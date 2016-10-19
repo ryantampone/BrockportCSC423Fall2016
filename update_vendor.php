@@ -11,10 +11,10 @@ require('db_cn.inc');
 require('vendor_modify_result_ui.inc');
 
 // Main control logic
-insert_vendor();
+update_vendor();
 
 //-------------------------------------------------------------
-function insert_vendor()
+function update_vendor()
 {
 
 	// Connect to the 'test' database
@@ -25,6 +25,7 @@ function insert_vendor()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
+	$vendorid = $_POST['vendorid'];
 	$vendorcode = $_POST['vendorcode'];
 	$vendorname = $_POST['vendorname'];
 	$address = $_POST['address'];
@@ -38,20 +39,20 @@ function insert_vendor()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password')";
+	$sql_stmt = "UPDATE Vendor SET VendorCode='$vendorcode', VendorName='$vendorname', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', ContactPersonName='$contactpersonname', Password='$password' WHERE VendorId='$vendorid'";
 
 	//Execute the query. The result will just be true or false
-	$result = mysql_query($insertStmt);
+	$result = mysql_query($sql_stmt);
 	echo $result;
 	$message = "";
 
 	if (!$result)
 	{
-  	  $message = "Error in inserting User: $vendorcode , $vendorname: ". mysql_error();
+  	  $message = "Error in updating Vendor: $vendorcode , $vendorname: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for User: $vendorcode , $vendorname inserted successfully.";
+	  $message = "Data for Vendor: $vendorcode , $vendorname updated successfully.";
 
 	}
 

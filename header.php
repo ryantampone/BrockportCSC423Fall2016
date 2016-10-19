@@ -18,19 +18,19 @@
   <div id="nav">
       <div id="nav_wrapper">
           <ul>
-              <li><a href="/BrockportCSC423Fall2016">Home</a></li>
+              <li><a href="/~rtamp1/csc423/gp/index.php">Home</a></li>
               <li><a href="#">Vendor</a>
                   <ul>
-                    <li><a href="/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
-                    <li><a href="/BrockportCSC423Fall2016/modifyvendor">Modify Vendor</a>
-                    <li><a href="/BrockportCSC423Fall2016/removevendor">Remove Vendor</a>
+                    <li><a href="/~rtamp1/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
+                    <li><a href="/~rtamp1/csc423/gp/modify_vendor_ui_form.php">Modify Vendor</a>
+                    <li><a href="/~rtamp1/csc423/gp/removevendor">Remove Vendor</a>
                   </ul>
               </li>
               <li><a href="#">Locations</a>
                   <ul>
-                    <li><a href="/BrockportCSC423Fall2016/addStoreLocation">Add Store Location</a>
-                    <li><a href="/BrockportCSC423Fall2016/modifyStoreLocation">Modify Store Location</a>
-                    <li><a href="/BrockportCSC423Fall2016/removeStoreLocation">Remove Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/addStoreLocation">Add Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/modifyStoreLocation">Modify Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/removeStoreLocation">Remove Store Location</a>
                   </ul>
               </li>
               <li><a href="#">Items</a>
@@ -44,7 +44,4 @@
       </div>
   </div>
 
-
-  <div id="callToAction">
-    <h4 align="center">Please Select What You Would Like to Do</h4>
-  </div>
+  <br>

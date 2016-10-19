@@ -8,16 +8,16 @@ require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('user_insert_result_ui.inc');
+require('vendor_modify_result_ui.inc');
 
 // Main control logic
-insert_user();
+insert_vendor();
 
 //-------------------------------------------------------------
-function insert_user()
+function insert_vendor()
 {
 
-	// Connect to the 'test' database 
+	// Connect to the 'test' database
         // The parameters are defined in the teach_cn.inc file
         // These are global constants
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
@@ -25,37 +25,36 @@ function insert_user()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$uid = $_POST['uid'];
-	$pwd = $_POST['pwd'];
-	$privilege = $_POST['privilege'];
-        
+	$vendorid = $_POST['vendorid'];
+	//echo"Vendor ID is: $vendorid";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$insertStmt = "INSERT INTO user (first, last, 
-		       uid, pwd, privilege) values ( '$firstname', '$lastname',
-                      '$uid', '$pwd', '$privilege')";
+	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId=$vendorid";
 
 	//Execute the query. The result will just be true or false
-	$result = mysql_query($insertStmt);
-	echo $result;
-	$message = "";
+	$result = mysql_query($sql_stmt);
 
-	if (!$result) 
-	{
-  	  $message = "Error in inserting User: $lastname , $firstname: ". mysql_error();
-	}
-	else
-	{
-	  $message = "Data for User: $lastname , $firstname inserted successfully.";
-	  
-	}
+	if (!$result)
+  {
+     echo "The retrieval was unsuccessful: ".mysql_error();
+     exit;
+  }
 
-	ui_show_user_insert_result($message, $lastname, $firstname, 
-		$uid, $pwd);
-			   
+  //$result is non-empty. So count the rows
+  $numrows = mysql_num_rows($result);
+
+  //Create an appropriate message
+  $message = "";
+  if ($numrows == 0)
+     $message = "No vendors found in database with the provided ID";
+
+  //Display the results
+  show_all_vendors($message, $result);
+
+  //Free the result set
+  mysql_free_result($result);
+
 }
 
 function connect_and_select_db($server, $username, $pwd, $dbname)
@@ -68,7 +67,7 @@ function connect_and_select_db($server, $username, $pwd, $dbname)
     	    exit;
 	}
 
-	// Select the database	
+	// Select the database
 	$dbh = mysql_select_db($dbname);
 	if (!$dbh){
     		echo "Unable to select ".$dbname.": " . mysql_error();

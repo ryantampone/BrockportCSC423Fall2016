@@ -5,6 +5,9 @@
 <?php
 	echo"
 		<br>
+		<div id='callToAction'>
+	    <h4 align='center'>Please Fill out the Vendor Form Below</h4>
+	  </div>
     	<div id='userdataform'>
             <form action='insert_vendor.php' method='post'>
                 <table align='center'>
