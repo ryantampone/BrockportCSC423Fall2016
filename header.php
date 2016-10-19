@@ -21,7 +21,7 @@
               <li><a href="/BrockportCSC423Fall2016">Home</a></li>
               <li><a href="#">Vendor</a>
                   <ul>
-                    <li><a href="/BrockportCSC423Fall2016/new_vendor_ui_form.php">Add Vendor</a>
+                    <li><a href="/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
                     <li><a href="/BrockportCSC423Fall2016/modifyvendor">Modify Vendor</a>
                     <li><a href="/BrockportCSC423Fall2016/removevendor">Remove Vendor</a>
                   </ul>

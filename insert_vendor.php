@@ -38,7 +38,7 @@ function insert_vendor()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$insertStmt = "INSERT INTO vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password',)";
+	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password')";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($insertStmt);
