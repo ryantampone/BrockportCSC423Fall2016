@@ -88,7 +88,7 @@ function show_all_vendors($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td><span align='right'>Vendor ID:</span></td>
-								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' disabled required/></td>
+								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Vendor Code:</span></td>
