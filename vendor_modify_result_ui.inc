@@ -59,6 +59,7 @@ function show_all_vendors($message, $result)
 	 	 $phone = $row['Phone'];
 	 	 $contactpersonname = $row['ContactPersonName'];
 	 	 $password = $row['Password'];
+		 $status = $row['Status'];
 
 
       //Put these in a table row. The htmlentities function converts any
@@ -125,6 +126,10 @@ function show_all_vendors($message, $result)
 						 <tr>
 								 <td><span align='right'>Password:</span></td>
 								 <td><input NAME='password' TYPE='password' SIZE='50' value='$password' required/></td>
+						 </tr>
+						 <tr>
+								 <td><span align='right'>Status:</span></td>
+								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>
 				 <p align='center'>
