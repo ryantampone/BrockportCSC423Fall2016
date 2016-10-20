@@ -8,7 +8,7 @@ require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('vendor_modify_result_ui.inc');
+require('vendor_insert_result_ui.inc');
 
 // Main control logic
 insert_vendor();
@@ -34,11 +34,11 @@ function insert_vendor()
 	$phone = $_POST['phone'];
 	$contactpersonname = $_POST['contactpersonname'];
 	$password = $_POST['password'];
-
+	$status = "Active";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password')";
+	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password, Status) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password', '$status');";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($insertStmt);
@@ -55,7 +55,7 @@ function insert_vendor()
 
 	}
 
-	ui_show_vendor_insert_result($message, $vendorcode, $vendorname);
+	ui_show_vendor_insert_result($message, $vendorcode, $vendorname, $result);
 
 }
 
