@@ -30,7 +30,7 @@ function insert_vendor()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId=$vendorid";
+	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId='$vendorid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
