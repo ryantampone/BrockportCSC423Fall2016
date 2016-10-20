@@ -23,7 +23,7 @@
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
                     <li><a href="/~rtamp1/csc423/gp/modify_vendor_ui_form.php">Modify Vendor</a>
-                    <li><a href="/~rtamp1/csc423/gp/removevendor">Remove Vendor</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Remove Vendor</a>
                   </ul>
               </li>
               <li><a href="#">Locations</a>
