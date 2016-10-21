@@ -4,6 +4,8 @@ require('db_cn.inc');
 
 require('item_insert_result_ui.inc');
 
+
+
 insert_item();
 
 function insert_item(){
