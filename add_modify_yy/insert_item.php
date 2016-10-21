@@ -10,10 +10,22 @@ function insert_item(){
 
 connect_and_select_db(DB_SERVER, DB_UN, DB_PWD， DB_NAME);
 
-   $itemname = $_POST['itemname'];
+   $itemId = $_POST['ItemId'];
+   $description = $_POST['Description'];
+   $size = $_POST['Size'];
+   $division = $_POST['Division'];
+   $department = $_POST['Department'];
+   $category = $_POST['Category'];
+   $itemCost = $_POST['ItemCost'];
+   $itemRetail = $_POST['ItemRetail'];
+   $imageFileName = $_POST['ImageFileName'];
+   $vendorID = $_POST['VendorId'];
+   
+   
 
 
-   $insertitem = "INSERT INTO InventoryItem();"
+   $insertitem = "INSERT INTO InventoryItem(ItemId, Description, Size, Division, Department,
+   Category, ItemCost, ItemRetail, ImageFileName, VendorId);"
 
    $result = mysql_query($insertitem);
    echo $result;
