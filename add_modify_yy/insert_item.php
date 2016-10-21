@@ -25,7 +25,8 @@ connect_and_select_db(DB_SERVER, DB_UN, DB_PWD， DB_NAME);
 
 
    $insertitem = "INSERT INTO InventoryItem(ItemId, Description, Size, Division, Department,
-   Category, ItemCost, ItemRetail, ImageFileName, VendorId);"
+   Category, ItemCost, ItemRetail, ImageFileName, VendorId) 
+   values ('$itemId', '$description', '$size', '$division', '$department', '$category', '$itemCost', '$itemRetail', '$imageFileName', '$vendorID');"
 
    $result = mysql_query($insertitem);
    echo $result;
