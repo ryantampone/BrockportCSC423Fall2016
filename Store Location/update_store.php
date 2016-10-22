@@ -1,7 +1,6 @@
 <?php
 
 require('db_cn.inc');
-
 require('store_location_confirm.php');
 
 update_store();
@@ -50,4 +49,3 @@ function update_store()
 }
 
 ?>
-

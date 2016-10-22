@@ -8,7 +8,7 @@ require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('store_location_confirm.php');
+require('show_stores.php');
 
 // Main control logic
 get_store();
@@ -76,4 +76,3 @@ function connect_and_select_db($server, $username, $pwd, $dbname)
 }
 
 ?>
-
