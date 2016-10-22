@@ -45,6 +45,7 @@ function show_all_stores($message, $result)
 	 	 $zip = $row['ZIP'];
 	 	 $phone = $row['Phone'];
 	 	 $mgrname = $row['ManagerName'];
+     $status = $row['Status'];
 
       //Put these in a table row. The htmlentities function converts any
       //special chars in the string to a html-displayable form.
@@ -88,6 +89,10 @@ function show_all_stores($message, $result)
 								 <td><span align='right'>Manager Name:</span></td>
 								 <td><input NAME='mgrname' TYPE='text' SIZE='50' value='$mgrname' required/></td>
 						 </tr>
+             <tr>
+                 <td><span align='right'>Status:</span></td>
+                 <td><input name='status' type='text' size'50' value='$status' readonly/></td>
+             </tr>
 				 </table>
 				 <p align='center'>
 						 <input type='submit' value='Submit'/>
