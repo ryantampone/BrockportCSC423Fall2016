@@ -2,6 +2,10 @@
 
 include 'header.php';
 
+?>
+
+<?php
+
 function show_all_stores($message, $result)
 {
   //----------------------------------------------------------
