@@ -35,11 +35,12 @@ function update_vendor()
 	$phone = $_POST['phone'];
 	$contactpersonname = $_POST['contactpersonname'];
 	$password = $_POST['password'];
+	$status = "Inactive";
 
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE Vendor SET VendorCode='$vendorcode', VendorName='$vendorname', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', ContactPersonName='$contactpersonname', Password='$password' WHERE $vendorid='VendorId';";
+	$sql_stmt = "UPDATE Vendor SET VendorCode='$vendorcode', VendorName='$vendorname', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', ContactPersonName='$contactpersonname', Password='$password', Status='$status' WHERE VendorId='$vendorid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
@@ -48,11 +49,11 @@ function update_vendor()
 
 	if (!$result)
 	{
-  	  $message = "Error in updating Vendor: $vendorcode , $vendorname: ". mysql_error();
+  	  $message = "Error in deleting Vendor: $vendorcode , $vendorname: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for Vendor: $vendorid , $vendorcode , $vendorname updated successfully.";
+	  $message = "Data for Vendor: $vendorid , $vendorcode , $vendorname Deleted successfully.";
 
 	}
 
