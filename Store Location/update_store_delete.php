@@ -1,23 +1,13 @@
-
-<!-- insert_user.php
-   A PHP script to insert a new user into the test database
-  -->
 <?php
 
 require('db_cn.inc');
+require('store_location_confirm.php');
 
-//This file contains php code that will be executed after the
-//insert operation is done.
-require('show_stores_modify.php');
+update_store();
 
-// Main control logic
-get_store();
-
-//-------------------------------------------------------------
-function get_store()
+function update_store()
 {
-
-	// Connect to the 'test' database
+  // Connect to the 'test' database
         // The parameters are defined in the teach_cn.inc file
         // These are global constants
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
@@ -26,35 +16,37 @@ function get_store()
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
 	$storeid = $_POST['storeid'];
-	//echo"Vendor ID is: $vendorid";
+	$storecode = $_POST['storecode'];
+	$storename = $_POST['storename'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$zip = $_POST['zip'];
+	$phone = $_POST['phone'];
+	$mgrname = $_POST['mgrname'];
+	$status = "Inactive";
+
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM RetailStore WHERE StoreId='$storeid';";
+	$sql_stmt = "UPDATE RetailStore SET Status='$status' WHERE StoreId='$storeid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
+	echo $result;
+	$message = "";
 
 	if (!$result)
-  {
-     echo "The retrieval was unsuccessful: ".mysql_error();
-     exit;
-  }
+	{
+  	  $message = "Error in deleting Store: $storecode , $storename: ". mysql_error();
+	}
+	else
+	{
+	  $message = "Data for Store: $storeid , $storecode , $storename deleted successfully.";
 
-  //$result is non-empty. So count the rows
-  $numrows = mysql_num_rows($result);
+	}
 
-  //Create an appropriate message
-  $message = "";
-  if ($numrows == 0)
-     $message = "No store locations found in database with the provided ID";
-
-  //Display the results
-  show_all_stores($message, $result);
-
-  //Free the result set
-  mysql_free_result($result);
-
+	show_store_confirm($message);
 }
 
 function connect_and_select_db($server, $username, $pwd, $dbname)

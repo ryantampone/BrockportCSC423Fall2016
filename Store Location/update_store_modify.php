@@ -24,7 +24,7 @@ function update_store()
 	$zip = $_POST['zip'];
 	$phone = $_POST['phone'];
 	$mgrname = $_POST['mgrname'];
-	$status = $_POST['status'];
+	$status = "Inactive";
 
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
