@@ -4,6 +4,7 @@
   -->
 <?php
 
+
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
