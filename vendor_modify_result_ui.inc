@@ -3,6 +3,7 @@
 ?>
 <?php
 
+
 function show_all_vendors($message, $result)
 {
   //----------------------------------------------------------

@@ -4,18 +4,17 @@
   -->
 <?php
 
-
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('vendor_modify_result_ui.inc');
+require('show_stores_delete.php');
 
 // Main control logic
-insert_vendor();
+get_store();
 
 //-------------------------------------------------------------
-function insert_vendor()
+function get_store()
 {
 
 	// Connect to the 'test' database
@@ -26,12 +25,12 @@ function insert_vendor()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	$vendorid = $_POST['vendorid'];
+	$storeid = $_POST['storeid'];
 	//echo"Vendor ID is: $vendorid";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId='$vendorid';";
+	$sql_stmt = "SELECT * FROM RetailStore WHERE StoreId='$storeid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
@@ -48,10 +47,10 @@ function insert_vendor()
   //Create an appropriate message
   $message = "";
   if ($numrows == 0)
-     $message = "No vendors found in database with the provided ID";
+     $message = "No store locations found in database with the provided ID";
 
   //Display the results
-  show_all_vendors($message, $result);
+  show_all_stores($message, $result);
 
   //Free the result set
   mysql_free_result($result);

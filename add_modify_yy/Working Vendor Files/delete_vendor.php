@@ -4,18 +4,17 @@
   -->
 <?php
 
-
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('vendor_modify_result_ui.inc');
+require('vendor_insert_result_ui.inc');
 
 // Main control logic
-insert_vendor();
+delete_vendor();
 
 //-------------------------------------------------------------
-function insert_vendor()
+function delete_vendor()
 {
 
 	// Connect to the 'test' database
@@ -27,36 +26,33 @@ function insert_vendor()
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
 	$vendorid = $_POST['vendorid'];
+	$status = "Inactive";
 	//echo"Vendor ID is: $vendorid";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId='$vendorid';";
+	$sql_stmt = "UPDATE Vendor SET Status='$status' WHERE VendorId='$vendorid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
+	echo $result;
+	$message = "";
 
 	if (!$result)
-  {
-     echo "The retrieval was unsuccessful: ".mysql_error();
-     exit;
-  }
+	{
+  	  $message = "Error in deletig Vendor: Vendor $vendorid not found". mysql_error();
+	}
+	else
+	{
+	  $message = "Vendor: $vendorid removed successfully.";
 
-  //$result is non-empty. So count the rows
-  $numrows = mysql_num_rows($result);
+	}
 
-  //Create an appropriate message
-  $message = "";
-  if ($numrows == 0)
-     $message = "No vendors found in database with the provided ID";
-
-  //Display the results
-  show_all_vendors($message, $result);
-
-  //Free the result set
-  mysql_free_result($result);
+	ui_show_vendor_insert_result($message, $vendorcode, $vendorname);
 
 }
+
+
 
 function connect_and_select_db($server, $username, $pwd, $dbname)
 {

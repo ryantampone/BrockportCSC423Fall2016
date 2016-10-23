@@ -4,12 +4,11 @@
   -->
 <?php
 
-
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('vendor_modify_result_ui.inc');
+require('vendor_insert_result_ui.inc');
 
 // Main control logic
 insert_vendor();
@@ -26,35 +25,37 @@ function insert_vendor()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	$vendorid = $_POST['vendorid'];
-	//echo"Vendor ID is: $vendorid";
+	$vendorcode = $_POST['vendorcode'];
+	$vendorname = $_POST['vendorname'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$zip = $_POST['zip'];
+	$phone = $_POST['phone'];
+	$contactpersonname = $_POST['contactpersonname'];
+	$password = $_POST['password'];
+	$status = "Active";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId='$vendorid';";
+	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password, Status) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password', '$status');";
 
 	//Execute the query. The result will just be true or false
-	$result = mysql_query($sql_stmt);
+	$result = mysql_query($insertStmt);
+	echo $result;
+	$message = "";
 
 	if (!$result)
-  {
-     echo "The retrieval was unsuccessful: ".mysql_error();
-     exit;
-  }
+	{
+  	  $message = "Error in inserting User: $vendorcode , $vendorname: ". mysql_error();
+	}
+	else
+	{
+	  $message = "Data for User: $vendorcode , $vendorname inserted successfully.";
 
-  //$result is non-empty. So count the rows
-  $numrows = mysql_num_rows($result);
+	}
 
-  //Create an appropriate message
-  $message = "";
-  if ($numrows == 0)
-     $message = "No vendors found in database with the provided ID";
-
-  //Display the results
-  show_all_vendors($message, $result);
-
-  //Free the result set
-  mysql_free_result($result);
+	ui_show_vendor_insert_result($message, $vendorcode, $vendorname, $result);
 
 }
 

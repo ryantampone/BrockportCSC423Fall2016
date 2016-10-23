@@ -6,10 +6,10 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h4 align='center'>Please Enter the Vendor ID of the Vendor to Delete</h4>
+	    <h4 align='center'>Please Enter the Vendor ID of the Vendor to Modify</h4>
 	  </div>
     	<div id='userdataform'>
-            <form action='delete_vendor.php' method='post'>
+            <form action='modify_vendor.php' method='post'>
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Enter Vendor ID:</span></td>
