@@ -36,7 +36,7 @@
               <li><a href="#">Items</a>
                   <ul>
                     <li><a href="/~ydong1/csc423/gp/new_item_ui_form.php">Add Item</a>
-                    <li><a href="/BrockportCSC423Fall2016/modifyItem">Modify Item</a>
+                    <li><a href="/~ydong1/csc423/gp/modify_item_ui_form.php">Modify Item</a>
                     <li><a href="/BrockportCSC423Fall2016/removeItem">Remove Item</a>
                   </ul>
               </li>
