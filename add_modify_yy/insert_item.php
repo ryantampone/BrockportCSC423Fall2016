@@ -10,7 +10,7 @@ insert_item();
 
 function insert_item(){
 
-connect_and_select_db(DB_SERVER, DB_UN, DB_PWD， DB_NAME);
+connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 
    $itemId = $_POST['ItemId'];
    $description = $_POST['Description'];
