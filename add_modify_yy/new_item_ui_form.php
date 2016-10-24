@@ -14,20 +14,20 @@
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Item ID:</span></td>
-                        <td><input id='item_id' name='item_id' TYPE='text' SIZE='50' required/></td>
+                        <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' required/></td>
                     </tr>
-                    <tr>
-                        <td><span align='right'>Item Name:</span></td>
-                        <td><input id='item_name' name='item_name' TYPE='text' SIZE='50' required/></td>
+               								<tr>
+                        <td><span align='right'>Description:</span></td>
+                        <td><input id='Description' name='Description' type='textarea' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Size:</span></td>
-                        <td><input id='size' name='size' TYPE='text' SIZE='50' required/></td>
+                        <td><input id='Size' name='Size' TYPE='text' SIZE='50' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Division:</span></td>
 						<td>
-							<select name='division'>
+							<select name='Division'>
 								<option value='food_convenience'>Food Convenience</option>
 								<option value='meat_convenience'>Meat Convenience</option>
 						
@@ -35,12 +35,25 @@
 						
                        
                     </tr>
+		    
+		    
+		    <tr>
+                        <td><span align='right'>Department:</span></td>
+						<td>
+							<select name='Department'>
+								<option value='meat_department'>Meat Department</option>
+						
+						</td>
+						
+                       
+                    </tr>
+		    
 					
 					 <tr>
                         <td><span align='right'>Category:</span></td>
                         <td>
 						
-						<select name='category'>
+						<select name='Category'>
 								<option value='candy'>Candy</option>
 								<option value='pie'>Pie</option>
 						
@@ -48,16 +61,24 @@
                     </tr>
 					
 										<tr>
-											<td><span align='right'>Price</span></td>
-								  <td><input id='price' name='price' TYPE='text' SIZE='50' required/></td>			
+											<td><span align='right'>Item Cost</span></td>
+								  <td><input id='ItemCost' name='ItemCost' TYPE='text' SIZE='50' required/></td>			
 										</tr>
 									
 										<tr>
-                        <td><span align='right'>Description:</span></td>
-                        <td><input id='desc' name='desc' type='textarea' required/></td>
-                    </tr>
+											<td><span align='right'>Item Retail</span></td>
+								  <td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' required/></td>			
+										</tr>
+									
+			<tr>
+											<td><span align='right'>Vendor Id</span></td>
+								  <td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
+										</tr>
+									
 										
-                </table>
+                </table>		<td><span align='right'>Upload Image File</span></td>
+								  <td><input type="file" id='ImageFileName' name='ImageFileName' accept="image/gif, image/jpeg, image/png" /> <input type="submit"></td>			
+										</tr>
                 <p align='center'>
                     <input type='submit' value='Submit'/>
                     <input type='reset' value='Reset'/>
