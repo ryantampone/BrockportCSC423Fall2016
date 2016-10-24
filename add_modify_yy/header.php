@@ -18,7 +18,7 @@
   <div id="nav">
       <div id="nav_wrapper">
           <ul>
-              <li><a href="/~asmit26/csc423/gp/index.php">Home</a></li>
+              <li><a href="/~ydong1/csc423/gp/index.php">Home</a></li>
               <li><a href="#">Vendor</a>
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
