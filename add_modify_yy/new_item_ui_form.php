@@ -16,7 +16,7 @@
                         <td><span align='right'>Item ID:</span></td>
                         <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' required/></td>
                     </tr>
-               								<tr>
+               	    <tr>
                         <td><span align='right'>Description:</span></td>
                         <td><input id='Description' name='Description' type='textarea' required/></td>
                     </tr>
@@ -49,7 +49,7 @@
                     </tr>
 		    
 					
-					 <tr>
+		    <tr>
                         <td><span align='right'>Category:</span></td>
                         <td>
 						
@@ -60,24 +60,25 @@
 						/td>
                     </tr>
 					
-										<tr>
-											<td><span align='right'>Item Cost</span></td>
-								  <td><input id='ItemCost' name='ItemCost' TYPE='text' SIZE='50' required/></td>			
-										</tr>
+		<tr>
+			<td><span align='right'>Item Cost</span></td>
+			 <td><input id='ItemCost' name='ItemCost' TYPE='text' SIZE='50' required/></td>			
+		</tr>
 									
-										<tr>
-											<td><span align='right'>Item Retail</span></td>
-								  <td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' required/></td>			
-										</tr>
+		<tr>
+			<td><span align='right'>Item Retail</span></td>
+			 <td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' required/></td>			
+		</tr>
 									
-			<tr>
-											<td><span align='right'>Vendor Id</span></td>
-								  <td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
-										</tr>
-			<tr>
-				<td><span align='right'>Upload Image File</span></td>
-								  <td><input type="file" id='ImageFileName' name='ImageFileName' accept="image/gif, image/jpeg, image/png" /> <input type="submit"></td>			
-										</tr>					
+		<tr>
+			<td><span align='right'>Vendor Id</span></td>
+			<td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+		<tr>
+			<td><span align='right'>Upload Image File</span></td>
+			<td><input type="file" id='ImageFileName' name='ImageFileName' accept="image/gif, image/jpeg, image/png" /> 
+			</td>			
+		</tr>					
 										
                 </table>		
                 <p align='center'>
