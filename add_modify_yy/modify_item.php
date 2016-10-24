@@ -48,6 +48,7 @@ function insert_item()
   //Display the results
   show_all_items($message, $result);
 
+
   //Free the result set
   mysql_free_result($result);
 
