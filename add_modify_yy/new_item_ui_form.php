@@ -74,11 +74,7 @@
 			<td><span align='right'>Vendor Id</span></td>
 			<td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
 		</tr>
-		<tr>
-			<td><span align='right'>Upload Image File</span></td>
-			<td><input type="file" id='ImageFileName' name='ImageFileName' accept="image/gif, image/jpeg, image/png" /> 
-			</td>			
-		</tr>					
+					
 										
                 </table>		
                 <p align='center'>
