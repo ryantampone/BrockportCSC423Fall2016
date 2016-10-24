@@ -18,7 +18,7 @@
   <div id="nav">
       <div id="nav_wrapper">
           <ul>
-              <li><a href="/~rtamp1/csc423/gp/index.php">Home</a></li>
+              <li><a href="/~asmit26/csc423/gp/index.php">Home</a></li>
               <li><a href="#">Vendor</a>
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
@@ -28,14 +28,14 @@
               </li>
               <li><a href="#">Locations</a>
                   <ul>
-                    <li><a href="/~rtamp1/csc423/gp/addStoreLocation">Add Store Location</a>
-                    <li><a href="/~rtamp1/csc423/gp/modifyStoreLocation">Modify Store Location</a>
-                    <li><a href="/~rtamp1/csc423/gp/removeStoreLocation">Remove Store Location</a>
+                    <li><a href="/~asmit26/csc423/gp/add_store_location_ui.php">Add Store Location</a>
+                    <li><a href="/~asmit26/csc423/gp/modify_store_location_ui.php">Modify Store Location</a>
+                    <li><a href="/~asmit26/csc423/gp/delete_store_location_ui.php">Remove Store Location</a>
                   </ul>
               </li>
               <li><a href="#">Items</a>
                   <ul>
-                    <li><a href="/BrockportCSC423Fall2016/addItem">Add Item</a>
+                    <li><a href="/~ydong1/csc423/gp/new_item_ui_form.php">Add Item</a>
                     <li><a href="/BrockportCSC423Fall2016/modifyItem">Modify Item</a>
                     <li><a href="/BrockportCSC423Fall2016/removeItem">Remove Item</a>
                   </ul>
