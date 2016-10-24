@@ -25,12 +25,12 @@ function insert_vendor()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	$vendorid = $_POST['vendorid'];
+	$itemId = $_POST['ItemId'];
 	//echo"Vendor ID is: $vendorid";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM Vendor WHERE VendorId='$vendorid';";
+	$sql_stmt = "SELECT * FROM InventoryItem WHERE ItemId='$itemId';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
@@ -47,10 +47,10 @@ function insert_vendor()
   //Create an appropriate message
   $message = "";
   if ($numrows == 0)
-     $message = "No vendors found in database with the provided ID";
+     $message = "No items found in database with the provided ID";
 
   //Display the results
-  show_all_vendors($message, $result);
+  show_all_items($message, $result);
 
   //Free the result set
   mysql_free_result($result);
