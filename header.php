@@ -28,9 +28,9 @@
               </li>
               <li><a href="#">Locations</a>
                   <ul>
-                    <li><a href="/~rtamp1/csc423/gp/addStoreLocation">Add Store Location</a>
-                    <li><a href="/~rtamp1/csc423/gp/modifyStoreLocation">Modify Store Location</a>
-                    <li><a href="/~rtamp1/csc423/gp/removeStoreLocation">Remove Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Add Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Modify Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Remove Store Location</a>
                   </ul>
               </li>
               <li><a href="#">Items</a>
