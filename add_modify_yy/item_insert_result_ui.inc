@@ -1,6 +1,7 @@
-<?php
+<?php 
 
-function ui_show_item_insert_result($message, $item_id)
+function ui_show_item_insert_result($message, $itemname, $result)
+  {
   //----------------------------------------------------------
   // Start the html page
   echo "<HTML>";
@@ -9,7 +10,7 @@ function ui_show_item_insert_result($message, $item_id)
   echo "<BODY>";
 
   // If the message is non-null and not an empty string print it
-  // message contains the item_id
+  // message contains the lastname and firstname
   if ($message)
   {
     if ($message != "")
@@ -23,4 +24,5 @@ echo "<form action='index.php'><button >Return to Main Menu</button></form>";
  echo "</BODY>";
  echo "</HTML>";
 }
+
 ?>
