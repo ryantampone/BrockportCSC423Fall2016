@@ -3,7 +3,7 @@
 ?>
 <?php
 
-function show_all_vendors($message, $result)
+function show_all_items($message, $result)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -49,17 +49,17 @@ function show_all_vendors($message, $result)
    //as an associative array
    while ($row = mysql_fetch_assoc($result))
    {
-		 $vendorid = $row['VendorId'];
-		 $vendorcode = $row['VendorCode'];
-	 	 $vendorname = $row['VendorName'];
-  	 $address = $row['Address'];
- 	 	 $city = $row['City'];
- 	 	 $state = $row['State'];
-	 	 $zip = $row['ZIP'];
-	 	 $phone = $row['Phone'];
+		 $itemId = $row['ItemId'];
+		 $description = $row['Description'];
+	 	 $size = $row['Size'];
+  	 $division = $row['Division'];
+ 	 	 $department = $row['Department'];
+ 	 	 $category = $row['Category'];
+	 	 $itemCost = $row['ItemCost'];
+	 	 $itemRetail = $row['ItemRetail'];
 	 	 $contactpersonname = $row['ContactPersonName'];
-	 	 $password = $row['Password'];
-		 $status = $row['Status'];
+	 	 $imageFileName = $row['ImageFileName'];
+		 $vendorID = $row['VendorId'];
 
 
       //Put these in a table row. The htmlentities function converts any
@@ -85,53 +85,73 @@ function show_all_vendors($message, $result)
 
 
 		 echo"
-		 <form action='update_vendor.php' method='post'>
+		 <form action='update_item.php' method='post'>
 				 <table align='center'>
-						 <tr>
-								 <td><span align='right'>Vendor ID:</span></td>
-								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' readonly required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Vendor Code:</span></td>
-								 <td><input NAME='vendorcode' TYPE='text' SIZE='50' value='$vendorcode'required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Vendor Name:</span></td>
-								 <td><input NAME='vendorname' TYPE='text' SIZE='50' value='$vendorname' required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Address:</span></td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>City:</span></td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' required/></td>
-						 </tr>
-						 <tr>
-							 <td><span align='right'>State:</span></td>
-							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Zip:</span></td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Contact Person Name:</span></td>
-								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' value='$contactpersonname' required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Password:</span></td>
-								 <td><input NAME='password' TYPE='password' SIZE='50' value='$password' required/></td>
-						 </tr>
-						 <tr>
-								 <td><span align='right'>Status:</span></td>
-								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
-						 </tr>
-				 </table>
+                    <tr>
+                        <td><span align='right'>Item ID:</span></td>
+                        <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' required/></td>
+                    </tr>
+               	    <tr>
+                        <td><span align='right'>Description:</span></td>
+                        <td><input id='Description' name='Description' type='textarea' required/></td>
+                    </tr>
+                    <tr>
+                        <td><span align='right'>Size:</span></td>
+                        <td><input id='Size' name='Size' TYPE='text' SIZE='50' required/></td>
+                    </tr>
+                    <tr>
+                        <td><span align='right'>Division:</span></td>
+						<td>
+							<select name='Division'>
+								<option value='food_convenience'>Food Convenience</option>
+								<option value='meat_convenience'>Meat Convenience</option>
+						
+						</td>
+						
+                       
+                    </tr>
+		    
+		    
+		    <tr>
+                        <td><span align='right'>Department:</span></td>
+						<td>
+							<select name='Department'>
+								<option value='meat_department'>Meat Department</option>
+						
+						</td>
+						
+                       
+                    </tr>
+		    
+					
+		    <tr>
+                        <td><span align='right'>Category:</span></td>
+                        <td>
+						
+						<select name='Category'>
+								<option value='candy'>Candy</option>
+								<option value='pie'>Pie</option>
+						
+						/td>
+                    </tr>
+					
+		<tr>
+			<td><span align='right'>Item Cost</span></td>
+			 <td><input id='ItemCost' name='ItemCost' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+									
+		<tr>
+			<td><span align='right'>Item Retail</span></td>
+			 <td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+									
+		<tr>
+			<td><span align='right'>Vendor Id</span></td>
+			<td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+					
+										
+                </table>
 				 <p align='center'>
 						 <input type='submit' value='Submit'/>
 						 <input type='reset' value='Reset'/>
