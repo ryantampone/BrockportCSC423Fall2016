@@ -28,9 +28,9 @@
               </li>
               <li><a href="#">Locations</a>
                   <ul>
-                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Add Store Location</a>
-                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Modify Store Location</a>
-                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Remove Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/add_store_location_ui.php">Add Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/modify_store_location_ui.php">Modify Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_store_location_ui.php">Remove Store Location</a>
                   </ul>
               </li>
               <li><a href="#">Items</a>
@@ -38,6 +38,13 @@
                     <li><a href="/~rtamp1/csc423/gp/new_item_ui_form.php">Add Item</a>
                     <li><a href="/~rtamp1/csc423/gp/modify_item_ui_form.php">Modify Item</a>
                     <li><a href="/~rtamp1/csc423/gp/delete_item_ui_form.php">Remove Item</a>
+                  </ul>
+              </li>
+              <li><a href="#">Customers</a>
+                  <ul>
+                    <li><a href="/~rtamp1/csc423/gp/add_customer_ui.php">Add Customer</a>
+                    <li><a href="/~rtamp1/csc423/gp/modify_customer_ui.php">Modify Customer</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_customer_ui.php">Delete Customer</a>
                   </ul>
               </li>
           </ul>
