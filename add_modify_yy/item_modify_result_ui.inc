@@ -57,7 +57,7 @@ function show_all_items($message, $result)
  	 	 $category = $row['Category'];
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
-	 	 $contactpersonname = $row['ContactPersonName'];
+	 	
 	 	 //$imageFileName = $row['ImageFileName'];
 		 $vendorID = $row['VendorId'];
 
@@ -89,20 +89,20 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td><span align='right'>Item ID:</span></td>
-                        <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' required/></td>
+                        <td><input id='ItemId' name='ItemId' value="itemId" TYPE='text' SIZE='50' readonly/></td>
                     </tr>
                	    <tr>
                         <td><span align='right'>Description:</span></td>
-                        <td><input id='Description' name='Description' type='textarea' required/></td>
+                        <td><input id='Description' name='Description' value="$description" type='textarea' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Size:</span></td>
-                        <td><input id='Size' name='Size' TYPE='text' SIZE='50' required/></td>
+                        <td><input id='Size' name='Size' TYPE='text' value="$size" SIZE='50' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Division:</span></td>
 						<td>
-							<select name='Division'>
+							<select name='Division' value="$division">
 								<option value='food_convenience'>Food Convenience</option>
 								<option value='meat_convenience'>Meat Convenience</option>
 						
@@ -115,7 +115,7 @@ function show_all_items($message, $result)
 		    <tr>
                         <td><span align='right'>Department:</span></td>
 						<td>
-							<select name='Department'>
+							<select name='Department' value="$department">
 								<option value='meat_department'>Meat Department</option>
 						
 						</td>
@@ -128,7 +128,7 @@ function show_all_items($message, $result)
                         <td><span align='right'>Category:</span></td>
                         <td>
 						
-						<select name='Category'>
+						<select name='Category' value="$category">
 								<option value='candy'>Candy</option>
 								<option value='pie'>Pie</option>
 						
@@ -137,17 +137,17 @@ function show_all_items($message, $result)
 					
 		<tr>
 			<td><span align='right'>Item Cost</span></td>
-			 <td><input id='ItemCost' name='ItemCost' TYPE='text' SIZE='50' required/></td>			
+			 <td><input id='ItemCost' name='ItemCost' value="$itemCost" TYPE='text' SIZE='50' required/></td>			
 		</tr>
 									
 		<tr>
 			<td><span align='right'>Item Retail</span></td>
-			 <td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' required/></td>			
+			 <td><input id='ItemRetail' name='ItemRetail' value="$itemRetail" TYPE='text' SIZE='50' required/></td>			
 		</tr>
 									
 		<tr>
 			<td><span align='right'>Vendor Id</span></td>
-			<td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
+			<td><input id='VendorId' name='VendorId' value="$vendorID" TYPE='text' SIZE='50' required/></td>			
 		</tr>
 					
 										
