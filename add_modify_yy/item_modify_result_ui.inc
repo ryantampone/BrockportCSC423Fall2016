@@ -58,7 +58,7 @@ function show_all_items($message, $result)
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
 	 	 $contactpersonname = $row['ContactPersonName'];
-	 	 $imageFileName = $row['ImageFileName'];
+	 	 //$imageFileName = $row['ImageFileName'];
 		 $vendorID = $row['VendorId'];
 
 
