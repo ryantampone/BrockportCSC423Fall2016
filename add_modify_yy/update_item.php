@@ -57,7 +57,7 @@ function update_item()
 
 	}
 
-	ui_show_vendor_insert_result($message, $itemId, $result);
+	ui_show_item_insert_result($message, $itemname, $result);
 
 }
 
