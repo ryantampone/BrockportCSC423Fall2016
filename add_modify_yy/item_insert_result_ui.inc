@@ -1,6 +1,7 @@
 <?php 
 
 function ui_show_item_insert_result($message, $itemname, $result)
+	
   {
   //----------------------------------------------------------
   // Start the html page
