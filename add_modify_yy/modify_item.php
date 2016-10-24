@@ -1,20 +1,16 @@
 
-<!-- insert_user.php
-   A PHP script to insert a new user into the test database
-  -->
 <?php
 
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
-//insert operation is done.
-require('vendor_modify_result_ui.inc');
+require('item_modify_result_ui.inc');
 
 // Main control logic
-insert_vendor();
+insert_item();
 
 //-------------------------------------------------------------
-function insert_vendor()
+function insert_item()
 {
 
 	// Connect to the 'test' database
