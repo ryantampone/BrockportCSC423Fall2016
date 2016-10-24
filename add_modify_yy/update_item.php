@@ -8,13 +8,13 @@ require('db_cn.inc');
 
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('vendor_insert_result_ui.inc');
+require('item_insert_result_ui.inc');
 
 // Main control logic
-update_vendor();
+update_item();
 
 //-------------------------------------------------------------
-function update_vendor()
+function update_item()
 {
 
 	// Connect to the 'test' database
@@ -25,22 +25,22 @@ function update_vendor()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	$vendorid = $_POST['vendorid'];
-	$vendorcode = $_POST['vendorcode'];
-	$vendorname = $_POST['vendorname'];
-	$address = $_POST['address'];
-	$city = $_POST['city'];
-	$state = $_POST['state'];
-	$zip = $_POST['zip'];
-	$phone = $_POST['phone'];
-	$contactpersonname = $_POST['contactpersonname'];
-	$password = $_POST['password'];
-	$status = $_POST['status'];
+	 $itemId = $_POST['ItemId'];
+   $description = $_POST['Description'];
+   $size = $_POST['Size'];
+   $division = $_POST['Division'];
+   $department = $_POST['Department'];
+   $category = $_POST['Category'];
+   $itemCost = $_POST['ItemCost'];
+   $itemRetail = $_POST['ItemRetail'];
+   $imageFileName = $_POST['ImageFileName'];
+   $vendorID = $_POST['VendorId'];
+
 
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE Vendor SET VendorCode='$vendorcode', VendorName='$vendorname', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', ContactPersonName='$contactpersonname', Password='$password', Status='$status' WHERE VendorId='$vendorid';";
+	$sql_stmt = "UPDATE InventoryItem SET ItemId='$itemId', Description='$description', Size='$size', Division='$division', Department='$department', Category='$category', ItemCost='$itemCost', ItemRetail='$itemRetail', ImageFileName='$imageFileName', VendorId='$vendorId' WHERE ItemId='$itemId';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
@@ -49,15 +49,15 @@ function update_vendor()
 
 	if (!$result)
 	{
-  	  $message = "Error in updating Vendor: $vendorcode , $vendorname: ". mysql_error();
+  	  $message = "Error in updating item: $itemId: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for Vendor: $vendorid , $vendorcode , $vendorname updated successfully.";
+	  $message = "Data for Item: $itemId updated successfully.";
 
 	}
 
-	ui_show_vendor_insert_result($message, $vendorcode, $vendorname);
+	ui_show_vendor_insert_result($message, $itemId);
 
 }
 
