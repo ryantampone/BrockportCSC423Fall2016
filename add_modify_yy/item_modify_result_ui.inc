@@ -89,7 +89,7 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td><span align='right'>Item ID:</span></td>
-                        <td><input id='ItemId' name='ItemId' value="itemId" TYPE='text' SIZE='50' readonly/></td>
+                        <td><input id='ItemId' name='ItemId' value='itemId' TYPE='text' SIZE='50' readonly/></td>
                     </tr>
                	    <tr>
                         <td><span align='right'>Description:</span></td>
@@ -102,9 +102,7 @@ function show_all_items($message, $result)
                     <tr>
                         <td><span align='right'>Division:</span></td>
 						<td>
-							<select name='Division' value="$division">
-								<option value='food_convenience'>Food Convenience</option>
-								<option value='meat_convenience'>Meat Convenience</option>
+							<input id='Division' name='Division' value='$division' SIZE='50' required /> 
 						
 						</td>
 						
@@ -114,11 +112,7 @@ function show_all_items($message, $result)
 		    
 		    <tr>
                         <td><span align='right'>Department:</span></td>
-						<td>
-							<select name='Department' value="$department">
-								<option value='meat_department'>Meat Department</option>
-						
-						</td>
+			<td><input id='Department' name='Department' value='$department' SIZE='50' required /> </td>
 						
                        
                     </tr>
@@ -126,13 +120,7 @@ function show_all_items($message, $result)
 					
 		    <tr>
                         <td><span align='right'>Category:</span></td>
-                        <td>
-						
-						<select name='Category' value="$category">
-								<option value='candy'>Candy</option>
-								<option value='pie'>Pie</option>
-						
-						/td>
+                        <td><input id='Category' name='Category' value='$category' SIZE='50' required /> </td>
                     </tr>
 					
 		<tr>
