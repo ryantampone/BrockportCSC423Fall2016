@@ -74,11 +74,12 @@
 											<td><span align='right'>Vendor Id</span></td>
 								  <td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
 										</tr>
-									
-										
-                </table>		<td><span align='right'>Upload Image File</span></td>
+			<tr>
+				<td><span align='right'>Upload Image File</span></td>
 								  <td><input type="file" id='ImageFileName' name='ImageFileName' accept="image/gif, image/jpeg, image/png" /> <input type="submit"></td>			
-										</tr>
+										</tr>					
+										
+                </table>		
                 <p align='center'>
                     <input type='submit' value='Submit'/>
                     <input type='reset' value='Reset'/>
