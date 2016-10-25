@@ -56,6 +56,16 @@
     return true;
   }
 
+  function isPhoneNumber()
+  {
+  	var phonenumber = document.getElementById("phone").value;
+  	var pattern = /^\d{3}-\d{3}-\d{4}$/;
+  	if (phonenumber.match(pattern))
+  	  continue;
+  	else
+  	  alert("Invalid Phone Number, must be in the format ###-###-####");
+  }
+
 
 
 </script>
