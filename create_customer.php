@@ -43,7 +43,7 @@ function add_customer()
   // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
 
-	$sql_tmt = "INSERT INTO Customer (CustomerId, Name, Address, City, State, ZIP, Phone, Email, Status) values ('$customerid', '$name', '$address', '$city', '$state', '$zip', '$phone', '$email', '$status');";
+	$sql_stmt = "INSERT INTO Customer (CustomerId, Name, Address, City, State, ZIP, Phone, Email, Status) values ('$customerid', '$name', '$address', '$city', '$state', '$zip', '$phone', '$email', '$status');";
 	//Execute the query. The result will just be true or false
 
 	$result = mysql_query($sql_stmt);
