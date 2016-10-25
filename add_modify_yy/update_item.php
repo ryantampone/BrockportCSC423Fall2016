@@ -33,7 +33,7 @@ function update_item()
    $category = $_POST['Category'];
    $itemCost = $_POST['ItemCost'];
    $itemRetail = $_POST['ItemRetail'];
-   //$imageFileName = $_POST['ImageFileName'];
+   $imageFileName = $_POST['ImageFileName'];
    $vendorID = $_POST['VendorId'];
 
 
