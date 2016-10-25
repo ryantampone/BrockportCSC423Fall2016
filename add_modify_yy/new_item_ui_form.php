@@ -84,7 +84,7 @@
 			
 		<tr>  
 			<td><span align='right'>Image FileName</span></td>
-			<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' /></td>
+			<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' value='BrockportCSC423Fall2016/src/' /></td>
 		</tr>
 										
                 </table>		
