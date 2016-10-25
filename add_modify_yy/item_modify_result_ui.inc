@@ -58,7 +58,7 @@ function show_all_items($message, $result)
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
 	 	
-	 	 //$imageFileName = $row['ImageFileName'];
+	 	 $imageFileName = $row['ImageFileName'];
 		 $vendorID = $row['VendorId'];
 
 
@@ -138,7 +138,10 @@ function show_all_items($message, $result)
 			<td><input id='VendorId' name='VendorId' value="$vendorID" TYPE='text' SIZE='50' required/></td>			
 		</tr>
 					
-										
+		<tr>
+			<td><span align='right'>Image FileName</td>
+			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>	
+		</tr>
                 </table>
 				 <p align='center'>
 						 <input type='submit' value='Submit'/>
