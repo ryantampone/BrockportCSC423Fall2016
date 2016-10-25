@@ -4,6 +4,7 @@
 
 
 <?php
+	//creates an html form prompting user to input search parameters
 	echo"
 		<br>
 		<div id='callToAction'>

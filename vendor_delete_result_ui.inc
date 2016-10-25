@@ -28,22 +28,6 @@ function show_all_vendors($message, $result)
        }
   }
 
-	/*
-	echo '<table border="1" align="center" width="98%">';
-	echo '<th width="10%">Vendor ID</th>';
-  echo '<th width="10%">Vendor Code</th>';
-  echo '<th width="10%">Vendor Name</th>';
-  echo '<th width="10%">Address</th>';
-  echo '<th width="10%">City</th>';
-	echo '<th width="10%">State</th>';
-	echo '<th width="10%">Zip</th>';
-	echo '<th width="10%">Phone</th>';
-	echo '<th width="10%">Contact Person Name</th>';
-	echo '<th width="10%">Password</th>';
-  echo '<thead>';
-  echo '</thead>';
-  echo '<tbody>';
-	*/
 
    //While there are more rows in the $result, get the next row
    //as an associative array
@@ -61,29 +45,7 @@ function show_all_vendors($message, $result)
 	 	 $password = $row['Password'];
 		 $status = $row['Status'];
 
-
-      //Put these in a table row. The htmlentities function converts any
-      //special chars in the string to a html-displayable form.
-			/*
-      echo '<tr>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorid).'</SPAN></TD>';
-      echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorcode).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorname).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($address).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($city).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($state).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($zip).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($phone).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($contactpersonname).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($password).'</SPAN></TD>';
-      echo '</tr>';
-   //}
-
-   echo '</TBODY>';
-   echo '</table>';
-	 */
-
-
+		 //Takes the values from the database row and sets them as the default values of the form for the user to see
 		 echo"
 		 <form action='update_delete_vendor.php' method='post'>
 				 <table align='center'>
@@ -139,18 +101,7 @@ function show_all_vendors($message, $result)
 	}
 
 
-
-
-		/*
-		//finish up the html code, and put the return button to go back to main menu
-		  echo <<<UPTOEND
-		  <BR/><BR/>
-		  <center>
-		  <input type="button" value="Return to Main Menu"
-			onClick="window.location='index.php'"/>
-		  </center>
-		UPTOEND; */
-
+	//finishes html body
   echo "</BODY>";
   echo "</HTML>";
 
