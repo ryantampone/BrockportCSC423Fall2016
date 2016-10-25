@@ -25,14 +25,14 @@ function update_customer()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	$customerid = $row['CustomerId'];
-	$customername = $row['Name'];
-	$address = $row['Address'];
-	$city = $row['City'];
-	$state = $row['State'];
-	$zip = $row['ZIP'];
-	$phone = $row['Phone'];
-	$email = $row['Email'];
+	$customerid = $_POST['customerid'];
+	$customername = $_POST['name'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$zip = $_POST['zip'];
+	$phone = $_POST['phone'];
+	$email = $_POST['email'];
 	$status = "Inactive";
 
 	// Create a String consisting of the SQL command. Remember that
