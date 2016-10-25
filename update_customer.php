@@ -4,6 +4,7 @@
   -->
 <?php
 
+
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
@@ -33,12 +34,12 @@ function update_customer()
 	$zip = $row['ZIP'];
 	$phone = $row['Phone'];
 	$email = $row['Email'];
-	$status = "Inactive";
+	$status = $row['Status'];
 
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE Customer SET Name='$name', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', Email='$email', Status='$status' WHERE CustomerId='$customerid';";
+	$sql_stmt = "UPDATE Customer SET Name='$name', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', Status='$status' WHERE CustomerId='$customerid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
@@ -47,15 +48,15 @@ function update_customer()
 
 	if (!$result)
 	{
-  	  $message = "Error in deleting Customer: $name: ". mysql_error();
+  	  $message = "Error in updating Customer: $name: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for Customer: $customerid , $name Deleted successfully.";
+	  $message = "Data for Customer: $customerid , $name updated successfully.";
 
 	}
 
-	ui_show_customer_insert_result($message, $vendorname);
+	ui_show_customer_insert_result($message, $name);
 
 }
 

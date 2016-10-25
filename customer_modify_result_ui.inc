@@ -3,6 +3,7 @@
 ?>
 <?php
 
+
 function show_all_customers($message, $result)
 {
   //----------------------------------------------------------
@@ -14,7 +15,7 @@ function show_all_customers($message, $result)
 
 	echo"
 		<div id='callToAction'>
-			<h4 align='center'>Are you sure you want to delete this customer?</h4>
+			<h4 align='center'>Please Modify the Desired Information Below</h4>
 		</div>
 		";
 
@@ -56,7 +57,7 @@ function show_all_customers($message, $result)
  	 	 $state = $row['State'];
 	 	 $zip = $row['ZIP'];
 	 	 $phone = $row['Phone'];
-		 $email = $row['Email'];
+		 $email = $row['E-mail'];
 	 	 $status = $row['Status'];
 
 
@@ -83,7 +84,7 @@ function show_all_customers($message, $result)
 
 
 		 echo"
-		 <form action='update_delete_customer.php' method='post'>
+		 <form action='update_customer.php' method='post'>
 				 <table align='center'>
 						 <tr>
 								 <td><span align='right'>Customer ID:</span></td>
@@ -91,31 +92,27 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Customer Name:</span></td>
-								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' readonly required/></td>
+								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Address:</span></td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>City:</span></td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' required/></td>
 						 </tr>
 						 <tr>
 							 <td><span align='right'>State:</span></td>
-							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
+							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Zip:</span></td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
-						 </tr>
-						 <tr>
-						 		 <td><span align='right'>Email:</span></td>
-								 <td><input name='email' type='text' size='50' value='$email' readonly required/></td>
+								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Status:</span></td>
@@ -123,7 +120,8 @@ function show_all_customers($message, $result)
 						 </tr>
 				 </table>
 				 <p align='center'>
-						 <input type='submit' value='Confirm Delete'/>
+						 <input type='submit' value='Submit'/>
+						 <input type='reset' value='Reset'/>
 				 </p>
 		 </form> ";
 	}
