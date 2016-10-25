@@ -42,7 +42,12 @@
 						<td>
 							<select name='Department'>
 								<option value='meat_department'>Meat Department</option>
-						
+								<option value='beverages_department'>Beverages Department</option>
+								<option value='frozen_foods_department'>Frozen Foods Department</option>
+								<option value='produce_department'>Produce Department</option>
+								<option value='bread/bakery_department'>Bread/Bakery Department</option>
+
+
 						</td>
 						
                        
@@ -54,8 +59,10 @@
                         <td>
 						
 						<select name='Category'>
-								<option value='candy'>Candy</option>
-								<option value='pie'>Pie</option>
+								<option value='beverages'>Beverages</option>
+								<option value='bread/bakerty'>Bread/Bakery</option>
+								<option value='meat'>Meat</option>
+								<option value='frozen foods'>Frozen Foods</option>
 						
 						/td>
                     </tr>
