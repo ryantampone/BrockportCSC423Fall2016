@@ -3,7 +3,7 @@
    A PHP script to insert a new user into the test database
   -->
 <?php
-
+//tesy
 require('db_cn.inc');
 
 //This file contains php code that will be executed after the
