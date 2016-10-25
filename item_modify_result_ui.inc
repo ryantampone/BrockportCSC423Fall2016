@@ -28,22 +28,7 @@ function show_all_items($message, $result)
        }
   }
 
-	/*
-	echo '<table border="1" align="center" width="98%">';
-	echo '<th width="10%">Vendor ID</th>';
-  echo '<th width="10%">Vendor Code</th>';
-  echo '<th width="10%">Vendor Name</th>';
-  echo '<th width="10%">Address</th>';
-  echo '<th width="10%">City</th>';
-	echo '<th width="10%">State</th>';
-	echo '<th width="10%">Zip</th>';
-	echo '<th width="10%">Phone</th>';
-	echo '<th width="10%">Contact Person Name</th>';
-	echo '<th width="10%">Password</th>';
-  echo '<thead>';
-  echo '</thead>';
-  echo '<tbody>';
-	*/
+	
 
    //While there are more rows in the $result, get the next row
    //as an associative array
@@ -57,30 +42,15 @@ function show_all_items($message, $result)
  	 	 $category = $row['Category'];
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
-	 	 $imageFileName = $row['ImageFileName'];
+	 	 $contactpersonname = $row['ContactPersonName'];
+	 	 
 		 $vendorID = $row['VendorId'];
+		 $imageFileName = $row['ImageFileName'];
 
 
       //Put these in a table row. The htmlentities function converts any
       //special chars in the string to a html-displayable form.
-			/*
-      echo '<tr>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorid).'</SPAN></TD>';
-      echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorcode).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorname).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($address).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($city).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($state).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($zip).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($phone).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($contactpersonname).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($password).'</SPAN></TD>';
-      echo '</tr>';
-   //}
-
-   echo '</TBODY>';
-   echo '</table>';
-	 */
+			
 
 
 		 echo"
@@ -88,7 +58,7 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td><span align='right'>Item ID:</span></td>
-                        <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' value='$itemID' readonly/></td>
+                        <td><input id='ItemId' name='ItemId' value='$itemId'TYPE='text' SIZE='50' required/></td>
                     </tr>
                	    <tr>
                         <td><span align='right'>Description:</span></td>
@@ -96,41 +66,52 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td><span align='right'>Size:</span></td>
-                        <td><input id='Size' name='Size' TYPE='text' value='$size' SIZE='50' required/></td>
+                        <td><input id='Size' name='Size' value='$size' TYPE='text' SIZE='50' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Division:</span></td>
-												<td><input id='Division' name='Division' value='$division' SIZE='50' required /></td>
-										</tr>
-										<tr>
-                        <td><span align='right'>Department:</span></td>
-												<td><input id='Department' name='Department' value='$department' SIZE='50' required /> </td>
-										</tr>
-										<tr>
-                        <td><span align='right'>Category:</span></td>
-                        <td><input id='Category' name='Category' value='$category' SIZE='50' required /> </td>
+			<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/></td>
+			
+						
+                       
                     </tr>
-
-										<tr>
-											<td><span align='right'>Item Cost</span></td>
-											 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
-										</tr>
-
-										<tr>
-											<td><span align='right'>Item Retail</span></td>
-											 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>
-										</tr>
-
-										<tr>
-											<td><span align='right'>Vendor Id</span></td>
-											<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>
-										</tr>
-
-										<tr>
-											<td><span align='right'>Image FileName</td>
-											<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>
-										</tr>
-            </table>
+		    
+		    
+		    <tr>
+                        <td><span align='right'>Department:</span></td>
+			<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/></td>
+			
+						
+                       
+                    </tr>
+		    
+					
+		    <tr>
+                        <td><span align='right'>Category:</span></td>
+                  	<td><input id='Category' name='Category' value='$category' TYPE='text' SIZE='50' required/></td>
+	
+                    </tr>
+					
+		<tr>
+			<td><span align='right'>Item Cost</span></td>
+			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+									
+		<tr>
+			<td><span align='right'>Item Retail</span></td>
+			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+									
+		<tr>
+			<td><span align='right'>Vendor Id</span></td>
+			<td><input id='VendorId' name='VendorId' value='$vendorId' TYPE='text' SIZE='50' required/></td>			
+		</tr>
+					
+		<tr>
+			<td><span align='right'>Image FileName</span></td>
+			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>			
+		</tr>							
+                </table>
 				 <p align='center'>
 						 <input type='submit' value='Submit'/>
 						 <input type='reset' value='Reset'/>
