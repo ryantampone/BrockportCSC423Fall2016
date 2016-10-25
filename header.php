@@ -28,9 +28,9 @@
               </li>
               <li><a href="#">Locations</a>
                   <ul>
-                    <li><a href="/~asmit26/csc423/gp/add_store_location_ui.php">Add Store Location</a>
-                    <li><a href="/~asmit26/csc423/gp/modify_store_location_ui.php">Modify Store Location</a>
-                    <li><a href="/~asmit26/csc423/gp/delete_store_location_ui.php">Remove Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/add_store_location_ui.php">Add Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/modify_store_location_ui.php">Modify Store Location</a>
+                    <li><a href="/~rtamp1/csc423/gp/delete_store_location_ui.php">Remove Store Location</a>
                   </ul>
               </li>
               <li><a href="#">Items</a>
