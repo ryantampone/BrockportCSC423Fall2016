@@ -77,7 +77,20 @@
 									
 		<tr>
 			<td><span align='right'>Vendor Id</span></td>
-			<td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
+			
+
+    connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
+	
+	
+	$sql_vendorid = "SELECT VendorId FROM Vendor;";
+	$result = mysql_query($sql_vendorid);
+	echo "<select id='VendorId' name='VendorId'>";
+	while($row = mysql_fetch_array($result)){
+		 echo "<option value='". $row['VendorId'] ."'>" . $row['VendorId'] ."</option>";
+		}
+	echo "</select>";
+	
+?>	
 		</tr>
 			
 		<tr>  
