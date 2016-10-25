@@ -104,7 +104,7 @@ function show_all_items($message, $result)
 									
 		<tr>
 			<td><span align='right'>Vendor Id</span></td>
-			<td><input id='VendorId' name='VendorId' value='$vendorId' TYPE='text' SIZE='50' required/></td>			
+			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>			
 		</tr>
 					
 		<tr>
