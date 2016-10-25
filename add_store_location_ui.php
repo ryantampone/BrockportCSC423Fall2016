@@ -13,14 +13,14 @@
         </tr>
         <tr>
           <td align='right'>Store Name:</td>
-          <td><input type='text' name='storename' id='storename' size='50' onKeyPress='return isAddress(event)' onpaste='return false'required/></td>
+          <td><input type='text' name='storename' id='storename' size='50' onKeyPress='return isAddress(event)' onpaste='return false' required/></td>
         </tr>
           <td align='right'>Address:</td>
-          <td><input type='text' name='address' size='50' required/></td>
+          <td><input type='text' name='address' size='50' onKeyPress='return isAddress(event)' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>City:</td>
-          <td><input type='text' name='city' size='50' required/></td>
+          <td><input type='text' name='city' size='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>State:</td>
@@ -82,15 +82,15 @@
         </tr>
         <tr>
           <td align='right'>Zip Code:</td>
-          <td><input type='text' name='zip' size='10' required/></td>
+          <td><input type='text' name='zip' size='10' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>Phone Number:</td>
-          <td><input type='text' name='phone' size='50' required/></td>
+          <td><input type='text' name='phone' size='50' onblur='isPhoneNumber()' required/></td>
         </tr>
         <tr>
           <td align='right'>Manager Name:</td>
-          <td><input type='text' name='mgrname' size='50' required/></td>
+          <td><input type='text' name='mgrname' size='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
         </tr>
       </table>
       <p align='center'>
