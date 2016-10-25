@@ -33,7 +33,7 @@ function update_customer()
 	$state = $row['State'];
 	$zip = $row['ZIP'];
 	$phone = $row['Phone'];
-	$email = $row['E-mail'];
+	$email = $row['Email'];
 	$status = $row['Status'];
 
 	// Create a String consisting of the SQL command. Remember that

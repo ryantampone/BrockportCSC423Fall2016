@@ -92,27 +92,27 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Customer Name:</span></td>
-								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' readonly required/></td>
+								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Address:</span></td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>City:</span></td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' required/></td>
 						 </tr>
 						 <tr>
 							 <td><span align='right'>State:</span></td>
-							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
+							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Zip:</span></td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
+								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Status:</span></td>
@@ -120,7 +120,8 @@ function show_all_customers($message, $result)
 						 </tr>
 				 </table>
 				 <p align='center'>
-						 <input type='submit' value='Confirm Delete'/>
+						 <input type='submit' value='Submit'/>
+						 <input type='reset' value='Reset'/>
 				 </p>
 		 </form> ";
 	}
