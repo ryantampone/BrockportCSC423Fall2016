@@ -42,7 +42,7 @@
               </li>
               <li><a href="#">Customer</a>
                   <ul>
-                    <li><a href="/~rtamp1/csc423/gp/new_customer_ui_form.php">Add Customer</a>
+                    <li><a href="/~rtamp1/csc423/gp/add_customer_ui_form.php">Add Customer</a>
                     <li><a href="/~rtamp1/csc423/gp/modify_customer_ui_form.php">Modify Customer</a>
                     <li><a href="/~rtamp1/csc423/gp/delete_customer_ui_form.php">Remove Customer</a>
                   </ul>
