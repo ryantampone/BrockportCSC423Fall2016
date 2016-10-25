@@ -48,7 +48,7 @@
     return true;
   }
 
-  function isTextCityKey(evt)
+  function isTextCityOrPersonKey(evt)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
     if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 32 || charCode > 32)) )
