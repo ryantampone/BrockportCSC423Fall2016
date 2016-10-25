@@ -63,7 +63,7 @@
 																	<option value='NH'>New Hampshire</option>
 																	<option value='NJ'>New Jersey</option>
 																	<option value='NM'>New Mexico</option>
-																	<option value='NY' selected='selected'>NY</option>
+																	<option value='NY' selected='selected'>New York</option>
 																	<option value='NC'>North Carolina</option>
 																	<option value='ND'>North Dakota</option>
 																	<option value='OH'>Ohio</option>
