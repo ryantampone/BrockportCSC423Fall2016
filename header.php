@@ -66,6 +66,42 @@
   	  alert("Invalid Phone Number, must be in the format ###-###-####");
   }
 
+  function anythingButQuotes(evt)
+{
+	var charCode = (evt.which) ? evt.which : event.keycode
+
+	// Allows: anything but single quote (')
+	if (charCode > 31 && (charCode == 8216 || charCode == 8217)
+		return false;
+	return true;
+
+}
+
+function isPasswordKey(evt)
+{
+	var charCode = (evt.which) ? evt.which : event.keycode
+
+	// Allows: anything but single quote (')
+	if (charCode > 31 && (charCode == 8216 || charCode == 8217)
+	{
+		alert('ERROR: Password field can contain any character except the single quote.');
+		document.getElementById('password').value = '';
+		return false;
+	}
+	return true;
+}
+
+function isAddressKey(evt)
+{
+	var charCode = (evt.which) ? evt.which : event.keycode
+
+	// Allows: A-Z, a-z, space, numbers, hyphens
+	if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode != 32)) && (charCode > 31 && (charCode != 45)))
+		return false;
+	return true;
+}
+
+
 
 
 </script>

@@ -13,19 +13,19 @@
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Vendor Code:</span></td>
-                        <td><input NAME='vendorcode' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='vendorcode' id='vendorcode' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Vendor Name:</span></td>
-                        <td><input NAME='vendorname' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotes(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Address:</span></td>
-                        <td><input NAME='address' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='address' id='address' TYPE='text' SIZE='50' onKeyPress='return validateAddress(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>City:</span></td>
-                        <td><input NAME='city' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='city' id='city' TYPE='text' SIZE='50' onKeyPress='return isTextNameKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
 											<td><span align='right'>State:</span></td>
@@ -87,19 +87,19 @@
 										</tr>
 										<tr>
                         <td><span align='right'>Zip:</span></td>
-                        <td><input NAME='zip' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='zip' id='zip'TYPE='text' SIZE='50' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Phone:</span></td>
-                        <td><input NAME='phone' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onKeyPress='return isPhoneNumber(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Contact Person Name:</span></td>
-                        <td><input NAME='contactpersonname' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='contactpersonname' id='contactpersonname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Password:</span></td>
-                        <td><input NAME='password' TYPE='password' SIZE='50' required/></td>
+                        <td><input NAME='password' id='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
                 <p align='center'>
