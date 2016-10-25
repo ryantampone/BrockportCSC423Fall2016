@@ -89,7 +89,7 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td><span align='right'>Item ID:</span></td>
-                        <td><input id='ItemId' name='ItemId' value='itemId' TYPE='text' SIZE='50' readonly/></td>
+                        <td><input id='ItemId' name='ItemId' value='itemId' TYPE='text' SIZE='50' value='$itemID' readonly/></td>
                     </tr>
                	    <tr>
                         <td><span align='right'>Description:</span></td>
@@ -101,48 +101,37 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td><span align='right'>Division:</span></td>
-						<td>
-							<input id='Division' name='Division' value='$division' SIZE='50' required />
-
-						</td>
-
-
-                    </tr>
-
-
-		    <tr>
+												<td><input id='Division' name='Division' value='$division' SIZE='50' required /></td>
+										</tr>
+										<tr>
                         <td><span align='right'>Department:</span></td>
-			<td><input id='Department' name='Department' value='$department' SIZE='50' required /> </td>
-
-
-                    </tr>
-
-
-		    <tr>
+												<td><input id='Department' name='Department' value='$department' SIZE='50' required /> </td>
+										</tr>
+										<tr>
                         <td><span align='right'>Category:</span></td>
                         <td><input id='Category' name='Category' value='$category' SIZE='50' required /> </td>
                     </tr>
 
-		<tr>
-			<td><span align='right'>Item Cost</span></td>
-			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
-		</tr>
+										<tr>
+											<td><span align='right'>Item Cost</span></td>
+											 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
+										</tr>
 
-		<tr>
-			<td><span align='right'>Item Retail</span></td>
-			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>
-		</tr>
+										<tr>
+											<td><span align='right'>Item Retail</span></td>
+											 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>
+										</tr>
 
-		<tr>
-			<td><span align='right'>Vendor Id</span></td>
-			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>			
-		</tr>
+										<tr>
+											<td><span align='right'>Vendor Id</span></td>
+											<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>
+										</tr>
 
-		<tr>
-			<td><span align='right'>Image FileName</td>
-			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>
-		</tr>
-                </table>
+										<tr>
+											<td><span align='right'>Image FileName</td>
+											<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>
+										</tr>
+            </table>
 				 <p align='center'>
 						 <input type='submit' value='Submit'/>
 						 <input type='reset' value='Reset'/>

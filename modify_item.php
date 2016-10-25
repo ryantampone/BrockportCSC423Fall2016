@@ -7,10 +7,10 @@ require('db_cn.inc');
 require('item_modify_result_ui.inc');
 
 // Main control logic
-insert_item();
+modify_item();
 
 //-------------------------------------------------------------
-function insert_item()
+function modify_item()
 {
 
 	// Connect to the 'test' database
