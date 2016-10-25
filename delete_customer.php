@@ -30,7 +30,7 @@ function delete_customer()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM Customer WHERE CustomerId='$customerid';";
+	$sql_stmt = "SELECT * FROM Customer WHERE CustomerId='$customerid' AND Status='Active';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
