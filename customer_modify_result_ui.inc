@@ -57,7 +57,7 @@ function show_all_customers($message, $result)
  	 	 $state = $row['State'];
 	 	 $zip = $row['ZIP'];
 	 	 $phone = $row['Phone'];
-		 $email = $row['E-mail'];
+		 $email = $row['Email'];
 	 	 $status = $row['Status'];
 
 
