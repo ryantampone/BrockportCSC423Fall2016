@@ -70,10 +70,8 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td><span align='right'>Division:</span></td>
-						<td>
-							<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/></td>
-						
-						</td>
+			<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/></td>
+			
 						
                        
                     </tr>
@@ -81,9 +79,8 @@ function show_all_items($message, $result)
 		    
 		    <tr>
                         <td><span align='right'>Department:</span></td>
-						<td>
-							<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/></td>
-						</td>
+			<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/></td>
+			
 						
                        
                     </tr>
@@ -91,11 +88,8 @@ function show_all_items($message, $result)
 					
 		    <tr>
                         <td><span align='right'>Category:</span></td>
-                        <td>
-						
-					<td><input id='Category' name='Category' value='$category' TYPE='text' SIZE='50' required/></td>
-						
-						/td>
+                  	<td><input id='Category' name='Category' value='$category' TYPE='text' SIZE='50' required/></td>
+	
                     </tr>
 					
 		<tr>
@@ -113,7 +107,7 @@ function show_all_items($message, $result)
 			<td><input id='VendorId' name='VendorId' value='$vendorId' TYPE='text' SIZE='50' required/></td>			
 		</tr>
 					
-					<tr>
+		<tr>
 			<td><span align='right'>Image FileName</span></td>
 			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>			
 		</tr>							
