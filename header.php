@@ -100,6 +100,33 @@ function isAddressKey(evt)
 		return false;
 	return true;
 }
+	
+	// item
+  function isOnlyCharacter(event){
+		var charCode= (evt.which) ? evt.which: event.keycode
+			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode <123) 
+				return true;
+			return false;	  
+	  }
+	  
+  function isPrice(event){
+	    var charCode = (evt.which) ?evt.which: event.keycode
+			if(charCode.match(/\d+.\d{2}/))
+			    return true;
+			return false;
+	  
+	  }
+	  
+	  
+  function isImageFileName(event)
+	{
+    var charCode = (evt.which) ? evt.which : event.keycode
+		if(charCode.match(/[\d\D_.\/-]*/))
+			    return true;
+			return false;
+  }
+  
+//item
 
 </script>
 
