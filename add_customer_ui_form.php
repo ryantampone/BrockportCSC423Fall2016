@@ -13,19 +13,19 @@ echo"
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Customer Id:</span></td>
-                        <td><input NAME='customerid' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='customerid' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Name:</span></td>
-                        <td><input NAME='name' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='name' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Address:</span></td>
-                        <td><input NAME='address' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>City:</span></td>
-                        <td><input NAME='city' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
 											<td><span align='right'>State:</span></td>
@@ -87,11 +87,11 @@ echo"
 										</tr>
 		                <tr>
                         <td><span align='right'>Zip:</span></td>
-                        <td><input NAME='zip' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='zip' TYPE='text' SIZE='50' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Phone:</span></td>
-                        <td><input NAME='phone' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='phone' TYPE='text' SIZE='50' onKeyPress='return isPhoneNumber(event)' onpaste='return false'required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Email:</span></td>
