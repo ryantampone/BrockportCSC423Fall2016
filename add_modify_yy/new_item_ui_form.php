@@ -81,7 +81,11 @@
 			<td><span align='right'>Vendor Id</span></td>
 			<td><input id='VendorId' name='VendorId' TYPE='text' SIZE='50' required/></td>			
 		</tr>
-					
+			
+		<tr>  
+			<td><span align='right'>Image FileName</span></td>
+			<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' /></td>
+		</tr>
 										
                 </table>		
                 <p align='center'>
