@@ -115,6 +115,9 @@ function show_all_customers($message, $result)
 								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' required/></td>
 						 </tr>
 						 <tr>
+						 		 <td><span align='right'>Email:</span></td>
+								 <td><input name='email' type='text' size='50' value='$email' required/></td>
+						 <tr>
 								 <td><span align='right'>Status:</span></td>
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
