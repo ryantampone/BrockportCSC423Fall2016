@@ -61,4 +61,3 @@ function insert_store()
 }
 
 ?>
-
