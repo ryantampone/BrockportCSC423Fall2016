@@ -29,23 +29,6 @@ function show_all_customers($message, $result)
        }
   }
 
-	/*
-	echo '<table border="1" align="center" width="98%">';
-	echo '<th width="10%">Vendor ID</th>';
-  echo '<th width="10%">Vendor Code</th>';
-  echo '<th width="10%">Vendor Name</th>';
-  echo '<th width="10%">Address</th>';
-  echo '<th width="10%">City</th>';
-	echo '<th width="10%">State</th>';
-	echo '<th width="10%">Zip</th>';
-	echo '<th width="10%">Phone</th>';
-	echo '<th width="10%">Contact Person Name</th>';
-	echo '<th width="10%">Password</th>';
-  echo '<thead>';
-  echo '</thead>';
-  echo '<tbody>';
-	*/
-
    //While there are more rows in the $result, get the next row
    //as an associative array
    while ($row = mysql_fetch_assoc($result))
@@ -60,59 +43,90 @@ function show_all_customers($message, $result)
 		 $email = $row['Email'];
 	 	 $status = $row['Status'];
 
-
-      //Put these in a table row. The htmlentities function converts any
-      //special chars in the string to a html-displayable form.
-			/*
-      echo '<tr>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorid).'</SPAN></TD>';
-      echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorcode).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($vendorname).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($address).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($city).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($state).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($zip).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($phone).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($contactpersonname).'</SPAN></TD>';
-			echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($password).'</SPAN></TD>';
-      echo '</tr>';
-   //}
-
-   echo '</TBODY>';
-   echo '</table>';
-	 */
-
-
 		 echo"
 		 <form action='update_customer.php' method='post'>
 				 <table align='center'>
 						 <tr>
 								 <td><span align='right'>Customer ID:</span></td>
-								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' readonly required/></td>
+								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Customer Name:</span></td>
-								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' required/></td>
+								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Address:</span></td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>City:</span></td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false'required/></td>
 						 </tr>
 						 <tr>
 							 <td><span align='right'>State:</span></td>
-							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' required/></td>
+							 <td>
+							 		<select name='state' id='state' value='$state'/>
+											<option value='AL'>Alabama</option>
+											<option value='AK'>Alaska</option>
+											<option value='AZ'>Arizona</option>
+											<option value='AR'>Arkansas</option>
+											<option value='CA'>California</option>
+											<option value='CO'>Colorado</option>
+											<option value='CT'>Connecticut</option>
+											<option value='DE'>Delaware</option>
+											<option value='DC'>District Of Columbia</option>
+											<option value='FL'>Florida</option>
+											<option value='GA'>Georgia</option>
+											<option value='HI'>Hawaii</option>
+											<option value='ID'>Idaho</option>
+											<option value='IL'>Illinois</option>
+											<option value='IN'>Indiana</option>
+											<option value='IA'>Iowa</option>
+											<option value='KS'>Kansas</option>
+											<option value='KY'>Kentucky</option>
+											<option value='LA'>Louisiana</option>
+											<option value='ME'>Maine</option>
+											<option value='MD'>Maryland</option>
+											<option value='MA'>Massachusetts</option>
+											<option value='MI'>Michigan</option>
+											<option value='MN'>Minnesota</option>
+											<option value='MS'>Mississippi</option>
+											<option value='MO'>Missouri</option>
+											<option value='MT'>Montana</option>
+											<option value='NE'>Nebraska</option>
+											<option value='NV'>Nevada</option>
+											<option value='NH'>New Hampshire</option>
+											<option value='NJ'>New Jersey</option>
+											<option value='NM'>New Mexico</option>
+											<option value='NY' selected='selected'>New York</option>
+											<option value='NC'>North Carolina</option>
+											<option value='ND'>North Dakota</option>
+											<option value='OH'>Ohio</option>
+											<option value='OK'>Oklahoma</option>
+											<option value='OR'>Oregon</option>
+											<option value='PA'>Pennsylvania</option>
+											<option value='RI'>Rhode Island</option>
+											<option value='SC'>South Carolina</option>
+											<option value='SD'>South Dakota</option>
+											<option value='TN'>Tennessee</option>
+											<option value='TX'>Texas</option>
+											<option value='UT'>Utah</option>
+											<option value='VT'>Vermont</option>
+											<option value='VA'>Virginia</option>
+											<option value='WA'>Washington</option>
+											<option value='WV'>West Virginia</option>
+											<option value='WI'>Wisconsin</option>
+											<option value='WY'>Wyoming</option>
+									</select>
+							 </td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Zip:</span></td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' required/></td>
+								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' onKeyPress='return isPhoneNumber(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 						 		 <td><span align='right'>Email:</span></td>
@@ -130,17 +144,6 @@ function show_all_customers($message, $result)
 	}
 
 
-
-
-		/*
-		//finish up the html code, and put the return button to go back to main menu
-		  echo <<<UPTOEND
-		  <BR/><BR/>
-		  <center>
-		  <input type="button" value="Return to Main Menu"
-			onClick="window.location='index.php'"/>
-		  </center>
-		UPTOEND; */
 
   echo "</BODY>";
   echo "</HTML>";
