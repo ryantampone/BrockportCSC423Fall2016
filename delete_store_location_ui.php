@@ -9,7 +9,7 @@
       <table align='center'>
         <tr>
           <td>Retail Store ID:</td>
-          <td><input type='text' name='storeid' size='50' required/></td>
+          <td><input type='text' name='storeid' size='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
         </tr>
       </table>
       <p align='center'>

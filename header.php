@@ -6,9 +6,26 @@
     <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
     <link href="css/homeActionStyles.css" type="text/css" rel="stylesheet" />
 
-<SCRIPT SRC="javascript/examplejavascript.js">
-  //showing how to embed javascript held in another file
-</SCRIPT>
+<script language="javascript">
+
+  function hasToBeNumber(event)
+	{
+    var charCode = (evt.which) ? evt.which : event.keycode
+		if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
+		return true;
+  }
+
+  function isZipCode(evt)
+	{
+		var charCode = (evt.which) ? evt.which : event.keycode
+		if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode.length == 5))
+			return false;
+		return true;
+	}
+</script>
+
+
 </head>
 
 <body>

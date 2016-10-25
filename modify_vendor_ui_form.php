@@ -11,11 +11,11 @@
 	    <h4 align='center'>Please Enter the Vendor ID of the Vendor to Modify</h4>
 	  </div>
     	<div id='userdataform'>
-            <form action='modify_vendor.php' method='post'>
+            <form name='myform' action='modify_vendor.php' method='post'>
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Enter Vendor ID:</span></td>
-                        <td><input NAME='vendorid' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='vendorid' id='vendorid' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
                 <p align='center'>
