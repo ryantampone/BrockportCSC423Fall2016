@@ -23,6 +23,33 @@
 			return false;
 		return true;
 	}
+
+  function hasToBeLetter(evt)
+  {
+    var charCode = (evt.which) ? evt.which : event.keycode
+    if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)))
+      return false;
+    return true;
+  }
+
+  function hasToBeNumberOrLetter(evt)
+	{
+		var charCode = (evt.which) ? evt.which : event.keycode
+		if  ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)))
+			return false;
+		return true;
+	}
+
+  function isTextNameKey(evt)
+  {
+    var charCode = (evt.which) ? evt.which : event.keycode
+    if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)))
+      return false;
+    return true;
+  }
+
+
+
 </script>
 
 
