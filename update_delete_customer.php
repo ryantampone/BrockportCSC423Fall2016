@@ -26,7 +26,7 @@ function update_customer()
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
 	$customerid = $_POST['customerid'];
-	$customername = $_POST['name'];
+	$customername = $_POST['customername'];
 	$address = $_POST['address'];
 	$city = $_POST['city'];
 	$state = $_POST['state'];
