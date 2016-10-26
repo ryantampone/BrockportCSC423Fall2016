@@ -63,7 +63,10 @@
   	if (phonenumber.match(pattern))
   	  return;
   	else
+    {
   	  alert("Invalid Phone Number, must be in the format ###-###-####");
+      document.getElementById("phone").value = "";
+    }
   }
 
   function anythingButQuotesOrSlash(evt)
@@ -83,12 +86,14 @@
 
   	// Allows: anything but single quote (') and backslash (\)
   	if (charCode > 31 && (charCode < 39 || charCode > 39) && (charCode > 31 && (charCode < 92 || charCode > 92)))
-  	{
-  		alert('ERROR: Password field can contain any character except the single quote.');
-  		document.getElementById('password').value = '';
-  		return false;
+  	   return true;
+  	else
+    {
+      alert('ERROR: Password field can contain any character except the single quote.');
+      document.getElementById("password").value = "";
+    	return false;
   	}
-  	return true;
+
   }
 
   function isAddressKey(evt)
