@@ -122,11 +122,11 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Zip:</span></td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' onKeyPress='return isPhoneNumber(event)' onpaste='return false' required/></td>
+								 <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' value='$phone' onblur='isPhoneNumber()' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 						 		 <td><span align='right'>Email:</span></td>

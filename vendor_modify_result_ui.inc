@@ -130,11 +130,11 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Zip:</span></td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return isZipCode(event)' onpaste='return false' value='$zip' required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' value='$zip' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false' value='$phone' required/></td>
+								 <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false' value='$phone' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Contact Person Name:</span></td>

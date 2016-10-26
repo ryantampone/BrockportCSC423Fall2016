@@ -86,7 +86,7 @@
         </tr>
         <tr>
           <td align='right'>Phone Number:</td>
-          <td><input type='text' name='phone' size='50' onblur='isPhoneNumber()' onpaste='return false' required/></td>
+          <td><input type='text' name='phone' id='phone' size='50' onblur='isPhoneNumber()' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>Manager Name:</td>
