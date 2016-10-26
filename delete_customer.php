@@ -1,7 +1,3 @@
-
-<!-- insert_user.php
-   A PHP script to insert a new user into the test database
-  -->
 <?php
 
 require('db_cn.inc');

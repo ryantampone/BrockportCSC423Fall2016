@@ -66,12 +66,12 @@
   	  alert("Invalid Phone Number, must be in the format ###-###-####");
   }
 
-  function anythingButQuotes(evt)
+  function anythingButQuotesOrSlash(evt)
   {
 	var charCode = (evt.which) ? evt.which : event.keycode
 
 	// Allows: anything but single quote (')
-	if (charCode > 31 && (charCode == 8216 || charCode == 8217))
+	if (charCode > 31 && (charCode == 8216 || charCode == 8217) && (charCode > 31 && charCode != 47))
 		return false;
 	return true;
 
@@ -95,29 +95,29 @@ function isAddressKey(evt)
 	var charCode = (evt.which) ? evt.which : event.keycode
 
 	// Allows: A-Z, a-z, space, numbers, hyphens
-	if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && charCode != 32) && (charCode > 31 && 
+	if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && charCode != 32) && (charCode > 31 &&
     charCode != 45))
 		return false;
 	return true;
 }
-	
+
 	// item
   function isOnlyCharacter(event){
 		var charCode= (evt.which) ? evt.which: event.keycode
-			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode <123) 
+			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode <123)
 				return true;
-			return false;	  
+			return false;
 	  }
-	  
+
   function isPrice(event){
 	    var charCode = (evt.which) ?evt.which: event.keycode
 			if(charCode.match(/\d+.\d{2}/))
 			    return true;
 			return false;
-	  
+
 	  }
-	  
-	  
+
+
   function isImageFileName(event)
 	{
     var charCode = (evt.which) ? evt.which : event.keycode
@@ -125,7 +125,7 @@ function isAddressKey(evt)
 			    return true;
 			return false;
   }
-  
+
 //item
 
 </script>
