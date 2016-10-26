@@ -61,7 +61,7 @@
   	var phonenumber = document.getElementById("phone").value;
   	var pattern = /^\d{3}-\d{3}-\d{4}$/;
   	if (phonenumber.match(pattern))
-  	  continue;
+  	  return;
   	else
   	  alert("Invalid Phone Number, must be in the format ###-###-####");
   }
@@ -71,7 +71,7 @@
 	var charCode = (evt.which) ? evt.which : event.keycode
 
 	// Allows: anything but single quote (') and backslash (\)
-	if (charCode > 31 && (charCode == 8216 || charCode == 8217) && (charCode > 31 && charCode != 92))
+	if (charCode > 31 && (charCode > 8215 || charCode < 8218) && (charCode > 31 && (charCode < 92 || charCode > 92)))
 		return false;
 	return true;
 
@@ -82,7 +82,7 @@
   	var charCode = (evt.which) ? evt.which : event.keycode
 
   	// Allows: anything but single quote (')
-  	if (charCode > 31 && (charCode == 8216 || charCode == 8217))
+  	if (charCode > 31 && (charCode > 8215 || charCode < 8218))
   	{
   		alert('ERROR: Password field can contain any character except the single quote.');
   		document.getElementById('password').value = '';
@@ -96,8 +96,8 @@
   	var charCode = (evt.which) ? evt.which : event.keycode
 
   	// Allows: A-Z, a-z, space, numbers, hyphens
-  	if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && charCode != 32) && (charCode > 31 &&
-      charCode != 45))
+  	if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 32 || charCode > 32)) &&
+    (charCode > 31 && (charCode < 45 || charCode > 45)))
   		return false;
   	return true;
   }
