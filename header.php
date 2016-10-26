@@ -8,7 +8,7 @@
 
 <script language="javascript">
 
-  function hasToBeNumber(event)
+  function hasToBeNumber(evt)
 	{
     var charCode = (evt.which) ? evt.which : event.keycode
 		if (charCode > 31 && (charCode < 48 || charCode > 57))
@@ -103,7 +103,7 @@
   }
 
 	// item
-  function isOnlyCharacter(event)
+  function isOnlyCharacter(evt)
   {
 		var charCode= (evt.which) ? evt.which: event.keycode
 			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode <123)
@@ -111,7 +111,7 @@
 			return false;
 	}
 
-  function isPrice(event)
+  function isPrice(evt)
   {
 	    var charCode = (evt.which) ?evt.which: event.keycode
 			if(charCode.match(/\d+.\d{2}/))
@@ -120,7 +120,7 @@
 
 	}
 
-  function isImageFileName(event)
+  function isImageFileName(evt)
 	{
     var charCode = (evt.which) ? evt.which : event.keycode
 		if(charCode.match(/[\d\D_.\/-]*/))
