@@ -16,7 +16,7 @@
 		return true;
   }
 
-  function isZipCode(evt)
+  function isZipCode(event)
 	{
 		var charCode = (evt.which) ? evt.which : event.keycode
 		if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode.length == 5))
@@ -24,7 +24,7 @@
 		return true;
 	}
 
-  function hasToBeLetter(evt)
+  function hasToBeLetter(event)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
     if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)))
@@ -32,7 +32,7 @@
     return true;
   }
 
-  function hasToBeNumberOrLetter(evt)
+  function hasToBeNumberOrLetter(event)
 	{
 		var charCode = (evt.which) ? evt.which : event.keycode
 		if  ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)))
@@ -40,7 +40,7 @@
 		return true;
 	}
 
-  function isTextNameKey(evt)
+  function isTextNameKey(event)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
     if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)))
@@ -48,7 +48,7 @@
     return true;
   }
 
-  function isTextCityOrPersonKey(evt)
+  function isTextCityOrPersonKey(event)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
     if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 32 || charCode > 32)) )
@@ -66,7 +66,7 @@
   	  alert("Invalid Phone Number, must be in the format ###-###-####");
   }
 
-  function anythingButQuotesOrSlash(evt)
+  function anythingButQuotesOrSlash(event)
   {
 	var charCode = (evt.which) ? evt.which : event.keycode
 
@@ -77,7 +77,7 @@
 
   }
 
-  function isPasswordKey(evt)
+  function isPasswordKey(event)
   {
   	var charCode = (evt.which) ? evt.which : event.keycode
 
@@ -91,7 +91,7 @@
   	return true;
   }
 
-  function isAddressKey(evt)
+  function isAddressKey(event)
   {
   	var charCode = (evt.which) ? evt.which : event.keycode
 
@@ -103,7 +103,7 @@
   }
 
 	// item
-  function isOnlyCharacter(evt)
+  function isOnlyCharacter(event)
   {
 		var charCode= (evt.which) ? evt.which: event.keycode
 			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode <123)
@@ -111,7 +111,7 @@
 			return false;
 	}
 
-  function isPrice(evt)
+  function isPrice(event)
   {
 	    var charCode = (evt.which) ?evt.which: event.keycode
 			if(charCode.match(/\d+.\d{2}/))
@@ -120,7 +120,7 @@
 
 	}
 
-  function isImageFileName(evt)
+  function isImageFileName(event)
 	{
     var charCode = (evt.which) ? evt.which : event.keycode
 		if(charCode.match(/[\d\D_.\/-]*/))
