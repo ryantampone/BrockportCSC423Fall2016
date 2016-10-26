@@ -4,8 +4,36 @@ body
   margin: 0;
   overflow-y: scroll;
   font-family: Arial;
-  font-size: 18px;
+  font-size: 12px;
+  background-image: url('Deer.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+h1{
+  margin: 60px 0px 10px 0px;
+  text-align:center;
+  font-size: 48px
+  }
+h2{
+
+margin: -20px 0px 30px 0px;
+  text-align:center;
+  font-size: 36px
+
+
+}
+
+h3{
+
+margin: -20px 0px 30px 0px;
+  text-align:center;
+  font-size: 24px
+
+
+}
+
+
 
 #nav
 {
@@ -15,7 +43,7 @@ body
 #nav_wrapper
 {
   width: 960px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: center;
 }
 
@@ -30,7 +58,17 @@ body
 #nav li
 {
   display: inline-block;
+ font-size:24px;
+  padding:0px 30px 0px 30px;
 }
+
+#nav li li
+{
+  display: inline-block;
+  font-size:13px;
+ padding:0px 30px 0px 30px;
+}
+
 
 #nav ul li:hover
 {
@@ -87,7 +125,34 @@ body
   color: white;
 }
 
+#button{
+  margin-left: 500px;
+  padding: 40px 0 40px 0;
+
+
+  }
+#tiny_button{
+background-color:#374357;
+border: none;
+	color:white;
+	border-radius: 8px;
+	padding: 8px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+	font-size: 16px;
+  }
+#button:hover{
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+
+/*
 #callToAction h3
 {
   color: #444444;
-}
+}*/

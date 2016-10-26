@@ -6,7 +6,7 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h4 align='center'>Please Enter the Vendor ID of the Vendor to Delete</h4>
+	    <h4 align='center'>Please Enter the Customer ID of the Customer You Would Like to Delete</h4>
 	  </div>
     	<div id='userdataform'>
             <form action='delete_customer.php' method='post'>
