@@ -71,9 +71,9 @@
 	var charCode = (evt.which) ? evt.which : event.keycode
 
 	// Allows: anything but single quote (') and backslash (\)
-	if (charCode > 31 && (charCode > 8215 || charCode < 8218) && (charCode > 31 && (charCode < 92 || charCode > 92)))
-		return false;
-	return true;
+	if (charCode > 31 && (charCode < 39 || charCode > 39) && (charCode > 31 && (charCode < 92 || charCode > 92)))
+		return true;
+	return false;
 
   }
 
@@ -81,8 +81,8 @@
   {
   	var charCode = (evt.which) ? evt.which : event.keycode
 
-  	// Allows: anything but single quote (')
-  	if (charCode > 31 && (charCode > 8215 || charCode < 8218))
+  	// Allows: anything but single quote (') and backslash (\)
+  	if (charCode > 31 && (charCode < 39 || charCode > 39) && (charCode > 31 && (charCode < 92 || charCode > 92)))
   	{
   		alert('ERROR: Password field can contain any character except the single quote.');
   		document.getElementById('password').value = '';
