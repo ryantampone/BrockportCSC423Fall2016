@@ -82,11 +82,11 @@
         </tr>
         <tr>
           <td align='right'>Zip Code:</td>
-          <td><input type='text' name='zip' size='10' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
+          <td><input type='text' name='zip' size='10' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>Phone Number:</td>
-          <td><input type='text' name='phone' size='50' onblur='isPhoneNumber()' required/></td>
+          <td><input type='text' name='phone' size='50' onblur='isPhoneNumber()' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>Manager Name:</td>
