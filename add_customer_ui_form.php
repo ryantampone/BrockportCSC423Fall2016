@@ -95,7 +95,7 @@ echo"
                     </tr>
 										<tr>
                         <td><span align='right'>Email:</span></td>
-                        <td><input NAME='email' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='email' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
                 <p align='center'>

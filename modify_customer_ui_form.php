@@ -14,7 +14,7 @@
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Enter Customer ID:</span></td>
-                        <td><input NAME='customerid' TYPE='text' SIZE='50' required/></td>
+                        <td><input NAME='customerid' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
                 <p align='center'>
