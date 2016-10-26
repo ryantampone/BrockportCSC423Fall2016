@@ -87,7 +87,7 @@
 										</tr>
 										<tr>
                         <td><span align='right'>Zip:</span></td>
-                        <td><input NAME='zip' id='zip'TYPE='text' SIZE='50' onKeyPress='return isZipCode(event)' onpaste='return false' required/></td>
+                        <td><input NAME='zip' id='zip'TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Phone:</span></td>
