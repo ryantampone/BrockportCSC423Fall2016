@@ -1,14 +1,11 @@
-@charset "utf-8";
-/* CSS Document */
-
 body
 {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
   font-family: Arial;
-  font-size: 24px;
-   background-image: url('Deer.jpg');
+  font-size: 12px;
+  background-image: url('Deer.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -18,19 +15,34 @@ h1{
   text-align:center;
   font-size: 48px
   }
-	
-	}
+h2{
+
+margin: -20px 0px 30px 0px;
+  text-align:center;
+  font-size: 36px
+
+
+}
+
+h3{
+
+margin: -20px 0px 30px 0px;
+  text-align:center;
+  font-size: 24px
+
+
+}
+
+
 
 #nav
 {
   background-color: #374357;
-  
 }
 
 #nav_wrapper
 {
   width: 960px;
-  
   margin: 30px auto;
   text-align: center;
 }
@@ -46,9 +58,10 @@ h1{
 #nav li
 {
   display: inline-block;
-  font-size:24px;
+ font-size:24px;
   padding:0px 30px 0px 30px;
 }
+
 #nav li li
 {
   display: inline-block;
@@ -60,7 +73,6 @@ h1{
 #nav ul li:hover
 {
   background-color: #374357;
-  
 }
 
 #nav ul li a:hover
@@ -113,15 +125,37 @@ h1{
   color: white;
 }
 
+#button{
+  margin-left: 500px;
+  padding: 40px 0 40px 0;
+  
+  
+  }
+#tiny_button{
+background-color:#374357;
+border: none;
+	color:white;
+	border-radius: 8px;
+	padding: 8px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	
+	font-size: 16px;  
+  }
+#button:hover{
+    
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);  
+    }
+
+
+
+/*
 #callToAction h3
 {
   color: #444444;
-}
-.header-img{
-   background-color: #000000;
-   background-image: url(../../images/universal.jpg); 
-   background-position: 100%;
-   background-repeat: no-repeat;
+}*/
 
-}
+
 
