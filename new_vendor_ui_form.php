@@ -17,15 +17,15 @@
                     </tr>
                     <tr>
                         <td><span align='right'>Vendor Name:</span></td>
-                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotes(event)' onpaste='return false' required/></td>
+                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesSlash(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Address:</span></td>
-                        <td><input NAME='address' id='address' TYPE='text' SIZE='50' onKeyPress='return validateAddress(event)' onpaste='return false' required/></td>
+                        <td><input NAME='address' id='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>City:</span></td>
-                        <td><input NAME='city' id='city' TYPE='text' SIZE='50' onKeyPress='return isTextNameKey(event)' onpaste='return false' required/></td>
+                        <td><input NAME='city' id='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
 											<td><span align='right'>State:</span></td>

@@ -60,15 +60,15 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Vendor Name:</span></td>
-								 <td><input NAME='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotes(event)' onpaste='return false' value='$vendorname' required/></td>
+								 <td><input NAME='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' value='$vendorname' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Address:</span></td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return validateAddress(event)' onpaste='return false' value='$address'required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value='$address'required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>City:</span></td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextNameKey(event)' onpaste='return false' value='$city' required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value='$city' required/></td>
 						 </tr>
 						 <tr>
 							 <td><span align='right'>State:</span></td>
@@ -134,7 +134,7 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Phone:</span></td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' onKeyPress='return isPhoneNumber(event)' onpaste='return false' value='$phone' required/></td>
+								 <td><input NAME='phone' TYPE='text' SIZE='50' onblur='return isPhoneNumber()' onpaste='return false' value='$phone' required/></td>
 						 </tr>
 						 <tr>
 								 <td><span align='right'>Contact Person Name:</span></td>
