@@ -70,7 +70,7 @@
   {
 	var charCode = (evt.which) ? evt.which : event.keycode
 
-	// Allows: anything but single quote (')
+	// Allows: anything but single quote (') and backslash (\)
 	if (charCode > 31 && (charCode == 8216 || charCode == 8217) && (charCode > 31 && charCode != 47))
 		return false;
 	return true;
