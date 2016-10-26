@@ -91,7 +91,7 @@ echo"
                     </tr>
 										<tr>
                         <td><span align='right'>Phone:</span></td>
-                        <td><input NAME='phone' TYPE='text' SIZE='50' onKeyPress='return isPhoneNumber(event)' onpaste='return false'required/></td>
+                        <td><input NAME='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false'required/></td>
                     </tr>
 										<tr>
                         <td><span align='right'>Email:</span></td>

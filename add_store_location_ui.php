@@ -13,10 +13,10 @@
         </tr>
         <tr>
           <td align='right'>Store Name:</td>
-          <td><input type='text' name='storename' id='storename' size='50' onKeyPress='return isAddress(event)' onpaste='return false' required/></td>
+          <td><input type='text' name='storename' id='storename' size='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
         </tr>
           <td align='right'>Address:</td>
-          <td><input type='text' name='address' size='50' onKeyPress='return isAddress(event)' onpaste='return false' required/></td>
+          <td><input type='text' name='address' size='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
         </tr>
         <tr>
           <td align='right'>City:</td>
