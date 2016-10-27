@@ -131,14 +131,17 @@
 	}
 
 
-  function isItemRetail(evt){
-
-	    var charCode = document.getElementById("ItemRetail").value;
-			if(charCode.match(/\d+.\d{2}/))
-			    return true;
-			return false;
-
-
+  function isItemRetail()
+  {
+    var itemretail = document.getElementById("ItemRetail").value;
+    var pattern = /^\d+.\d{2}$/;
+    if (itemretail.match(pattern))
+      return;
+    else
+    {
+      alert("Invalid Item Retail");
+      document.getElementById("ItemRetail").value = "";
+    }
   }
 
   function isImageFileName(evt)

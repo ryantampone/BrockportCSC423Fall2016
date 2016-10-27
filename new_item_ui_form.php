@@ -63,7 +63,7 @@
 					</tr>
 					<tr>
 							<td align='right'>Item Retail:</td>
-							<td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' onKeyPress='return isItemRetail(event)' onpaste='return false' required/></td>
+							<td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' onblur='isItemRetail()' onpaste='return false' required/></td>
 					</tr>
 					<tr>
 							<td align='right'>Vendor Id:</td>
