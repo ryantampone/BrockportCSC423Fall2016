@@ -18,7 +18,7 @@ function show_all_stores($message, $result)
 
 	echo"
 		<div id='callToAction'>
-			<h4 align='center'>Are you sure you want to delete this Store Location?</h4>
+			<h2>Are you sure you want to delete this Store Location?</h2>
 		</div>
 		";
 
@@ -94,10 +94,11 @@ function show_all_stores($message, $result)
                  <td><input name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>
-				 <p align='center'>
-						 <input type='submit' value='Submit'/>
-						 <input type='reset' value='Reset'/>
-				 </p>
+				  <div id='button'>
+					<input id='tiny_button' type='submit' id='submit' name='submit' >
+					<input id='tiny_button' type='reset' id='reset' name='reset'>
+</div>            
+
 		 </form> ";
 	}
 
