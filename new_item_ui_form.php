@@ -14,15 +14,15 @@
       	<table align='center'>
         	<tr>
           	<td align='right'>Item ID:</td>
-            <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(evt)' onpaste='return false' required/></td>
+            <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
           </tr>
           <tr>
             <td align='right'>Description:</td>
-            <td><input id='Description' name='Description' type='textarea' onKeyPress='return anythingButQuotesOrSlash(evt)' onpaste='return false' required/></td>
+            <td><input id='Description' name='Description' type='textarea' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
           </tr>
           <tr>
             <td align='right'>Size:</td>
-          	<td><input id='Size' name='Size' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(evt)' onpaste='return false' required/></td>
+          	<td><input id='Size' name='Size' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
           </tr>
           <tr>
             <td align='right'>Division:</td>
@@ -58,11 +58,11 @@
           </tr>
 					<tr>
 							<td align='right'>Item Cost:</td>
-							<td><input id='ItemCost' name='ItemCost' TYPE='text' onKeyPress='return isPrice(evt)' onpaste='return false' SIZE='50' required/></td>
+							<td><input id='ItemCost' name='ItemCost' TYPE='text' onKeyPress='return isPrice(event)' onpaste='return false' SIZE='50' required/></td>
 					</tr>
 					<tr>
 							<td align='right'>Item Retail:</td>
-							<td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' onKeyPress='return isPrice(evt)' onpaste='return false' required/></td>
+							<td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' onKeyPress='return isPrice(event)' onpaste='return false' required/></td>
 					</tr>
 					<tr>
 							<td align='right'>Vendor Id:</td>
@@ -70,7 +70,7 @@
 					</tr>
 					<tr>
 							<td align='right'>Image Filename:</td>
-							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(evt)' onpaste='return false'   value='BrockportCSC423Fall2016/src/' /></td>
+							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false'   value='BrockportCSC423Fall2016/src/' /></td>
 					</tr>
 					</table>
 					<div id='button'>
