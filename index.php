@@ -3,7 +3,7 @@
 ?>
 
 <div id="callToAction">
-  <h4 align="center">Please Select What You Would Like to Do</h4>
+  <h2>Please Select What You Would Like to Do</h2>
 </div>
 
 
