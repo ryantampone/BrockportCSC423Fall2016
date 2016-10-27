@@ -95,7 +95,7 @@ function show_all_vendors($message, $result)
 						 </tr>
 				 </table>
 			 <div id='button'>
-			<input class='tiny_button' type='button' id='confirm' name = 'comfirm' value='Confirm Delete' />
+			<input class='tiny_button' type='submit' id='confirm' name = 'comfirm' value='Confirm Delete' />
 			</div>            
 
 		 </form> ";
