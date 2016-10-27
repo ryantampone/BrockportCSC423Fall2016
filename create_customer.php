@@ -52,11 +52,11 @@ function add_customer()
 
 	if (!$result)
 	{
-  	  $message = "Error in inserting User: $customerid, $name: ". mysql_error();
+  	  $message = "Error in inserting customer: $customerid, $name: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for User: $customerid , $name inserted successfully.";
+	  $message = "Data for Customer: $customerid , $name inserted successfully.";
 	}
 
   ui_show_customer_insert_result($message, $customerid, $name, $result);
