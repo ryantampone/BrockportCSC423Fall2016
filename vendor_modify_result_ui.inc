@@ -150,10 +150,10 @@ function show_all_vendors($message, $result)
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>
-				 <p align='center'>
-						 <input type='submit' value='Submit'/>
-						 <input type='reset' value='Reset'/>
-				 </p>
+				 <div id='button'>
+					 <input id='tiny_button' type='submit' id='submit' name='submit'/>
+					 <input id='tiny_button' type='reset' id='reset' name='reset'/>
+				 </div>
 		 </form> ";
 	}
 
