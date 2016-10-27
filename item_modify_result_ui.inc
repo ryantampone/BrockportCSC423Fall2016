@@ -77,12 +77,21 @@ function show_all_items($message, $result)
 			<tr>	  <td align='right'>Department:</td>
 
 		  <td>
-							<select  id='Department'  value='$department'  onpaste='return false'>
-								<option value='Meat Department'>Meat Department</option>
-								<option value='Beverages Department'>Beverages Department</option>
-								<option value='Candy Department'>Candy Department</option>
-								<option value='Cookies/Crackers Department'>Cookies/Crackers Department</option>
-							</select>
+			<select id='Department' name='Department' required />";
+			   $sql_dept ="Select Department From InventoryItem Where ItemID ='$itemId';";
+				$department_result = mysql($sql_dept);
+				if(!$department_result)
+				{
+			
+				echo "Depatment's retrieved unsuccessfully: ".mysql_error();
+				exit;
+			}
+				
+			
+				$department = $row['Department'];
+				echo "<option>".$department."</option>";
+	     echo "<option value='Department' selected>$department</option>
+			</select>
 						</td>
 					</tr>
   				<tr>
