@@ -96,7 +96,7 @@ function show_all_stores($message, $result)
 				 </table>
 
 				 <div class='button'>
-						<input class='tiny_button' type='button' id='confirm' name = 'comfirm' value='Confirm Delete' />
+						<input class='tiny_button' type='submit' id='confirm' name = 'comfirm' value='Confirm Delete' />
 				 </div>
 
 				
