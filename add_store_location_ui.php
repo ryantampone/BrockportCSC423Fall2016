@@ -4,6 +4,7 @@
 
 <?php
   echo"
+  <br>
     <h2>Please fill out the Store form below.</h2>
     <form name='add_store_loc' action='add_store_location.php' method='post'>
       <table align='center'>

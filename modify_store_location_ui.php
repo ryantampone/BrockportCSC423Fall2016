@@ -4,6 +4,7 @@
 
 <?php
   echo"
+  <br>
     <h2>Please Enter the Store ID of the Store to Modify</h2>
     <form action='modify_store_location.php' method='post'>
       <table align='center'>
