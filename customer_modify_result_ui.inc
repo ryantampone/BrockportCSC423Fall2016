@@ -117,7 +117,7 @@ function show_all_customers($message, $result)
 										<option value='West Virginia'>West Virginia</option>
 										<option value='Wisconsin'>Wisconsin</option>
 										<option value='Wyoming'>Wyoming</option>
-										<option value='myState'>$state</option>
+										<option value='myState' selected>$state</option>
 									</select>
 							 </td>
 						 </tr>
