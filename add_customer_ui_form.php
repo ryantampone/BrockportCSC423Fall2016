@@ -6,7 +6,7 @@ include 'header.php';
 <?php
 echo"
 		<div id='callToAction'>
-	    <h4 align='center'>Please Fill out the Customer Form Below</h4>
+	    <h2>Please Fill out the Customer Form Below</h2>
 	  </div>
     	<div id='userdataform'>
             <form action='create_customer.php' method='post'>
@@ -98,10 +98,11 @@ echo"
                         <td><input NAME='email' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
-                <p align='center'>
-                    <input type='submit' value='Submit'/>
-                    <input type='reset' value='Reset'/>
-                </p>
+              <div id='button'>
+<input id='tiny_button' type='submit' id='submit' name='submit' >
+<input id='tiny_button' type='reset' id='reset' name='reset'>
+</div>            
+
             </form>
         </div>
 				";
