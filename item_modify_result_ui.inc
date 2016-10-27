@@ -104,7 +104,7 @@ function show_all_items($message, $result)
 		<tr>
 			<td align='right'>Vendor Id:</td>
 			<td>
-				<select id='VendorId' name='VendorId' required/></td>
+				<select id='VendorId' name='VendorId' required/>
 			";
 				  $sql_vendors = "SELECT VendorId FROM Vendor WHERE Status='Active';";
 					$vendors_result = mysql_query($sql_vendors);
@@ -119,7 +119,9 @@ function show_all_items($message, $result)
 						$vendorid = $row['VendorId'];
 						echo "<option>".$vendorid."</option>";
 					}
-echo "</select>
+  echo "<option value='myVendorId' selected>$vendorid</option>
+				</select>
+			</td>
 		</tr>
 
 		<tr>

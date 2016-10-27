@@ -1,5 +1,22 @@
 <?php
 	include 'header.php';
+	require('db_cn.inc');
+
+	function connect_and_select_db($server, $username, $pwd, $dbname)
+{
+	// Connect to db server
+	$conn = mysql_connect($server, $username, $pwd);
+	if (!$conn) {
+	    echo "Unable to connect to DB: " . mysql_error();
+    	    exit;
+	}
+	// Select the database
+	$dbh = mysql_select_db($dbname);
+	if (!$dbh){
+    		echo "Unable to select ".$dbname.": " . mysql_error();
+		exit;
+	}
+}
 ?>
 
 <?php
@@ -42,7 +59,7 @@
 								<option value='Beverages Department'>Beverages Department</option>
 								<option value='Candy Department'>Candy Department</option>
 								<option value='Cookies/Crackers Department'>Cookies/Crackers Department</option>
-								
+
 							</select>
 						</td>
 					</tr>
@@ -52,7 +69,7 @@
 								<select name='Category'>
 										<option id='Category_1' value='5'></option>
 										<option id='Category_2' value='5'></option>
-										
+
 								</select>
 							</td>
           </tr>
@@ -67,8 +84,9 @@
 					<tr>
 							<td align='right'>Vendor Id:</td>
 							<td>
-								<select id='VendorId' name='VendorId' required/></td>
+								<select id='VendorId' name='VendorId' required/>
 							";
+									connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 									$sql_vendors = "SELECT VendorId FROM Vendor WHERE Status='Active';";
 									$vendors_result = mysql_query($sql_vendors);
 
@@ -82,7 +100,8 @@
 										$vendorid = $row['VendorId'];
 										echo "<option>".$vendorid."</option>";
 									}
-			echo "</select>
+			  echo "</select>
+						</td>
 					</tr>
 					<tr>
 							<td align='right'>Image Filename:</td>
