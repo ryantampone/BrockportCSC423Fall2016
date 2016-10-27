@@ -22,7 +22,7 @@
           </tr>
           <tr>
             <td align='right'>Size:</td>
-          	<td><input id='Size' name='Size' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+          	<td><input id='Size' name='Size' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(evt)' onpaste='return false' required/></td>
           </tr>
           <tr>
             <td align='right'>Division:</td>
