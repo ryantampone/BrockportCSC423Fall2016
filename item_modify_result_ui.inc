@@ -74,7 +74,7 @@ function show_all_items($message, $result)
 
 
                     </tr>
-				  <td align='right'>Department:</td>
+			<tr>	  <td align='right'>Department:</td>
 
 		  <td>
 							<select  id='Department'  value='$department'  onpaste='return false'>
@@ -93,6 +93,8 @@ function show_all_items($message, $result)
 										<option id='Category_2' value='5'></option>
 								</select>
 							</td>
+							
+			</tr>
 		<tr>
 			<td align='right'>Item Cost:</td>
 			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
