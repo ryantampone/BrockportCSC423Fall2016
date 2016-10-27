@@ -84,7 +84,7 @@ function show_all_customers($message, $result)
 						 </tr>
 				 </table>
 				  <div id='button'>
-						 <input id='tiny_button' type='submit' value='Confirm Delete'/>
+						<input class='tiny_button' type='submit' id='confirm' name ='comfirm' value='Confirm Delete' />
 				</div>  
 				 
 				 
