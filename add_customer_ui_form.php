@@ -63,7 +63,7 @@ echo"
 																<option value='NH'>New Hampshire</option>
 																<option value='NJ'>New Jersey</option>
 																<option value='NM'>New Mexico</option>
-																<option value='NY' selected='selected'>NY</option>
+																<option value='NY' selected='selected'>New York</option>
 																<option value='NC'>North Carolina</option>
 																<option value='ND'>North Dakota</option>
 																<option value='OH'>Ohio</option>
@@ -101,7 +101,7 @@ echo"
               <div id='button'>
 <input id='tiny_button' type='submit' id='submit' name='submit' >
 <input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>            
+</div>
 
             </form>
         </div>

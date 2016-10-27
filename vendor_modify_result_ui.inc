@@ -73,7 +73,8 @@ function show_all_vendors($message, $result)
 						 <tr>
 							 <td><span align='right'>State:</span></td>
 							 <td>
-							 		<select name='state' id='state' value='$state'/>
+							 		<select name='state' id='state'>
+											<option value='myState' selected>$state</option>
 											<option value='AL'>Alabama</option>
 											<option value='AK'>Alaska</option>
 											<option value='AZ'>Arizona</option>
@@ -106,7 +107,7 @@ function show_all_vendors($message, $result)
 											<option value='NH'>New Hampshire</option>
 											<option value='NJ'>New Jersey</option>
 											<option value='NM'>New Mexico</option>
-											<option value='NY' selected='selected'>New York</option>
+											<option value='NY'>New York</option>
 											<option value='NC'>North Carolina</option>
 											<option value='ND'>North Dakota</option>
 											<option value='OH'>Ohio</option>
@@ -152,7 +153,7 @@ function show_all_vendors($message, $result)
 				  <div id='button'>
 <input id='tiny_button' type='submit' id='submit' name='submit' >
 <input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>            
+</div>
 
 		 </form> ";
 	}

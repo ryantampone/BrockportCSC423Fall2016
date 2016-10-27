@@ -65,7 +65,8 @@ function show_all_customers($message, $result)
 						 <tr>
 							 <td><span align='right'>State:</span></td>
 							 <td>
-							 		<select name='state' id='state' value='$state'/>
+							 		<select name='state' id='state'/>
+											<option value='myState'>$state</option>
 											<option value='AL'>Alabama</option>
 											<option value='AK'>Alaska</option>
 											<option value='AZ'>Arizona</option>
@@ -139,7 +140,7 @@ function show_all_customers($message, $result)
 			  <div id='button'>
 <input id='tiny_button' type='submit' id='submit' name='submit' >
 <input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>   
+</div>
 		 </form> ";
 	}
 
