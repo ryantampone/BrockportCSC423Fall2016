@@ -15,7 +15,7 @@ function update_item()
 	// Get the information entered into the webpage by the user
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
-	
+
    $itemId = $_POST['ItemId'];
    $description = $_POST['Description'];
    $size = $_POST['Size'];
@@ -26,9 +26,9 @@ function update_item()
    $itemRetail = $_POST['ItemRetail'];
    $imageFileName = $_POST['ImageFileName'];
    $vendorID = $_POST['VendorId'];
-  
-  
-  
+
+
+
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
@@ -45,7 +45,7 @@ function update_item()
 	{
 	  $message = "Data for Item: $itemId Deleted successfully.";
 	}
-	ui_show_vendor_insert_result($message, $itemId);
+	ui_show_item_insert_result($message, $itemId);
 }
 function connect_and_select_db($server, $username, $pwd, $dbname)
 {

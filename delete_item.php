@@ -24,20 +24,29 @@ function delete_item()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "DELETE FROM InventoryItem WHERE ItemId='$itemId';";
+	$sql_stmt = "SELECT * FROM InventoryItem WHERE ItemId='$itemId';";
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
-	echo $result;
-	$message = "";
+
 	if (!$result)
 	{
-  	  $message = "Error in deletig Item: Item $itemId not found". mysql_error();
+		 echo "The retrieval was unsuccessful: ".mysql_error();
+		 exit;
 	}
-	else
-	{
-	  $message = "Item: $itemId removed successfully.";
-	}
-	ui_show_item_insert_result($message, $itemname, $result);
+
+	//$result is non-empty. So count the rows
+	$numrows = mysql_num_rows($result);
+
+	//Create an appropriate message
+	$message = "";
+	if ($numrows == 0)
+		 $message = "No vendors found in database with the provided ID";
+
+	//Display the results
+	show_all_items($message, $result);
+
+	//Free the result set
+	mysql_free_result($result);
 }
 function connect_and_select_db($server, $username, $pwd, $dbname)
 {
