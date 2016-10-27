@@ -40,9 +40,9 @@
 							<select name='Department'>
 								<option value='Meat Department'>Meat Department</option>
 								<option value='Beverages Department'>Beverages Department</option>
-								<option value='Frozen Foods Department'>Frozen Foods Department</option>
-								<option value='Produce Department'>Produce Department</option>
-								<option value='Bread/Bakery Department'>Bread/Bakery Department</option>
+								<option value='Candy Department'>Candy Department</option>
+								<option value='Cookies/Crackers Department'>Cookies/Crackers Department</option>
+								
 							</select>
 						</td>
 					</tr>
@@ -50,10 +50,9 @@
               <td align='right'>Category:</td>
               <td>
 								<select name='Category'>
-										<option value='Beverages'>Beverages</option>
-										<option value='Bread/Bakery'>Bread/Bakery</option>
-										<option value='Meat'>Meat</option>
-										<option value='Frozen Foods'>Frozen Foods</option>
+										<option id='Category_1' value='Beverages'></option>
+										<option id='Category_2' value='Bread/Bakery'></option>
+										
 								</select>
 							</td>
           </tr>
