@@ -151,6 +151,33 @@
 			    return true;
 			return false;
   }
+	
+	
+  function check_dept() {
+ switch(document.getElementById('dept').value){
+		case 'Meat Department':
+			document.getElementById('Category_1').innerHTML = 'Beef';
+        	document.getElementById('Category_2').innerHTML = 'Chicken';
+			break;
+			
+		case 'Candy Department':
+		 document.getElementById('Category_1').innerHTML = 'Jelly Beans';
+         document.getElementById('Category_2').innerHTML = 'Gummy & Chewy Candy';
+		 break;
+		 
+		 case 'Cookies/Crackers Department':
+		 document.getElementById('Category_1').innerHTML = 'Chocolate Chip Cookies';
+         document.getElementById('Category_2').innerHTML = 'Ginger Cookies';
+		 break;
+			
+		default:
+		
+		  document.getElementById('Category_1').innerHTML = 'Pepsi';
+          document.getElementById('Category_2').innerHTML = 'Water';
+		
+		}
+}
+
 
 //item
 
