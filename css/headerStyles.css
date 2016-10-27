@@ -5,8 +5,8 @@ body
   overflow-y: scroll;
   font-family: Arial;
   font-size: 12px;
-  background-image: url('Deer.jpg');
-    background-repeat: no-repeat;
+  background-image: url('gplaypattern.jpg');
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 

@@ -6,7 +6,7 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h4 align='center'>Please Enter the Item ID of the Item to Remove</h4>
+	    <h2>Please Enter the Item ID of the Item to Remove</h2>
 	  </div>
     	<div id='userdataform'>
             <form action='delete_item.php' method='post'>
@@ -16,10 +16,11 @@
                         <td><input id='ItemId' NAME='ItemId' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
-                <p align='center'>
-                    <input type='submit' value='Submit'/>
-                    <input type='reset' value='Reset'/>
-                </p>
+                 <div id='button'>
+<input id='tiny_button' type='submit' id='submit' name='submit' >
+<input id='tiny_button' type='reset' id='reset' name='reset'>
+</div>            
+
             </form>
         </div>
 	";

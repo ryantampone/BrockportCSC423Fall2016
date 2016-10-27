@@ -4,7 +4,7 @@
 
 <?php
   echo"
-    <center><h4>Please fill out the Store form below.</h4><center>
+    <h2>Please fill out the Store form below.</h2>
     <form name='add_store_loc' action='add_store_location.php' method='post'>
       <table align='center'>
         <tr>
@@ -93,10 +93,11 @@
           <td><input type='text' name='mgrname' size='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
         </tr>
       </table>
-      <p align='center'>
-        <input type='submit' value='Submit' />
-        <input type='reset' value='Reset' />
-      </p>
+      <div id='button'>
+<input id='tiny_button' type='submit' id='submit' name='submit' >
+<input id='tiny_button' type='reset' id='reset' name='reset'>
+</div>            
+
     </form>
   ";
 ?>

@@ -20,7 +20,13 @@ function ui_show_vendor_insert_result($message, $lastname, $firstname,
        }
   }
 
-echo "<form action='index.php'><button >Return to Main Menu</button></form>";
+echo "<form action='index.php'>
+  <div id='button'>
+<button id='tiny_button'>Return to Main Menu</button></form>";
+</div>            
+
+
+
 
  echo "</BODY>";
  echo "</HTML>";
