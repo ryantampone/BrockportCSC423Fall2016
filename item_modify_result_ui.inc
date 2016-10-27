@@ -79,7 +79,7 @@ function show_all_items($message, $result)
 		  <td>
 			<select id='Department' name='Department' required />";
 			   $sql_dept ="Select Department From InventoryItem Where ItemID ='$itemId';";
-				$department_result = mysql($sql_dept);
+				$department_result = mysql_query($sql_dept);
 				if(!$department_result)
 				{
 			
@@ -90,7 +90,7 @@ function show_all_items($message, $result)
 			
 				$department = $row['Department'];
 				echo "<option>".$department."</option>";
-	     echo "<option value='Department' selected>$department</option>
+	     echo "<option value='Department' selected>"$department"</option>
 			</select>
 						</td>
 					</tr>
