@@ -59,7 +59,7 @@
           </tr>
 					<tr>
 							<td align='right'>Item Cost:</td>
-							<td><input id='ItemCost' name='ItemCost' TYPE='text' onKeyPress='return isItemCost(event)' onpaste='return false' SIZE='50' required/></td>
+							<td><input id='ItemCost' name='ItemCost' TYPE='text' onblur='isItemCost()' onpaste='return false' SIZE='50' required/></td>
 					</tr>
 					<tr>
 							<td align='right'>Item Retail:</td>

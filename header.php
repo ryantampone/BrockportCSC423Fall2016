@@ -116,24 +116,29 @@
 			return false;
 	}
 
-  function isItemCost(evt)
+  function isItemCost()
   {
-	    var charCode = document.getElementById("ItemCost").value;
-			if(charCode.match(/\d+.\d{2}/))
-			    return true;
-			return false;
+    var itemcost = document.getElementById("ItemCost").value;
+    var pattern = /^\d+.\d{2}$/;
+    if (itemcost.match(pattern))
+      return;
+    else
+    {
+      alert("Invalid Item Cost");
+      document.getElementById("ItemCost").value = "";
+    }
 
 	}
-	
-	
+
+
   function isItemRetail(evt){
-  
+
 	    var charCode = document.getElementById("ItemRetail").value;
 			if(charCode.match(/\d+.\d{2}/))
 			    return true;
 			return false;
 
-  
+
   }
 
   function isImageFileName(evt)
