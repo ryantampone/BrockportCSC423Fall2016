@@ -69,7 +69,30 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td align='right'>Division:</td>
-			<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/></td>
+												<td>
+												<select id='Division' name='Division' required />";
+															 $sql_division ="Select Division From InventoryItem Where ItemID ='$itemId';";
+															$division_result = mysql_query($sql_division);
+															if(!$division_result)
+															{
+
+															echo "Division's retrieved unsuccessfully: ".mysql_error();
+															exit;
+														}
+
+														while($row = mysql_fetch_assoc($division_result))
+														{
+
+															$divisiont = $row['Division'];
+															echo "<option>".$divisiont."</option>";
+
+														}
+
+														echo"</select>
+												</td>
+
+
+
 
 
 
@@ -82,12 +105,12 @@ function show_all_items($message, $result)
 				$department_result = mysql_query($sql_dept);
 				if(!$department_result)
 				{
-			
+
 				echo "Depatment's retrieved unsuccessfully: ".mysql_error();
 				exit;
 			}
-				
-			
+
+
 				$department = $row['Department'];
 				echo "<option>".$department."</option>";
 	     echo "<option value='Department' selected>"$department"</option>
@@ -97,12 +120,27 @@ function show_all_items($message, $result)
   				<tr>
               <td align='right'>Category:</td>
               <td>
-								<select value='$category' name='Category'>
-										<option id='Category_1' value='5'></option>
-										<option id='Category_2' value='5'></option>
-								</select>
+							<select id='Category' name='Category' required />";
+										 $sql_dept ="Select Category From InventoryItem Where ItemID ='$itemId';";
+										$category_result = mysql_query($sql_dept);
+										if(!$category_result)
+										{
+
+										echo "Category's retrieved unsuccessfully: ".mysql_error();
+										exit;
+									}
+
+									while($row = mysql_fetch_assoc($category_result))
+									{
+
+										$categoryt = $row['Category'];
+										echo "<option>".$categoryt."</option>";
+
+									}
+
+									echo"</select>
 							</td>
-							
+
 			</tr>
 		<tr>
 			<td align='right'>Item Cost:</td>
