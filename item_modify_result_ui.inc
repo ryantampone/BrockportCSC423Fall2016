@@ -74,10 +74,10 @@ function show_all_items($message, $result)
 
 
                     </tr>
-
+				  <td align='right'>Department:</td>
 
 		  <td>
-							<select  id='Department'  value='$department' onchange='check_dept()' onpaste='return false'>
+							<select  id='Department'  value='$department'  onpaste='return false'>
 								<option value='Meat Department'>Meat Department</option>
 								<option value='Beverages Department'>Beverages Department</option>
 								<option value='Candy Department'>Candy Department</option>
