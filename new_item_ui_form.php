@@ -108,7 +108,7 @@
 							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false'   value='BrockportCSC423Fall2016/src/' /></td>
 					</tr>
 					</table>
-					<div id='button'>
+					<div class='button'>
 						<input id='tiny_button' type='submit' id='submit' name='submit' >
 						<input id='tiny_button' type='reset' id='reset' name='reset'>
 					</div>

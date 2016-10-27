@@ -20,14 +20,14 @@ function show_store_confirm($message)
   }
 
 echo "<form action='index.php'>
-  <div id='button'>
+  <div class='button'>
 <button id='tiny_button' >Return to Main Menu</button></div>  </form>";
 
-          
-	
-         
-	
-	
+
+
+
+
+
  echo "</BODY>";
  echo "</HTML>";
 }

@@ -28,7 +28,7 @@ function show_all_items($message, $result)
        }
   }
 
-	
+
 
    //While there are more rows in the $result, get the next row
    //as an associative array
@@ -43,14 +43,14 @@ function show_all_items($message, $result)
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
 	 	 $contactpersonname = $row['ContactPersonName'];
-	 	 
+
 		 $vendorID = $row['VendorId'];
 		 $imageFileName = $row['ImageFileName'];
 
 
       //Put these in a table row. The htmlentities function converts any
       //special chars in the string to a html-displayable form.
-			
+
 
 
 		 echo"
@@ -71,50 +71,50 @@ function show_all_items($message, $result)
                     <tr>
                         <td><span align='right'>Division:</span></td>
 			<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' readonly required/></td>
-			
-						
-                       
+
+
+
                     </tr>
-		    
-		    
+
+
 		    <tr>
                         <td><span align='right'>Department:</span></td>
 			<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' readonly   required/></td>
-			
-						
-                       
+
+
+
                     </tr>
-		    
-					
+
+
 		    <tr>
                         <td><span align='right'>Category:</span></td>
                   	<td><input id='Category' name='Category' value='$category' TYPE='text' SIZE='50' readonly  required/></td>
-	
+
                     </tr>
-					
+
 		<tr>
 			<td><span align='right'>Item Cost</span></td>
-			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' readonly  required/></td>			
+			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' readonly  required/></td>
 		</tr>
-									
+
 		<tr>
 			<td><span align='right'>Item Retail</span></td>
-			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50'  readonly required/></td>			
+			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50'  readonly required/></td>
 		</tr>
-									
+
 		<tr>
 			<td><span align='right'>Vendor Id</span></td>
-			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' readonly  required/></td>			
+			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' readonly  required/></td>
 		</tr>
-					
+
 		<tr>
 			<td><span align='right'>Image FileName</span></td>
-			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50'  readonly required/></td>			
-		</tr>							
+			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50'  readonly required/></td>
+		</tr>
                 </table>
-			 <div id='button'>
+			 <div class='button'>
 			<input class='tiny_button' type='submit' id='confirm' name = 'comfirm' value='Confirm Delete' />
-			</div>     
+			</div>
 
 		 </form> ";
 	}

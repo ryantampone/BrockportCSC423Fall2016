@@ -97,7 +97,7 @@ function show_all_stores($message, $result)
 				 <p align='center'>
 						 <input type='submit' value='Confirm Delete'/>
 				 </p>
-				  <div id='button'>
+				  <div class='button'>
 					<input id='tiny_button' type='submit' id='submit' name='submit' >
 					<input id='tiny_button' type='reset' id='reset' name='reset'>
 </div>

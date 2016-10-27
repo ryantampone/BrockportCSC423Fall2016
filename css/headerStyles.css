@@ -124,9 +124,15 @@ margin: -20px 0px 30px 0px;
   color: white;
 }
 
-#button{
-  margin-left: 500px;
+
+.button{
+  text-align: center;
   padding: 40px 0 40px 0;
+}
+
+#button{
+  //margin-left: 500px;
+  //padding: 40px 0 40px 0;
 
 
   }
@@ -134,7 +140,7 @@ margin: -20px 0px 30px 0px;
 background-color:#374357;
 border: none;
 	color:white;
-	border-radius: 8px;
+	border-radius: 5px;
 	padding: 8px 24px;
 	text-align: center;
 	text-decoration: none;

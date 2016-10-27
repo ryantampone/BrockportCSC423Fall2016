@@ -102,7 +102,7 @@
                         <td><input NAME='password' id='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
-								<div id='button'>
+								<div class='button'>
 									<input id='tiny_button' type='submit' id='submit' name='submit' >
 									<input id='tiny_button' type='reset' id='reset' name='reset'>
 								</div>

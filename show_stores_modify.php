@@ -149,7 +149,7 @@ function show_all_stores($message, $result)
                  <td><input name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>
-				  <div id='button'>
+				  <div class='button'>
 						<input id='tiny_button' type='submit' id='submit' name='submit' >
 						<input id='tiny_button' type='reset' id='reset' name='reset'>
 			</div>

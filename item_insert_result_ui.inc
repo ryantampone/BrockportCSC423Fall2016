@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 function ui_show_item_insert_result($message, $itemname, $result)
-	
+
   {
   //----------------------------------------------------------
   // Start the html page
@@ -21,10 +21,10 @@ function ui_show_item_insert_result($message, $itemname, $result)
   }
 
 echo "<form action='index.php'>
-<div id='button'>
+<div class='button'>
 <button id='tiny_button'>Return to Main Menu</button>
 
-</div>            
+</div>
 
 
 
