@@ -37,7 +37,7 @@
 		    	<tr>
             <td align='right'>Department:</td>
 						<td>
-							<select  name='Department' onchange='check_dept()' onpaste='return false'>
+							<select  id='Department' onchange='check_dept()' onpaste='return false'>
 								<option value='Meat Department'>Meat Department</option>
 								<option value='Beverages Department'>Beverages Department</option>
 								<option value='Candy Department'>Candy Department</option>
