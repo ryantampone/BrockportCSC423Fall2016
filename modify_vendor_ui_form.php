@@ -8,7 +8,7 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h2>Please Enter the Vendor ID of the Vendor to Modify</h2>
+	    <h4 align='center'>Please Enter the Vendor ID of the Vendor to Modify</h4>
 	  </div>
     	<div id='userdataform'>
             <form name='myform' action='modify_vendor.php' method='post'>
@@ -18,11 +18,10 @@
                         <td><input NAME='vendorid' id='vendorid' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
-                <div id='button'>
-<input id='tiny_button' type='submit' id='submit' name='submit' >
-<input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>            
-
+                <p align='center'>
+                    <input type='submit' value='Submit'/>
+                    <input type='reset' value='Reset'/>
+                </p>
             </form>
         </div>
 	";

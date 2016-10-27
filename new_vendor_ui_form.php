@@ -6,107 +6,106 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h2>Please Fill out the Vendor Form Below</h2>
+	    <h4 align='center'>Please Fill out the Vendor Form Below</h4>
 	  </div>
     	<div id='userdataform'>
             <form action='insert_vendor.php' method='post'>
                 <table align='center'>
                     <tr>
-                        <td align='right'>Vendor Code:</td>
+                        <td><span align='right'>Vendor Code:</span></td>
                         <td><input NAME='vendorcode' id='vendorcode' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td align='right'>Vendor Name:</td>
+                        <td><span align='right'>Vendor Name:</span></td>
                         <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td align='right'>Address:</td>
+                        <td><span align='right'>Address:</span></td>
                         <td><input NAME='address' id='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td align='right'>City:</td>
+                        <td><span align='right'>City:</span></td>
                         <td><input NAME='city' id='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-											<td align='right'>State:</td>
+											<td><span align='right'>State:</span></td>
 											<td>
-														<select name='state'>
-																<option value='Alabama'>Alabama</option>
-																<option value='Alaska'>Alaska</option>
-																<option value='Arizona'>Arizona</option>
-																<option value='Arkansas'>Arkansas</option>
-																<option value='California'>California</option>
-																<option value='Colorado'>Colorado</option>
-																<option value='Connecticut'>Connecticut</option>
-																<option value='Delaware'>Delaware</option>
-																<option value='District Of Columbia'>District Of Columbia</option>
-																<option value='Florida'>Florida</option>
-																<option value='Georgia'>Georgia</option>
-																<option value='Hawaii'>Hawaii</option>
-																<option value='Idaho'>Idaho</option>
-																<option value='Illinois'>Illinois</option>
-																<option value='Indiana'>Indiana</option>
-																<option value='Iowa'>Iowa</option>
-																<option value='Kansas'>Kansas</option>
-																<option value='Kentucky'>Kentucky</option>
-																<option value='Louisiana'>Louisiana</option>
-																<option value='Maine'>Maine</option>
-																<option value='Maryland'>Maryland</option>
-																<option value='Massachusetts'>Massachusetts</option>
-																<option value='Michigan'>Michigan</option>
-																<option value='Minnesota'>Minnesota</option>
-																<option value='Mississippi'>Mississippi</option>
-																<option value='Missouri'>Missouri</option>
-																<option value='Montana'>Montana</option>
-																<option value='Nebraska'>Nebraska</option>
-																<option value='Nevada'>Nevada</option>
-																<option value='New Hampshire'>New Hampshire</option>
-																<option value='New Jersey'>New Jersey</option>
-																<option value='New Mexico'>New Mexico</option>
-																<option value='New York' selected='selected'>New York</option>
-																<option value='North Carolina'>North Carolina</option>
-																<option value='North Dakota'>North Dakota</option>
-																<option value='Ohio'>Ohio</option>
-																<option value='Oklahoma'>Oklahoma</option>
-																<option value='Oregon'>Oregon</option>
-																<option value='Pennsylvania'>Pennsylvania</option>
-																<option value='Rhode Island'>Rhode Island</option>
-																<option value='South Carolina'>South Carolina</option>
-																<option value='South Dakota'>South Dakota</option>
-																<option value='Tennessee'>Tennessee</option>
-																<option value='Texas'>Texas</option>
-																<option value='Utah'>Utah</option>
-																<option value='Vermont'>Vermont</option>
-																<option value='Virginia'>Virginia</option>
-																<option value='Washington'>Washington</option>
-																<option value='West Virginia'>West Virginia</option>
-																<option value='Wisconsin'>Wisconsin</option>
-																<option value='Wyoming'>Wyoming</option>
-													</select>
+															<select name='state'>
+																	<option value='AL'>Alabama</option>
+																	<option value='AK'>Alaska</option>
+																	<option value='AZ'>Arizona</option>
+																	<option value='AR'>Arkansas</option>
+																	<option value='CA'>California</option>
+																	<option value='CO'>Colorado</option>
+																	<option value='CT'>Connecticut</option>
+																	<option value='DE'>Delaware</option>
+																	<option value='DC'>District Of Columbia</option>
+																	<option value='FL'>Florida</option>
+																	<option value='GA'>Georgia</option>
+																	<option value='HI'>Hawaii</option>
+																	<option value='ID'>Idaho</option>
+																	<option value='IL'>Illinois</option>
+																	<option value='IN'>Indiana</option>
+																	<option value='IA'>Iowa</option>
+																	<option value='KS'>Kansas</option>
+																	<option value='KY'>Kentucky</option>
+																	<option value='LA'>Louisiana</option>
+																	<option value='ME'>Maine</option>
+																	<option value='MD'>Maryland</option>
+																	<option value='MA'>Massachusetts</option>
+																	<option value='MI'>Michigan</option>
+																	<option value='MN'>Minnesota</option>
+																	<option value='MS'>Mississippi</option>
+																	<option value='MO'>Missouri</option>
+																	<option value='MT'>Montana</option>
+																	<option value='NE'>Nebraska</option>
+																	<option value='NV'>Nevada</option>
+																	<option value='NH'>New Hampshire</option>
+																	<option value='NJ'>New Jersey</option>
+																	<option value='NM'>New Mexico</option>
+																	<option value='NY' selected='selected'>New York</option>
+																	<option value='NC'>North Carolina</option>
+																	<option value='ND'>North Dakota</option>
+																	<option value='OH'>Ohio</option>
+																	<option value='OK'>Oklahoma</option>
+																	<option value='OR'>Oregon</option>
+																	<option value='PA'>Pennsylvania</option>
+																	<option value='RI'>Rhode Island</option>
+																	<option value='SC'>South Carolina</option>
+																	<option value='SD'>South Dakota</option>
+																	<option value='TN'>Tennessee</option>
+																	<option value='TX'>Texas</option>
+																	<option value='UT'>Utah</option>
+																	<option value='VT'>Vermont</option>
+																	<option value='VA'>Virginia</option>
+																	<option value='WA'>Washington</option>
+																	<option value='WV'>West Virginia</option>
+																	<option value='WI'>Wisconsin</option>
+																	<option value='WY'>Wyoming</option>
+														</select>
 											</td>
 										</tr>
 										<tr>
-                        <td align='right'>Zip:</td>
+                        <td><span align='right'>Zip:</span></td>
                         <td><input NAME='zip' id='zip'TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td align='right'>Phone:</td>
+                        <td><span align='right'>Phone:</span></td>
                         <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td align='right'>Contact Person Name:</td>
+                        <td><span align='right'>Contact Person Name:</span></td>
                         <td><input NAME='contactpersonname' id='contactpersonname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td align='right'>Password:</td>
+                        <td><span align='right'>Password:</span></td>
                         <td><input NAME='password' id='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
-         	<div id='button'>
-						<input id='tiny_button' type='submit' id='submit' name='submit' >
-						<input id='tiny_button' type='reset' id='reset' name='reset'>
-					</div>
-
+                <p align='center'>
+                    <input type='submit' value='Submit'/>
+                    <input type='reset' value='Reset'/>
+                </p>
             </form>
         </div>
 	";
