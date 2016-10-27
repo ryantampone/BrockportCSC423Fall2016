@@ -50,47 +50,47 @@ function show_all_vendors($message, $result)
 		 <form action='update_delete_vendor.php' method='post'>
 				 <table align='center'>
 						 <tr>
-								 <td><span align='right'>Vendor ID:</span></td>
+								 <td align='right'>Vendor ID:</td>
 								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Vendor Code:</span></td>
+								 <td align='right'>Vendor Code:</td>
 								 <td><input NAME='vendorcode' TYPE='text' SIZE='50' value='$vendorcode'readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Vendor Name:</span></td>
+								 <td align='right'>Vendor Name:</td>
 								 <td><input NAME='vendorname' TYPE='text' SIZE='50' value='$vendorname' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Address:</span></td>
+								 <td align='right'>Address:</td>
 								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>City:</span></td>
+								 <td align='right'>City:</td>
 								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
 						 </tr>
 						 <tr>
-							 <td><span align='right'>State:</span></td>
+							 <td align='right'>State:</td>
 							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Zip:</span></td>
+								 <td align='right'>Zip:</td>
 								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Phone:</span></td>
+								 <td align='right'>Phone:</td>
 								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Contact Person Name:</span></td>
+								 <td align='right'>Contact Person Name:</td>
 								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' value='$contactpersonname' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Password:</span></td>
+								 <td align='right'>Password:</td>
 								 <td><input NAME='password' TYPE='password' SIZE='50' value='$password' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Status:</span></td>
+								 <td align='right'>Status:</td>
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>
