@@ -154,7 +154,7 @@
 	
 	
   function check_dept() {
- switch(document.getElementById('dept').value){
+ switch(document.getElementById('Department').value){
 		case 'Meat Department':
 			document.getElementById('Category_1').innerHTML = 'Beef';
         	document.getElementById('Category_2').innerHTML = 'Chicken';
