@@ -95,8 +95,7 @@ function show_all_stores($message, $result)
              </tr>
 				 </table>
 				 <p align='center'>
-						 <input type='submit' value='Submit'/>
-						 <input type='reset' value='Reset'/>
+						 <input type='submit' value='Confirm Delete'/>
 				 </p>
 		 </form> ";
 	}
