@@ -5,7 +5,7 @@
 require('db_cn.inc');
 //This file contains php code that will be executed after the
 //insert operation is done.
-require('item_insert_result_ui.inc');
+require('item_delete_result_ui.php');
 // Main control logic
 delete_item();
 //-------------------------------------------------------------
