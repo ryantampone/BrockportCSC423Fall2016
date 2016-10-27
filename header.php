@@ -89,7 +89,7 @@
   	   return true;
   	else
     {
-      alert('ERROR: Password field can contain any character except the single quote.');
+      alert('ERROR: Password field can contain any character except an apostrophe or backslash.');
       document.getElementById("password").value = "";
     	return false;
   	}
