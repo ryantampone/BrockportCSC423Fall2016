@@ -7,8 +7,7 @@
 	//creates an html form prompting user to input search parameters
 	echo"
 		<br>
-		<div id='callToAction'>
-	    <h4 align='center'>Please Enter the Vendor ID of the Vendor to Modify</h4>
+		<h2>Please Enter the Vendor ID of the Vendor to Modify</h2>
 	  </div>
     	<div id='userdataform'>
             <form name='myform' action='modify_vendor.php' method='post'>
