@@ -83,8 +83,8 @@ function show_all_items($message, $result)
 														while($row = mysql_fetch_assoc($division_result))
 														{
 
-															$divisiont = $row['Division'];
-															echo "<option>".$divisiont."</option>";
+															$division = $row['Division'];
+															echo "<option>".$division."</option>";
 
 														}
 
@@ -133,8 +133,8 @@ function show_all_items($message, $result)
 									while($row = mysql_fetch_assoc($category_result))
 									{
 
-										$categoryt = $row['Category'];
-										echo "<option>".$categoryt."</option>";
+										$category = $row['Category'];
+										echo "<option>".$category."</option>";
 
 									}
 

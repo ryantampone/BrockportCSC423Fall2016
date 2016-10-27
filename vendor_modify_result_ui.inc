@@ -125,7 +125,7 @@ function show_all_vendors($message, $result)
 										<option value='West Virginia'>West Virginia</option>
 										<option value='Wisconsin'>Wisconsin</option>
 										<option value='Wyoming'>Wyoming</option>
-										<option value='myState' selected>$state</option>
+										<option value='$state' selected>$state</option>
 									</select>
 							 </td>
 						 </tr>
