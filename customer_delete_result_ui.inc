@@ -14,7 +14,7 @@ function show_all_customers($message, $result)
 
 	echo"
 		<div id='callToAction'>
-			<h4 align='center'>Are you sure you want to delete this customer?</h4>
+			<h2>Are you sure you want to delete this customer?</h2>
 		</div>
 		";
 
@@ -83,9 +83,13 @@ function show_all_customers($message, $result)
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>
-				 <p align='center'>
-						 <input type='submit' value='Confirm Delete'/>
-				 </p>
+				  <div id='button'>
+						 <input id='tiny_button' type='submit' value='Confirm Delete'/>
+				</div>  
+				 
+				 
+
+</div>   
 		 </form> ";
 	}
 
