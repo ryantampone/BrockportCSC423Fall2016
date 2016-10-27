@@ -76,7 +76,7 @@ function show_all_stores($message, $result)
 						 <tr>
 							 <td align='right'>State:</td>
 							 <td>
-                  <select id='state' required/>
+                  <select name='state' id='state' required/>
                     <option value='Alabama'>Alabama</option>
                     <option value='Alaska'>Alaska</option>
                     <option value='Arizona'>Arizona</option>
