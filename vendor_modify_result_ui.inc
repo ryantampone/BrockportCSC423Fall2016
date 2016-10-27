@@ -130,23 +130,23 @@ function show_all_vendors($message, $result)
 							 </td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Zip:</span></td>
+								 <td align='right'>Zip:</td>
 								 <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' value='$zip' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Phone:</span></td>
+								 <td align='right'>Phone:</td>
 								 <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false' value='$phone' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Contact Person Name:</span></td>
+								 <td align='right'>Contact Person Name:</td>
 								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' value='$contactpersonname' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Password:</span></td>
+								 <td align='right'>Password:</td>
 								 <td><input NAME='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' value='$password' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Status:</span></td>
+								 <td align='right'>Status:</td>
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>
