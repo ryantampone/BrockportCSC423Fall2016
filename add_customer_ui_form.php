@@ -12,23 +12,23 @@ echo"
             <form action='create_customer.php' method='post'>
                 <table align='center'>
                     <tr>
-                        <td><span align='right'>Customer Id:</span></td>
+                        <td align='right'>Customer Id:</td>
                         <td><input NAME='customerid' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Name:</span></td>
+                        <td align='right'>Name:</td>
                         <td><input NAME='name' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Address:</span></td>
+                        <td align='right'>Address:</td>
                         <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>City:</span></td>
+                        <td align='right'>City:</td>
                         <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-											<td><span align='right'>State:</span></td>
+											<td align='right'>State:</td>
 											<td>
 												<select name='state'>
 													<option value='Alabama'>Alabama</option>
@@ -86,15 +86,15 @@ echo"
 											</td>
 										</tr>
 		                <tr>
-                        <td><span align='right'>Zip:</span></td>
+                        <td align='right'>Zip:</td>
                         <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td><span align='right'>Phone:</span></td>
+                        <td align='right'>Phone:</td>
                         <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false'required/></td>
                     </tr>
 										<tr>
-                        <td><span align='right'>Email:</span></td>
+                        <td align='right'>Email:</td>
                         <td><input NAME='email' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>

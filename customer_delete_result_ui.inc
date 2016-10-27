@@ -47,49 +47,49 @@ function show_all_customers($message, $result)
 		 <form action='update_delete_customer.php' method='post'>
 				 <table align='center'>
 						 <tr>
-								 <td><span align='right'>Customer ID:</span></td>
+								 <td align='right'>Customer ID:</td>
 								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Customer Name:</span></td>
+								 <td align='right'>Customer Name:</td>
 								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Address:</span></td>
+								 <td align='right'>Address:</td>
 								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>City:</span></td>
+								 <td align='right'>City:</td>
 								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
 						 </tr>
 						 <tr>
-							 <td><span align='right'>State:</span></td>
+							 <td align='right'>State:</td>
 							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Zip:</span></td>
+								 <td align='right'>Zip:</td>
 								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Phone:</span></td>
+								 <td align='right'>Phone:</td>
 								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
 						 </tr>
 						 <tr>
-						 		 <td><span align='right'>Email:</span></td>
+						 		 <td align='right'>Email:</td>
 								 <td><input name='email' type='text' size='50' value='$email' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Status:</span></td>
+								 <td align='right'>Status:</td>
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>
 				  <div id='button'>
 						 <input id='tiny_button' type='submit' value='Confirm Delete'/>
-				</div>  
-				 
-				 
+				</div>
 
-</div>   
+
+
+</div>
 		 </form> ";
 	}
 

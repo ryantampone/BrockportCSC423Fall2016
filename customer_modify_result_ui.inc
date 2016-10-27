@@ -47,23 +47,23 @@ function show_all_customers($message, $result)
 		 <form action='update_customer.php' method='post'>
 				 <table align='center'>
 						 <tr>
-								 <td><span align='right'>Customer ID:</span></td>
+								 <td align='right'>Customer ID:</td>
 								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Customer Name:</span></td>
+								 <td align='right'>Customer Name:</td>
 								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Address:</span></td>
+								 <td align='right'>Address:</td>
 								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>City:</span></td>
+								 <td align='right'>City:</td>
 								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false'required/></td>
 						 </tr>
 						 <tr>
-							 <td><span align='right'>State:</span></td>
+							 <td align='right'>State:</td>
 							 <td>
 							 		<select name='state' id='state'/>
 										<option value='Alabama'>Alabama</option>
@@ -122,18 +122,18 @@ function show_all_customers($message, $result)
 							 </td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Zip:</span></td>
+								 <td align='right'>Zip:</td>
 								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Phone:</span></td>
+								 <td align='right'>Phone:</td>
 								 <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' value='$phone' onblur='isPhoneNumber()' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
-						 		 <td><span align='right'>Email:</span></td>
+						 		 <td align='right'>Email:</td>
 								 <td><input name='email' type='text' size='50' value='$email' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
 						 <tr>
-								 <td><span align='right'>Status:</span></td>
+								 <td align='right'>Status:</td>
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
 						 </tr>
 				 </table>

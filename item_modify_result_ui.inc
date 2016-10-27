@@ -28,7 +28,7 @@ function show_all_items($message, $result)
        }
   }
 
-	
+
 
    //While there are more rows in the $result, get the next row
    //as an associative array
@@ -43,79 +43,79 @@ function show_all_items($message, $result)
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
 	 	 $contactpersonname = $row['ContactPersonName'];
-	 	 
+
 		 $vendorID = $row['VendorId'];
 		 $imageFileName = $row['ImageFileName'];
 
 
       //Put these in a table row. The htmlentities function converts any
       //special chars in the string to a html-displayable form.
-			
+
 
 
 		 echo"
 		 <form action='update_item.php' method='post'>
 				 <table align='center'>
                     <tr>
-                        <td><span align='right'>Item ID:</span></td>
+                        <td align='right'>Item ID:</td>
                         <td><input id='ItemId' name='ItemId' value='$itemId'TYPE='text' SIZE='50' required/></td>
                     </tr>
                	    <tr>
-                        <td><span align='right'>Description:</span></td>
+                        <td align='right'>Description:</td>
                         <td><input id='Description' name='Description' value='$description' type='textarea' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Size:</span></td>
+                        <td align='right'>Size:</td>
                         <td><input id='Size' name='Size' value='$size' TYPE='text' SIZE='50' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Division:</span></td>
+                        <td align='right'>Division:</td>
 			<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/></td>
-			
-						
-                       
+
+
+
                     </tr>
-		    
-		    
+
+
 		    <tr>
-                        <td><span align='right'>Department:</span></td>
+                        <td align='right'>Department:</td>
 			<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/></td>
-			
-						
-                       
+
+
+
                     </tr>
-		    
-					
+
+
 		    <tr>
-                        <td><span align='right'>Category:</span></td>
+                        <td align='right'>Category:</td>
                   	<td><input id='Category' name='Category' value='$category' TYPE='text' SIZE='50' required/></td>
-	
+
                     </tr>
-					
+
 		<tr>
-			<td><span align='right'>Item Cost</span></td>
-			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>			
+			<td align='right'>Item Cost:</td>
+			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
 		</tr>
-									
+
 		<tr>
-			<td><span align='right'>Item Retail</span></td>
-			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>			
+			<td align='right'>Item Retail:</td>
+			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>
 		</tr>
-									
+
 		<tr>
-			<td><span align='right'>Vendor Id</span></td>
-			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>			
+			<td align='right'>Vendor Id:</td>
+			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>
 		</tr>
-					
+
 		<tr>
-			<td><span align='right'>Image FileName</span></td>
-			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>			
-		</tr>							
+			<td align='right'>Image Filename:</td>
+			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>
+		</tr>
                 </table>
 				  <div id='button'>
 <input id='tiny_button' type='submit' id='submit' name='submit' >
 <input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>            
+</div>
 
 		 </form> ";
 	}

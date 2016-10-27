@@ -13,19 +13,19 @@
             <form action='insert_item.php' method='post'>
                 <table align='center'>
                     <tr>
-                        <td><span align='right'>Item ID:</span></td>
+                        <td align='right'>Item ID:</td>
                         <td><input id='ItemId' name='ItemId' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                	    <tr>
-                        <td><span align='right'>Description:</span></td>
+                        <td align='right'>Description:</td>
                         <td><input id='Description' name='Description' type='textarea' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Size:</span></td>
+                        <td align='right'>Size:</td>
                         <td><input id='Size' name='Size' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Division:</span></td>
+                        <td align='right'>Division:</td>
 						<td>
 							<select name='Division'>
 								<option value='food_convenience'>Food Convenience</option>
@@ -38,7 +38,7 @@
 
 
 		    <tr>
-                        <td><span align='right'>Department:</span></td>
+                        <td align='right'>Department:</td>
 						<td>
 							<select name='Department'>
 								<option value='meat_department'>Meat Department</option>
@@ -53,7 +53,7 @@
 
 
 		    <tr>
-                        <td><span align='right'>Category:</span></td>
+                        <td align='right'>Category:</td>
                         <td>
 
 						<select name='Category'>
@@ -66,17 +66,17 @@
                     </tr>
 
 		<tr>
-			<td><span align='right'>Item Cost</span></td>
+			<td align='right'>Item Cost:</td>
 			 <td><input id='ItemCost' name='ItemCost' TYPE='text' onKeyPress='return isPrice(event)' onpaste='return false' SIZE='50' required/></td>
 		</tr>
 
 		<tr>
-			<td><span align='right'>Item Retail</span></td>
+			<td align='right'>Item Retail:</td>
 			 <td><input id='ItemRetail' name='ItemRetail' TYPE='text' SIZE='50' onKeyPress='return isPrice(event)' onpaste='return false' required/></td>
 		</tr>
 
 		<tr>
-			<td><span align='right'>Vendor Id</span></td>
+			<td align='right'>Vendor Id:</td>
 
 
     connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
@@ -94,7 +94,7 @@
 		</tr>
 
 		<tr>
-			<td><span align='right'>Image FileName</span></td>
+			<td align='right'>Image Filename:</span></td>
 			<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false'   value='BrockportCSC423Fall2016/src/' /></td>
 		</tr>
 

@@ -54,43 +54,43 @@ function show_all_stores($message, $result)
 		 <form action='update_store_delete.php' method='post'>
 				 <table align='center'>
 						 <tr>
-								 <td><span align='right'>Store ID:</span></td>
+								 <td align='right'>Store ID:</td>
 								 <td><input NAME='storeid' TYPE='text' SIZE='50' value='$storeid' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Store Code:</span></td>
+								 <td align='right'>Store Code:</td>
 								 <td><input NAME='storecode' TYPE='text' SIZE='50' value='$storecode' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Store Name:</span></td>
+								 <td align='right'>Store Name:</td>
 								 <td><input NAME='storename' TYPE='text' SIZE='50' value='$storename' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Address:</span></td>
+								 <td align='right'>Address:</td>
 								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>City:</span></td>
+								 <td align='right'>City:</td>
 								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
 						 </tr>
 						 <tr>
-							 <td><span align='right'>State:</span></td>
+							 <td align='right'>State:</td>
 							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Zip:</span></td>
+								 <td align='right'>Zip:</td>
 								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Phone:</span></td>
+								 <td align='right'>Phone:</td>
 								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Manager Name:</span></td>
+								 <td align='right'>Manager Name:</td>
 								 <td><input NAME='mgrname' TYPE='text' SIZE='50' value='$mgrname' readonly required/></td>
 						 </tr>
              <tr>
-                 <td><span align='right'>Status:</span></td>
+                 <td align='right'>Status:</td>
                  <td><input name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>
@@ -102,7 +102,7 @@ function show_all_stores($message, $result)
 				  <div id='button'>
 					<input id='tiny_button' type='submit' id='submit' name='submit' >
 					<input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>            
+</div>
 
 >>>>>>> origin/master
 		 </form> ";

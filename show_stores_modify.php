@@ -54,27 +54,27 @@ function show_all_stores($message, $result)
 		 <form action='update_store_modify.php' method='post'>
 				 <table align='center'>
 						 <tr>
-								 <td><span align='right'>Store ID:</span></td>
+								 <td align='right'>Store ID:</td>
 								 <td><input NAME='storeid' TYPE='text' SIZE='50' value='$storeid' readonly required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Store Code:</span></td>
+								 <td align='right'>Store Code:</td>
 								 <td><input NAME='storecode' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' value='$storecode'required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Store Name:</span></td>
+								 <td align='right'>Store Name:</td>
 								 <td><input NAME='storename' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value='$storename' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Address:</span></td>
+								 <td align='right'>Address:</td>
 								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value='$address'required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>City:</span></td>
+								 <td align='right'>City:</td>
 								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value='$city' required/></td>
 						 </tr>
 						 <tr>
-							 <td><span align='right'>State:</span></td>
+							 <td align='right'>State:</td>
 							 <td>
                   <select id='state' required/>
                     <option value='Alabama'>Alabama</option>
@@ -133,19 +133,19 @@ function show_all_stores($message, $result)
                </td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Zip:</span></td>
+								 <td align='right'>Zip:</td>
 								 <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' value='$zip' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Phone:</span></td>
+								 <td align='right'>Phone:</td>
 								 <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false' value='$phone' required/></td>
 						 </tr>
 						 <tr>
-								 <td><span align='right'>Manager Name:</span></td>
+								 <td align='right'>Manager Name:</td>
 								 <td><input NAME='mgrname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' value='$mgrname' required/></td>
 						 </tr>
              <tr>
-                 <td><span align='right'>Status:</span></td>
+                 <td align='right'>Status:</td>
                  <td><input name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>

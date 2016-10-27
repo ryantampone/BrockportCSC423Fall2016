@@ -12,23 +12,23 @@
             <form action='insert_vendor.php' method='post'>
                 <table align='center'>
                     <tr>
-                        <td><span align='right'>Vendor Code:</span></td>
+                        <td align='right'>Vendor Code:</td>
                         <td><input NAME='vendorcode' id='vendorcode' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Vendor Name:</span></td>
+                        <td align='right'>Vendor Name:</td>
                         <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Address:</span></td>
+                        <td align='right'>Address:</td>
                         <td><input NAME='address' id='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>City:</span></td>
+                        <td align='right'>City:</td>
                         <td><input NAME='city' id='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-											<td><span align='right'>State:</span></td>
+											<td align='right'>State:</td>
 											<td>
 														<select name='state'>
 																<option value='Alabama'>Alabama</option>
@@ -86,26 +86,26 @@
 											</td>
 										</tr>
 										<tr>
-                        <td><span align='right'>Zip:</span></td>
+                        <td align='right'>Zip:</td>
                         <td><input NAME='zip' id='zip'TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td><span align='right'>Phone:</span></td>
+                        <td align='right'>Phone:</td>
                         <td><input NAME='phone' id='phone' TYPE='text' SIZE='50' onblur='isPhoneNumber()' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td><span align='right'>Contact Person Name:</span></td>
+                        <td align='right'>Contact Person Name:</td>
                         <td><input NAME='contactpersonname' id='contactpersonname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
 										<tr>
-                        <td><span align='right'>Password:</span></td>
+                        <td align='right'>Password:</td>
                         <td><input NAME='password' id='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>
-         <div id='button'>
-<input id='tiny_button' type='submit' id='submit' name='submit' >
-<input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>
+         	<div id='button'>
+						<input id='tiny_button' type='submit' id='submit' name='submit' >
+						<input id='tiny_button' type='reset' id='reset' name='reset'>
+					</div>
 
             </form>
         </div>
