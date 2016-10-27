@@ -9,13 +9,13 @@
       <table align='center'>
         <tr>
           <td>Retail Store ID:</td>
-          <td><input type='text' name='storeid' size='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+          <td><input type='text' name='storeid' size='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
         </tr>
       </table>
        <div id='button'>
           <input id='tiny_button' type='submit' id='submit' name='submit' >
           <input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>            
+</div>
 
     </form>
   ";
