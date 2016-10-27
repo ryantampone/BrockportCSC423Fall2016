@@ -40,7 +40,7 @@ function delete_item()
 	//Create an appropriate message
 	$message = "";
 	if ($numrows == 0)
-		 $message = "No vendors found in database with the provided ID";
+		 $message = "No items found in database with the provided ID";
 
 	//Display the results
 	show_all_items($message, $result);
