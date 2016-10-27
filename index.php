@@ -3,8 +3,10 @@
 ?>
 
 <div id="callToAction">
-  <h2>Please Select What You Would Like to Do</h2>
+  <h2>Please Select an Option From the Navigation Bar</h2>
 </div>
+
+
 
 
 </body>
