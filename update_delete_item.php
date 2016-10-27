@@ -32,7 +32,7 @@ function update_item()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE InventoryItem SET ItemId='$itemId', Description='$description', Size='$size', Division='$division', Department='$department', Category='$category', ItemCost='$itemCost', ItemRetail='$itemRetail', ImageFileName='$imageFileName', VendorId='$vendorId' WHERE ItemId='$itemId';";
+	$sql_stmt = "DELETE FROM InventoryItem WHERE ItemId='$itemId';";
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
 	echo $result;
