@@ -43,7 +43,6 @@ function show_all_items($message, $result)
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
 	 	 $contactpersonname = $row['ContactPersonName'];
-
 		 $vendorID = $row['VendorId'];
 		 $imageFileName = $row['ImageFileName'];
 
@@ -104,7 +103,23 @@ function show_all_items($message, $result)
 
 		<tr>
 			<td align='right'>Vendor Id:</td>
-			<td><input id='VendorId' name='VendorId' value='$vendorID' TYPE='text' SIZE='50' required/></td>
+			<td>
+				<select id='VendorId' name='VendorId' required/></td>
+			";
+				  $sql_vendors = "SELECT VendorId FROM Vendor WHERE Status='Active';";
+					$vendors_result = mysql_query($sql_vendors);
+
+					if (!$vendors_result)
+					{
+						echo "VendorId's retrieved unsuccessfully: ".mysql_error();
+						exit;
+					}
+					while ($row = mysql_fetch_assoc($vendors_result))
+					{
+						$vendorid = $row['VendorId'];
+						echo "<option>".$vendorid."</option>";
+					}
+echo "</select>
 		</tr>
 
 		<tr>
