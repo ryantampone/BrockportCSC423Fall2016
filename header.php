@@ -116,18 +116,29 @@
 			return false;
 	}
 
-  function isPrice(evt)
+  function isItemCost(evt)
   {
-	    var charCode = (evt.which) ?evt.which: event.keycode
+	    var charCode = document.getElementById("ItemCost").value;
 			if(charCode.match(/\d+.\d{2}/))
 			    return true;
 			return false;
 
 	}
+	
+	
+  function isItemRetail(evt){
+  
+	    var charCode = document.getElementById("ItemRetail").value;
+			if(charCode.match(/\d+.\d{2}/))
+			    return true;
+			return false;
+
+  
+  }
 
   function isImageFileName(evt)
 	{
-    var charCode = (evt.which) ? evt.which : event.keycode
+    var charCode = document.getElementById("ImageFileName").value;
 		if(charCode.match(/[\d\D_.\/-]*/))
 			    return true;
 			return false;
