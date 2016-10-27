@@ -76,21 +76,23 @@ function show_all_items($message, $result)
                     </tr>
 
 
-		    <tr>
-                        <td align='right'>Department:</td>
-			<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/></td>
-
-
-
-                    </tr>
-
-
-		    <tr>
-                        <td align='right'>Category:</td>
-                  	<td><input id='Category' name='Category' value='$category' TYPE='text' SIZE='50' required/></td>
-
-                    </tr>
-
+		  <td>
+							<select  id='Department'  value='$department' onchange='check_dept()' onpaste='return false'>
+								<option value='Meat Department'>Meat Department</option>
+								<option value='Beverages Department'>Beverages Department</option>
+								<option value='Candy Department'>Candy Department</option>
+								<option value='Cookies/Crackers Department'>Cookies/Crackers Department</option>
+							</select>
+						</td>
+					</tr>
+  				<tr>
+              <td align='right'>Category:</td>
+              <td>
+								<select value='$category' name='Category'>
+										<option id='Category_1' value='5'></option>
+										<option id='Category_2' value='5'></option>
+								</select>
+							</td>
 		<tr>
 			<td align='right'>Item Cost:</td>
 			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
