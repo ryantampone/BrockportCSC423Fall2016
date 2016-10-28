@@ -17,7 +17,7 @@
                     </tr>
                     <tr>
                         <td align='right'>Vendor Name:</td>
-                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
+                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td align='right'>Address:</td>
