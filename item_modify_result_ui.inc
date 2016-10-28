@@ -103,7 +103,26 @@ function show_all_items($message, $result)
 			</tr>
   				<tr>
               <td align='right'>Category:</td>
-            <td><input id='Category' name='Category' value='$division' TYPE='text' SIZE='50' required/>
+          <td>
+					<select id='Category' name='Category' required />";
+	   	
+			  		 $sql_category ="Select Category From InventoryItem Where ItemID ='$itemId';";
+					 $category_result = mysql_query($sql_category);
+	    		
+					if(!$category_result)
+					{
+			
+						echo "Depatment's retrieved unsuccessfully: ".mysql_error();
+						exit;
+					}
+					while ($row = mysql_fetch_assoc($category_result))
+					{
+						$category = $row['Category'];
+						echo "<option>".$category."</option>";
+					}
+  					echo "<option value='Category' selected>$category</option>
+				</select>
+				</td>
 																								</td>
 
 			</tr>
