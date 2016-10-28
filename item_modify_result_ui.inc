@@ -96,7 +96,6 @@ function show_all_items($message, $result)
 						$department = $row['Department'];
 						echo "<option>".$department."</option>";
 					}
-					$
   					echo "<option value='Department' selected>$department</option>
 				</select>
 				</td>
