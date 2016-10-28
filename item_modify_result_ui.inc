@@ -73,22 +73,22 @@ function show_all_items($message, $result)
 		<td>
 					<select id='Division' name='Division' required />";
 
-						 $sql_full ="Select Division From InventoryItem;";
-						 $sql_div ="Select Division From InventoryItem Where ItemID ='$itemId';";
+						 
+					 $sql_div ="Select Division From InventoryItem;";
 					 $div_result = mysql_query($sql_div);
-	    		$div = mysql_query($div);
+	    				$div = mysql_query($div_result);
 					if(!$div_result)
 					{
 
 						echo "Division's retrieved unsuccessfully: ".mysql_error();
 						exit;
 					}
-					while ($row = mysql_fetch_assoc($div))
+					while ($row = mysql_fetch_assoc($div_result))
 					{
 						$division = $row['Division'];
 						echo "<option>".$division."</option>";
 					}
-  					echo "<option value='Division' selected>$div_result</option>
+  					echo "<option value='Division' selected>$division</option>
 				</select>
 				</td>
 
