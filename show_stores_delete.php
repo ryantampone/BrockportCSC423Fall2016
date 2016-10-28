@@ -94,12 +94,9 @@ function show_all_stores($message, $result)
                  <td><input name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>
-				 <p align='center'>
-						 <input type='submit' value='Confirm Delete'/>
-				 </p>
+				 
 				  <div class='button'>
-					<input id='tiny_button' type='submit' id='submit' name='submit' >
-					<input id='tiny_button' type='reset' id='reset' name='reset'>
+					<input id='tiny_button' type='submit' name='confirm' value='Confirm Delete' >
 </div>
 		 </form> ";
 	}

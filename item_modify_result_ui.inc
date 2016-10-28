@@ -57,7 +57,7 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td align='right'>Item ID:</td>
-                        <td><input id='ItemId' name='ItemId' value='$itemId'TYPE='text' SIZE='50' required/></td>
+                        <td><input id='ItemId' name='ItemId' value='$itemId'TYPE='text' SIZE='50' readonly required/></td>
                     </tr>
                	    <tr>
                         <td align='right'>Description:</td>
@@ -69,27 +69,8 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td align='right'>Division:</td>
-												<td>
-												<select id='Division' name='Division' required />";
-															 $sql_division ="Select Division From InventoryItem Where ItemID ='$itemId';";
-															$division_result = mysql_query($sql_division);
-															if(!$division_result)
-															{
-
-															echo "Division's retrieved unsuccessfully: ".mysql_error();
-															exit;
-														}
-
-														while($row = mysql_fetch_assoc($division_result))
-														{
-
-															$division = $row['Division'];
-															echo "<option>".$division."</option>";
-
-														}
-
-														echo"</select>
-												</td>
+												<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/>
+																								</td>
 
 
 
@@ -99,47 +80,18 @@ function show_all_items($message, $result)
                     </tr>
 			<tr>	  <td align='right'>Department:</td>
 
-		  <td>
-			<select id='Department' name='Department' required />";
-			   $sql_dept ="Select Department From InventoryItem Where ItemID ='$itemId';";
-				$department_result = mysql_query($sql_dept);
-				if(!$department_result)
-				{
-
-				echo "Depatment's retrieved unsuccessfully: ".mysql_error();
-				exit;
-			}
+<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/>
+																								</td>
 
 
-				$department = $row['Department'];
-				echo "<option>".$department."</option>";
-	     echo "<option value='Department' selected>"$department"</option>
-			</select>
-						</td>
+
+
+
 					</tr>
   				<tr>
               <td align='right'>Category:</td>
-              <td>
-							<select id='Category' name='Category' required />";
-										 $sql_dept ="Select Category From InventoryItem Where ItemID ='$itemId';";
-										$category_result = mysql_query($sql_dept);
-										if(!$category_result)
-										{
-
-										echo "Category's retrieved unsuccessfully: ".mysql_error();
-										exit;
-									}
-
-									while($row = mysql_fetch_assoc($category_result))
-									{
-
-										$category = $row['Category'];
-										echo "<option>".$category."</option>";
-
-									}
-
-									echo"</select>
-							</td>
+            <td><input id='Category' name='Category' value='$division' TYPE='text' SIZE='50' required/>
+																								</td>
 
 			</tr>
 		<tr>

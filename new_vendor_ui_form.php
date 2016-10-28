@@ -6,7 +6,7 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h4 align='center'>Please Fill out the Vendor Form Below</h4>
+	    <h2>Please Fill out the Vendor Form Below</h2>
 	  </div>
     	<div id='userdataform'>
             <form action='insert_vendor.php' method='post'>

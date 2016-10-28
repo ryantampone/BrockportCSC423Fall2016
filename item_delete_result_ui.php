@@ -113,7 +113,7 @@ function show_all_items($message, $result)
 		</tr>
                 </table>
 			 <div class='button'>
-			<input class='tiny_button' type='submit' id='confirm' name = 'comfirm' value='Confirm Delete' />
+			<input id='tiny_button' type='submit' name = 'comfirm' value='Confirm Delete' />
 			</div>
 
 		 </form> ";
