@@ -79,15 +79,29 @@ function show_all_items($message, $result)
 
                     </tr>
 			<tr>	  <td align='right'>Department:</td>
+				<td>
+					<select id='Department' name='Department' required />";
+	   	
+			  		 $sql_dept ="Select Department From InventoryItem Where ItemID ='$itemId';";
+					 $department_result = mysql_query($sql_dept);
+	    		
+					if(!$department_result)
+					{
+			
+						echo "Depatment's retrieved unsuccessfully: ".mysql_error();
+						exit;
+					}
+					while ($row = mysql_fetch_assoc($department_result))
+					{
+						$department = $row['Department'];
+						echo "<option>".$department."</option>";
+					}
+					$
+  					echo "<option value='Department' selected>$department</option>
+				</select>
+				</td>
 
-<td><input id='Department' name='Department' value='$department' TYPE='text' SIZE='50' required/>
-																								</td>
-
-
-
-
-
-					</tr>
+			</tr>
   				<tr>
               <td align='right'>Category:</td>
             <td><input id='Category' name='Category' value='$division' TYPE='text' SIZE='50' required/>
