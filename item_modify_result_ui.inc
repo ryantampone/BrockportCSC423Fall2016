@@ -69,25 +69,26 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td align='right'>Division:</td>
-											
+
 		<td>
 					<select id='Division' name='Division' required />";
-	   	
-			  		 $sql_div ="Select Division From InventoryItem Where ItemID ='$itemId';";
+
+						 $sql_full ="Select Division From InventoryItem;";
+						 $sql_div ="Select Division From InventoryItem Where ItemID ='$itemId';";
 					 $div_result = mysql_query($sql_div);
-	    		
+	    		$div = mysql_query($div);
 					if(!$div_result)
 					{
-			
+
 						echo "Division's retrieved unsuccessfully: ".mysql_error();
 						exit;
 					}
-					while ($row = mysql_fetch_assoc($div_result))
+					while ($row = mysql_fetch_assoc($div))
 					{
 						$division = $row['Division'];
-						echo "<option>".$department."</option>";
+						echo "<option>".$division."</option>";
 					}
-  					echo "<option value='Division' selected>$division</option>
+  					echo "<option value='Division' selected>$div_result</option>
 				</select>
 				</td>
 
@@ -98,13 +99,13 @@ function show_all_items($message, $result)
 			<tr>	  <td align='right'>Department:</td>
 				<td>
 					<select id='Department' name='Department' required />";
-	   	
+
 			  		 $sql_dept ="Select Department From InventoryItem Where ItemID ='$itemId';";
 					 $department_result = mysql_query($sql_dept);
-	    		
+
 					if(!$department_result)
 					{
-			
+
 						echo "Depatment's retrieved unsuccessfully: ".mysql_error();
 						exit;
 					}
@@ -122,13 +123,13 @@ function show_all_items($message, $result)
               <td align='right'>Category:</td>
           <td>
 					<select id='Category' name='Category' required />";
-	   	
+
 			  		 $sql_category ="Select Category From InventoryItem Where ItemID ='$itemId';";
 					 $category_result = mysql_query($sql_category);
-	    		
+
 					if(!$category_result)
 					{
-			
+
 						echo "Category's retrieved unsuccessfully: ".mysql_error();
 						exit;
 					}
