@@ -73,7 +73,7 @@ function show_all_items($message, $result)
 		<td>
 					<select id='Division' name='Division' required />";
 	   	
-			  		 $sql_divsion ="Select Division From InventoryItem Where ItemID ='$itemId';";
+			  		 $sql_divsion ="SELECT Division FROM InventoryItem WHERE ItemId='$itemId';";
 					 $division_result = mysql_query($sql_division);
 	    		
 					if(!$division_result)
