@@ -69,11 +69,27 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td align='right'>Division:</td>
-												<td><input id='Division' name='Division' value='$division' TYPE='text' SIZE='50' required/>
-																								</td>
-
-
-
+											
+		<td>
+					<select id='Division' name='Division' required />";
+	   	
+			  		 $sql_divsion ="Select Division From InventoryItem Where ItemID ='$itemId';";
+					 $division_result = mysql_query($sql_division);
+	    		
+					if(!$division_result)
+					{
+			
+						echo "Division's retrieved unsuccessfully: ".mysql_error();
+						exit;
+					}
+					while ($row = mysql_fetch_assoc($division_result))
+					{
+						$division = $row['Division'];
+						echo "<option>".$division."</option>";
+					}
+  					echo "<option value='Division' selected>$division</option>
+				</select>
+				</td>
 
 
 
@@ -112,7 +128,7 @@ function show_all_items($message, $result)
 					if(!$category_result)
 					{
 			
-						echo "Depatment's retrieved unsuccessfully: ".mysql_error();
+						echo "Category's retrieved unsuccessfully: ".mysql_error();
 						exit;
 					}
 					while ($row = mysql_fetch_assoc($category_result))
