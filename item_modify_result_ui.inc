@@ -74,7 +74,7 @@ function show_all_items($message, $result)
 					<select id='Division' name='Division' required />";
 
 						 
-					 $sql_div ="Select Division From InventoryItem;";
+					 $sql_div ="SELECT DISTINCT Division, FROM InventoryItem ORDER BY Division;";
 					 $div_result = mysql_query($sql_div);
 	    				$div = mysql_query($div_result);
 					if(!$div_result)
@@ -100,7 +100,7 @@ function show_all_items($message, $result)
 				<td>
 					<select id='Department' name='Department' required />";
 
-			  		 $sql_dept ="Select Department From InventoryItem Where ItemID ='$itemId';";
+			  		 $sql_dept ="SELECT DISTINCT Department FROM InventoryItem ORDER BY Department;";
 					 $department_result = mysql_query($sql_dept);
 
 					if(!$department_result)
@@ -124,7 +124,7 @@ function show_all_items($message, $result)
           <td>
 					<select id='Category' name='Category' required />";
 
-			  		 $sql_category ="Select Category From InventoryItem Where ItemID ='$itemId';";
+			  		 $sql_category ="SELECT DISTINCT Category FROM InventoryItem ORDER BY Category;";
 					 $category_result = mysql_query($sql_category);
 
 					if(!$category_result)
