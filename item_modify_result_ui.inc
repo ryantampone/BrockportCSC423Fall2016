@@ -74,7 +74,7 @@ function show_all_items($message, $result)
 					<select id='Division' name='Division' required />";
 
 						 
-					 $sql_div ="SELECT DISTINCT Division, FROM InventoryItem ORDER BY Division;";
+					 $sql_div ="SELECT DISTINCT Division FROM InventoryItem ORDER BY Division;";
 					 $div_result = mysql_query($sql_div);
 	    				$div = mysql_query($div_result);
 					if(!$div_result)
