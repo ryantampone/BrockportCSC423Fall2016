@@ -42,10 +42,8 @@ function show_all_items($message, $result)
  	 	 $category = $row['Category'];
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
-	 	 $contactpersonname = $row['ContactPersonName'];
 		 $vendorID = $row['VendorId'];
 		 $imageFileName = $row['ImageFileName'];
-
 
       //Put these in a table row. The htmlentities function converts any
       //special chars in the string to a html-displayable form.
@@ -57,15 +55,15 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td align='right'>Item ID:</td>
-                        <td><input id='ItemId' name='ItemId' value='$itemId'TYPE='text' SIZE='50' readonly required/></td>
+                        <td><input id='ItemId' name='ItemId' value=\"$itemId\" TYPE='text' SIZE='50' readonly required/></td>
                     </tr>
                	    <tr>
                         <td align='right'>Description:</td>
-                        <td><input id='Description' name='Description' value='$description' type='textarea' required/></td>
+                        <td><input id='Description' name='Description' value=\"$description\" type='textarea' required/></td>
                     </tr>
                     <tr>
                         <td align='right'>Size:</td>
-                        <td><input id='Size' name='Size' value='$size' TYPE='text' SIZE='50' required/></td>
+                        <td><input id='Size' name='Size' value=\"$size\" TYPE='text' SIZE='50' required/></td>
                     </tr>
                     <tr>
                         <td align='right'>Division:</td>
@@ -73,7 +71,7 @@ function show_all_items($message, $result)
 		<td>
 					<select id='Division' name='Division' required />";
 
-						 
+
 					 $sql_div ="SELECT DISTINCT Division FROM InventoryItem ORDER BY Division;";
 					 $div_result = mysql_query($sql_div);
 	    				$div = mysql_query($div_result);
@@ -146,12 +144,12 @@ function show_all_items($message, $result)
 			</tr>
 		<tr>
 			<td align='right'>Item Cost:</td>
-			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' TYPE='text' SIZE='50' required/></td>
+			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' onKeyPress='return isItemCost(event)' onpaste='return false' TYPE='text' SIZE='50' required/></td>
 		</tr>
 
 		<tr>
 			<td align='right'>Item Retail:</td>
-			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' TYPE='text' SIZE='50' required/></td>
+			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' onKeyPress='return isItemRetail(event)' opaste='return false' TYPE='text' SIZE='50' required/></td>
 		</tr>
 
 		<tr>
@@ -159,7 +157,7 @@ function show_all_items($message, $result)
 			<td>
 				<select id='VendorId' name='VendorId' required/>
 			";
-				  $sql_vendors = "SELECT VendorId FROM Vendor WHERE Status='Active';";
+				  $sql_vendors = "SELECT VendorId, VendorName FROM Vendor WHERE Status='Active';";
 					$vendors_result = mysql_query($sql_vendors);
 
 					if (!$vendors_result)
@@ -170,16 +168,17 @@ function show_all_items($message, $result)
 					while ($row = mysql_fetch_assoc($vendors_result))
 					{
 						$vendorid = $row['VendorId'];
-						echo "<option>".$vendorid."</option>";
+						$vendorname = mysql_real_escape_string($row['VendorName']);
+						echo "<option>".$vendorid.": ".$vendorname."</option>";
 					}
-  echo "<option value='myVendorId' selected>$vendorid</option>
+  echo "<option value='$vendorID' selected>$vendorID</option>
 				</select>
 			</td>
 		</tr>
 
 		<tr>
 			<td align='right'>Image Filename:</td>
-			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50' required/></td>
+			<td><input id='ImageFileName' name='ImageFileName' value=\"$imageFileName\" onKeyPress='return isImageFileName(event)' onpaste='return false' TYPE='text' SIZE='50' required/></td>
 		</tr>
                 </table>
 				  <div class='button'>

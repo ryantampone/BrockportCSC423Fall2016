@@ -63,15 +63,15 @@ function show_all_stores($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Store Name:</td>
-								 <td><input NAME='storename' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value='$storename' required/></td>
+								 <td><input NAME='storename' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value=\"$storename\" required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value='$address'required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value=\"$address\" required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value='$city' required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value=\"$city\" required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
@@ -134,7 +134,7 @@ function show_all_stores($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Zip:</td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' value='$zip' required/></td>
+								 <td><input NAME='zip' id='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' onblur='checkZipCode()' value='$zip' required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Phone:</td>
@@ -142,7 +142,7 @@ function show_all_stores($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Manager Name:</td>
-								 <td><input NAME='mgrname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' value='$mgrname' required/></td>
+								 <td><input NAME='mgrname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' value=\"$mgrname\" required/></td>
 						 </tr>
              <tr>
                  <td align='right'>Status:</td>

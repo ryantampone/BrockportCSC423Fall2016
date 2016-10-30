@@ -45,8 +45,13 @@ function insert_store()
 	$phone = $_POST['phone'];
 	$mgrname = $_POST['mgrname'];
 
+	$esc_storename = mysql_real_escape_string($_POST['storename']);
+	$esc_address = mysql_real_escape_string($_POST['address']);
+	$esc_city = mysql_real_escape_string($_POST['city']);
+	$esc_mgrname = mysql_real_escape_string($_POST['mgrname']);
+
 	// Set the SQL command
-	$insertCmd = "INSERT INTO RetailStore (StoreCode, StoreName, Address, City, State, ZIP, Phone, ManagerName) values ('$storecode', '$storename', '$address', '$city', '$state', '$zip', '$phone', '$mgrname');";
+	$insertCmd = "INSERT INTO RetailStore (StoreCode, StoreName, Address, City, State, ZIP, Phone, ManagerName) values ('$storecode', '$esc_storename', '$esc_address', '$esc_city', '$state', '$zip', '$phone', '$esc_mgrname');";
 
 	$result = mysql_query($insertCmd);
 	echo $result;

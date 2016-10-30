@@ -60,15 +60,15 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Vendor Name:</td>
-								 <td><input NAME='vendorname' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' value='$vendorname' required/></td>
+								 <td><input NAME='vendorname' TYPE='text' SIZE='50' value=\"$vendorname\" required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value='$address'required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' onKeyPress='return isAddressKey(event)' onpaste='return false' value=\"$address\" required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value='$city' required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value=\"$city\" required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
@@ -131,7 +131,7 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Zip:</td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' value='$zip' required/></td>
+								 <td><input NAME='zip' id='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' onblur='checkZipCode()' value='$zip' required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Phone:</td>
@@ -139,11 +139,11 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Contact Person Name:</td>
-								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' value='$contactpersonname' required/></td>
+								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' value=\"$contactpersonname\" required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Password:</td>
-								 <td><input NAME='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' value='$password' required/></td>
+								 <td><input NAME='password' TYPE='password' SIZE='50' value=\"$password\" required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Status:</td>

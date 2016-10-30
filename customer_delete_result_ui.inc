@@ -52,15 +52,15 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Customer Name:</td>
-								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' readonly required/></td>
+								 <td><input NAME='customername' TYPE='text' SIZE='50' value=\"$customername\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" readonly required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
@@ -76,7 +76,7 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 						 		 <td align='right'>Email:</td>
-								 <td><input name='email' type='text' size='50' value='$email' readonly required/></td>
+								 <td><input name='email' type='text' size='50' value=\"$email\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Status:</td>

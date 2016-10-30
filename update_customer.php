@@ -36,10 +36,15 @@ function update_customer()
 	$email = $_POST['email'];
 	$status = $_POST['status'];
 
+	$esc_customername = mysql_real_escape_string($_POST['name']);
+	$esc_address = mysql_real_escape_string($_POST['address']);
+	$esc_city = mysql_real_escape_string($_POST['city']);
+	$esc_email = mysql_real_escape_string($_POST['email']);
+
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE Customer SET Name='$customername', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', Email='$email' WHERE CustomerId='$customerid';";
+	$sql_stmt = "UPDATE Customer SET Name='$esc_customername', Address='$esc_address', City='$esc_city', State='$state', ZIP='$zip', Phone='$phone', Email='$esc_email' WHERE CustomerId='$customerid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);

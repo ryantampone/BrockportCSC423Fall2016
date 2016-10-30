@@ -26,10 +26,15 @@ function update_store()
 	$mgrname = $_POST['mgrname'];
 	$status = $_POST['status'];
 
+	$esc_storename = mysql_real_escape_string($_POST['storename']);
+	$esc_address = mysql_real_escape_string($_POST['address']);
+	$esc_city = mysql_real_escape_string($_POST['city']);
+	$esc_mgrname = mysql_real_escape_string($_POST['mgrname']);
+
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE RetailStore SET StoreCode='$storecode', StoreName='$storename', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', ManagerName='$mgrname', Status='$status' WHERE StoreId='$storeid';";
+	$sql_stmt = "UPDATE RetailStore SET StoreCode='$storecode', StoreName='$esc_storename', Address='$esc_address', City='$esc_city', State='$state', ZIP='$zip', Phone='$phone', ManagerName='$esc_mgrname', Status='$status' WHERE StoreId='$storeid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);

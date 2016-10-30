@@ -36,11 +36,15 @@ function update_item()
    $imageFileName = $_POST['ImageFileName'];
    $vendorID = $_POST['VendorId'];
 
+   $esc_itemId = mysql_real_escape_string($_POST['ItemId']);
+   $esc_description = mysql_real_escape_string($_POST['Description']);
+   $esc_size = mysql_real_escape_string($_POST['Size']);
+   $esc_imageFileName = mysql_real_escape_string($_POST['ImageFileName']);
 
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE InventoryItem SET ItemId='$itemId', Description='$description', Size='$size', Division='$division', Department='$department', Category='$category', ItemCost='$itemCost', ItemRetail='$itemRetail', ImageFileName='$imageFileName', VendorId='$vendorId' WHERE ItemId='$itemId';";
+	$sql_stmt = "UPDATE InventoryItem SET ItemId='$esc_itemId', Description='$esc_description', Size='$esc_size', Division='$division', Department='$department', Category='$category', ItemCost='$itemCost', ItemRetail='$itemRetail', ImageFileName='$esc_imageFileName', VendorId='$vendorId' WHERE ItemId='$itemId';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);

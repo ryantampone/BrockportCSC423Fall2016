@@ -35,10 +35,16 @@ function update_vendor()
 	$password = $_POST['password'];
 	$status = $_POST['status'];
 
+	$esc_vendorname = mysql_real_escape_string($_POST['vendorname']);
+	$esc_address = mysql_real_escape_string($_POST['address']);
+	$esc_city = mysql_real_escape_string($_POST['city']);
+	$esc_contactpersonname = mysql_real_escape_string($_POST['contactpersonname']);
+	$esc_password = mysql_real_escape_string($_POST['password']);
+
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE Vendor SET VendorCode='$vendorcode', VendorName='$vendorname', Address='$address', City='$city', State='$state', ZIP='$zip', Phone='$phone', ContactPersonName='$contactpersonname', Password='$password', Status='$status' WHERE VendorId='$vendorid';";
+	$sql_stmt = "UPDATE Vendor SET VendorCode='$vendorcode', VendorName='$esc_vendorname', Address='$esc_address', City='$esc_city', State='$state', ZIP='$zip', Phone='$phone', ContactPersonName='$esc_contactpersonname', Password='$esc_password', Status='$status' WHERE VendorId='$vendorid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);

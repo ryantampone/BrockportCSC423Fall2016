@@ -38,12 +38,16 @@ function add_customer()
 	$email = $_POST['email'];
 	$status = "Active";
 
+	$esc_name = mysql_real_escape_string($_POST['name']);
+	$esc_address = mysql_real_escape_string($_POST['address']);
+	$esc_city = mysql_real_escape_string($_POST['city']);
+	$esc_email = mysql_real_escape_string($_POST['email']);
 
 	// Create a String consisting of the SQL command. Remember that
   // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
 
-	$sql_stmt = "INSERT INTO Customer (CustomerId, Name, Address, City, State, ZIP, Phone, Email, Status) values ('$customerid', '$name', '$address', '$city', '$state', '$zip', '$phone', '$email', '$status');";
+	$sql_stmt = "INSERT INTO Customer (CustomerId, Name, Address, City, State, ZIP, Phone, Email, Status) values ('$customerid', '$esc_name', '$esc_address', '$esc_city', '$state', '$zip', '$phone', '$esc_email', '$status');";
 	//Execute the query. The result will just be true or false
 
 	$result = mysql_query($sql_stmt);

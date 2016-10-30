@@ -4,8 +4,6 @@ require('db_cn.inc');
 
 require('item_insert_result_ui.inc');
 
-
-
 insert_item();
 
 function insert_item(){
@@ -22,14 +20,13 @@ connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
    $itemRetail = $_POST['ItemRetail'];
    $imageFileName = $_POST['ImageFileName'];
    $vendorID = $_POST['VendorId'];
-   
-   
 
+   $esc_itemId = mysql_real_escape_string($_POST['ItemId']);
+   $esc_description = mysql_real_escape_string($_POST['Description']);
+   $esc_size = mysql_real_escape_string($_POST['Size']);
+   $esc_imageFileName = mysql_real_escape_string($_POST['ImageFileName']);
 
-   $insertitem = "INSERT INTO InventoryItem(ItemId, Description, Size, Division, Department,
-   Category, ItemCost, ItemRetail, ImageFileName, VendorId) 
-   values ('$itemId', '$description', '$size', '$division', '$department', '$category', '$itemCost', '$itemRetail',
-   '$imageFileName', '$vendorID');";
+   $insertitem = "INSERT INTO InventoryItem(ItemId, Description, Size, Division, Department, Category, ItemCost, ItemRetail, ImageFileName, VendorId) values ('$esc_itemId', '$esc_description', '$esc_size', '$division', '$department', '$category', '$itemCost', '$itemRetail', '$esc_imageFileName', '$vendorID');";
 
    $result = mysql_query($insertitem);
    echo $result;
@@ -38,12 +35,12 @@ connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
    if(!$result){
 
    $message = "Error in inserting item: $itemname". mysql_error();
-   
+
    }
    else{
 
    $message = "Item: $itemname inserted successfully.";
-   
+
    }
 
    ui_show_item_insert_result($message, $itemname, $result);

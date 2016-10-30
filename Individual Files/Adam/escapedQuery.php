@@ -1,15 +1,15 @@
 <?php
-
+  require('db_cn.inc');
   escape_my_sql();
 
   function escape_my_sql()
   {
     connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 
-    $storename = "Adam's Apples";
+    $storename = "Adams Apples";
     $esc_storename = mysql_real_escape_string($storename);
 
-    $sql_query = "INSERT INTO RetailStore Values ('0123', '$esc_storename', '1234 Aspen Drive', 'Chicago', 'Illinois', '65512', '865-555-8800', 'Adam Adams', 'Active');";
+    $sql_query = "INSERT INTO RetailStore (StoreCode, StoreName, Address, City, State, ZIP, Phone, ManagerName) values ('0123', '$esc_storename', '1234 Aspen Drive', 'Chicago', 'Illinois', '65512', '865-555-8800', 'Adam Adams');";
 
     $result = mysql_query($sql_query);
   	echo $result;

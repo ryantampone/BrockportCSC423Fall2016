@@ -52,15 +52,15 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Customer Name:</td>
-								 <td><input NAME='customername' TYPE='text' SIZE='50' value='$customername' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+								 <td><input NAME='customername' TYPE='text' SIZE='50' value=\"$customername\" onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" onKeyPress='return isAddressKey(event)' onpaste='return false' required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false'required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false'required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
@@ -123,7 +123,7 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Zip:</td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+								 <td><input NAME='zip' id='zip' TYPE='text' SIZE='50' value='$zip' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' onblur='checkZipCode()' required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Phone:</td>
@@ -131,7 +131,7 @@ function show_all_customers($message, $result)
 						 </tr>
 						 <tr>
 						 		 <td align='right'>Email:</td>
-								 <td><input name='email' type='text' size='50' value='$email' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
+								 <td><input name='email' type='text' size='50' value=\"$email\" required/></td>
 						 <tr>
 								 <td align='right'>Status:</td>
 								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>

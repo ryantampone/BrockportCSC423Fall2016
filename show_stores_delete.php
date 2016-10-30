@@ -63,15 +63,15 @@ function show_all_stores($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Store Name:</td>
-								 <td><input NAME='storename' TYPE='text' SIZE='50' value='$storename' readonly required/></td>
+								 <td><input NAME='storename' TYPE='text' SIZE='50' value=\"$storename\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address' readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" readonly required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
@@ -87,14 +87,14 @@ function show_all_stores($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Manager Name:</td>
-								 <td><input NAME='mgrname' TYPE='text' SIZE='50' value='$mgrname' readonly required/></td>
+								 <td><input NAME='mgrname' TYPE='text' SIZE='50' value=\"$mgrname\" readonly required/></td>
 						 </tr>
              <tr>
                  <td align='right'>Status:</td>
                  <td><input name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>
-				 
+
 				  <div class='button'>
 					<input id='tiny_button' type='submit' name='confirm' value='Confirm Delete' >
 </div>

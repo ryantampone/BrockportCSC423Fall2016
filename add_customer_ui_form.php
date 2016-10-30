@@ -88,7 +88,7 @@ echo"
 										</tr>
 		                <tr>
                         <td align='right'>Zip:</td>
-                        <td><input NAME='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+                        <td><input NAME='zip' id='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' onblur='checkZipCode()' required/></td>
                     </tr>
 										<tr>
                         <td align='right'>Phone:</td>
@@ -96,7 +96,7 @@ echo"
                     </tr>
 										<tr>
                         <td align='right'>Email:</td>
-                        <td><input NAME='email' TYPE='text' SIZE='50' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
+                        <td><input NAME='email' TYPE='text' SIZE='50' required/></td>
                     </tr>
                 </table>
               <div class='button'>

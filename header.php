@@ -24,6 +24,17 @@
 		return true;
 	}
 
+  function checkZipCode()
+  {
+    var myZip = document.getElementById("zip").value;
+    if (myZip.length < 5)
+    {
+      document.getElementById("zip").value = "";
+      //alert("ERROR: The Zip Code field must contain 5 numbers. Please try again.");
+    }
+
+  }
+
   function hasToBeLetter(evt)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
@@ -43,7 +54,8 @@
   function isTextNameKey(evt)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
-    if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)))
+    if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)) &&
+    (charCode > 31 && (charCode < 39 && charCode > 39)) && (charCode > 31 && (charCode < 92 && charCode > 92)))
       return false;
     return true;
   }
@@ -51,7 +63,8 @@
   function isTextCityOrPersonKey(evt)
   {
     var charCode = (evt.which) ? evt.which : event.keycode
-    if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 32 || charCode > 32)) )
+    if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 32 || charCode > 32)) &&
+    (charCode > 31 && (charCode < 39 && charCode > 39)) && (charCode > 31 && (charCode < 92 && charCode > 92)))
       return false;
     return true;
   }
@@ -69,7 +82,8 @@
     }
   }
 
-  function anythingButQuotesOrSlash(evt)
+  // Do not need this function - recent update allows user to enter backslash and apostrophe
+  /*function anythingButQuotesOrSlash(evt)
   {
 	var charCode = (evt.which) ? evt.which : event.keycode
 
@@ -78,31 +92,27 @@
 		return true;
 	return false;
 
-  }
+}*/
 
-  function isPasswordKey(evt)
+  // Do not need password function - user can type any character in password field
+  /*function isPasswordKey(evt)
   {
   	var charCode = (evt.which) ? evt.which : event.keycode
 
   	// Allows: anything but single quote (') and backslash (\)
   	if (charCode > 31 && (charCode < 39 || charCode > 39) && (charCode > 31 && (charCode < 92 || charCode > 92)))
   	   return true;
-  	else
-    {
-      alert('ERROR: Password field can contain any character except an apostrophe or backslash.');
-      document.getElementById("password").value = "";
-    	return false;
-  	}
+  	return false;
 
-  }
+  }*/
 
   function isAddressKey(evt)
   {
   	var charCode = (evt.which) ? evt.which : event.keycode
 
-  	// Allows: A-Z, a-z, space, numbers, hyphens
+  	// Allows: A-Z, a-z, space, numbers, hyphens, apostrophe/backslash
   	if ((charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 32 || charCode > 32)) &&
-    (charCode > 31 && (charCode < 45 || charCode > 45)))
+    (charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 39 && charCode > 39)) && (charCode > 31 && (charCode < 92 && charCode > 92)))
   		return false;
   	return true;
   }
@@ -111,7 +121,7 @@
   function isOnlyCharacter(evt)
   {
 		var charCode= (evt.which) ? evt.which: event.keycode
-			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode <123)
+			if(charCode > 65 || charCode < 91 || charCode > 96 || charCode < 123)
 				return true;
 			return false;
 	}
@@ -151,30 +161,30 @@
 			    return true;
 			return false;
   }
-	
-	
+
+
   function check_dept() {
  switch(document.getElementById('Department').value){
 		case 'Meat Department':
 			document.getElementById('Category_1').innerHTML = 'Beef';
         	document.getElementById('Category_2').innerHTML = 'Chicken';
 			break;
-			
+
 		case 'Candy Department':
 		 document.getElementById('Category_1').innerHTML = 'Jelly Beans';
          document.getElementById('Category_2').innerHTML = 'Gummy & Chewy Candy';
 		 break;
-		 
+
 		 case 'Cookies/Crackers Department':
 		 document.getElementById('Category_1').innerHTML = 'Chocolate Chip Cookies';
          document.getElementById('Category_2').innerHTML = 'Ginger Cookies';
 		 break;
-			
+
 		default:
-		
+
 		  document.getElementById('Category_1').innerHTML = 'Pepsi';
           document.getElementById('Category_2').innerHTML = 'Water';
-		
+
 		}
 }
 

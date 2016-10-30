@@ -58,15 +58,15 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td><span align='right'>Item ID:</span></td>
-                        <td><input id='ItemId' name='ItemId' value='$itemId'TYPE='text' SIZE='50' readonly required/></td>
+                        <td><input id='ItemId' name='ItemId' value=\"$itemId\" TYPE='text' SIZE='50' readonly required/></td>
                     </tr>
                	    <tr>
                         <td><span align='right'>Description:</span></td>
-                        <td><input id='Description' name='Description' value='$description' type='textarea' readonly required/></td>
+                        <td><input id='Description' name='Description' value=\"$description\" type='textarea' readonly required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Size:</span></td>
-                        <td><input id='Size' name='Size' value='$size' TYPE='text' SIZE='50'readonly required/></td>
+                        <td><input id='Size' name='Size' value=\"$size\" TYPE='text' SIZE='50'readonly required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Division:</span></td>
@@ -109,7 +109,7 @@ function show_all_items($message, $result)
 
 		<tr>
 			<td><span align='right'>Image FileName</span></td>
-			<td><input id='ImageFileName' name='ImageFileName' value='$imageFileName' TYPE='text' SIZE='50'  readonly required/></td>
+			<td><input id='ImageFileName' name='ImageFileName' value=\"$imageFileName\" TYPE='text' SIZE='50'  readonly required/></td>
 		</tr>
                 </table>
 			 <div class='button'>

@@ -22,15 +22,21 @@ function insert_vendor()
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
 	$vendorcode = $_POST['vendorcode'];
-	$vendorname = mysql_real_escape_string($_POST['vendorname']);
-	$address = mysql_real_escape_string($_POST['address']);
-	$city = mysql_real_escape_string($_POST['city']);
+	$vendorname = $_POST['vendorname'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
 	$state = $_POST['state'];
 	$zip = $_POST['zip'];
 	$phone = $_POST['phone'];
-	$contactpersonname = mysql_real_escape_string($_POST['contactpersonname']);
-	$password = mysql_real_escape_string($_POST['password']);
+	$contactpersonname = $_POST['contactpersonname'];
+	$password = $_POST['password'];
 	$status = "Active";
+
+	$esc_vendorname = mysql_real_escape_string($_POST['vendorname']);
+	$esc_address = mysql_real_escape_string($_POST['address']);
+	$esc_city = mysql_real_escape_string($_POST['city']);
+	$esc_contactpersonname = mysql_real_escape_string($_POST['contactpersonname']);
+	$esc_password = mysql_real_escape_string($_POST['password']);
 
 	/*$esc_vendorname = mysql_real_escape_string($vendorname);
 	$esc_address = mysql_real_escape_string($address);
@@ -41,8 +47,8 @@ function insert_vendor()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	
-	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password, Status) values ('$vendorcode', '$vendorname', '$address', '$city', '$state', '$zip', '$phone', '$contactpersonname', '$password', '$status');";
+
+	$insertStmt = "INSERT INTO Vendor (VendorCode, VendorName, Address, City, State, ZIP, Phone, ContactPersonName, Password, Status) values ('$vendorcode', '$esc_vendorname', '$esc_address', '$esc_city', '$state', '$zip', '$phone', '$esc_contactpersonname', '$esc_password', '$status');";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($insertStmt);

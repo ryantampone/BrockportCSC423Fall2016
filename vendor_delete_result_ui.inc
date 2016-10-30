@@ -59,15 +59,15 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Vendor Name:</td>
-								 <td><input NAME='vendorname' TYPE='text' SIZE='50' value='$vendorname' readonly required/></td>
+								 <td><input NAME='vendorname' TYPE='text' SIZE='50' value=\"$vendorname\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value='$address'readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value='$city' readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" readonly required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
@@ -83,11 +83,11 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Contact Person Name:</td>
-								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' value='$contactpersonname' readonly required/></td>
+								 <td><input NAME='contactpersonname' TYPE='text' SIZE='50' value=\"$contactpersonname\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Password:</td>
-								 <td><input NAME='password' TYPE='password' SIZE='50' value='$password' readonly required/></td>
+								 <td><input NAME='password' TYPE='password' SIZE='50' value=\"$password\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Status:</td>

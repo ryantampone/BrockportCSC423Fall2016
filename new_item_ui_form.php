@@ -36,11 +36,11 @@
           </tr>
           <tr>
             <td align='right'>Description:</td>
-            <td><input id='Description' name='Description' type='textarea' onKeyPress='return anythingButQuotesOrSlash(event)' onpaste='return false' required/></td>
+            <td><input id='Description' name='Description' type='textarea' required/></td>
           </tr>
           <tr>
             <td align='right'>Size:</td>
-          	<td><input id='Size' name='Size' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
+          	<td><input id='Size' name='Size' TYPE='text' SIZE='50' required/></td>
           </tr>
           <tr>
             <td align='right'>Division:</td>
@@ -87,7 +87,7 @@
 								<select id='VendorId' name='VendorId' required/>
 							";
 									connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-									$sql_vendors = "SELECT VendorId FROM Vendor WHERE Status='Active';";
+									$sql_vendors = "SELECT VendorId, VendorName FROM Vendor WHERE Status='Active';";
 									$vendors_result = mysql_query($sql_vendors);
 
 									if (!$vendors_result)
@@ -98,14 +98,15 @@
 									while ($row = mysql_fetch_assoc($vendors_result))
 									{
 										$vendorid = $row['VendorId'];
-										echo "<option>".$vendorid."</option>";
+										$vendorname = mysql_real_escape_string($row['VendorName']);
+										echo "<option>".$vendorid.": ".$vendorname."</option>";
 									}
 			  echo "</select>
 						</td>
 					</tr>
 					<tr>
 							<td align='right'>Image Filename:</td>
-							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false'   value='BrockportCSC423Fall2016/src/' /></td>
+							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false' value='BrockportCSC423Fall2016/src/' /></td>
 					</tr>
 					</table>
 					<div class='button'>

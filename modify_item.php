@@ -22,11 +22,12 @@ function modify_item()
         // These are available in the super global variable $_POST
 	// This is actually an associative array, indexed by a string
 	$itemId = $_POST['ItemId'];
+	$esc_itemId = mysql_real_escape_string($_POST['ItemId']);
 	//echo"Vendor ID is: $vendorid";
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "SELECT * FROM InventoryItem WHERE ItemId='$itemId';";
+	$sql_stmt = "SELECT * FROM InventoryItem WHERE ItemId='$esc_itemId';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);

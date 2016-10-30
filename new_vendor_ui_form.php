@@ -17,7 +17,7 @@
                     </tr>
                     <tr>
                         <td align='right'>Vendor Name:</td>
-                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' onpaste='return false' required/></td>
+                        <td><input NAME='vendorname' id='vendorname' TYPE='text' SIZE='50' required/></td>
                     </tr>
                     <tr>
                         <td align='right'>Address:</td>
@@ -87,7 +87,7 @@
 										</tr>
 										<tr>
                         <td align='right'>Zip:</td>
-                        <td><input NAME='zip' id='zip'TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+                        <td><input NAME='zip' id='zip' TYPE='text' SIZE='50' maxlength='5' onKeyPress='return hasToBeNumber(event)' onpaste='return false' onblur='checkZipCode()' required/></td>
                     </tr>
 										<tr>
                         <td align='right'>Phone:</td>
@@ -99,7 +99,7 @@
                     </tr>
 										<tr>
                         <td align='right'>Password:</td>
-                        <td><input NAME='password' id='password' TYPE='password' SIZE='50' onKeyPress='return isPasswordKey(event)' onpaste='return false' required/></td>
+                        <td><input NAME='password' id='password' TYPE='password' SIZE='50' required/></td>
                     </tr>
                 </table>
 								<div class='button'>
