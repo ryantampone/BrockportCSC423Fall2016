@@ -1,7 +1,7 @@
 <?php
 
-	include 'header.php'
-
+	include 'header.php';
+         require('db_cn.inc');
 ?>
 
 <?php
@@ -18,8 +18,7 @@
 				<td ><span align='right'>Vendor ID:</span></td>
 				
 				<td>
-					<select id='VendorId' name='VendorId' required />
-				";
+					<select id='VendorId' name='VendorId' required />";
 					$sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active';";
 					$vendors_result = mysql_query($sql_vendors);
 					if (!$vendors_result)
@@ -42,8 +41,7 @@
 			<tr>
 					<td><span align='right'>Store ID:</span></td>
 					<td>
-					<select id='StoreId' name='StoreId' required />
-				";
+					<select id='StoreId' name='StoreId' required />";
 					$sql_store = "SELECT StoreName FROM RetailStore WHERE Status='Active';";
 					$store_result = mysql_query($sql_store);
 					if (!$store_result)
