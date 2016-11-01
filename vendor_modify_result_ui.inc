@@ -153,6 +153,7 @@ function show_all_vendors($message, $result)
 				 <div class='button'>
 					 <input id='tiny_button' type='submit' id='submit' name='submit'/>
 					 <input id='tiny_button' type='reset' id='reset' name='reset'/>
+					 <button id='tiny_button' type='button' name='activate' onclick=\"document.getElementById('status').value = 'Active';\">Activate Vendor</button>
 				 </div>
 		 </form> ";
 	}
