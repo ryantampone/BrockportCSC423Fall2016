@@ -9,6 +9,7 @@
 
 <script language="javascript">
 
+
   function hasToBeNumber(evt)
 	{
     var charCode = (evt.which) ? evt.which : event.keycode
