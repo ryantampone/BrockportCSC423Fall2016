@@ -83,8 +83,8 @@ function show_all_items($message, $result)
 					}
 					while ($row = mysql_fetch_assoc($div_result))
 					{
-						$division = $row['Division'];
-						echo "<option>".$division."</option>";
+						$_division = $row['Division'];
+						echo "<option>".$_division."</option>";
 					}
   					echo "<option value='Division' selected>$division</option>
 				</select>
@@ -109,8 +109,8 @@ function show_all_items($message, $result)
 					}
 					while ($row = mysql_fetch_assoc($department_result))
 					{
-						$department = $row['Department'];
-						echo "<option>".$department."</option>";
+						$_department = $row['Department'];
+						echo "<option>".$_department."</option>";
 					}
   					echo "<option value='Department' selected>$department</option>
 				</select>
@@ -133,8 +133,8 @@ function show_all_items($message, $result)
 					}
 					while ($row = mysql_fetch_assoc($category_result))
 					{
-						$category = $row['Category'];
-						echo "<option>".$category."</option>";
+						$_category = $row['Category'];
+						echo "<option>".$_category."</option>";
 					}
   					echo "<option value='Category' selected>$category</option>
 				</select>
