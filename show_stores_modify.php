@@ -146,12 +146,13 @@ function show_all_stores($message, $result)
 						 </tr>
              <tr>
                  <td align='right'>Status:</td>
-                 <td><input name='status' type='text' size'50' value='$status' readonly/></td>
+                 <td><input id='status' name='status' type='text' size'50' value='$status' readonly/></td>
              </tr>
 				 </table>
 				  <div class='button'>
 						<input id='tiny_button' type='submit' id='submit' name='submit' >
 						<input id='tiny_button' type='reset' id='reset' name='reset'>
+					 	<button id='tiny_button' type='button' name='activate' onclick=\"document.getElementById('status').value = 'Active';\">Activate Store</button>
 			</div>
 
 		 </form> ";
