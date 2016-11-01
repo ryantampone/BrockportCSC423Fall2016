@@ -203,12 +203,10 @@
       <div id="nav_wrapper">
           <ul>
               <li><a href="/~rtamp1/csc423/gp/indexVendor.php">Home</a></li>
-              <li><a href="#">Vendor</a>
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
-                    <li><a href="/~rtamp1/csc423/gp/modify_vendor_ui_form.php">Modify Vendor</a>
-                    <li><a href="/~rtamp1/csc423/gp/delete_vendor_ui_form.php">Remove Vendor</a>
                   </ul>
+
               </li>
           </ul>
       </div>
