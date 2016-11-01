@@ -8,6 +8,7 @@ echo"
 		<div id='callToAction'>
 	    <h4 align='center'>Please Fill out the Customer Form Below</h4>
 	  </div>
+		
     	<div id='userdataform'>
             <form action='create_customer.php' method='post'>
                 <table align='center'>
