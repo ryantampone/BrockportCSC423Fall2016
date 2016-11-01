@@ -5,6 +5,12 @@
 ?>
 
 <?php
+
+ while ($row = mysql_fetch_assoc($result))
+   {
+	$storeid = $row['StoreId'];
+	$vendorid = $row['VendorId'];
+
 	echo"
 		<br>
 		<h2>Please fill out the new order form below.</h2>
@@ -74,9 +80,9 @@
 						<input id='tiny_button' type='submit' id='submit' name='submit' >
 						<input id='tiny_button' type='reset' id='reset' name='reset'>
 					</div>
-		</form>
+		</form>";
+}
 
-	";
 ?>
 
 </body>
