@@ -231,6 +231,12 @@
                     <li><a href="/~rtamp1/csc423/gp/delete_customer_ui_form.php">Remove Customer</a>
                   </ul>
               </li>
+              <li><a href="#">Order</a>
+                  <ul>
+                    <li><a href="/~rtamp1/csc423/gp/new_item_order_form.php">Create Order</a>
+                    <li><a href="/~rtamp1/csc423/gp/add_item_to_order_form.php">Add Items to Order</a>
+                  </ul>
+              </li>
           </ul>
       </div>
   </div>
