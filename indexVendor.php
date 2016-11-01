@@ -15,7 +15,7 @@
 									</form>";
 			} else{
 					echo"<form action='loginfiles/login.inc.php' method='POST'>
-									<input type='text' name='uid' placeholder='VendorCode'><br>
+									<input type='text' name='vcode' placeholder='VendorCode'><br>
 									<input type='password' name='pwd' placeholder='Password'>
 									<button type='submit'>Login</button>
 							</form>";

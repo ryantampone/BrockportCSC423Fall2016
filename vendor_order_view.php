@@ -8,18 +8,7 @@
 
 <br>
 
-if (isset($_SESSION['id'])){
-				echo"<form action='loginfiles/logout.inc.php'>
-								<button >Logout</button>
-						</form>";
-} else{
-		echo"<form action='loginfiles/login.inc.php' method='POST'>
-						<input type='text' name='uid' placeholder='Username'><br>
-						<input type='password' name='pwd' placeholder='Password'>
-						<button type='submit'>Login</button>
-				</form>";
-}
-
+<h2>Congrats!  You Were Able to Login</h2>
 
 
 </body>
