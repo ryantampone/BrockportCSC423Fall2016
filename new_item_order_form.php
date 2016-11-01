@@ -66,9 +66,16 @@
 				<td ><span align='right'>Date:</span></td>
 				<td><input type='date'  id='DateTimeOfOrder' name='DateTimeOfOrder' required /></td>
 			</tr>
+			<tr>
+				<td><span align='right'>Status:</span></td>
+				<td><input type='text' id='Status' name='Status' value='Pending' /></td>
+			</tr>
 			
 			</table>
-		
+		<div class='button'>
+						<input id='tiny_button' type='submit' id='submit' name='submit' >
+						<input id='tiny_button' type='reset' id='reset' name='reset'>
+					</div>
 		</form>
 
 	";
