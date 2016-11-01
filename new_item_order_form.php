@@ -11,11 +11,11 @@
 		<form action='new_order.php' method='post'>
 			<table align='center'>
 			<tr>
-				<td align='right'>Order ID:</td>
+				<td><span align='right'>Order ID:</span></td>
 				<td><input type='text' id='OrderId' name='OrderId' size='50' /></td>
 			</tr>
 			<tr>
-				<td align='right'>Vendor ID:</td>
+				<td ><span align='right'>Vendor ID:</span></td>
 				
 				<td>
 					<select id='VendorId' name='VendorId' required />
@@ -40,7 +40,7 @@
 				
 			</tr>
 			<tr>
-					<td align='right'>Store ID:</td>
+					<td><span align='right'>Store ID:</span></td>
 					<td>
 					<select id='StoreId' name='StoreId' required />
 				";
@@ -61,6 +61,10 @@
 					echo "<option value='$vendorId'>$vendorId</option>
 					</select>
 				</td>
+			</tr>
+			<tr>
+				<td ><span align='right'>Date:</span></td>
+				<td><input type='date'  id='DateTimeOfOrder' name='DateTimeOfOrder' required /></td>
 			</tr>
 			
 			</table>
