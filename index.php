@@ -1,15 +1,16 @@
 <?php
 	include 'header.php';
 ?>
+<link href="css/indexStyles.css" type="text/css" rel="stylesheet" />
+
 
 <div id="callToAction">
-  <h2>Please Select an Option From the Navigation Bar</h2>
+  <h2>Dashboard</h2>
 </div>
+<br>
+//-----------------Index Code Goes Under Here--------------------
 
-<br><br><br>
-<h3 align='center'>(Something Cool is Coming Here)</h3>
 
-<p align='center'><img src='/~rtamp1/csc423/gp/src/gift.png' class="img_m"/></p>
 
 </body>
 </html>
