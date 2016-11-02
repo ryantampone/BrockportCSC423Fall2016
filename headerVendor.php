@@ -15,15 +15,15 @@
             <div id="nav">
                 <div id="nav_wrapper">
                     <ul>
-                        <li><a href="/brockportforecasting/forecastoptions.php">Main Menu</a></li>
+                        <li><a href="/~rtamp1/csc423/gp/indexVendor.php">Main Menu</a></li>
     					<li>	<?php
-                                if (isset($_SESSION['id'])){
-                                        echo"<form action='includes/logout.inc.php'>
+                                if (isset($_SESSION['VendorId'])){
+                                        echo"<form action='loginfiles/logout.inc.php'>
                                                 <button >Logout</button>
                                             </form>";
                                 } else{
-                                    echo"<form action='includes/login.inc.php' method='POST'>
-                                            <input type='text' name='uid' placeholder='Username'>
+                                    echo"<form action='loginfiles/login.inc.php' method='POST'>
+                                            <input type='text' name='vcode' placeholder='Vendor Code'>
                                             <input type='password' name='pwd' placeholder='Password'>
                                             <button type='submit'>Login</button>
                                         </form>";
