@@ -1,22 +1,15 @@
+<?php
+	session_start();
+?>
+
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Nonno's Vendor Order System</title>
     <link href="css/headerVendorStyles.css" type="text/css" rel="stylesheet" />
-    <link href="css/homeActionStyles.css" type="text/css" rel="stylesheet" />
+</head>
 
-    <?php
-    	session_start();
-    ?>
-
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta charset="UTF-8">
-        <title>Brockport Forecasting Login</title>
-        <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
-    </head>
     <body bgcolor="#F5F5F5">
 
             <div id="nav">
