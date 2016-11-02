@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../dbh.php';
+include '/~rtamp1/csc423/gp/dbh.php';
 
 $vcode = $_POST['vcode'];
 $pwd = $_POST['pwd'];
@@ -15,6 +15,6 @@ if(!$row = mysqli_fetch_assoc($result)){
 	$_SESSION['VendorId'] = $row['VendorId'];
 }
 
-header("location: ../vendor_order_view.php");
+header("location: /~rtamp1/csc423/gp/vendor_order_view.php");
 
 ?>
