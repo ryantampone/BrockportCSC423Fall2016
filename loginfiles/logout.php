@@ -2,6 +2,6 @@
 session_start();
 session_destroy();
 
-header("location: ../indexVendor.php");
+header("/~rtamp1/csc423/gp/indexVendor.php");
 
 ?>

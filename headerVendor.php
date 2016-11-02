@@ -18,11 +18,11 @@
                         <li><a href="/~rtamp1/csc423/gp/indexVendor.php">Main Menu</a></li>
     					<li>	<?php
                                 if (isset($_SESSION['VendorId'])){
-                                        echo"<form action='/~rtamp1/csc423/gp/loginfiles/logout.inc.php'>
+                                        echo"<form action='/~rtamp1/csc423/gp/loginfiles/logout.php'>
                                                 <button >Logout</button>
                                             </form>";
                                 } else{
-                                    echo"<form action='/~rtamp1/csc423/gp/loginfiles/login.inc.php' method='POST'>
+                                    echo"<form action='/~rtamp1/csc423/gp/loginfiles/login.php' method='POST'>
                                             <input type='text' name='vcode' placeholder='Vendor Code'>
                                             <input type='password' name='pwd' placeholder='Password'>
                                             <button type='submit'>Login</button>
