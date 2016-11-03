@@ -13,7 +13,7 @@ $result = $conn->query($sql);
 if(!$row = mysqli_fetch_assoc($result)){
 	echo "Your username or password is incorrect";
 } else {
-	$_SESSION['VendorId'] = $row['VendorId'];
+	$_SESSION['VendorCode'] = $row['VendorCode'];
 }
 
 header("location: /~rtamp1/csc423/gp/vendor_order_view.php");
