@@ -6,7 +6,7 @@
   echo"
     <br>
 		<div id='callToAction'>
-	    <h2>Please Enter the Item ID of the Item to Modify</h2>
+	    <h2>Please Enter the Order ID of the Order to Modify</h2>
 	  </div>
     <div id='userdataform'>
       <form action='add_to_existing_order.php' method='post'>
