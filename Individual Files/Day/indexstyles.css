@@ -180,6 +180,7 @@ border: none;
   margin-right: auto;
   /*background-color: pink;*/
   position: absolute;
+  z-index: -1;
 }
 #vendor{
   height: 90%;
