@@ -175,11 +175,11 @@ border: none;
 
 #vendor_store{
   height: 50%;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   /*background-color: pink;*/
-  position: relative;
+  position: absolute;
 }
 #vendor{
   height: 90%;
@@ -203,12 +203,12 @@ border: none;
 }
 #orders_customers{
   height: 50%;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right:auto;
-  margin-top: 5%;
+  margin-top: 25%;
   /*background-color: purple;*/
-  position: relative;
+  position: absolute;
 }
 #orders{
   height: 90%;
@@ -232,12 +232,12 @@ border: none;
 }
 #item_div{
   height: 50%;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 50%;
   /*background-color: maroon;*/
-  position: relative;
+  position: absolute;
   overflow: hidden;
 
 }
