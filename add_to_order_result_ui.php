@@ -41,7 +41,7 @@ function show_order($message, $result)
 
 	echo"
 		<div id='callToAction'>
-			<h2>Please Modify the Desired Information Below</h2>
+			<h2>Current Item in your Order</h2>
 		</div>
 		";
 
@@ -71,7 +71,7 @@ function show_order($message, $result)
 			 	<table align='center'>
 		 ";
 
-		 $order_sql = "SELECT * FROM OrderDetail WHERE (OrderId = $orderid);"
+		 $order_sql = "SELECT * FROM OrderDetail WHERE (OrderId = $orderid);";
 		 $order_result = mysql_query($order_sql);
 
 		 // Get the value of each orderdetail ordered within the given order
@@ -79,29 +79,33 @@ function show_order($message, $result)
 		 $item_array = array();
 		 while($order_row = mysql_fetch_assoc($order_result))
 		 {
+			 $count++;
 			 $itemid = $order_row['ItemId'];
-			 $qty = $order_row['QuantityOrder'];
+			 $qty = $order_row['QuantityOrdered'];
 
-			 $item_sql = "SELECT Description, Size FROM InventoryItem WHERE (ItemId = $itemid);"
-			 $item_result = mysql_query($item_result);
+			 $item_sql = "SELECT Description, Size FROM InventoryItem WHERE (ItemId = $itemid);";
+			 $item_result = mysql_query($item_sql);
 
 			 // Get the description and size from each item in the order
 			 while($item_row = mysql_fetch_assoc($item_result))
 			 {
+				 $_id_for_next_item = "item".$count;
 				 $_description = $item_row['Description'];
 				 $_size = $item_row['Size'];
-
 				 echo"
 				 	<tr>
-				 		<td>
-							<label>".$_description.", ".$_size."</label>
-							<input type='text' size='5' id='".$_id_for_next_item."' />
-						</td>
+				 		<td><p style=\"padding-right: 15px;\" align='right'>".$_description.", ".$_size."</p></td>
+						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty'/></td>
 					</tr>
 				 ";
 			 }
 		 }
+
 	}
+
+	echo "</table>";
+	echo "</form>";
+	echo "<hr/>";
 
 
 

@@ -1,6 +1,3 @@
-<!-- addStoreLocation
-	inserts a new row into the RetailStore table -->
-
 <?php
 
 // File that contains login info for database
@@ -19,7 +16,6 @@ function add_item_to_order()
 	$orderid = $_POST['orderid'];
 
 	// Set the SQL command
-	$sql_stmt = "SELECT * FROM Order WHERE (OrderId = '$orderid');";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
