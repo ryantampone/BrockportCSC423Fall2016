@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Jodi L. Hess -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nanno's Food</title>
+</head>
+<body>
+
+  <table>
+    connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
+    <tr> <td> <b> Vendors: </b> </td> </tr>
+    <tr> <td> Active Vendors: </td> </tr> $strSQL= SELECT Status AS Active Vendors FROM Vendors WHERE Status = 'Active';
+    <tr> <td>  Inactive Vendors:  </td> </tr> $strSQL= SELECT Status AS Inactive Vendors FROM Vendors WHERE Status = 'Inactive';
+
+    <tr> <td> Total Number of Vendors: </td> </tr>
+    $strSQL= SELECT sum(Number of Vendors) AS Total FROM Vendors;
+
+    <tr> <td> <b> Stores: </b>
+    <tr> <td> Number of Stores: </td> </tr> $strSQL= COUNT(StoreName) AS Number of Stores FROM RetailStore;
+    <tr> <td> Store Name: </td> </tr>  $strSQL = Select StoreName FROM RetailStore order by StoreName ASC;
+    <tr> <td> Total of Sales: </td> </tr>  $strSQL = sum(Total of Sales) AS Total of Sales FROM RetailStore;
+
+    <tr> <td> <b> Orders: </b> </td> </tr>
+    <tr> <td> Pending Orders: </td> </tr>  <$strSQL = Select Status AS Pending Order FROM Order WHERE Order = 'Pending';>
+    <tr> <td> Delivered Orders: </td> </tr>  <$strSQL = Select Status AS Pending Order FROM Order WHERE Order = 'Delivered';>
+    <tr> <td> Canceled Orders: </td> </tr>  <$strSQL = Select Status AS Pending Order FROM Order WHERE Order = 'Canceled';>
+
+    <tr> <td> <b> Customers: </b> </td> </tr>
+    <tr> <td> Active Customers: </td> </tr> <$strSQL= SELECT CustomerName AS Active Customers from Customers WHERE Customers = Active;>
+    <tr> <td> Total Customers: </td> </tr>  <$strSQL= SELECT sum(CustomerName) AS Total Customers FROM Customers>
+
+    <tr> <td> <b> Items to be Reordered: </b> </td> </tr>
+    <!-- Add sql code -->
+
+
+  </table>
+
+
+</body>
+</html>
