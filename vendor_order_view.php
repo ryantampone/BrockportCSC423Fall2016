@@ -1,10 +1,10 @@
 <?php
-	include 'header.php';
+	include 'headerVendor.php';
 ?>
 
 
 <?php
-	if (isset($_SESSION['VendorId']))
+	if (isset($_SESSION['VendorCode']))
 	{
 		echo
 			"
@@ -12,15 +12,15 @@
             	<h3 align='center'>View Your Orders Below</h3>
         	 </div>
 
-    		<center>
-        		<form action='/brockportforecasting/new_user_ui_form.php'><button >Register User</button></form>
-    		</center>
-
 			";
 	}
 	else
 	{
-		echo "<script type='text/javascript'>alert('Please login to view this page')</script>";
+		echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('Please Login to View This Page')
+    window.location.href='http://www.itss.brockport.edu/~rtamp1/csc423/gp/indexVendor.php';
+    </SCRIPT>");
+		//echo "<script type='text/javascript'>alert('Please login to view this page') window.location.href='./indexVendor.php'</script>";
 	}
 ?>
 
