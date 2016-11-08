@@ -1,6 +1,8 @@
 <?php
 	session_start();
-	echo $_SESSION['VendorCode'];
+	//echo $_SESSION['VendorCode'];
+	$VENDORCODE = (string)$_SESSION['VendorCode'];
+	//echo "VENDORCODE is: ".$VENDORCODE;
 ?>
 <?php
 	include 'headerVendor.php';
@@ -10,17 +12,11 @@
 <?php
 	if (isset($_SESSION['VendorCode']))
 	{
-		/*
-		if(!isset($_COOKIE[$cookie_name])) {
-		    echo "Cookie named '" . $cookie_name . "' is not set!";
-		} else {
-		    echo "Cookie '" . $cookie_name . "' is set!<br>";
-		    echo "Value is: " . $_COOKIE[$cookie_name];
-		}*/
+		//echo "VENDORCODE IN MY IF IS:". $VENDORCODE;
 
 		echo
 			"
-				<div id='callToAction'><h3 align='center'>View Your Orders Below</h3></div>
+				<div id='callToAction'><h3 align='center'>Displaying Your Pending Orders Below</h3></div>
 
 			";
 	}
