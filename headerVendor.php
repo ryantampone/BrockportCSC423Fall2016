@@ -8,6 +8,19 @@
 <meta charset="UTF-8">
     <title>Nonno's Vendor Order System</title>
     <link href="css/headerVendorStyles.css" type="text/css" rel="stylesheet" />
+<!--
+				<script type='text/javascript'>
+						var VENDORCODE = "default_value";
+						function storeVendorCode()
+						{
+							VENDORCODE = document.getElementById('vcode').value;
+						}
+						function retrieveVendorCode()
+						{
+							return VENDORCODE;
+						}
+				</script>
+-->
 </head>
 <body bgcolor="#F5F5F5">
 
@@ -23,7 +36,7 @@
                                             </form>";
                                 } else{
                                     echo"<form action='/~rtamp1/csc423/gp/loginfiles/login.php' method='POST'>
-                                            <input type='text' name='vcode' placeholder='Vendor Code'>
+                                            <input type='text' name='vcode' id='vcode' placeholder='Vendor Code'>
                                             <input type='password' name='pwd' placeholder='Password'>
                                             <button type='submit'>Login</button>
                                         </form>";
