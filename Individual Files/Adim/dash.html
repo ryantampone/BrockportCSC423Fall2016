@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <!-- Jodi L. Hess -->
+  <!-- Adim Odumefune -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Nanno's Food</title>
@@ -12,8 +12,8 @@
   <table>
     connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
     <tr> <td> <b> Vendors: </b> </td> </tr>
-    <tr> <td> Active Vendors: </td> </tr> $strSQL= SELECT Status AS Active Vendors FROM Vendors WHERE Status = 'Active';
-    <tr> <td>  Inactive Vendors:  </td> </tr> $strSQL= SELECT Status AS Inactive Vendors FROM Vendors WHERE Status = 'Inactive';
+    <tr> <td> Active Vendors: </td> </tr> $strSQL= SELECT STATUS FROM `Vendor` WHERE STATUS =  'Active';
+    <tr> <td>  Inactive Vendors:  </td> </tr> $strSQL= SELECT STATUS FROM `Vendor` WHERE STATUS =  'Inactive';
 
     <tr> <td> Total Number of Vendors: </td> </tr>
     $strSQL= SELECT sum(Number of Vendors) AS Total FROM Vendors;
