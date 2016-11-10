@@ -28,7 +28,7 @@
             <div id="nav">
                 <div id="nav_wrapper">
                     <ul>
-                        <li><a href="/~rtamp1/csc423/gp/indexVendor.php">Main Menu</a></li>
+                        <li><a href="/~rtamp1/csc423/gp/vendor_order_type_select.php">Main Menu</a></li>
     					<li>	<?php
                                 if (isset($_SESSION['VendorCode'])){
                                         echo"<form action='/~rtamp1/csc423/gp/loginfiles/logout.php'>

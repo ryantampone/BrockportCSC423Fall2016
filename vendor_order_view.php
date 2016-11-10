@@ -3,7 +3,7 @@
 ?>
 <?php
 
-function show_order($message, $result)
+function show_order($result, $orderStatus)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -12,21 +12,6 @@ function show_order($message, $result)
   echo "</HEAD>";
   echo "<BODY>";
 
-	echo"
-		<div id='callToAction'>
-			<h2>Current Orders</h2>
-		</div>
-		";
-
-  // If the message is non-null and not an empty string print it
-  // message contains the lastname and firstname
-  if ($message)
-  {
-    if ($message != "")
-       {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
-       }
-  }
 
    //While there are more rows in the $result, get the next row
    //as an associative array
@@ -40,8 +25,25 @@ function show_order($message, $result)
 		 $completedatetime = $row['DateTimeOfFulfillment'];
 
 		 echo"
+	 		<div id='callToAction'>
+				<br>
+	 			<h2>$orderStatus Order ID: $orderid</h2>
+	 		</div>
+	 		";
+
+
+		 echo"
 		 <form action='' method='post'>
 			 	<table align='center'>
+
+				<tr>
+	 			 <td><p style=\"padding-right: 30px;\" align='right'>Date and Time of Order Placement:</p></td>
+	 			 <td><p style=\"padding-right: 30px;\" align='left'>$orderdatetime</p></td>
+	 		 </tr>
+	 		 <tr>
+	 			 <td><p style=\"padding-right: 30px;\" align='right'>Status of Order:</p></td>
+	 			 <td><p style=\"padding-right: 30px;\" align='left'>$status</p></td>
+	 		 </tr>
 		 ";
 
 		 $order_sql = "SELECT * FROM OrderDetail WHERE (OrderId = $orderid);";
@@ -67,8 +69,8 @@ function show_order($message, $result)
 				 $_size = $item_row['Size'];
 				 echo"
 				 	<tr>
-				 		<td><p style=\"padding-right: 15px;\" align='right'>".$_description.", ".$_size."</p></td>
-						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty'/></td>
+				 		<td><p style=\"padding-right: 30px;\" align='right'>".$_description.", ".$_size."</p></td>
+						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty' readonly/></td>
 					</tr>
 				 ";
 			 }
@@ -76,9 +78,12 @@ function show_order($message, $result)
 
 	}
 
+
+
+
 	echo "</table>";
 	echo "</form>";
-	echo "<hr/>";
+	echo "<hr/><br><br>";
 
 
 
@@ -88,4 +93,31 @@ function show_order($message, $result)
 
 }
 
+
+
+function show_order_not_found($message)
+{
+  //----------------------------------------------------------
+  // Start the html page
+  echo "<HTML>";
+  echo "<HEAD>";
+  echo "</HEAD>";
+  echo "<BODY>";
+
+
+  // If the message is non-null and not an empty string print it
+  // message contains the lastname and firstname
+  if ($message)
+  {
+    if ($message != "")
+       {
+	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+       }
+  }
+
+
+
+	echo "</BODY>";
+	echo "</HTML>";
+}
 ?>

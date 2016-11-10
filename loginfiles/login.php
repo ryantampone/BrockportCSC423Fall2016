@@ -22,6 +22,7 @@ if(!$row = mysqli_fetch_assoc($result)){
 	$_SESSION['VendorCode'] = $row['VendorCode'];
 }
 
-header("location: ../vendor_order.php");
+//header("location: ../vendor_order.php");
+header("location: ../vendor_order_type_select.php");
 
 ?>

@@ -1,16 +1,16 @@
 <?php
 	session_start();
-	//echo $_SESSION['VendorCode'];
 	$VENDORCODE = (string)$_SESSION['VendorCode'];
-	//echo "VENDORCODE is: ".$VENDORCODE;
-  //include 'headerVendor.php';
 ?>
 
 <?php
 	require('db_cn.inc');
 	require('vendor_order_view.php');
+
+	$selectedOrderStatus = $_POST['orderStatus'];
+
 	$VENDORID;
-	$ORDERID;
+	$message;
 
 	if (isset($_SESSION['VendorCode']))
 	{
@@ -25,8 +25,10 @@
 		}
 		$numrows = mysql_num_rows($result);
 		$message = "";
-		if ($numrows == 0)
+		if ($numrows == 0){
 			 $message = "No vendor ID found in database with the provided Vendor Code";
+			 notFound($message);
+		 }
 
 	 while ($row = mysql_fetch_assoc($result))
 	 {
@@ -36,40 +38,32 @@
 	 mysql_free_result($result);
 
 
-	 //Step 2 Get Order ID Where VendorID is our VendorID and Status is Pending
-	 connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-	 $sql_stmt = "SELECT OrderId FROM `Order` WHERE ((VendorId='$VENDORID')and(Status='Pending'));";
-	 $result = mysql_query($sql_stmt);
-	 if (!$result)
-	 {
-			echo "The retrieval was unsuccessful: ".mysql_error();
-			exit;
-	 }
-	 $numrows = mysql_num_rows($result);
-	 $message = "";
-	 if ($numrows == 0)
-			$message = "No Order ID found in database with the provided Vendor ID";
+			 //Step 2 Get Order ID Where VendorID is our VendorID and Status is What the Vendor Selects
+			 connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
+			 $sql_stmt = "SELECT OrderId FROM `Order` WHERE ((VendorId='$VENDORID')and(Status='$selectedOrderStatus')) ORDER BY  `Order`.`DateTimeOfOrder` DESC;";
+			 $result = mysql_query($sql_stmt);
+			 if (!$result)
+			 {
+					echo "The retrieval was unsuccessful: ".mysql_error();
+					exit;
+			 }
+			 $numrows = mysql_num_rows($result);
+			 $message = "";
+			 if ($numrows == 0){
+					$message = "No Order ID found in database with the provided Vendor ID and status: ".$selectedOrderStatus;
+					notFound($message);
+				}
 
-	while ($row = mysql_fetch_assoc($result))
-	{
-				$ORDERID = $row['OrderId'];
-	}
-	mysql_free_result($result);
+			while ($row = mysql_fetch_assoc($result))
+			{
+						$ORDERID = $row['OrderId'];
+						showItemsInOrder($ORDERID, $selectedOrderStatus);
+			}
+			mysql_free_result($result);
+		//}
 
-  //echo "ORDERID is: ".$ORDERID;
-	//Step 3 Implement Adam's Code to Show Orders
-	showItemsInOrder($ORDERID);
 
-	 //-----------------------------Document Form Goes Here--------------------------------------------------
-	 /*
-	 	echo "Vendor ID is: ".$VENDORID;
-		echo "Order ID is: ".$ORDERID;
-		echo
-			"
-				<div id='callToAction'><h3 align='center'>Displaying Your Pending Orders Below</h3></div>
 
-			";
-			*/
 	}
 	else
 	{
@@ -82,38 +76,42 @@
 
 
 
-	function showItemsInOrder($ORDERID)
+	function showItemsInOrder($ORDERID, $selectedOrderStatus)
 	{
 		// Connect to the database with the 'db_cn.ini' file required above
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 
-		// Get the info the user enters on the webpage
-		$orderid = $ORDERID;
+	$orderid= $ORDERID;
+	$SELECTEDORDERSTATUS = $selectedOrderStatus;
 
-		// Set the SQL command
-		$sql_stmt = "SELECT * FROM `Order` WHERE (OrderId='$orderid');";
 
-		//Execute the query. The result will just be true or false
-		$result = mysql_query($sql_stmt);
-
-		if (!$result)
-	  {
-	     echo "The retrieval was unsuccessful: ".mysql_error();
-	     exit;
-	  }
-
-	  //$result is non-empty. So count the rows
-	  $numrows = mysql_num_rows($result);
-	  $message = "";
-	  if ($numrows == 0)
-	     $message = "No pending orders found in database with the provided Vendor Code";
-
-	  //Display the results
-	  show_order($message, $result);
-
-	  //Free the result set
-	  mysql_free_result($result);
+	//Orders
+	$sql_stmt = "SELECT * FROM `Order` WHERE (OrderId='$orderid');";
+	$result = mysql_query($sql_stmt);
+	if (!$result)
+	{
+		 echo "The retrieval was unsuccessful: ".mysql_error();
+		 exit;
 	}
+	$numrows = mysql_num_rows($result);
+	$message = "";
+	if ($numrows == 0){
+		 $message = "No orders found in database with the provided Vendor Code";
+		 notFound($message);
+	 }
+
+		 show_order($result, $SELECTEDORDERSTATUS);
+		 mysql_free_result($result);
+
+	}
+
+
+	function notFound($messageNF)
+	{
+		$errormessage=$messageNF;
+		show_order_not_found($errormessage);
+	}
+
 
 
 function connect_and_select_db($server, $username, $pwd, $dbname)
