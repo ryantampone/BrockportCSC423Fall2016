@@ -1,7 +1,12 @@
 <?php
 	include 'header.php';
-	include 'update_dashboard.php'
+	include 'update_dashboard.php';
 ?>
+
+
+<?php
+	function show_index($v_active){
+
 <link href="indexStyles.css" type="text/css" rel="stylesheet" />
 
 
@@ -87,3 +92,6 @@
 
 </body>
 </html>
+
+}
+?>

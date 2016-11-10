@@ -4,6 +4,7 @@
 <?php
 
   require('db_cn.inc');
+  // require('update_dashboard_insert_result_ui.inc');
 
   update_dash();
 
@@ -11,9 +12,21 @@
   {
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
     $activeVendors = mysql_query("select count(*) from Vendor where Status = "Active";");
-    echo '<script type="text/javascript">'
-    echo 'document.getElementById("active_vendors").innerHTML = "$activeVendors"';
-    echo '</script>'
+    //$inactiveVendors = mysql_query("select count(*) from Vendor where Status = "Inctive";");
+    //$totalVendors = mysql_query("select count(*) from Vendor");
+
+    $resultAV = mysql_query($activeVendors);
+    if (!$resultAV){
+      echo "N/A"; //be sure to change
+      exit;
+    }
+    while($row = mysql_fetch_assoc($resultAV)){
+      $vendorsActive = $row['count(*)'];
+    }
+    mysql_free_result($resultAV);
+
+    show_index($vendorsActive);
+
   }
 
 
