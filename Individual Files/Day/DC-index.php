@@ -1,5 +1,6 @@
 <?php
 	include 'header.php';
+	include 'update_dashboard.php'
 ?>
 <link href="indexStyles.css" type="text/css" rel="stylesheet" />
 

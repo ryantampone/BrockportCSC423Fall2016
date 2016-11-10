@@ -11,9 +11,9 @@
   {
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
     $activeVendors = mysql_query("select count(*) from Vendor where Status = "Active";");
-    <script type="text/javascript">
-      document.getElementById("active_vendors").innerHTML("$activeVendors");
-    </script>
+    echo '<script type="text/javascript">'
+    echo 'document.getElementById("active_vendors").innerHTML = "$activeVendors"';
+    echo '</script>'
   }
 
 
