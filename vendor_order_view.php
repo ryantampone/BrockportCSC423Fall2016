@@ -34,9 +34,9 @@ function show_order($result, $orderStatus)
 
 		 echo"
 		 <form action='' method='post'>
-			 	<table align='center'>
+			 <table align='center'>
 
-				<tr>
+			 <tr>
 	 			 <td><p style=\"padding-right: 30px;\" align='right'>Date and Time of Order Placement:</p></td>
 	 			 <td><p style=\"padding-right: 30px;\" align='left'>$orderdatetime</p></td>
 	 		 </tr>
@@ -44,13 +44,19 @@ function show_order($result, $orderStatus)
 	 			 <td><p style=\"padding-right: 30px;\" align='right'>Status of Order:</p></td>
 	 			 <td><p style=\"padding-right: 30px;\" align='left'>$status</p></td>
 	 		 </tr>
+			</table>
 		 ";
 
 		 echo"
+			<p align='center'>-----------------------------------------------------------------------------------------------</p>
+		<table align='center'>
+
 			<tr>
-				<td><p style=\"padding-right: 30px;\" align='right'>Item Description</p></td>
-				<td><p style=\"padding-right: 30px;\" align='right'>Quantity</p></td>
+				<th><font color='black'><u><strong><p style=\"padding-right: 30px;\" align='center'>Item Description</p></font></strong></u></td>
+				<th><font color='black'><u><strong><p style=\"padding-right: 30px;\" align='center'>Quantity</p></font></strong></u></td>
 			</tr>
+				
+
 		 ";
 
 		 $order_sql = "SELECT * FROM OrderDetail WHERE (OrderId = $orderid);";
