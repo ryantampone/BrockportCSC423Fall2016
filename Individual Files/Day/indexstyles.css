@@ -189,7 +189,7 @@ border: none;
   top:5%;
   left: 5%;
   bottom: 5%;
-  background-color: black;
+  background-color: white;
   box-shadow: 15px 15px 15px #888888/*#b6aeae*/;
 }
 #store{
@@ -199,7 +199,7 @@ border: none;
   top: 5%;
   bottom: 5%;
   right: 5%;
-  background-color: black;
+  background-color: white;
   box-shadow: 15px 15px 15px #888888;
 }
 #orders_customers{
@@ -218,7 +218,7 @@ border: none;
   left: 5%;
   bottom: 5%;
   top: 5%;
-  background-color: black;
+  background-color: white;
   box-shadow: 15px 15px 15px #888888;
 }
 #customers{
@@ -228,7 +228,7 @@ border: none;
   right: 5%;
   top:5%;
   bottom: 5%;
-  background-color: black;
+  background-color: white;
   box-shadow: 15px 15px 15px #888888;
 }
 #item_div{
@@ -249,6 +249,6 @@ border: none;
   left: 5%;
   top: 5%;
   bottom: 5%;
-  background-color: black;
+  background-color: white;
   box-shadow: 15px 15px 15px #888888;
 }
