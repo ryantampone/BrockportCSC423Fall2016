@@ -46,6 +46,13 @@ function show_order($result, $orderStatus)
 	 		 </tr>
 		 ";
 
+		 echo"
+			<tr>
+				<td><p style=\"padding-right: 30px;\" align='right'>Item Description</p></td>
+				<td><p style=\"padding-right: 30px;\" align='right'>Quantity</p></td>
+			</tr>
+		 ";
+
 		 $order_sql = "SELECT * FROM OrderDetail WHERE (OrderId = $orderid);";
 		 $order_result = mysql_query($order_sql);
 

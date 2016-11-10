@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Nanno's Foods Management System</title>
     <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
     <link href="css/homeActionStyles.css" type="text/css" rel="stylesheet" />
 

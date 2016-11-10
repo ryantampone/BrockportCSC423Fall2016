@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>Nonno's Vendor Order System</title>
+    <title>Nanno's Vendor Order System</title>
     <link href="css/headerVendorStyles.css" type="text/css" rel="stylesheet" />
 <!--
 				<script type='text/javascript'>
