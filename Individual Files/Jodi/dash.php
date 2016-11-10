@@ -32,16 +32,19 @@ echo "
     ";
 
      //$strSQL= SELECT COUNT(StoreName) FROM RetailStore;
-     $sql   = "SELECT COUNT(StoreName) FROM 'RetailStore'"
+     $sql   = "SELECT COUNT(StoreName) FROM RetailStore"
 
 
      //============================= correct sql to this point ======================
-     
-    <!--   <tr> <td> Store Name: </td> </tr>  $strSQL = Select StoreName FROM RetailStore order by StoreName ASC; -->
-      <!-- <tr> <td> Total of Sales: </td> </tr>  $strSQL = SELECT COUNT(OrderID) FROM 'Order'; -->
 
-    <tr> <td> <b> Orders: </b> </td> </tr>
-    <tr> <td> Pending Orders: </td> </tr>  $strSQL = SELECT COUNT( STATUS ) FROM 'Order' WHERE STATUS  = 'Pending'; <!-- doesn't work -->
+    //  <tr> <td> Store Name: </td> </tr>  $strSQL = Select StoreName FROM RetailStore order by StoreName ASC; -->
+   //  <tr> <td> Total of Sales: </td> </tr>  $strSQL = SELECT COUNT(OrderID) FROM 'Order'; -->
+
+    echo " <tr> <td> <b> Orders: </b> </td> </tr>
+    <tr> <td> Pending Orders: </td> </tr>
+   ";
+
+     $strSQL = SELECT COUNT( STATUS ) FROM 'Order' WHERE STATUS  = 'Pending'; //-- doesn't work 
 
     <tr> <td> Delivered Orders: </td> </tr>  $strSQL = Select Status AS Delivered Order FROM Order WHERE Order = 'Delivered';
     <tr> <td> Canceled Orders: </td> </tr>  $strSQL = Select Status AS Canceled Order FROM Order WHERE Order = 'Canceled';
