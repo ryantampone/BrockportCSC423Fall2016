@@ -4,7 +4,7 @@ echo "
 <html>
 <head>
 
-  <!-- Adim Odumefune/Jodi L. Hess -->
+  <!-- Jodi L. Hess -->
   < charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Nanno's Food</title>
@@ -25,16 +25,26 @@ echo "
      $sql  = "SELECT COUNT( STATUS ) FROM  `Vendor` WHERE STATUS =  'Inactive'";
     //$strSQL= SELECT COUNT( STATUS ) FROM  `Vendor` WHERE STATUS =  'Inactive';
 
-    <tr> <td> Total Number of Vendors: </td> </tr>
-    $strSQL= SELECT COUNT (VendorID) FROM 'Vendor';
+    $sql  =  "SELECT COUNT(*) FROM Vendor"
 
-    <tr> <td> <b> Stores: </b>
-    <tr> <td> Number of Stores: </td> </tr> $strSQL= SELECT COUNT(StoreName) FROM RetailStore;
-    <!--   <tr> <td> Store Name: </td> </tr>  $strSQL = Select StoreName FROM RetailStore order by StoreName ASC; -->
-      <!-- <tr> <td> Total of Sales: </td> </tr>  $strSQL = SELECT COUNT(OrderID) FROM 'Order'; -->
+    echo "<tr> <td> <b> Stores: </b>
+    <tr> <td> Number of Stores: </td> </tr>
+    ";
 
-    <tr> <td> <b> Orders: </b> </td> </tr>
-    <tr> <td> Pending Orders: </td> </tr>  $strSQL = SELECT COUNT( STATUS ) FROM 'Order' WHERE STATUS  = 'Pending'; <!-- doesn't work -->
+     //$strSQL= SELECT COUNT(StoreName) FROM RetailStore;
+     $sql   = "SELECT COUNT(StoreName) FROM RetailStore"
+
+
+     //============================= correct sql to this point ======================
+
+    //  <tr> <td> Store Name: </td> </tr>  $strSQL = Select StoreName FROM RetailStore order by StoreName ASC; -->
+   //  <tr> <td> Total of Sales: </td> </tr>  $strSQL = SELECT COUNT(OrderID) FROM 'Order'; -->
+
+    echo " <tr> <td> <b> Orders: </b> </td> </tr>
+    <tr> <td> Pending Orders: </td> </tr>
+   ";
+
+     $strSQL = SELECT COUNT( STATUS ) FROM 'Order' WHERE STATUS  = 'Pending'; //-- doesn't work 
 
     <tr> <td> Delivered Orders: </td> </tr>  $strSQL = Select Status AS Delivered Order FROM Order WHERE Order = 'Delivered';
     <tr> <td> Canceled Orders: </td> </tr>  $strSQL = Select Status AS Canceled Order FROM Order WHERE Order = 'Canceled';
