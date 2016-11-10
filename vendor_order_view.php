@@ -27,7 +27,7 @@ function show_order($result, $orderStatus)
 		 echo"
 	 		<div id='callToAction'>
 				<br>
-	 			<h2>$orderStatus Order ID: $orderid</h2>
+	 			<h2>Order ID $orderid: $orderStatus </h2>
 	 		</div>
 	 		";
 
@@ -37,13 +37,17 @@ function show_order($result, $orderStatus)
 			 <table align='center'>
 
 			 <tr>
+				 <td><p style=\"padding-right: 30px;\" align='right'>Nanno's Foods Store Location:</p></td>
+				 <td><p style=\"padding-right: 30px;\" align='left'>$storeid</p></td>
+			 </tr>
+			 <tr>
 	 			 <td><p style=\"padding-right: 30px;\" align='right'>Date and Time of Order Placement:</p></td>
 	 			 <td><p style=\"padding-right: 30px;\" align='left'>$orderdatetime</p></td>
 	 		 </tr>
-	 		 <tr>
-	 			 <td><p style=\"padding-right: 30px;\" align='right'>Status of Order:</p></td>
-	 			 <td><p style=\"padding-right: 30px;\" align='left'>$status</p></td>
-	 		 </tr>
+			 <tr>
+				 <td><p style=\"padding-right: 30px;\" align='right'>Date and Time of Order Fulfillment:</p></td>
+				 <td><p style=\"padding-right: 30px;\" align='left'>$completedatetime</p></td>
+			 </tr>
 			</table>
 		 ";
 
@@ -55,7 +59,7 @@ function show_order($result, $orderStatus)
 				<th><font color='black'><u><strong><p style=\"padding-right: 30px;\" align='center'>Item Description</p></font></strong></u></td>
 				<th><font color='black'><u><strong><p style=\"padding-right: 30px;\" align='center'>Quantity</p></font></strong></u></td>
 			</tr>
-				
+
 
 		 ";
 

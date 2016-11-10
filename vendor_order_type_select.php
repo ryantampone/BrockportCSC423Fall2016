@@ -11,7 +11,7 @@
 if (isset($_SESSION['VendorCode']))
 {
 	echo"
-	 <div id='callToAction'>
+	 <div id='callToAction'><br>
 		 <h2>Select Which Type of Order you Would Like to View</h2>
 	 </div>
 	 ";
@@ -19,15 +19,16 @@ if (isset($_SESSION['VendorCode']))
 	 echo"
 	 <div id='userdataform'>
 	 	<table align='center'>
-			<tr>
-				<td>
+			<th>
 					<form action='vendor_order.php' method='post'>
 						<select name='orderStatus'>
 							<option value='Pending'>Pending</option>
 							<option value='Delivered'>Delivered</option>
 							<option value='Canceled'>Canceled</option>
 						</select>
-
+			</th>
+			<tr>
+				<td>
 						<div class='button'>
 							<input id='tiny_button' type='submit' id='submit' name='Search For Orders' >
 						</div>
