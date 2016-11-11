@@ -34,9 +34,6 @@ echo "
      //$strSQL= SELECT COUNT(StoreName) FROM RetailStore;
      $sql   = "SELECT COUNT(StoreName) FROM RetailStore"
 
-
-     //============================= correct sql to this point ======================
-
     //  <tr> <td> Store Name: </td> </tr>  $strSQL = Select StoreName FROM RetailStore order by StoreName ASC; -->
    //  <tr> <td> Total of Sales: </td> </tr>  $strSQL = SELECT COUNT(OrderID) FROM 'Order'; -->
 
@@ -44,10 +41,15 @@ echo "
     <tr> <td> Pending Orders: </td> </tr>
    ";
 
-     $strSQL = SELECT COUNT( STATUS ) FROM 'Order' WHERE STATUS  = 'Pending'; //-- doesn't work 
+     $sql = "SELECT COUNT( STATUS ) FROM `Order` WHERE STATUS  = 'Pending'"
 
-    <tr> <td> Delivered Orders: </td> </tr>  $strSQL = Select Status AS Delivered Order FROM Order WHERE Order = 'Delivered';
-    <tr> <td> Canceled Orders: </td> </tr>  $strSQL = Select Status AS Canceled Order FROM Order WHERE Order = 'Canceled';
+    ///////////   Correct code to this point
+
+    echo " <tr> <td> Delivered Orders: </td> </tr> "
+    //$strSQL = Select Status AS Delivered Order FROM Order WHERE Order = 'Delivered';
+    $sql =  "SELECT COUNT(STATUS) FROM `Order` WHERE STATUS = 'Delivered'"
+
+    echo " <tr> <td> Canceled Orders: </td> </tr>  $strSQL = Select Status AS Canceled Order FROM Order WHERE Order = 'Canceled';
 
     <tr> <td> <b> Customers: </b> </td> </tr>
     <tr> <td> Active Customers: </td> </tr> <$strSQL= SELECT COUNT( STATUS ) FROM  `Customer` WHERE STATUS =  'active';
