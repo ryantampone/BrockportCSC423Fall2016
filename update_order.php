@@ -135,10 +135,8 @@ function update_order()
 */
     $tmp_cnt++;
   }
-	if ($update_array_count == 0)
+	//if ($update_array_count == 0)
 		// "No items updated.";
-
-	$message = "Order ".$my_order_id." updated successfully.";
 
 	echo "<HTML>";
   echo "<HEAD>";
@@ -147,7 +145,7 @@ function update_order()
 
   // If the message is non-null and not an empty string print it
   // message contains the lastname and firstname
-	echo "<center><font color='blue'>$message</font></center><br />";
+	echo '<center><font color="blue">Order '.$my_order_id.' updated successfully.</font></center><br />';
 
 	echo "<form action='index.php'><input id='tiny_button' type='submit' id='submit' value='Return to Main Menu'/></form>";
 	echo "</BODY>";
