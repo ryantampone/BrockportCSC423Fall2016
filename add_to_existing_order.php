@@ -16,7 +16,7 @@ function add_item_to_order()
 	$orderid = $_POST['orderid'];
 
 	// Set the SQL command
-	$sql_stmt = "SELECT * FROM `Order` WHERE (OrderId='$orderid');";
+	$sql_stmt = "SELECT * FROM `Order` WHERE (OrderId='$orderid' AND Status='Pending');";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
