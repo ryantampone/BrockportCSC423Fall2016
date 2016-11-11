@@ -43,18 +43,31 @@ echo "
 
      $sql = "SELECT COUNT( STATUS ) FROM `Order` WHERE STATUS  = 'Pending'"
 
-    ///////////   Correct code to this point
-
     echo " <tr> <td> Delivered Orders: </td> </tr> "
     //$strSQL = Select Status AS Delivered Order FROM Order WHERE Order = 'Delivered';
     $sql =  "SELECT COUNT(STATUS) FROM `Order` WHERE STATUS = 'Delivered'"
 
-    echo " <tr> <td> Canceled Orders: </td> </tr>  $strSQL = Select Status AS Canceled Order FROM Order WHERE Order = 'Canceled';
+    echo " <tr> <td> Canceled Orders: </td> </tr>
+    ";
 
-    <tr> <td> <b> Customers: </b> </td> </tr>
-    <tr> <td> Active Customers: </td> </tr> <$strSQL= SELECT COUNT( STATUS ) FROM  `Customer` WHERE STATUS =  'active';
-    <tr> <td> Inactive Customers: </td> </tr>$strSQL= SELECT COUNT( STATUS ) FROM  `Customer` WHERE STATUS =  'inactive';
-    <tr> <td> Total Customers: </td> </tr>  <$strSQL= SELECT COUNT(CustomerId) FROM 'Customer';
+    $sql = "SELECT COUNT(STATUS) FROM `Order` WHERE STATUS = 'Canceled'"
+
+    echo "  <tr> <td> <b> Customers: </b> </td> </tr>
+    <tr> <td> Active Customers: </td> </tr>
+    ";
+
+    <$sql = SELECT COUNT( STATUS ) FROM  `Customer` WHERE STATUS =  'active';
+
+    echo " <tr> <td> Inactive Customers: </td> </tr>
+    ";
+
+    $sql= SELECT COUNT( STATUS ) FROM  `Customer` WHERE STATUS =  'inactive';
+
+///////////   Correct code to this point
+
+    echo " <tr> <td> Total Customers: </td> </tr>
+";
+    <$sql = SELECT COUNT(CustomerId) FROM 'Customer';
 
     <tr> <td> <b> Items to be Reordered: </b> </td> </tr>
     <!-- Add sql code -->
