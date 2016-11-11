@@ -52,7 +52,12 @@ echo "
 
     $sql = "SELECT COUNT(STATUS) FROM `Order` WHERE STATUS = 'Canceled'"
 
-    echo "  <tr> <td> <b> Customers: </b> </td> </tr>
+    echo " <tr> <td> Total Orders: </td> </tr>
+    ";
+
+    $sql = "SELECT COUNT(OrderId) FROM `Order`"
+
+      echo "  <tr> <td> <b> Customers: </b> </td> </tr>
     <tr> <td> Active Customers: </td> </tr>
     ";
 
