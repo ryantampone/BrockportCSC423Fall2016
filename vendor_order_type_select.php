@@ -10,8 +10,9 @@
 
 if (isset($_SESSION['VendorCode']))
 {
+	//select count(*) from Vendor where Status = "Active";
 	echo"
-	 <div id='callToAction'><br>
+	 <div id='callToAction'><br><br>
 		 <h2>Select Which Type of Order you Would Like to View</h2>
 	 </div>
 	 ";
