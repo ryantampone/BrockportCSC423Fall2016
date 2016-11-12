@@ -235,6 +235,7 @@
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_item_order_form.php">Create Order</a>
                     <li><a href="/~rtamp1/csc423/gp/add_to_existing_order_ui.php">Add Items to Order</a>
+                    <li><a href="/~rtamp1/csc423/gp/process_delivery_ui.php">Process a Delivery</a>
                   </ul>
               </li>
           </ul>

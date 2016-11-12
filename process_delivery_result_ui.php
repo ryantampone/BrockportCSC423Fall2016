@@ -3,7 +3,7 @@
 ?>
 <?php
 
-function show_order($result)
+function show_order($message, $result)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -21,19 +21,19 @@ function show_order($result)
 		 $vendorid = $row['VendorId'];
 		 $storeid = $row['StoreId'];
 		 $orderdatetime = $row['DateTimeOfOrder'];
-		 $status = $row['Status'];
-		 $completedatetime = $row['DateTimeOfFulfillment'];
-
+		 $status = 'Delivered';//$row['Status'];
+		 $completedatetime = date("Y-m-d");
 		 echo"
 	 		<div id='callToAction'>
 				<br>
-	 			<h2>Order ID $orderid: </h2>
+	 			<h2>Order ID: $orderid: </h2>
 	 		</div>
 	 		";
+		}
 
 
 		 echo"
-		 <form action='' method='post'>
+		 <form action='process_delivery_submission.php' method='post'>
 			 <table align='center'>
 
 			 <tr>
@@ -49,6 +49,8 @@ function show_order($result)
 				 <td><p style=\"padding-right: 30px;\" align='left'>$completedatetime</p></td>
 			 </tr>
 			</table>
+			<input name='fulfillmentDate' id='fulfillmentDate' TYPE='hidden' SIZE='50' value='$completedatetime'/>
+			<input name='updatedOrderStatus' id='updatedOrderStatus' TYPE='hidden' SIZE='50' value='$status'/>
 		 ";
 
 		 echo"
@@ -79,26 +81,34 @@ function show_order($result)
 			 $item_result = mysql_query($item_sql);
 
 			 // Get the description and size from each item in the order
+			 $counterfordesc=0;;
+
 			 while($item_row = mysql_fetch_assoc($item_result))
 			 {
+				 $counterfordesc ++;
 				 $_id_for_next_item = "item".$count;
 				 $_description = $item_row['Description'];
 				 $_size = $item_row['Size'];
 				 echo"
 				 	<tr>
 				 		<td><p style=\"padding-right: 30px;\" align='right'>".$_description.", ".$_size."</p></td>
+						<input name='desc$counterfordesc' id='desc' TYPE='hidden' SIZE='5' value='$_description'/>
 						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty' readonly/></td>
 					</tr>
 				 ";
 			 }
 		 }
 
-	}
-
+	echo "<input name='numItems' id='numItems' TYPE='hidden' SIZE='50' value='$counterfordesc'/>"
 
 	echo "</table>";
+	echo"
+	<div class='button'>
+		<input id='tiny_button' type='submit' id='submit' name='submit' value='Process Delivery' >
+	</div>
+	";
 	echo "</form>";
-	echo "<hr/><br><br>";
+	echo "<br><br>";
 
   echo "</BODY>";
   echo "</HTML>";

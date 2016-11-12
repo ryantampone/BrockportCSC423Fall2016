@@ -8,7 +8,7 @@
 		<h2>Please Enter the Order ID of the Order for Delivery</h2>
 		</div>
 			<div id='userdataform'>
-						<form name='myform' action='process_delivery' method='post'>
+						<form name='myform' action='process_delivery.php' method='post'>
 								<table align='center'>
 										<tr>
 												<td><span align='right'>Enter Order ID:</span></td>
