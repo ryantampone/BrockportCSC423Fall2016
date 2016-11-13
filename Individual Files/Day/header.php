@@ -5,6 +5,7 @@
     <title>Home Page</title>
     <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
     <link href="css/homeActionStyles.css" type="text/css" rel="stylesheet" />
+    <link href='css/indexStyles.css' type='text/css' rel='stylesheet' />
 
 <script language="javascript">
 
