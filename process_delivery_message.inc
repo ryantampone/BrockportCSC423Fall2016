@@ -1,6 +1,6 @@
 <?php
 
-function show_delivery_result($message)
+function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -9,15 +9,33 @@ function show_delivery_result($message)
   echo "</HEAD>";
   echo "<BODY>";
 
-  // If the message is non-null and not an empty string print it
-  // message contains the lastname and firstname
-  if ($message)
+  if ($messageOrder)
   {
-    if ($message != "")
+    if ($messageOrder != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+	 echo '<center><font color="blue">'.$messageOrder.'</font></center><br />';
        }
   }
+
+
+  if ($messageInsert)
+  {
+    if ($messageInsert != "")
+       {
+	 echo '<center><font color="blue">'.$messageInsert.'</font></center><br />';
+       }
+  }
+
+
+  if ($messageUpdateQTY)
+  {
+    if ($messageUpdateQTY != "")
+       {
+   echo '<center><font color="blue">'.$messageUpdateQTY.'</font></center><br />';
+       }
+  }
+
+
 
 echo "<form action='index.php'><button >Return to Main Menu</button></form>";
 
