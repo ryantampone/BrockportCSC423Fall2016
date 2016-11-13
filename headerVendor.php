@@ -24,7 +24,7 @@
 </head>
 <body bgcolor="#F5F5F5">
 
-      <h1 align="center">Nanno's Foods Vendor Order System</h1>
+      <h1 align="center">Nanno's Foods Vendor Order System</h1><br><br>
             <div id="nav">
                 <div id="nav_wrapper">
                     <ul>
@@ -46,4 +46,6 @@
                     </ul>
                 </div>
             </div>
+
+						<br><br>
             <!-- ====================== End Page Header ====================== -->

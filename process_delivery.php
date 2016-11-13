@@ -3,11 +3,11 @@
 // File that contains login info for database
 require('db_cn.inc');
 
-require('add_to_order_result_ui.php');
+require('process_delivery_result_ui.php');
 
-add_item_to_order();
+process_delivery();
 
-function add_item_to_order()
+function process_delivery()
 {
 	// Connect to the database with the 'db_cn.ini' file required above
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
