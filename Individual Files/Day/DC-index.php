@@ -4,7 +4,7 @@
 
 
 <?php
-	function show_index($v_active,$v_inactive, $v_total,$stores, $pending, $delivered, $cancelled, $c_active, $c_inactive, $c_total)
+	function show_index($v_active ,$v_inactive, $v_total, $stores, $pending, $delivered, $cancelled, $c_active, $c_inactive, $c_total)
 	{
 		echo "
 
@@ -16,66 +16,82 @@
 
 		<div id='vendor_store'>
 			<div id='vendor'>
-				<table>
-					<th>VENDOR</th>
+				<div id='vendorTitle'>
+					<div class='title'><h3>VENDOR</h3></div>
+				</div>
+				<div id='vendorTable'>
+					<table class='dashTables' align='center'>
 					<tr>
-						<td>Active: </td><td id='active_vendors'>$v_active</td>
+						<td height='30px' width='100px'><h4>Active: </h4></td><td id='active_vendors'>$v_active</td>
 					</tr>
 					<tr>
-						<td>Inactive: </td><td id='inactive_vendors'>$v_inactive</td>
+						<td height='30px' ><h4>Inactive: </h4></td><td id='inactive_vendors'>$v_inactive</td>
 					</tr>
 					<tr>
-						<td>Total: </td><td id='total_vendors'>$v_total</td>
+						<td height='30px'><h4>Total: </h4></td><td id='total_vendors'>$v_total</td>
 					</tr>
-				</table>
+					</table>
+				</div>
 			</div>
 
 
 			<div id='store'>
-				<table>
-					<th>STORE</th>
+				<div id='storeTitle'>
+					<div class='title'><h3>STORE</h3></div>
+				</div>
+				<div id='storeTable'>
+					<table class='dashTables' align='center'>
 					<tr>
-						<td>Number of Stores: </td><td id='number_stores'>$stores</td>
+						<td width='175px'><h4>Number of Stores: </h4></td><td id='number_stores'>$stores</td>
 					</tr>
-				</table>
+					</table>
+				</div>
 			</div>
 		</div>
 
 
 		<div id='orders_customers'>
 			<div id='orders'>
-				<table>
-					<th>ORDER</th>
+				<div id='orderTitle'>
+					<div class='title'><h3>ORDER</h3></div>
+				</div>
+				<div id='orderTable'>
+					<table class='dashTables' align='center'>
 					<tr>
-						<td>Pending: </td><td id='pending_orders'>$pending</td>
+						<td height='30px' width='100px'><h4>Pending: </h4></td><td id='pending_orders'>$pending</td>
 					</tr>
 					<tr>
-						<td>Delivered: </td><td id='delivered_orders'>$delivered</td>
+						<td height='30px'><h4>Delivered: </h4></td><td id='delivered_orders'>$delivered</td>
 					</tr>
 					<tr>
-						<td>Cancelled: </td><td id='cancelled_orders'>$cancelled</td>
+						<td height='30px'><h4>Cancelled: </h4></td><td id='cancelled_orders'>$cancelled</td>
 					</tr>
-				</table>
+					</table>
+				</div>
 			</div>
 
 
 			<div id='customers'>
-				<table>
-					<th>CUSTOMER</th>
+				<div id='customerTitle'>
+					<div class='title'><h3>CUSTOMER</h3></div>
+				</div>
+				<div id='customerTable'>
+					<table class='dashTables' align='center'>
 					<tr>
-						<td>Active: </td><td id='active_customers'>$c_active</td>
+						<td height='30px' width='100px'><h4>Active: </h4></td><td id='active_customers'>$c_active</td>
 					</tr>
 					<tr>
-						<td>Inactive: </td><td id='inactive_customers'>$c_inactive</td>
+						<td height='30px'><h4>Inactive: </h4></td><td id='inactive_customers'>$c_inactive</td>
 					</tr>
 					<tr>
-						<td>Total: </td><td id='total_customers'>$c_inactive</td>
+						<td height='30px'><h4>Total: </h4></td><td id='total_customers'>$c_total</td>
 					</tr>
-				</table>
+					</table>
+				</div>
 			</div>
 		</div>
 
-		<div id='item_div'>
+<!--		<div id='item_div'>
 			<div id='items'>
 				<table>
 					<th>ITEM</th>
@@ -84,7 +100,7 @@
 					</tr>
 				</table>
 			</div>
-		</div>
+		</div> -->
 
 
 
