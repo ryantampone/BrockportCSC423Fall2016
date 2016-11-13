@@ -24,7 +24,7 @@
 
 	//----------------------------------------------------------------------------------
     $inactiveVendorsQuery = "SELECT count(*) FROM Vendor WHERE Status = 'Inactive';";
-    $resultAV = mysql_query($inactiveVendorsQuery);
+    $resultIAV = mysql_query($inactiveVendorsQuery);
     if (!$resultIAV)
     {
       echo "N/A"; //be sure to change
@@ -35,7 +35,6 @@
       $vendorsInactive = $row['count(*)'];
     }
     mysql_free_result($resultIAV);
-
 	//----------------------------------------------------------------------------------
     $totalVendorsQuery = "SELECT count(*) FROM Vendor;";
     $resultTV = mysql_query($totalVendorsQuery);
@@ -65,7 +64,7 @@
     mysql_free_result($resultStores);
 
 	//----------------------------------------------------------------------------------
-    $pendingOrdersQuery = "SELECT count(*) FROM Order WHERE Status = 'Pending';";
+    $pendingOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Pending';";
     $resultPending = mysql_query($pendingOrdersQuery);
     if (!$resultPending)
     {
@@ -79,21 +78,21 @@
     mysql_free_result($resultPending);
 
 	//----------------------------------------------------------------------------------
-    $deliveredOrdersQuery = "SELECT count(*) FROM Order WHERE Status = 'Delivered';";
-    $resultDelievered = mysql_query($deliveredOrdersQuery);
+    $deliveredOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Delivered';";
+    $resultDelivered = mysql_query($deliveredOrdersQuery);
     if (!$resultDelivered)
     {
       echo "N/A"; //be sure to change
       exit;
     }
-    while($row = mysql_fetch_assoc($resultDelievered))
+    while($row = mysql_fetch_assoc($resultDelivered))
     {
       $deliveredOrders = $row['count(*)'];
     }
-    mysql_free_result($resultDelievered);
-	
+    mysql_free_result($resultDelivered);
+
 	//----------------------------------------------------------------------------------
-    $cancelledOrdersQuery = "SELECT count(*) FROM Order WHERE Status = 'Canceled';";
+    $cancelledOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Canceled';";
     $resultCancelled = mysql_query($cancelledOrdersQuery);
     if (!$resultCancelled)
     {
@@ -105,7 +104,7 @@
       $cancelledOrders = $row['count(*)'];
     }
     mysql_free_result($resultCancelled);
-		
+
 	//----------------------------------------------------------------------------------
     $activeCustomersQuery = "SELECT count(*) FROM Customer WHERE Status = 'Active';";
     $resultAC = mysql_query($activeCustomersQuery);
@@ -119,9 +118,9 @@
       $activeCustomers = $row['count(*)'];
     }
     mysql_free_result($resultAC);
-		
+
 	//----------------------------------------------------------------------------------
-    $inactiveCustomersQuery = "SELECT count(*) FROM Customer WHERE Status = 'Inactive';";
+   $inactiveCustomersQuery = "SELECT count(*) FROM Customer WHERE Status = 'Inactive';";
     $resultIAC = mysql_query($inactiveCustomersQuery);
     if (!$resultIAC)
     {
@@ -147,14 +146,14 @@
       $totalCustomers = $row['count(*)'];
     }
     mysql_free_result($resultT);
-	//----------------------------------------------------------------------------------	
-	
-	
+	//----------------------------------------------------------------------------------
+
+
 	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $pendingOrders, $deliveredOrders, $cancelledOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
-	
-	
-	
-	
+
+
+
+
   function connect_and_select_db($server, $username, $pwd, $dbname)
   {
     $conn = mysql_connect($server, $username, $pwd);
