@@ -1,12 +1,9 @@
 <?php
-
 // File that contains login info for database
 require('db_cn.inc');
-
 require('process_delivery_result_ui.php');
 
 process_delivery();
-
 function process_delivery()
 {
 	// Connect to the database with the 'db_cn.ini' file required above
