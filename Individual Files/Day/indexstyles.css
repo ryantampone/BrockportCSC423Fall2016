@@ -190,10 +190,10 @@ border: none;
   left: 5%;
   bottom: 5%;
 
-  box-shadow: 5px 5px 5px #888888/*#b6aeae*/;
+  box-shadow: 5px 5px 5px #bdbdbd/*#b6aeae*/;
 }
 #vendor:hover{
-	box-shadow: 15px 15px 10px #888888;
+	box-shadow: 15px 15px 10px #bdbdbd;
 }
 #vendorTitle{
 	position: absolute;
@@ -217,7 +217,10 @@ border: none;
   bottom: 5%;
   right: 5%;
 
-  box-shadow: 20px 20px 20px #888888;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+#store:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
 }
 #storeTitle{
 	position: absolute;
@@ -248,7 +251,10 @@ border: none;
   bottom: 5%;
   top: 5%;
 
-  box-shadow: 15px 15px 15px #888888;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+#orders:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
 }
 #orderTitle{
 	position: absolute;
@@ -257,7 +263,7 @@ border: none;
 	height: 40%;
 }
 #orderTable{
-	margin-top: 27%;
+	margin-top: 25%;
 	position: absolute;
 	width: 100%;
 	height: 60%;
@@ -270,7 +276,10 @@ border: none;
   top:5%;
   bottom: 5%;
 
-  box-shadow: 15px 15px 15px #888888;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+#customers:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
 }
 #customerTitle{
 	position: absolute;

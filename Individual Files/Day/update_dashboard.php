@@ -92,7 +92,7 @@
     mysql_free_result($resultDelivered);
 
 	//----------------------------------------------------------------------------------
-    $cancelledOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Canceled';";
+   $cancelledOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Canceled';";
     $resultCancelled = mysql_query($cancelledOrdersQuery);
     if (!$resultCancelled)
     {
@@ -106,6 +106,20 @@
     mysql_free_result($resultCancelled);
 
 	//----------------------------------------------------------------------------------
+	$totalOrdersQuery = "SELECT count(*) FROM `Order`;";
+	$resultTO = mysql_query($totalOrdersQuery);
+	if(!$resultTO)
+	{
+		echo "N/A";
+		exit;
+	}
+	while($row = mysql_fetch_assoc($resultTO))
+	{
+		$totalOrders = $row['count(*)'];
+	}
+	mysql_free_result($resultTO);
+	//----------------------------------------------------------------------------------
+
     $activeCustomersQuery = "SELECT count(*) FROM Customer WHERE Status = 'Active';";
     $resultAC = mysql_query($activeCustomersQuery);
     if (!$resultAC)
@@ -149,7 +163,7 @@
 	//----------------------------------------------------------------------------------
 
 
-	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $pendingOrders, $deliveredOrders, $cancelledOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
+	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $pendingOrders, $deliveredOrders, $cancelledOrders, $totalOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
 
 
 

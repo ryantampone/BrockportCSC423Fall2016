@@ -4,7 +4,7 @@
 
 
 <?php
-	function show_index($v_active ,$v_inactive, $v_total, $stores, $pending, $delivered, $cancelled, $c_active, $c_inactive, $c_total)
+	function show_index($v_active ,$v_inactive, $v_total, $stores, $pending, $delivered, $cancelled, $total_o, $c_active, $c_inactive, $c_total)
 	{
 		echo "
 
@@ -17,7 +17,7 @@
 		<div id='vendor_store'>
 			<div id='vendor'>
 				<div id='vendorTitle'>
-					<div class='title'><h3>VENDOR</h3></div>
+					<div class='title'><font color='white'><h3>VENDOR</h3></font></div>
 				</div>
 				<div id='vendorTable'>
 					<table class='dashTables' align='center'>
@@ -37,7 +37,7 @@
 
 			<div id='store'>
 				<div id='storeTitle'>
-					<div class='title'><h3>STORE</h3></div>
+					<div class='title'><font color='white'><h3>STORE</h3></font></div>
 				</div>
 				<div id='storeTable'>
 					<table class='dashTables' align='center'>
@@ -53,18 +53,21 @@
 		<div id='orders_customers'>
 			<div id='orders'>
 				<div id='orderTitle'>
-					<div class='title'><h3>ORDER</h3></div>
+					<div class='title'><font color='white'><h3>ORDER</h3></font></div>
 				</div>
 				<div id='orderTable'>
 					<table class='dashTables' align='center'>
 					<tr>
-						<td height='30px' width='100px'><h4>Pending: </h4></td><td id='pending_orders'>$pending</td>
+						<td height='30px' width='120px'><h4>Pending: </h4></td><td id='pending_orders'>$pending</td>
 					</tr>
 					<tr>
 						<td height='30px'><h4>Delivered: </h4></td><td id='delivered_orders'>$delivered</td>
 					</tr>
 					<tr>
 						<td height='30px'><h4>Cancelled: </h4></td><td id='cancelled_orders'>$cancelled</td>
+					</tr>
+					<tr>
+						<td height='30px'><h4>Total: </h4></td><td id='total_orders'>$total_o</td>
 					</tr>
 					</table>
 				</div>
@@ -73,7 +76,7 @@
 
 			<div id='customers'>
 				<div id='customerTitle'>
-					<div class='title'><h3>CUSTOMER</h3></div>
+					<div class='title'> <font color='white'><h3>CUSTOMER</h3></font></div>
 				</div>
 				<div id='customerTable'>
 					<table class='dashTables' align='center'>
