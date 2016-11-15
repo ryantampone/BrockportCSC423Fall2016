@@ -189,7 +189,7 @@ border: none;
   top:5%;
   left: 5%;
   bottom: 5%;
-
+  background: white;
   box-shadow: 5px 5px 5px #bdbdbd/*#b6aeae*/;
 }
 #vendor:hover{
@@ -216,7 +216,7 @@ border: none;
   top: 5%;
   bottom: 5%;
   right: 5%;
-
+  background: white;
   box-shadow: 5px 5px 5px #bdbdbd;
 }
 #store:hover{
@@ -250,7 +250,7 @@ border: none;
   left: 5%;
   bottom: 5%;
   top: 5%;
-
+  background: white;
   box-shadow: 5px 5px 5px #bdbdbd;
 }
 #orders:hover{
@@ -275,7 +275,7 @@ border: none;
   right: 5%;
   top:5%;
   bottom: 5%;
-
+  background: white;
   box-shadow: 5px 5px 5px #bdbdbd;
 }
 #customers:hover{

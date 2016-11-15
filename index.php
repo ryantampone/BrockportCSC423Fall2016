@@ -9,7 +9,7 @@
 <br><br><br>
 <h3 align='center'>(Something Cool is Coming Here)</h3>
 
-<p align='center'><img src='/~rtamp1/csc423/gp/src/gift.png' class="img_m"  href="/~rtamp1/csc423/gp/indexV2.php"/></p>
+<p align='center'><a href="/~rtamp1/csc423/gp/update_dashboard.php"><img src='/~rtamp1/csc423/gp/src/gift.png' class="img_m"/></p>
 
 </body>
 </html>
