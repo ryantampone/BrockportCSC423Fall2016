@@ -33,12 +33,12 @@
 				<td ><span align='right'>Vendor ID:</span></td>
 				
 				<td>
-								<select id='VendorInfo'name='VendorInfo' />
+								<select id='VendorInfo' name='VendorInfo' >
 							";
 							       
-									$next_option=
+									
 									connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-									$sql_vendors = "SELECT VendorId, VendorName FROM Vendor WHERE Status='Active';";
+									$sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active';";
 									$vendors_result = mysql_query($sql_vendors);
 									if (!$vendors_result)
 									{
@@ -47,12 +47,23 @@
 									}
 									while ($row = mysql_fetch_assoc($vendors_result))
 									{
-										$vendorid = $row['VendorId'];
+										
 										$vendorname = $row['VendorName'];
-										echo "<option>".$vendorid." : ".$vendorname."</option>";
+										echo "<option>".$vendorname."</option>";
 									}
 								
-			  echo "</select>
+			  echo "</select>";
+			  
+			  	 /*$vendorinfo = $_POST['VendorInfo'];
+				$vendorid = split(':',$vendorinfo);
+				$vendorid = $vendorid[0];
+				echo "$vendorid";
+			  	echo "<input type='hidden' id='vendorId' name='vendorId' value='$vendorid' />";*/
+			  
+			  	
+			  echo"
+			    
+			   
 	
 			</td>
 				
@@ -69,4 +80,4 @@
 
 ?>
 
-</body>
+
