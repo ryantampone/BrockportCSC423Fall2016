@@ -189,6 +189,20 @@
 		}
 }
 
+function checkQty(count)
+{
+  var stockid = 'stock'.concat(count);
+  var returnid = 'return'.concat(count);
+  var stocknum = Number(document.getElementById(stockid).value);
+  var returnnum = Number(document.getElementById(returnid).value);
+
+  if (returnnum > stocknum)
+  {
+    alert("ERROR: Cannot return more items than are in stock. Please enter a number less than or equal to the quantity in stock.");
+    document.getElementById(returnid).value = "";
+  }
+}
+
 
 //item
 
