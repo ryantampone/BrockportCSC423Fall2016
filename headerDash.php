@@ -5,6 +5,7 @@
     <title>Nanno's Foods Management System</title>
     <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
     <link href="css/homeActionStyles.css" type="text/css" rel="stylesheet" />
+    <link href='css/indexstyles.css' type='text/css' rel='stylesheet' />
 
 <script language="javascript">
 
@@ -201,6 +202,7 @@ function checkQty(count)
     document.getElementById(returnid).value = "";
   }
 }
+
 //item
 
 </script>
@@ -247,8 +249,8 @@ function checkQty(count)
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_item_order_form.php">Create Order</a>
                     <li><a href="/~rtamp1/csc423/gp/add_to_existing_order_ui.php">Add Items to Order</a>
-                      <li><a href="/~rtamp1/csc423/gp/process_delivery_ui.php">Process Delivery</a>
-                      <li><a href="/~rtamp1/csc423/gp/process_return_ui.php">Process Return</a>
+                    <li><a href="/~rtamp1/csc423/gp/process_delivery_ui.php">Process Delivery</a>
+                    <li><a href="/~rtamp1/csc423/gp/process_return_ui.php">Process Return</a>
                   </ul>
               </li>
           </ul>
