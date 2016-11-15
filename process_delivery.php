@@ -2,6 +2,7 @@
 // File that contains login info for database
 require('db_cn.inc');
 require('process_delivery_result_ui.php');
+require('process_delivery_message.inc');
 
 process_delivery();
 function process_delivery()

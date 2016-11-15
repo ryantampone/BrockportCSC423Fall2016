@@ -29,7 +29,7 @@ function process_delivery_submission()
 		{
 		  $messageOrder = "Order processed successfully.  Date set to: $dateFulfilled , Status set to: $status ";
 		}
-		
+
 
 
 //--------------Dynamic Item Updates-----------------------------
@@ -65,7 +65,7 @@ function process_delivery_submission()
 				 $realItemId = $row['ItemId'];
 			 }
 
-			 echo"The Description is: $itemDesc with Quantity: $qty and RealItemId is: $realItemId<br><br>";
+			 //echo"The Description is: $itemDesc with Quantity: $qty and RealItemId is: $realItemId<br><br>";
 
 			//Step 2: Get the QTY of the item ID from aboves
 			$sqlGetItemQTY = "SELECT QuantityInStock FROM `Inventory` WHERE ItemId='$realItemId' and StoreId='$storeID'";//works

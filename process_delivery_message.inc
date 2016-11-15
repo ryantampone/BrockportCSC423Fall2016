@@ -26,7 +26,7 @@ function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY)
        }
   }
 
-
+/*
   if ($messageUpdateQTY)
   {
     if ($messageUpdateQTY != "")
@@ -35,9 +35,11 @@ function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY)
        }
   }
 
+  */
 
 
-echo "<form action='index.php'><button >Return to Main Menu</button></form>";
+
+echo "<center><form action='index.php'><button >Return to Main Menu</button></form></center>";
 
  echo "</BODY>";
  echo "</HTML>";

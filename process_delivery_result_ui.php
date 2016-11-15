@@ -12,6 +12,22 @@ function show_order($message, $result)
   echo "</HEAD>";
   echo "<BODY>";
 
+	if ($message)
+	{
+		if ($message != "")
+			 {
+				 /*
+				 echo '<center><font color="blue">'.$message.'</font></center><br />';
+				 echo "<center><form action='index.php'><button >Return to Main Menu</button></form></center>";
+				 echo "</BODY>";
+			 	 echo "</HTML>";
+				 */
+				 echo ("<SCRIPT LANGUAGE='JavaScript'>
+			 	window.alert('No Orders Found With the Provided Order ID')
+			 	window.location.href='http://www.itss.brockport.edu/~rtamp1/csc423/gp/process_delivery_ui.php';
+			 	</SCRIPT>");
+			 }
+	}
 
    //While there are more rows in the $result, get the next row
    //as an associative array

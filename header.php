@@ -5,6 +5,7 @@
     <title>Nanno's Foods Management System</title>
     <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
     <link href="css/homeActionStyles.css" type="text/css" rel="stylesheet" />
+    <link href='css/indexstyles.css' type='text/css' rel='stylesheet' />
 
 <script language="javascript">
 
