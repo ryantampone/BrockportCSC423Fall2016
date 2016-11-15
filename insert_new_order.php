@@ -12,32 +12,7 @@ insert_new_order();
 function insert_new_order()
 {
 	
-	   
-	  /* $add_item = array();
-	   $add_qty = array();
-	   
-	   
-	   
-	   for($j = 1; $j<$total_row; $j++){
-		   
-		   $input_qty = $qty[$j];
-		   echo $input_qty;
-		   
-		   if($qty[$j] != ""){
-			   
-			   $add_item[$j] = $item[$j];
-			   echo "New Item = ".$add_item[$j]."<br />";
-			   $add_qty[$j] = $qty[$j];
-			    echo "New Item = ".$add_qty[$j]."<br />";
-			  
-			   
-			   }
-		   
-		   
-		   
-		   }
-		   
-		 */
+	
 	   
 	   $vendorId = $_POST['vendor_id'];
 	   //echo "$vendorId";
@@ -71,7 +46,7 @@ function insert_new_order()
 		}
 		//echo "$orderId";
 	   $orderId = $orderId +1;
-	  echo "$orderId";
+	  //echo "$orderId";
 	  
 	  
 	   $sql_last_orderDetailID = "SELECT `OrderDetailId` FROM `OrderDetail` ORDER BY `OrderDetailId` DESC LIMIT 1";
@@ -81,10 +56,10 @@ function insert_new_order()
 						$orderDetail = $row['OrderDetailId'];
 					}
 					//echo "$orderId";
-				echo "Last OrderDetailID Is is :";
-				echo "$orderDetail";
+				//echo "Last OrderDetailID Is is :";
+				//echo "$orderDetail";
 				$orderDetail = $orderDetail +1;
-				echo "$orderDetail";
+				//echo "$orderDetail";
 	  
 	  
 
@@ -92,7 +67,7 @@ function insert_new_order()
 	   $sql_order = "INSERT INTO `Order`(`OrderId`, `VendorId`, `StoreId`, `DateTimeOfOrder`, `Status`, `DateTimeOfFulfillment`) VALUES ('$orderId','$vendorId','$storeId','$dateTimeOfOrder','$status', ' ');";
 	   $resule_order = mysql_query($sql_order);
 	   
-	  echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />'; 
+	 // echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />'; 
 	   
         
 	   // echo"Silly3";  
@@ -120,7 +95,7 @@ function insert_new_order()
 	  $row = mysql_fetch_assoc($result_count);
 					
 					$total_row = $row['total'];
-					echo "Total Item = ". $total_row. "<br />";
+					//echo "Total Item = ". $total_row. "<br />";
 				    
 					
 				//echo "Total Item = ".$num_items."<br />";
@@ -132,18 +107,14 @@ function insert_new_order()
 	   $item = array();
 	   $qty_array = array();
 	   $num_items = $_POST[$total_item];
-	   echo "Num items = ".$num_items."<br/><br/>";
+	   //echo "Num items = ".$num_items."<br/><br/>";
 	   
 	   
 	   for($i = 1; $i <= $total_row; $i++)
 	   {
 
 		   
-		   //echo "Item Count = ".$itemcount. ", ";
-		  
-		   //echo "ITEM ID = ".$itemId.", ";
-		   //$item[$i] = "$itemId";
-		   //echo "Insert Item = ".$item[$i]."<br />";
+		   
 		   $itemcount = "item".$i;  
 		   $itemId = $_POST[$itemcount];
 		   $qty = "qtyId".$i;
@@ -152,9 +123,9 @@ function insert_new_order()
 		   if($qty != ""){
 			   
 			    $item[$i] = "$itemId";
-				echo "Insert Item = ".$item[$i]."<br />";
+				//echo "Insert Item = ".$item[$i]."<br />";
 				$qty_array[$i] = "$qty";
-				echo "Insert QTY = ".$qty_array[$i]."<br />";
+				//echo "Insert QTY = ".$qty_array[$i]."<br />";
 			   
 			   }
 		   
@@ -171,12 +142,12 @@ function insert_new_order()
 	   }
 	   
 	   $array_size = sizeof($item);
-	   echo "Size of Item Array = ".$array_size. "<br />";
+	   //echo "Size of Item Array = ".$array_size. "<br />";
 	  $size_qty = sizeof($qty_array);
-	   echo "Size of QTY Array = ".$size_qty."<br />";
+	   //echo "Size of QTY Array = ".$size_qty."<br />";
 	   
-	   echo "OrderDetailId = ".$orderDetail."<br />";
-	   echo "OrderId = ".$orderId."<br />";
+	  // echo "OrderDetailId = ".$orderDetail."<br />";
+	   //echo "OrderId = ".$orderId."<br />";
 	   
 	   		
 	   
@@ -189,58 +160,13 @@ function insert_new_order()
 				$sql_insertOrder = "INSERT INTO `OrderDetail`(`OrderId`, `ItemId`, `QuantityOrdered`) VALUES ('$orderId','$item[$j]','$qty_array[$j]');";
 				$insertOrder = mysql_query($sql_insertOrder);
 				$j++;
-				/*echo "ITEM = ".$item[$j]."<br />";
-				echo "QTY = ".$qty_array[$j]."<br />";
-				/*$sql_itemId = "SELECT ItemId FROM InventoryItem WHERE Description='$desc';";
-				$itemId = mysql_query($sql_itemId);
-				 while($row = mysql_fetch_assoc($itemId))
-				{
-					$itemId = $row['ItemId'];
+				
+				
 				}
+		   
+		   
+		   
 		 
-				//echo "Item Id"." ".$desc. " ";
-				echo "$itemId";
-				$qty = $qty_array[$j];
-				echo "$qty";
-				
-				*/
-				
-				}
-		   
-		   
-		   
-		  /* connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-		   $total_item = $_POST['total_item'];
-		   echo"Total Item is:";
-		   echo"$total_item";
-		   $item_array = array();
-		   $qty_array = array();
-		  */
-		   
-		   //for($i=1 ; $i <)
-		   
-		   
-		   /* while($i<$total_item){
-			  
-			   $_desc_id = "Item".$i;
-			   $_description = $_POST['$vendor_desc_id'];
-			   echo "Description is :";
-			   echo "$_description";
-
-			   $_qty_id = "Qty".$i;
-			   $_qty = $_POST['$_qty_id'];
-			   echo "QTY is:";
-			   echo "$_qty";
-			   $item_array[$i] = $_description;
-			   //$size_array[$i] = $_size;
-			   $qty_array[$i] = $_qty;
-			   
-			   $i++;
-			   }
-            */
-			
-	        //based on the the item name($desc), find out the itemId
-	
 		   			  
 
 	   
