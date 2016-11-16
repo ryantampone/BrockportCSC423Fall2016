@@ -1,5 +1,6 @@
 <?php
-	include 'headerDash.php';
+	include 'header.php';
+	echo"<link href='css/indexstyles.css' type='text/css' rel='stylesheet' />";
 ?>
 
 
