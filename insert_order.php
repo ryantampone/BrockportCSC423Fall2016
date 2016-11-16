@@ -97,10 +97,11 @@ function show_item($message, $result_showItem,$vendorId)
 			echo "<input type='hidden' name='total_item' value='$total' />";
 					
 			echo "
-
+            </table>
+			<table align='center' cellpadding='7' cellspacing='30' border='0'>
 			<tr>
 					<td align='right'>Store Name:</td>
-					<td>
+					<td align='left'>
 					<select id='StoreId' name='StoreId' required >";
 					$sql_store = "SELECT StoreName FROM RetailStore WHERE Status='Active';";
 					$store_result = mysql_query($sql_store);
@@ -123,11 +124,11 @@ function show_item($message, $result_showItem,$vendorId)
 			</tr>
 			<tr>
 				<td align='right'>Date:</td>
-				<td><input type='date'  id='DateTimeOfOrder' name='DateTimeOfOrder' required /></td>
+				<td align='left'><input type='date'  id='DateTimeOfOrder' name='DateTimeOfOrder' required /></td>
 			</tr>
 			<tr>
 				<td align='right'>Status:</td>
-				<td><input type='text' id='Status' name='Status' value='Pending' readonly/></td>
+				<td align='left'><input type='text' id='Status' name='Status' value='Pending' readonly/></td>
 			</tr>
 			</table>
 			<div class='button'>
