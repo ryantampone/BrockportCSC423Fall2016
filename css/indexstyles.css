@@ -172,6 +172,12 @@ border: none;
 }*/
 
 /* =================== Day's Index Code ======================= */
+#createSpace
+{
+  margin-bottom: 75px;
+}
+
+
 #vendor_store{
   height: 50%;
   width: 100%;
@@ -201,11 +207,25 @@ border: none;
 	height: 40%;
 }
 
-#vendorTable{
-	margin-top: 27%;
+
+.outerTable
+{
 	position: absolute;
+  bottom: 0px;
 	width: 100%;
 	height: 60%;
+}
+
+
+.innerTable
+{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /*
+	position: absolute;
+	width: 100%;
+	height: 60%;*/
 }
 
 #store{
