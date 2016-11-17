@@ -72,10 +72,10 @@ function show_item($message, $result_showItem,$vendorId)
 				
 					echo "
 						<tr>
-							<td align='center'></td>
-							<td align='center'><p>".$_description."</p></td>
-						  	<td align='center'><p>".$_size."</p></td>
-							<td align='center'><input type='text' size='5' name='qtyId$count'  /></td>
+							<td align='left'></td>
+							<td align='left'><p>".$_description."</p></td>
+						  	<td align='left'><p>".$_size."</p></td>
+							<td align='left'><input type='text' size='5' name='qtyId$count'  /></td>
 							
 						</tr>
 						
