@@ -86,7 +86,7 @@ function show_order($result, $orderStatus)
 				 $_size = $item_row['Size'];
 				 echo"
 				 	<tr>
-				 		<td><p style=\"padding-right: 30px;\" align='right'>".$_description.", ".$_size."</p></td>
+				 		<td><p style=\"padding-right: 30px;\" align='left'>".$_description.", ".$_size."</p></td>
 						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty' readonly/></td>
 					</tr>
 				 ";

@@ -29,23 +29,27 @@
                 <div id="nav_wrapper">
                     <ul>
                         <li><a href="/~rtamp1/csc423/gp/vendor_order_type_select.php">Main Menu</a></li>
-    					<li>	<?php
-                                if (isset($_SESSION['VendorCode'])){
-                                        echo"<form action='/~rtamp1/csc423/gp/loginfiles/logout.php'>
-                                                <button >Logout</button>
-                                            </form>";
-                                } else{
-                                    echo"<form action='/~rtamp1/csc423/gp/loginfiles/login.php' method='POST'>
-                                            <input type='text' name='vcode' id='vcode' placeholder='Vendor Code'>
-                                            <input type='password' name='pwd' placeholder='Password'>
-                                            <button type='submit'>Login</button>
-                                        </form>";
-                                }
-                            ?>
-                        </li>
                     </ul>
                 </div>
             </div>
 
-						<br><br>
+
+
+<?php
+		if (isset($_SESSION['VendorCode'])){
+						echo"
+								<div id='signoutButton'>
+								<form action='/~rtamp1/csc423/gp/loginfiles/logout.php'>
+										<div class='button'>
+											<input id='fixedButton' id='tiny_button' type='submit' id='submit' name='submit' value='Sign out'>
+										</div>
+
+										<!-- <button >Sign out</button>  -->
+								</form>
+								</div>";
+		} else
+		{
+
+		}
+?>
             <!-- ====================== End Page Header ====================== -->
