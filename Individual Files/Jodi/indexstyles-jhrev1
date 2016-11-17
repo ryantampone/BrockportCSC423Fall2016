@@ -172,18 +172,14 @@ border: none;
 }*/
 
 /* =================== Day's Index Code ======================= */
-#createSpace
-{
-  margin-bottom: 75px;
-}
-
 
 #vendor_store{
+
   height: 50%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  /*background-color: blue;*/
+  /*background-color: pink;*/
   position: absolute;
   z-index: -1;
 }
@@ -194,40 +190,9 @@ border: none;
   top:5%;
   left: 5%;
   bottom: 5%;
-  background: white;
-  box-shadow: 5px 5px 5px #bdbdbd/*#b6aeae*/;
+  background-color: white;
+  box-shadow: 15px 15px 15px #888888/*#b6aeae*/;
 }
-#vendor:hover{
-	box-shadow: 15px 15px 10px #bdbdbd;
-}
-#vendorTitle{
-	position: absolute;
-	background-color: #516382;
-	width: 100%;
-	height: 40%;
-}
-
-
-.outerTable
-{
-	position: absolute;
-  bottom: 0px;
-	width: 100%;
-	height: 60%;
-}
-
-
-.innerTable
-{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  /*
-	position: absolute;
-	width: 100%;
-	height: 60%;*/
-}
-
 #store{
   height: 90%;
   width: 40%;
@@ -235,23 +200,8 @@ border: none;
   top: 5%;
   bottom: 5%;
   right: 5%;
-  background: white;
-  box-shadow: 5px 5px 5px #bdbdbd;
-}
-#store:hover{
-	box-shadow: 15px 15px 10px #bdbdbd;
-}
-#storeTitle{
-	position: absolute;
-	background-color: #516382;
-	width: 100%;
-	height: 40%;
-}
-#storeTable{
-	margin-top: 35%;
-	position: absolute;
-	width: 100%;
-	height: 60%;
+  background-color: white;
+  box-shadow: 15px 15px 15px #888888;
 }
 #orders_customers{
   height: 50%;
@@ -269,23 +219,8 @@ border: none;
   left: 5%;
   bottom: 5%;
   top: 5%;
-  background: white;
-  box-shadow: 5px 5px 5px #bdbdbd;
-}
-#orders:hover{
-	box-shadow: 15px 15px 10px #bdbdbd;
-}
-#orderTitle{
-	position: absolute;
-	background-color: #516382;
-	width: 100%;
-	height: 40%;
-}
-#orderTable{
-	margin-top: 25%;
-	position: absolute;
-	width: 100%;
-	height: 60%;
+  background-color: white;
+  box-shadow: 15px 15px 15px #888888;
 }
 #customers{
   height: 90%;
@@ -294,23 +229,8 @@ border: none;
   right: 5%;
   top:5%;
   bottom: 5%;
-  background: white;
-  box-shadow: 5px 5px 5px #bdbdbd;
-}
-#customers:hover{
-	box-shadow: 15px 15px 10px #bdbdbd;
-}
-#customerTitle{
-	position: absolute;
-	background-color: #516382;
-	width: 100%;
-	height: 40%;
-}
-#customerTable{
-	margin-top: 27%;
-	position: absolute;
-	width: 100%;
-	height: 60%;
+  background-color: white;
+  box-shadow: 15px 15px 15px #888888;
 }
 #item_div{
   height: 50%;
@@ -332,18 +252,4 @@ border: none;
   bottom: 5%;
   background-color: white;
   box-shadow: 15px 15px 15px #888888;
-}
-.dashTables{
-	font-size: 150%;
-	border: 1px;
-
-}
-.title{
-	position: absolute;
-	margin-left: 3%;
-	margin-top: 18%;
-}
-h4{
-	padding:0;
-	margin: 0;
 }
