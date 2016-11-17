@@ -54,7 +54,7 @@
 		    	<tr>
             <td align='right'>Department:</td>
 						<td>
-							<select  id='Department' onchange='check_dept()' onpaste='return false'>
+							<select name='Department' id='Department' onchange='check_dept()' onpaste='return false'>
 								<option value='Meat Department'>Meat Department</option>
 								<option value='Beverages Department'>Beverages Department</option>
 								<option value='Candy Department'>Candy Department</option>
@@ -67,8 +67,8 @@
               <td align='right'>Category:</td>
               <td>
 								<select name='Category'>
-										<option id='Category_1' value='5'></option>
-										<option id='Category_2' value='5'></option>
+										<option id='Category_1' value='Beef'>Beef</option>
+										<option id='Category_2' value='Chicken'>Chicken</option>
 
 								</select>
 							</td>

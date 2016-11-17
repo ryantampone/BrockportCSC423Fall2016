@@ -134,7 +134,7 @@
       return;
     else
     {
-      alert("Invalid Item Cost");
+      //alert("Invalid Item Cost");
       document.getElementById("ItemCost").value = "";
     }
 
