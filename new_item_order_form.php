@@ -28,17 +28,17 @@
 		<h2>Please fill out the new order form below.</h2>
 		<form action='new_order.php' method='post'>
 			<table align='center'>
-		
+
 			<tr>
 				<td ><span align='right'>Vendor ID:</span></td>
-				
+
 				<td>
 								<select id='VendorInfo' name='VendorInfo' >
 							";
-							       
-									
+
+
 									connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-									$sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active';";
+									$sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active'; ORDER BY VendorName";
 									$vendors_result = mysql_query($sql_vendors);
 									if (!$vendors_result)
 									{
@@ -47,30 +47,30 @@
 									}
 									while ($row = mysql_fetch_assoc($vendors_result))
 									{
-										
+
 										$vendorname = $row['VendorName'];
 										echo "<option>".$vendorname."</option>";
 									}
-								
+
 			  echo "</select>";
-			  
+
 			  	 /*$vendorinfo = $_POST['VendorInfo'];
 				$vendorid = split(':',$vendorinfo);
 				$vendorid = $vendorid[0];
 				echo "$vendorid";
 			  	echo "<input type='hidden' id='vendorId' name='vendorId' value='$vendorid' />";*/
-			  
-			  	
+
+
 			  echo"
-			    
-			   
-	
+
+
+
 			</td>
-				
+
 			</tr>
-			
-			
-			
+
+
+
 			</table>
 		<div class='button'>
 						<input id='tiny_button' type='submit' id='submit' name='submit' >
@@ -79,5 +79,3 @@
 		</form>";
 
 ?>
-
-
