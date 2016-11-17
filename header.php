@@ -209,8 +209,8 @@ function checkQty(count)
 
 <body>
   <!-- ====================== Begin Page Header ====================== -->
-  <h1 align="center">Nanno's Foods</h1>
-
+  <!-- <h1 align="center">Nanno's Foods</h1> -->
+  <p align='center'><img src='/~rtamp1/csc423/gp/src/logo2.png'/></p>
   <div id="nav">
       <div id="nav_wrapper">
           <ul>

@@ -24,7 +24,8 @@
 </head>
 <body bgcolor="#F5F5F5">
 
-      <h1 align="center">Nanno's Foods Vendor Order System</h1><br><br>
+    <!--  <h1 align="center">Nanno's Foods Vendor Order System</h1><br><br> -->
+		<p align='center'><img src='/~rtamp1/csc423/gp/src/logovendor.png'/></p>
             <div id="nav">
                 <div id="nav_wrapper">
                     <ul>
