@@ -77,63 +77,71 @@ function update_order()
 
 
   $add_array_count = sizeof($add_desc_array);
-  //echo $desc_array_count."<br/>";
+  //echo $add_array_count."<br/>";
   $update_array_count = sizeof($update_qty_array);
-  //echo $qty_array_count."<br/>";
+  //echo $update_array_count."<br/>";
 
 
 	// Add item to order that doesn't already exist in current order
-  $tmp_cnt = 0;
+  $tmp_cnt_add = 0;
   // "Add item not in order:<br/>";
-  while($tmp_cnt < $add_array_count)
+  while($tmp_cnt_add < $add_array_count)
   {
-    $_esc_val = mysql_real_escape_string($add_desc_array[$tmp_cnt]);
+    $_esc_val = mysql_real_escape_string($add_desc_array[$tmp_cnt_add]);
     $item_sql_res = mysql_query("SELECT ItemId FROM `InventoryItem` WHERE Description='$_esc_val';");
     while ($row = mysql_fetch_assoc($item_sql_res))
     {
  		   $my_item_id = $row['ItemId'];
     }
+		mysql_free_result($item_sql_res);
     $my_order_id = $_POST['myorderid'];
-    $my_qty = $add_qty_array[$tmp_cnt];
-    //echo $add_desc_array[$tmp_cnt].", ".$add_qty_array[$tmp_cnt]."<br/>";
-    // "OrderId = ".$my_order_id.", ItemId = ".$my_item_id.", Quantity = ".$my_qty."<br/>";
+    $my_qty = $add_qty_array[$tmp_cnt_add];
+    //echo $add_desc_array[$tmp_cnt_add].", ".$add_qty_array[$tmp_cnt_add]."<br/>";
+    //echo "OrderId = ".$my_order_id.", ItemId = ".$my_item_id.", Quantity = ".$my_qty."<br/>";
 
     $sql_add = "INSERT INTO OrderDetail (OrderId, ItemId, QuantityOrdered) VALUES ('$my_order_id', '$my_item_id', '$my_qty');";
     $sql_add_res = mysql_query($sql_add);
-    // $sql_add_res;
+
+		mysql_free_result($sql_add_res);
     /*if(!$sql_add_res)
       $messageAdd = "Error in inserting item ".$add_desc_array[$tmp_cnt].": ".mysql_error();
     else $messageAdd = "Item ".$add_desc_array[$tmp_cnt]." added successfully.<br/>";
 */
-    $tmp_cnt++;
+    $tmp_cnt_add++;
   }
 	if ($add_array_count == 0)
 		// "No new items added to order.<br/>";
 
 
 	// Add quantites of selected items that do exist in current order
-  $tmp_cnt = 0;
+  $tmp_cnt_update = 0;
   // "<br/>Update item quantites in order:<br/>";
-  while($tmp_cnt < $update_array_count)
+  while($tmp_cnt_update < $update_array_count)
   {
-    $_esc_val = mysql_real_escape_string($update_desc_array[$tmp_cnt]);
+		if($tmp_cnt_update == "")
+			$tmp_cnt_update = 0;
+		//echo "<br/>-------COUNT: ".$tmp_cnt_update."-----------<br/>";
+    $_esc_val = mysql_real_escape_string($update_desc_array[$tmp_cnt_update]);
     $item_sql_res = mysql_query("SELECT ItemId FROM `InventoryItem` WHERE Description='$_esc_val';");
 		while($row = mysql_fetch_assoc($item_sql_res))
 		{
 			$my_item_id = $row['ItemId'];
 		}
+		mysql_free_result($item_sql_res);
 		$my_order_id = $_POST['myorderid'];
-		$my_qty = $update_qty_array[$tmp_cnt];
-		// "OrderId = ".$my_order_id.", ItemId = ".$my_item_id.", Quantity = ".$my_qty."<br/>";
+		$my_qty = $update_qty_array[$tmp_cnt_update];
+		//echo "Number of times through: ".$tmp_cnt_update."<br/>";
+		//echo "OrderId = ".$my_order_id.", ItemId = ".$my_item_id.", Quantity = ".$my_qty."<br/>";
 
 		$sql_update = "UPDATE OrderDetail SET QuantityOrdered='$my_qty' WHERE (OrderId='$my_order_id' AND ItemId = '$my_item_id');";
 		$sql_update_res = mysql_query($sql_update);
+		mysql_free_result($sql_update_res);
 		// $sql_update_res;
 		/*if(!$sql_update_res)
 			echo = "Error in updating item: ".$update_desc_array[$tmp_cnt].":".mysql_error();
 		else $messageUpdate = "Item ".$update_desc_array[$tmp_cnt]." updated successfully.<br/>";
 */
-    $tmp_cnt++;
+    $tmp_cnt_update++;
   }
 	//if ($update_array_count == 0)
 		// "No items updated.";
