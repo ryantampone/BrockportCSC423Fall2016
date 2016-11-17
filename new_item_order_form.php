@@ -38,7 +38,7 @@
 
 
 									connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-									$sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active'; ORDER BY VendorName";
+									$sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active'ORDER BY VendorName;";
 									$vendors_result = mysql_query($sql_vendors);
 									if (!$vendors_result)
 									{
