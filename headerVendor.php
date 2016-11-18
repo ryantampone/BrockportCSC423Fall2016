@@ -40,13 +40,13 @@
 		if (isset($_SESSION['VendorCode'])){
 						echo"
 								<div id='signoutButton'>
-								<form action='/~rtamp1/csc423/gp/loginfiles/logout.php'>
-										<div class='button'>
-											<input id='fixedButton' id='tiny_button' type='submit' id='submit' name='submit' value='Sign out'>
-										</div>
+										<form action='/~rtamp1/csc423/gp/loginfiles/logout.php'>
+												<div class='button'>
+													<input id='fixedButton' id='tiny_button' type='submit' id='submit' name='submit' value='Sign out'>
+												</div>
 
-										<!-- <button >Sign out</button>  -->
-								</form>
+												<!-- <button >Sign out</button>  -->
+										</form>
 								</div>";
 		} else
 		{
