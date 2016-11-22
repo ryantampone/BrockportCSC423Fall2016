@@ -98,7 +98,7 @@
 									while ($row = mysql_fetch_assoc($vendors_result))
 									{
 										$vendorid = $row['VendorId'];
-										$vendorname = mysql_real_escape_string($row['VendorName']);
+										$vendorname = $row['VendorName'];
 										echo "<option>".$vendorid.": ".$vendorname."</option>";
 									}
 			  echo "</select>
