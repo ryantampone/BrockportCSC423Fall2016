@@ -42,12 +42,25 @@ function show_all_items($message, $result)
  	 	 $category = $row['Category'];
 	 	 $itemCost = $row['ItemCost'];
 	 	 $itemRetail = $row['ItemRetail'];
-		 $vendorID = $row['VendorId'];
+		 $vendorId = $row['VendorId'];
 		 $imageFileName = $row['ImageFileName'];
 
       //Put these in a table row. The htmlentities function converts any
       //special chars in the string to a html-displayable form.
 
+
+		 $vName;
+		 $sql_vendorNameFromID ="SELECT VendorName FROM Vendor WHERE VendorId=$vendorId;";
+		 $vNresult = mysql_query($sql_vendorNameFromID);
+		 if(!$vNresult)
+		 {
+			 echo "Vendor Name retrieved unsuccessfully: ".mysql_error();
+			 exit;
+		 }
+		 while ($row = mysql_fetch_assoc($vNresult))
+		 {
+			 $vName = $row['VendorName'];
+		 }
 
 
 		 echo"
@@ -144,34 +157,33 @@ function show_all_items($message, $result)
 			</tr>
 		<tr>
 			<td align='right'>Item Cost:</td>
-			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' onKeyPress='return isItemCost(event)' onpaste='return false' TYPE='text' SIZE='50' required/></td>
+			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' onblur='isItemCost()' onpaste='return false' TYPE='text' SIZE='50' required/></td>
 		</tr>
 
 		<tr>
 			<td align='right'>Item Retail:</td>
-			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' onKeyPress='return isItemRetail(event)' opaste='return false' TYPE='text' SIZE='50' required/></td>
+			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' onBlur='isItemRetail()' opaste='return false' TYPE='text' SIZE='50' required/></td>
 		</tr>
 
 		<tr>
-			<td align='right'>Vendor Id:</td>
+			<td align='right'>Vendor Name:</td>
 			<td>
-				<select id='VendorId' name='VendorId' required/>
+				<select id='VendorName' name='VendorName' required/>
 			";
-				  $sql_vendors = "SELECT VendorId, VendorName FROM Vendor WHERE Status='Active';";
+				  $sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active';";
 					$vendors_result = mysql_query($sql_vendors);
 
 					if (!$vendors_result)
 					{
-						echo "VendorId's retrieved unsuccessfully: ".mysql_error();
+						echo "VendorName's retrieved unsuccessfully: ".mysql_error();
 						exit;
 					}
 					while ($row = mysql_fetch_assoc($vendors_result))
 					{
-						$vendorid = $row['VendorId'];
 						$vendorname = mysql_real_escape_string($row['VendorName']);
-						echo "<option>".$vendorid.": ".$vendorname."</option>";
+						echo "<option>".$vendorname."</option>";
 					}
-  echo "<option value='$vendorID' selected>$vendorID</option>
+  echo "<option value='$vName' selected>$vName</option>
 				</select>
 			</td>
 		</tr>

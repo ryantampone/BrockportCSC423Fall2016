@@ -34,17 +34,30 @@ function update_item()
    $itemCost = $_POST['ItemCost'];
    $itemRetail = $_POST['ItemRetail'];
    $imageFileName = $_POST['ImageFileName'];
-   $vendorID = $_POST['VendorId'];
+   $vendorName = $_POST['VendorName'];
 
    $esc_itemId = mysql_real_escape_string($_POST['ItemId']);
    $esc_description = mysql_real_escape_string($_POST['Description']);
    $esc_size = mysql_real_escape_string($_POST['Size']);
    $esc_imageFileName = mysql_real_escape_string($_POST['ImageFileName']);
 
+
+	 $vId;
+	 $sql_vendorIDFromName ="SELECT VendorId FROM `Vendor` WHERE VendorName = '$vendorName';";
+	 $vIresult = mysql_query($sql_vendorIDFromName);
+	 if(!$vIresult)
+	 {
+		 echo "Vendor Id retrieved unsuccessfully: ".mysql_error();
+		 exit;
+	 }
+	 while ($row = mysql_fetch_assoc($vIresult))
+	 {
+		 $vId = $row['VendorId'];
+	 }
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE InventoryItem SET ItemId='$esc_itemId', Description='$esc_description', Size='$esc_size', Division='$division', Department='$department', Category='$category', ItemCost='$itemCost', ItemRetail='$itemRetail', ImageFileName='$esc_imageFileName', VendorId='$vendorId' WHERE ItemId='$itemId';";
+	$sql_stmt = "UPDATE InventoryItem SET ItemId='$esc_itemId', Description='$esc_description', Size='$esc_size', Division='$division', Department='$department', Category='$category', ItemCost='$itemCost', ItemRetail='$itemRetail', ImageFileName='$esc_imageFileName', VendorId='$vId' WHERE ItemId='$itemId';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);
