@@ -1,5 +1,31 @@
 <?php
-	session_start();
+
+require('db_cn.inc');
+include 'header.php';
+
+$storeName = $_POST['StoreName'];
+show_item();
+
+function show_item(){
+	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
+	$sql_showItem = "SELECT Deacription FROM Inventory WHERE ItemId in (SELECT ItemId FROM Inventory WHERE StoreId in (SELECT StoreId FROM RetailStore WHERE storeName='$storeName'))";
+	$result = mysql_query($sql_showItem);
+	if(!result){
+			echo "The retrieval was unsuccessful: ".mysql_error();
+			exit;
+			"
+
+	}
+	$numrows = mysql_num_rows($result);
+	$message = "";
+	if ($numrows == 0){
+		 $message = "No Store ID found in database with the provided Store name";
+		 notFound($message);
+	 }
+
+
+}
+	/*session_start();
 	$VENDORCODE = (string)$_SESSION['VendorCode'];
 ?>
 
@@ -113,7 +139,7 @@
 	}
 
 
-
+*/
 function connect_and_select_db($server, $username, $pwd, $dbname)
 	{
 		// Connect to db server

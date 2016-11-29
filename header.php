@@ -214,7 +214,7 @@ function checkQty(count)
   <div id="nav">
       <div id="nav_wrapper">
           <ul>
-              <li><a href="/~rtamp1/csc423/gp/index.php">Home</a></li>
+              <li><a href="/~rtamp1/csc423/gp/update_dashboard.php">Home</a></li>
               <li><a href="#">Vendor</a>
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/new_vendor_ui_form.php">Add Vendor</a>
@@ -249,6 +249,11 @@ function checkQty(count)
                     <li><a href="/~rtamp1/csc423/gp/add_to_existing_order_ui.php">Add Items to Order</a>
                       <li><a href="/~rtamp1/csc423/gp/process_delivery_ui.php">Process Delivery</a>
                       <li><a href="/~rtamp1/csc423/gp/process_return_ui.php">Process Return</a>
+                  </ul>
+              </li>
+              <li><a href="#">Reports</a>
+                  <ul>
+                    <li><a href="/~rtamp1/csc423/gp/report_all_items.php">Total Inventory</a>
                   </ul>
               </li>
           </ul>
