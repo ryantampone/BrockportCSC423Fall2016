@@ -26,7 +26,7 @@
 	echo"
 		<br>
 		<h2>Total Inventory Report : Please select a store location</h2>
-		<form action='report_all_item_view.php' method='post'>
+		<form action='report_all_item_list.php' method='post'>
 			<table align='center'>
 
 			<tr>
