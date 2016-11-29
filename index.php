@@ -1,4 +1,8 @@
 <?php
+	header("Location: http://www.itss.brockport.edu/~rtamp1/csc423/gp/update_dashboard.php");
+?>
+
+<?php
 	include 'header.php';
 ?>
 
