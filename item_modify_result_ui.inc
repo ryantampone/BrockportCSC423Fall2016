@@ -97,9 +97,9 @@ function show_all_items($message, $result)
 					while ($row = mysql_fetch_assoc($div_result))
 					{
 						$_division = $row['Division'];
-						echo "<option>".$_division."</option>";
+						echo "<option value=$_division>".$_division."</option>";
 					}
-  					echo "<option value='Division' selected>$division</option>
+  					echo "<option value='$division' selected>$division</option>
 				</select>
 				</td>
 
@@ -123,9 +123,9 @@ function show_all_items($message, $result)
 					while ($row = mysql_fetch_assoc($department_result))
 					{
 						$_department = $row['Department'];
-						echo "<option>".$_department."</option>";
+						echo "<option value=$_department>".$_department."</option>";
 					}
-  					echo "<option value='Department' selected>$department</option>
+  					echo "<option value='$department' selected>$department</option>
 				</select>
 				</td>
 
