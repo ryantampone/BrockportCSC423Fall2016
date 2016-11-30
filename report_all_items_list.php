@@ -26,17 +26,17 @@ function show_item($storeName){
 			<form action='export_item.php' method='post'>
 			<table align='center'>
 					<tr>
-						<th style=\"padding-right: 30px;\" align='center'><u>Item ID</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Item Name</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Item Size</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Division</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Department</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Category</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Item Cost</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Item Retail</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Image File Name</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Vendor ID</u></th>
-						<th style=\"padding-right: 30px;\" align='center'><u>Quantity</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Item ID</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Item Name</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Item Size</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Division</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Department</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Category</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Item Cost</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Item Retail</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Image File Name</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Vendor ID</u></th>
+						<th style=\"padding-right: 15px;\" align='center'><u>Quantity</u></th>
 					</tr>
 		 		";
 				$count = 0;
@@ -81,39 +81,39 @@ function show_item($storeName){
 							
 							 echo"
 								<tr>
-								<td><p style=\"padding-right: 30px;\">".$itemid."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$itemid."</p></td>
 								<input type='hidden' name='$itemid_ex' value='$itemid' />
 								
-								<td><p style=\"padding-right: 30px;\">".$description."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$description."</p></td>
 								<input type='hidden' name='$description_ex' value='$description' />
 								
-								<td><p style=\"padding-right: 30px;\">".$size."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$size."</p></td>
 								<input type='hidden' name='$size_ex' value='$size' />
 								
-								<td><p style=\"padding-right: 30px;\">".$division."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$division."</p></td>
 								<input type='hidden' name='$division_ex' value='$division' />
 								
-								<td><p style=\"padding-right: 30px;\">".$department."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$department."</p></td>
 								<input type='hidden' name='$department_ex' value='$department' />
 								
-								<td><p style=\"padding-right: 30px;\">".$category."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$category."</p></td>
 								<input type='hidden' name='$category_ex' value='$category' />
 								
-								<td><p style=\"padding-right: 30px;\">".$itemCost."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$itemCost."</p></td>
 								<input type='hidden' name='$itemCost_ex' value='$itemCost' />
 								
-								<td><p style=\"padding-right: 30px;\">".$itemRetail."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$itemRetail."</p></td>
 								<input type='hidden' name='$itemRetail_ex' value='$itemRetail' />
 								
-								<td><p style=\"padding-right: 30px;\">".$imageFileName."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$imageFileName."</p></td>
 								<input type='hidden' name='$imageFileName_ex' value='$imageFileName' />
 								
-								<td><p style=\"padding-right: 30px;\">".$vendorId."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$vendorId."</p></td>
 								<input type='hidden' name='$vendorId_ex' value='$vendorId' />
 								
 						
 								
-								<td><p style=\"padding-right: 30px;\">".$qty."</p></td>
+								<td><p style=\"padding-right: 15px;\">".$qty."</p></td>
 								<input type='hidden' name='$qty_ex' value='$qty' />
 								</tr>
 								
