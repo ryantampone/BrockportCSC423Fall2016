@@ -8,7 +8,7 @@
 	function show_index($v_active ,$v_inactive, $v_total, $stores, $pending, $delivered, $cancelled, $total_o, $c_active, $c_inactive, $c_total)
 	{
 		echo "
-
+<br>
 		<div id='callToAction'>
 		  <h2>Dashboard</h2>
 		</div>
