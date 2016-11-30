@@ -19,10 +19,10 @@ function show_item($storeName){
 					 echo "The retrieval was unsuccessful: ".mysql_error();
 					 exit;
 				  }
-		      
-			  
+
+
 			  echo"
-			  <h2>Item Inventory Report</h2>
+			  <h2>Total Inventory Report</h2>
 			<form action='export_item.php' method='post'>
 			<table align='center'>
 					<tr>
@@ -42,8 +42,8 @@ function show_item($storeName){
 				$count = 0;
 				$array = 0;
 				 while ($row = mysql_fetch_assoc($result))
-			  		{		
-					 
+			  		{
+
 						 $itemid = $row['ItemId'];
 						 $description = $row['Description'];
 						 $size = $row['Size'];
@@ -57,7 +57,7 @@ function show_item($storeName){
 						 $qty_sql = "SELECT QuantityOrdered FROM `OrderDetail` WHERE ItemId='$itemid';";
 						 $item_result = mysql_query($qty_sql);
 						 while($qty_row = mysql_fetch_assoc($item_result)){
-						 
+
 						 	$qty = $qty_row['QuantityOrdered'];
 							$count++;
 							//echo"count is ".$count."\n";
@@ -67,7 +67,7 @@ function show_item($storeName){
 							//echo"itemid is ".$itemid_ex."\n";
 							$description_ex = 'description_ex'.$count;
 							//echo"description is ".$description_ex."\n";
-							
+
 							$size_ex = 'size_ex'.$count;
 							$division_ex = 'division_ex'.$count;
 							$department_ex = 'department_ex'.$count;
@@ -78,71 +78,71 @@ function show_item($storeName){
 							$vendorId_ex = 'vendorId_ex'.$count;
 							$qty_ex = 'qty_ex'.$count;
 							//echo"qty is ".$qty_ex."\n";
-							
+
 							 echo"
 								<tr>
 								<td><p style=\"padding-right: 15px;\">".$itemid."</p></td>
 								<input type='hidden' name='$itemid_ex' value='$itemid' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$description."</p></td>
 								<input type='hidden' name='$description_ex' value='$description' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$size."</p></td>
 								<input type='hidden' name='$size_ex' value='$size' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$division."</p></td>
 								<input type='hidden' name='$division_ex' value='$division' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$department."</p></td>
 								<input type='hidden' name='$department_ex' value='$department' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$category."</p></td>
 								<input type='hidden' name='$category_ex' value='$category' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$itemCost."</p></td>
 								<input type='hidden' name='$itemCost_ex' value='$itemCost' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$itemRetail."</p></td>
 								<input type='hidden' name='$itemRetail_ex' value='$itemRetail' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$imageFileName."</p></td>
 								<input type='hidden' name='$imageFileName_ex' value='$imageFileName' />
-								
+
 								<td><p style=\"padding-right: 15px;\">".$vendorId."</p></td>
 								<input type='hidden' name='$vendorId_ex' value='$vendorId' />
-								
-						
-								
+
+
+
 								<td><p style=\"padding-right: 15px;\">".$qty."</p></td>
 								<input type='hidden' name='$qty_ex' value='$qty' />
 								</tr>
-								
+
 								";
-						
+
 						 }
-				
+
 				}
 			echo"
 						<input type='hidden' name='count' value='$count' />
 						<input type='hidden' name='array' value='$array' />
 						</table>
 
-						
+
 								<div class='button'>
 								 <input type='submit' name='submit' value='Download CSV file' />
-								
+
 							</div>
 				</form>
-					
+
 					";
-					
-					
-			
-	
-			
+
+
+
+
+
 		}
 
-      
+
 
 
 		//Function to connect to the database

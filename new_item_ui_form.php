@@ -106,7 +106,7 @@
 					</tr>
 					<tr>
 							<td align='right'>Image Filename:</td>
-							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false' value='BrockportCSC423Fall2016/src/' /></td>
+							<td><input id='ImageFileName' name='ImageFileName' TYPE='text' SIZE='50' onKeyPress='return isImageFileName(event)' onpaste='return false' value='src/' /></td>
 					</tr>
 					</table>
 					<div class='button'>
