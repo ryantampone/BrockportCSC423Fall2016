@@ -1,163 +1,164 @@
 <?php
-
+// File that contains login info for database
 require('db_cn.inc');
 include 'header.php';
 
+
+
 $storeName = $_POST['StoreName'];
-show_item();
-
-function show_item(){
-	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-	$sql_showItem = "SELECT Deacription FROM Inventory WHERE ItemId in (SELECT ItemId FROM Inventory WHERE StoreId in (SELECT StoreId FROM RetailStore WHERE storeName='$storeName'))";
-	$result = mysql_query($sql_showItem);
-	if(!result){
-			echo "The retrieval was unsuccessful: ".mysql_error();
-			exit;
-			"
-
-	}
-	$numrows = mysql_num_rows($result);
-	$message = "";
-	if ($numrows == 0){
-		 $message = "No Store ID found in database with the provided Store name";
-		 notFound($message);
-	 }
 
 
-}
-	/*session_start();
-	$VENDORCODE = (string)$_SESSION['VendorCode'];
-?>
-
-<?php
-	require('db_cn.inc');
-	require('vendor_order_view.php');
-
-	$selectedOrderStatus = $_POST['orderStatus'];
-
-	$VENDORID;
-	$message;
-
-	if (isset($_SESSION['VendorCode']))
-	{
-		//Step 1 Get Vendor ID from VENDORCODE
-		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-		$sql_stmt = "SELECT VendorId FROM `Vendor` WHERE (VendorCode='$VENDORCODE');";
-		$result = mysql_query($sql_stmt);
-		if (!$result)
-		{
-			 echo "The retrieval was unsuccessful: ".mysql_error();
-			 exit;
-		}
-		$numrows = mysql_num_rows($result);
-		$message = "";
-		if ($numrows == 0){
-			 $message = "No vendor ID found in database with the provided Vendor Code";
-			 notFound($message);
-		 }
-
-	 while ($row = mysql_fetch_assoc($result))
-	 {
-	  		 $VENDORID = $row['VendorId'];
-	 }
-
-	 mysql_free_result($result);
-
-
-			 //Step 2 Get Order ID Where VendorID is our VendorID and Status is What the Vendor Selects
-			 connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-			 $sql_stmt = "SELECT OrderId FROM `Order` WHERE ((VendorId='$VENDORID')and(Status='$selectedOrderStatus')) ORDER BY  `Order`.`DateTimeOfOrder` DESC;";
-			 $result = mysql_query($sql_stmt);
-			 if (!$result)
-			 {
-					echo "The retrieval was unsuccessful: ".mysql_error();
-					exit;
-			 }
-			 $numrows = mysql_num_rows($result);
-			 $message = "";
-			 if ($numrows == 0){
-					$message = "No Order ID found in database with the provided Vendor ID and status: ".$selectedOrderStatus;
-					notFound($message);
+show_item($storeName);
+function show_item($storeName){
+			//echo "StoreName is ".$storeName."";
+			connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
+			$sql_showItem = "SELECT * FROM InventoryItem WHERE ItemId in (SELECT ItemId FROM Inventory WHERE StoreId in (SELECT StoreId FROM RetailStore WHERE StoreName = '$storeName'));";
+			$result = mysql_query($sql_showItem);
+			if (!$result)
+				  {
+					 echo "The retrieval was unsuccessful: ".mysql_error();
+					 exit;
+				  }
+		      
+			  
+			  echo"
+			  <h2>Item Inventory Report</h2>
+			<form action='export_item.php' method='post'>
+			<table align='center'>
+					<tr>
+						<th style=\"padding-right: 30px;\" align='center'><u>Item ID</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Item Name</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Item Size</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Division</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Department</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Category</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Item Cost</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Item Retail</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Image File Name</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Vendor ID</u></th>
+						<th style=\"padding-right: 30px;\" align='center'><u>Quantity</u></th>
+					</tr>
+		 		";
+				$count = 0;
+				$array = 0;
+				 while ($row = mysql_fetch_assoc($result))
+			  		{		
+					 
+						 $itemid = $row['ItemId'];
+						 $description = $row['Description'];
+						 $size = $row['Size'];
+						 $division = $row['Division'];
+						 $department = $row['Department'];
+						 $category = $row['Category'];
+						 $itemCost = $row['ItemCost'];
+						 $itemRetail = $row['ItemRetail'];
+						 $imageFileName = $row['ImageFileName'];
+						 $vendorId = $row['VendorId'];
+						 $qty_sql = "SELECT QuantityOrdered FROM `OrderDetail` WHERE ItemId='$itemid';";
+						 $item_result = mysql_query($qty_sql);
+						 while($qty_row = mysql_fetch_assoc($item_result)){
+						 
+						 	$qty = $qty_row['QuantityOrdered'];
+							$count++;
+							//echo"count is ".$count."\n";
+							$array++;
+							//echo"array count is ".$array."\n";
+							$itemid_ex = 'item_ex'.$count;
+							//echo"itemid is ".$itemid_ex."\n";
+							$description_ex = 'description_ex'.$count;
+							//echo"description is ".$description_ex."\n";
+							
+							$size_ex = 'size_ex'.$count;
+							$division_ex = 'division_ex'.$count;
+							$department_ex = 'department_ex'.$count;
+							$category_ex = 'category_ex'.$count;
+							$itemCost_ex = 'itemCost_ex'.$count;
+							$itemRetail_ex = 'itemRetail_ex'.$count;
+							$imageFileName_ex = 'imageFileName_ex'.$count;
+							$vendorId_ex = 'vendorId_ex'.$count;
+							$qty_ex = 'qty_ex'.$count;
+							//echo"qty is ".$qty_ex."\n";
+							
+							 echo"
+								<tr>
+								<td><p style=\"padding-right: 30px;\">".$itemid."</p></td>
+								<input type='hidden' name='$itemid_ex' value='$itemid' />
+								
+								<td><p style=\"padding-right: 30px;\">".$description."</p></td>
+								<input type='hidden' name='$description_ex' value='$description' />
+								
+								<td><p style=\"padding-right: 30px;\">".$size."</p></td>
+								<input type='hidden' name='$size_ex' value='$size' />
+								
+								<td><p style=\"padding-right: 30px;\">".$division."</p></td>
+								<input type='hidden' name='$division_ex' value='$division' />
+								
+								<td><p style=\"padding-right: 30px;\">".$department."</p></td>
+								<input type='hidden' name='$department_ex' value='$department' />
+								
+								<td><p style=\"padding-right: 30px;\">".$category."</p></td>
+								<input type='hidden' name='$category_ex' value='$category' />
+								
+								<td><p style=\"padding-right: 30px;\">".$itemCost."</p></td>
+								<input type='hidden' name='$itemCost_ex' value='$itemCost' />
+								
+								<td><p style=\"padding-right: 30px;\">".$itemRetail."</p></td>
+								<input type='hidden' name='$itemRetail_ex' value='$itemRetail' />
+								
+								<td><p style=\"padding-right: 30px;\">".$imageFileName."</p></td>
+								<input type='hidden' name='$imageFileName_ex' value='$imageFileName' />
+								
+								<td><p style=\"padding-right: 30px;\">".$vendorId."</p></td>
+								<input type='hidden' name='$vendorId_ex' value='$vendorId' />
+								
+						
+								
+								<td><p style=\"padding-right: 30px;\">".$qty."</p></td>
+								<input type='hidden' name='$qty_ex' value='$qty' />
+								</tr>
+								
+								";
+						
+						 }
+				
 				}
+			echo"
+						<input type='hidden' name='count' value='$count' />
+						<input type='hidden' name='array' value='$array' />
+						</table>
 
-			while ($row = mysql_fetch_assoc($result))
+						
+								<div class='button'>
+								 <input type='submit' name='submit' value='Download CSV file' />
+								
+							</div>
+				</form>
+					
+					";
+					
+					
+			
+	
+			
+		}
+
+      
+
+
+		//Function to connect to the database
+			function connect_and_select_db($server, $username, $pwd, $dbname)
 			{
-						$ORDERID = $row['OrderId'];
-						showItemsInOrder($ORDERID, $selectedOrderStatus);
+				// Connect to db server
+				$conn = mysql_connect($server, $username, $pwd);
+				if (!$conn) {
+					echo "Unable to connect to DB: " . mysql_error();
+						exit;
+				}
+				// Select the database
+				$dbh = mysql_select_db($dbname);
+				if (!$dbh){
+						echo "Unable to select ".$dbname.": " . mysql_error();
+					exit;
+				}
 			}
-			mysql_free_result($result);
-		//}
-
-
-
-	}
-	else
-	{
-		echo ("<SCRIPT LANGUAGE='JavaScript'>
-    window.alert('Invalid Login Credentials: Please Login to View This Page')
-    window.location.href='http://www.itss.brockport.edu/~rtamp1/csc423/gp/indexVendor.php';
-    </SCRIPT>");
-		//echo "<script type='text/javascript'>alert('Please login to view this page') window.location.href='./indexVendor.php'</script>";
-	}
-
-
-
-	function showItemsInOrder($ORDERID, $selectedOrderStatus)
-	{
-		// Connect to the database with the 'db_cn.ini' file required above
-		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-
-	$orderid= $ORDERID;
-	$SELECTEDORDERSTATUS = $selectedOrderStatus;
-
-
-	//Orders
-	$sql_stmt = "SELECT * FROM `Order` WHERE (OrderId='$orderid');";
-	$result = mysql_query($sql_stmt);
-	if (!$result)
-	{
-		 echo "The retrieval was unsuccessful: ".mysql_error();
-		 exit;
-	}
-	$numrows = mysql_num_rows($result);
-	$message = "";
-	if ($numrows == 0){
-		 $message = "No orders found in database with the provided Vendor Code";
-		 notFound($message);
-	 }
-
-		 show_order($result, $SELECTEDORDERSTATUS);
-		 mysql_free_result($result);
-
-	}
-
-
-	function notFound($messageNF)
-	{
-		$errormessage=$messageNF;
-		show_order_not_found($errormessage);
-	}
-
-
-*/
-function connect_and_select_db($server, $username, $pwd, $dbname)
-	{
-		// Connect to db server
-		$conn = mysql_connect($server, $username, $pwd);
-
-		if (!$conn) {
-		    echo "Unable to connect to DB: " . mysql_error();
-	    	    exit;
-		}
-
-		// Select the database
-		$dbh = mysql_select_db($dbname);
-		if (!$dbh){
-	    		echo "Unable to select ".$dbname.": " . mysql_error();
-			exit;
-		}
-	}
 ?>
-
-</body>
-</html>
