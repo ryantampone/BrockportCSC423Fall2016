@@ -134,7 +134,7 @@ function purchase()
 			</table>
 			<input type='hidden' name='customerid' value='$customerid' />
 			<input type='hidden' name='storeid' value='$storeid' />
-			<input type='hidden' name='storename' value='$storename' />
+			<input type='hidden' name='storename' value=\"$storename\" />
 			<input type='hidden' name='itemid' value='$itemid' />
 			<input type='hidden' name='itemqty' value='$itemqty' />
 			<input type='hidden' name='storeqty' value='$storeqty' />

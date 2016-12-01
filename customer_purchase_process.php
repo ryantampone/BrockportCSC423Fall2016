@@ -49,7 +49,7 @@ function process_purchase()
           </tr>
         </table>
         <input type='hidden' name='custid' value='$customerid' />
-        <input type='hidden' name='stname' value='$storename' />
+        <input type='hidden' name='stname' value=\"$storename\" />
       </form>
     </BODY>
   </HTML>
