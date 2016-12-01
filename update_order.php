@@ -51,9 +51,9 @@ function update_order()
         //echo "Entered<br/>";
         if($vendor_qty != "")
         {
-            //echo "Add quantity = ".$vendor_qty." to order item = ".$order_desc."<br/>";
+            echo "Add quantity = ".$vendor_qty." to order item = ".$order_desc."<br/>";
             $new_order_qty = $vendor_qty + $order_qty;
-            //echo "New quantity = ".$new_order_qty."<br/>";
+            echo "New quantity = ".$new_order_qty."<br/>";
             $update_desc_array[] = $order_desc;
             $update_qty_array[] = $new_order_qty;
         }
@@ -158,7 +158,8 @@ $message = 'Order '.$my_order_id.' updated successfully.';
 		 window.alert('$message')
 		 window.location.href='index.php';
 		 </SCRIPT>";
-	#echo '<center><font color="blue">Order '.$my_order_id.' updated successfully.</font></center><br />';
+
+	//echo '<center><font color="blue">Order '.$my_order_id.' updated successfully.</font></center><br />';
 
 	echo "<form action='index.php'><input id='tiny_button' type='submit' id='submit' value='Return to Main Menu'/></form>";
 	echo "</BODY>";
