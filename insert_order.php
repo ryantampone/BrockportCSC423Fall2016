@@ -15,87 +15,87 @@ function show_item($message, $result_showItem,$vendorId)
 
 
 		if($message){
-			
+
 			if($message!= ""){
-				
+
 						echo '<center><font color="blue">'.$message.'</font></center>';
 				exit;
 				}
-			
-			
+
+
 			}
-			
-		echo" 
+
+		echo"
 				<div id='callToAction'>
 				<h2>Please fill out the new order form below.</h2>
 				</div>
-		"; 
-		
-			
+		";
+
+
 		echo"
 			    <div id='userdataform'>
 			<form action='insert_new_order.php' method='post'>
-			
-		
-			
-				<input type='hidden' id='vendor_id' name='vendor_id' value='$vendorId' readonly='readonly' />	
-		
+
+
+
+				<input type='hidden' id='vendor_id' name='vendor_id' value='$vendorId' readonly='readonly' />
+
 		  <table align='center' cellspacing='10' >
-			<tr>	
-			
+			<tr>
+
 					<td align='center'></td>
 					<td align='center'>Item Name</td>
 					<td align='center'>Size</td>
 					<td align='center'>Quantity</td>
-			</tr>	 
-		
+			</tr>
+
 				   ";
-		
+
 				$count = 0;
 				$item_array = array();
 				$item_size = array();
 				$quantity_array = array();
-				
-			
-				
-				
-				
+
+
+
+
+
 				while($row = mysql_fetch_assoc($result_showItem)){
-			
-			
+
+
 					$count++;
-			
+
 					$_description = $row['Description'];
 					$_size = $row['Size'];
 					$_itemId = $row['ItemId'];
 					$_qtyId = $row['QuantityOrdered'];
-				
+
 					echo "
 						<tr>
 							<td align='left'></td>
 							<td align='left'><p>".$_description."</p></td>
 						  	<td align='left'><p>".$_size."</p></td>
 							<td align='left'><input type='text' size='5' name='qtyId$count'  /></td>
-							
+
 						</tr>
-						
+
 						";
 						$qty = "qty".$count;
 						$item = "item".$count;
 						echo "<input type='hidden' name='item$count' value='$_itemId' />";
-				
-					
-			
+
+
+
 			}
-			
-         	
+
+
 			$total = $count;
 		   // echo "$total";
-	
-			
-			
+
+
+
 			echo "<input type='hidden' name='total_item' value='$total' />";
-					
+
 			echo "
             </table>
 			<table align='center' cellpadding='7' cellspacing='30' border='0'>
@@ -109,15 +109,15 @@ function show_item($message, $result_showItem,$vendorId)
 					{
 						echo "Store's retrieved unsuccessful: ".mysql_error();
 						exit;
-						
-						}	
+
+						}
 					while($row = mysql_fetch_assoc($store_result)){
-						
+
 						$storeid = $row['StoreId'];
-						$storename = mysql_real_escape_string($row['StoreName']);
+						$storename = $row['StoreName'];
 						echo "<option> ".$storename."</option>";
 						}
-						
+
 					echo "
 					</select>
 				</td>
@@ -139,12 +139,12 @@ function show_item($message, $result_showItem,$vendorId)
 		</form>
 		</div>
 	";
-		
-		
-		
-		
 
-	
+
+
+
+
+
 	}
 
 
