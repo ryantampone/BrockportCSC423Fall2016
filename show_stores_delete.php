@@ -28,7 +28,11 @@ function show_all_stores($message, $result)
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+         echo "<SCRIPT LANGUAGE='JavaScript'>
+           window.alert('$message')
+           window.location.href='delete_store_location_ui.php';
+           </SCRIPT>";
+           #echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 
@@ -55,43 +59,43 @@ function show_all_stores($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Store ID:</td>
-								 <td><input NAME='storeid' TYPE='text' SIZE='50' value='$storeid' readonly required/></td>
+								 <td><input NAME='storeid' TYPE='text' SIZE='50' value='$storeid' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Store Code:</td>
-								 <td><input NAME='storecode' TYPE='text' SIZE='50' value='$storecode' readonly required/></td>
+								 <td><input NAME='storecode' TYPE='text' SIZE='50' value='$storecode' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Store Name:</td>
-								 <td><input NAME='storename' TYPE='text' SIZE='50' value=\"$storename\" readonly required/></td>
+								 <td><input NAME='storename' TYPE='text' SIZE='50' value=\"$storename\" readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" readonly disabled required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
-							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
+							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Zip:</td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Phone:</td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
+								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Manager Name:</td>
-								 <td><input NAME='mgrname' TYPE='text' SIZE='50' value=\"$mgrname\" readonly required/></td>
+								 <td><input NAME='mgrname' TYPE='text' SIZE='50' value=\"$mgrname\" readonly disabled required/></td>
 						 </tr>
              <tr>
                  <td align='right'>Status:</td>
-                 <td><input name='status' type='text' size'50' value='$status' readonly/></td>
+                 <td><input name='status' type='text' size'50' value='$status' readonly disabled/></td>
              </tr>
 				 </table>
 

@@ -148,9 +148,12 @@ function insert_new_order()
 
 				}
 
-
-
-	echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />';
+				$message = 'Order '.$orderId.' inserted successfully';
+				echo "<SCRIPT LANGUAGE='JavaScript'>
+					 window.alert('$message')
+					 window.location.href='index.php';
+					 </SCRIPT>";
+	#echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />';
 	echo "<form action='index.php'><input id='tiny_button' type='submit' id='submit' value='Return to Main Menu'/></form>";
 
 

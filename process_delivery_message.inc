@@ -9,6 +9,12 @@ function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY)
   echo "</HEAD>";
   echo "<BODY>";
 
+  $message = $messageOrder.$messageInsert;
+  echo "<SCRIPT LANGUAGE='JavaScript'>
+     window.alert('$message')
+     window.location.href='index.php';
+     </SCRIPT>";
+  /*
   if ($messageOrder)
   {
     if ($messageOrder != "")
@@ -25,7 +31,7 @@ function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY)
 	 echo '<center><font color="blue">'.$messageInsert.'</font></center><br />';
        }
   }
-
+*/
 /*
   if ($messageUpdateQTY)
   {

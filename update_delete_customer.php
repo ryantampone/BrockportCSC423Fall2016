@@ -35,7 +35,7 @@ function update_customer()
 	$email = $_POST['email'];
 	$status = "Inactive";
 
-	$esc_customername = mysql_real_escape_string($_POST['name']);
+	$esc_customername = mysql_real_escape_string($_POST['customername']);
 	$esc_address = mysql_real_escape_string($_POST['address']);
 	$esc_city = mysql_real_escape_string($_POST['city']);
 	$esc_email = mysql_real_escape_string($_POST['email']);

@@ -7,13 +7,13 @@
 	echo"
 		<br>
 		<div id='callToAction'>
-	    <h2>Please Enter the Vendor ID of the Vendor to Delete</h2>
+	    <h2>Please Enter the Vendor Code of the Vendor to Delete</h2>
 	  </div>
     	<div id='userdataform'>
             <form name='myform' action='delete_vendor.php' method='post'>
                 <table align='center'>
                     <tr>
-                        <td><span align='right'>Enter Vendor ID:</span></td>
+                        <td><span align='right'>Enter Vendor Code:</span></td>
                         <td><input NAME='vendorid' TYPE='text' SIZE='50' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
                     </tr>
                 </table>

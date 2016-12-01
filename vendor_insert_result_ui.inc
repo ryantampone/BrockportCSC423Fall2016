@@ -16,7 +16,11 @@ function ui_show_vendor_insert_result($message, $lastname, $firstname,
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+				 echo "<SCRIPT LANGUAGE='JavaScript'>
+ 			 		window.alert('$message')
+ 					window.location.href='index.php';
+ 					</SCRIPT>";
+	 		 		#echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 

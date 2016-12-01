@@ -44,7 +44,7 @@ function update_customer()
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
-	$sql_stmt = "UPDATE Customer SET Name='$esc_customername', Address='$esc_address', City='$esc_city', State='$state', ZIP='$zip', Phone='$phone', Email='$esc_email' WHERE CustomerId='$customerid';";
+	$sql_stmt = "UPDATE Customer SET Name='$esc_customername', Address='$esc_address', City='$esc_city', State='$state', ZIP='$zip', Phone='$phone', Email='$esc_email', Status='$status' WHERE CustomerId='$customerid';";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($sql_stmt);

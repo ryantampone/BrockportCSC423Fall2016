@@ -25,7 +25,11 @@ function show_all_vendors($message, $result)
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+				 echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('$message')
+						window.location.href='modify_vendor_ui_form.php';
+						</SCRIPT>";
+					#echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 
@@ -52,7 +56,7 @@ function show_all_vendors($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Vendor ID:</td>
-								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' readonly required/></td>
+								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Vendor Code:</td>
@@ -147,7 +151,7 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Status:</td>
-								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
+								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' readonly disabled required/></td>
 						 </tr>
 				 </table>
 				 <div class='button'>

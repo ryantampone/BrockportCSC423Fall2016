@@ -24,8 +24,12 @@ function show_order($message, $result)
   {
     if ($message != "")
        {
-	 		 	echo '<center><font color="blue">'.$message.'</font></center><br />';
-				exit;
+				 echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('$message')
+						window.location.href='add_to_existing_order_ui.php';
+						</SCRIPT>";
+				#echo '<center><font color="blue">'.$message.'</font></center><br />';
+				#exit;
        }
   }
 
@@ -81,7 +85,7 @@ function show_order($message, $result)
 				 	<tr>
 				 		<td><p style=\"padding-right: 30px;\">".$_description."</p></td>
 						<td><p style=\"padding-right: 30px;\">".$_size."</p></td>
-						<td><input type='text' size='5' name='$_id_for_next_item' value='$qty' readonly/></td>
+						<td><input type='text' size='5' name='$_id_for_next_item' value='$qty' readonly disabled/></td>
 					</tr>
 				 ";
 				 echo "<input type='hidden' name='$order_desc_id' value='$_description' />";

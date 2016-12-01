@@ -15,7 +15,11 @@ function show_store_confirm($message)
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+         echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('$message')
+						window.location.href='index.php';
+						</SCRIPT>";
+           #echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 

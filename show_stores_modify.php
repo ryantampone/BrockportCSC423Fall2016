@@ -28,7 +28,11 @@ function show_all_stores($message, $result)
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+         echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('$message')
+						window.location.href='modify_store_location_ui.php';
+						</SCRIPT>";
+           #echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 
@@ -55,7 +59,7 @@ function show_all_stores($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Store ID:</td>
-								 <td><input NAME='storeid' TYPE='text' SIZE='50' value='$storeid' readonly required/></td>
+								 <td><input NAME='storeid' TYPE='text' SIZE='50' value='$storeid' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Store Code:</td>
@@ -146,7 +150,7 @@ function show_all_stores($message, $result)
 						 </tr>
              <tr>
                  <td align='right'>Status:</td>
-                 <td><input id='status' name='status' type='text' size'50' value='$status' readonly/></td>
+                 <td><input id='status' name='status' type='text' size'50' value='$status' readonly disabled/></td>
              </tr>
 				 </table>
 				  <div class='button'>

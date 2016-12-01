@@ -25,7 +25,11 @@ function show_all_customers($message, $result)
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+				 echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('$message')
+						window.location.href='modify_customer_ui_form.php';
+						</SCRIPT>";
+	 		 		#echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 
@@ -48,7 +52,7 @@ function show_all_customers($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Customer ID:</td>
-								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' readonly required/></td>
+								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' readonly disabled required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Customer Name:</td>
@@ -134,7 +138,7 @@ function show_all_customers($message, $result)
 								 <td><input name='email' type='text' size='50' value=\"$email\" required/></td>
 						 <tr>
 								 <td align='right'>Status:</td>
-								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
+								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' readonly disabled required/></td>
 						 </tr>
 				 </table>
 			  <div class='button'>

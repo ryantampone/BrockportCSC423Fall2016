@@ -24,7 +24,11 @@ function show_all_items($message, $result)
   {
     if ($message != "")
        {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
+				 echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('$message')
+						window.location.href='modify_item_ui_form.php';
+						</SCRIPT>";
+					#echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
 
@@ -68,7 +72,7 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td align='right'>Item ID:</td>
-                        <td><input id='ItemId' name='ItemId' value=\"$itemId\" TYPE='text' SIZE='50' readonly required/></td>
+                        <td><input id='ItemId' name='ItemId' value=\"$itemId\" TYPE='text' SIZE='50' readonly disabled required/></td>
                     </tr>
                	    <tr>
                         <td align='right'>Description:</td>
