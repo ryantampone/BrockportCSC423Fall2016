@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type: application/x-excel');
-header('Content-Disposition: attachment; filename="nannosfoodsinventoryreport.csv"');
+header('Content-Disposition: attachment; filename="cesei_activity_log.csv"');
 header('Expires: 0');
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 header('Pragma: public');
@@ -11,9 +11,9 @@ echo(implode(',',$headers));
 
 $count = 0;
 $array = $_POST['array'];
-while($count < $array){
+while($count <= $array){
 
-	$itemid_ex = 'item_ex'.$count;
+	$itemid_ex = 'itemid_ex'.$count;
 	$description_ex = 'description_ex'.$count;
 	$size_ex = 'size_ex'.$count;
 	$division_ex = 'division_ex'.$count;
