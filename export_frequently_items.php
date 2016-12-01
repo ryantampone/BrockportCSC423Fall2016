@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type: application/x-excel');
-header('Content-Disposition: attachment; filename="cesei_activity_log.csv"');
+header('Content-Disposition: attachment; filename="FrequentlyReturnedItemsReport.csv"');
 header('Expires: 0');
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 header('Pragma: public');

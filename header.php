@@ -255,6 +255,8 @@ function checkQty(count)
                   <ul>
                     <li><a href="/~rtamp1/csc423/gp/report_all_items.php">Total Inventory</a>
                     <li><a href="/~rtamp1/csc423/gp/report_overstocked_items.php">Overstock Inventory</a>
+                    <li><a href="/~rtamp1/csc423/gp/report_items_delivered.php">Delivered Inventory</a>
+                    <li><a href="/~rtamp1/csc423/gp/report_frequently_items.php">Returned Inventory</a>
                   </ul>
               </li>
           </ul>

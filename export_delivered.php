@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type: application/x-excel');
-header('Content-Disposition: attachment; filename="cesei_activity_log.csv"');
+header('Content-Disposition: attachment; filename="DeliveredItemsReport.csv"');
 header('Expires: 0');
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 header('Pragma: public');
@@ -17,7 +17,7 @@ while($count < $array){
 	$dateTimeOfOrder_ex = 'dateTimeOfOrder'.$count;
 	$itemId_ex = '$itemId_ex'.$count;
 	$description_ex = 'description_ex'.$count;
-	
+
 	$count++;
  	$row=array($_POST[$orderId_ex],$_POST[$itemId_ex],$_POST[$description_ex], $_POST[$dateTimeOfOrder_ex] );
 	echo(implode(',',$row));
