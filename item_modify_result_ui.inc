@@ -72,7 +72,7 @@ function show_all_items($message, $result)
 				 <table align='center'>
                     <tr>
                         <td align='right'>Item ID:</td>
-                        <td><input id='ItemId' name='ItemId' value=\"$itemId\" TYPE='text' SIZE='50' readonly disabled required/></td>
+                        <td><input id='ItemId' name='ItemId' value=\"$itemId\" TYPE='text' SIZE='50' readonly required/></td>
                     </tr>
                	    <tr>
                         <td align='right'>Description:</td>

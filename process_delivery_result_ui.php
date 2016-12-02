@@ -108,7 +108,7 @@ function show_order($message, $result)
 				 	<tr>
 				 		<td><p style=\"padding-right: 30px;\" align='right'>".$_description.", ".$_size."</p></td>
 						<input name='desc$count' id='desc' TYPE='hidden' SIZE='5' value='$_description'/>
-						<td><input type='text' size='5' name='$_id_for_next_item' id='$_id_for_next_item' value='$qty' readonly disabled/></td>
+						<td><input type='text' size='5' name='$_id_for_next_item' id='$_id_for_next_item' value='$qty' readonly/></td>
 						<td><input name='numRecords' id='numRecords' TYPE='hidden' SIZE='50' value='$count'/></td>
 					</tr>
 				 ";

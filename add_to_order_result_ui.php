@@ -85,7 +85,7 @@ function show_order($message, $result)
 				 	<tr>
 				 		<td><p style=\"padding-right: 30px;\">".$_description."</p></td>
 						<td><p style=\"padding-right: 30px;\">".$_size."</p></td>
-						<td><input type='text' size='5' name='$_id_for_next_item' value='$qty' readonly disabled/></td>
+						<td><input type='text' size='5' name='$_id_for_next_item' value='$qty' readonly/></td>
 					</tr>
 				 ";
 				 echo "<input type='hidden' name='$order_desc_id' value='$_description' />";
