@@ -26,7 +26,7 @@
 		<form action='report_delivered_item_list.php' method='post'>
 			<table align='center'>
 			<tr>
-				<td ><span align='right'>Store ID:</span></td>
+				<td ><span align='right'>Store Name:</span></td>
 				<td>
 								<select id='StoreName' name='StoreName' >
 							";
