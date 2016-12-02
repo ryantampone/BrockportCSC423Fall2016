@@ -55,6 +55,7 @@ function show_confirm()
     			</tr>
         ";
         $count = 1;
+				$temp_item_count = 1;
         while($count <= $numitems)
         {
           $desc = $_POST['desc'.$count];
@@ -64,9 +65,10 @@ function show_confirm()
             echo"
               <tr>
                 <td><p style=\"padding-right: 30px;\">$desc</p></td>
-                <td><input type='text' size='5' name='return$count' value='$returnqty' style=\"background-color: #d6dbdf;\" readonly/>
-                <input type='hidden' name='desc$count' value='$desc' />
+                <td><input type='text' size='5' name='return$temp_item_count' value='$returnqty' style=\"background-color: #d6dbdf;\" readonly/>
+                <input type='hidden' name='desc$temp_item_count' value='$desc' />
             ";
+						$temp_item_count++;
           }
           $count++;
         }

@@ -10,17 +10,16 @@ function insert_new_order()
 {
 
 
+		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 
 	   $vendorId = $_POST['vendor_id'];
 	   //echo "$vendorId";
-	   $storeName = $_POST['StoreId'];
-		 $esc_storeName = mysql_real_escape_string($storeName);
-	  //  echo "StoreName"." ".$storeName;
+	   $storeName = $_POST['Storename'];
+		 $esc_storeName = mysql_real_escape_string($_POST['Storename']);
 
 
 
-	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-	$sql_storeId = "SELECT StoreId FROM RetailStore WHERE StoreName='$storeName';";
+	$sql_storeId = "SELECT StoreId FROM RetailStore WHERE StoreName='$esc_storeName';";
 	$sql_result = mysql_query($sql_storeId);
 
 	while($row = mysql_fetch_assoc($sql_result))
@@ -153,6 +152,8 @@ function insert_new_order()
 					 window.alert('$message')
 					 window.location.href='index.php';
 					 </SCRIPT>";
+
+
 	#echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />';
 	echo "<form action='index.php'><input id='tiny_button' type='submit' id='submit' value='Return to Main Menu'/></form>";
 
@@ -164,147 +165,8 @@ function insert_new_order()
 
 			 		   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-	   /*$sql_order = "INSERT INTO `Order`(`OrderId`, `VendorId`, `StoreId`, `DateTimeOfOrder`, `Status`, `DateTimeOfFulfillment`) VALUES ('$orderId','$vendorId','$storeId','$dateTimeOfOrder','$status', ' ');";
-	   $resule_order = mysql_query($sql_order);
-	   */
-	 // echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />';
-
-
-	   // echo"Silly3";
-
-
-
-
 	 }
 
-
-	/*
-
-
-
-	   function insert_new_order_detail($orderDetail, $orderId){
-
-
-		   connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-
-
-
-	 $sql_count = "SELECT COUNT(*) as total FROM InventoryItem WHERE VendorId=1;";
-	   $result_count = mysql_query($sql_count);
-
-	  $row = mysql_fetch_assoc($result_count);
-
-					$total_row = $row['total'];
-					//echo "Total Item = ". $total_row. "<br />";
-
-
-				//echo "Total Item = ".$num_items."<br />";
-
-
-
-  //echo"Silly!";
-       //echo var_dump($_POST);
-	   $item = array();
-	   $qty_array = array();
-	   $num_items = $_POST[$total_item];
-	   //echo "Num items = ".$num_items."<br/><br/>";
-
-
-	   for($i = 1; $i <= $total_row; $i++)
-	   {
-
-
-
-		   $itemcount = "item".$i;
-		   $itemId = $_POST[$itemcount];
-		   $qty = "qtyId".$i;
-		   $qty = $_POST[$qty];
-
-		   if($qty != ""){
-
-			    $item[$i] = "$itemId";
-				//echo "Insert Item = ".$item[$i]."<br />";
-				$qty_array[$i] = "$qty";
-				//echo "Insert QTY = ".$qty_array[$i]."<br />";
-
-			   }
-
-
-
-
-
-		   //echo "Quantity = ".$qty."<br/>";
-		   //$qty[$i] = "$qty";
-		   //echo "Insert QTY = ".$qty[$i]."<br />";
-
-
-
-	   }
-
-	   $array_size = sizeof($item);
-	   //echo "Size of Item Array = ".$array_size. "<br />";
-	  $size_qty = sizeof($qty_array);
-	   //echo "Size of QTY Array = ".$size_qty."<br />";
-
-	  // echo "OrderDetailId = ".$orderDetail."<br />";
-	   //echo "OrderId = ".$orderId."<br />";
-
-        if($array_size >0){
-				connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-				$sql_order = "INSERT INTO `Order`(`OrderId`, `VendorId`, `StoreId`, `DateTimeOfOrder`, `Status`, `DateTimeOfFulfillment`) VALUES ('$orderId','$vendorId','$storeId','$dateTimeOfOrder','$status', ' ');";
-	   $resule_order = mysql_query($sql_order);
-
-			}
-	   else{
-
-		     echo"No item selected";
-		   }
-
-			$j = 0;
-
-	  			while($j<$size_qty){
-
-				connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-				$sql_insertOrder = "INSERT INTO `OrderDetail`(`OrderId`, `ItemId`, `QuantityOrdered`) VALUES ('$orderId','$item[$j]','$qty_array[$j]');";
-				$insertOrder = mysql_query($sql_insertOrder);
-				$j++;
-
-
-				}
-
-
-
-
-
-
-
-
-
-
-  echo "<HTML>";
-  echo "<HEAD>";
-  echo "</HEAD>";
-  echo "<BODY>";
-
-	echo '<center><font color="blue">Order '.$orderId.' inserted successfully.</font></center><br />';
-	echo "<form action='index.php'><input id='tiny_button' type='submit' id='submit' value='Return to Main Menu'/></form>";
-	echo "</BODY>";
-	echo "</HTML>";
-
-	   }
-*/
 
 function connect_and_select_db($server, $username, $pwd, $dbname)
 {

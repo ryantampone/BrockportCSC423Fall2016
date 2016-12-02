@@ -51,9 +51,9 @@ function update_order()
         //echo "Entered<br/>";
         if($vendor_qty != "")
         {
-            echo "Add quantity = ".$vendor_qty." to order item = ".$order_desc."<br/>";
+            //echo "Add quantity = ".$vendor_qty." to order item = ".$order_desc."<br/>";
             $new_order_qty = $vendor_qty + $order_qty;
-            echo "New quantity = ".$new_order_qty."<br/>";
+            //echo "New quantity = ".$new_order_qty."<br/>";
             $update_desc_array[] = $order_desc;
             $update_qty_array[] = $new_order_qty;
         }

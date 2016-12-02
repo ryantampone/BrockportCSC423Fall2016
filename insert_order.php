@@ -102,7 +102,7 @@ function show_item($message, $result_showItem,$vendorId)
 			<tr>
 					<td align='right'>Store Name:</td>
 					<td align='left'>
-					<select id='StoreId' name='StoreId' required >";
+					<select id='StoreId' name='Storename' required >";
 					$sql_store = "SELECT StoreName FROM RetailStore WHERE Status='Active';";
 					$store_result = mysql_query($sql_store);
 					if (!$store_result)

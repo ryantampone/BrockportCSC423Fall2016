@@ -56,9 +56,11 @@ function confirm_return()
   {
     // Dynamically retrieve the next itemid to be returned
     $next_desc = $_POST['desc'.$i];
+		//echo "desc".$i.": ".$next_desc."</br>";
     $esc_next_desc = mysql_real_escape_string($next_desc);
     $sql_get_itemid = "SELECT ItemId FROM InventoryItem WHERE Description='$esc_next_desc'";
     $sql_item_result = mysql_query($sql_get_itemid);
+		//echo "Query: ".$sql_get_itemid."<br/>";
     while($item_row = mysql_fetch_assoc($sql_item_result))
     {
       $next_itemid = $item_row['ItemId'];
@@ -104,7 +106,7 @@ $message = 'Return processed successfully';
 		 window.alert('$message')
 		 window.location.href='index.php';
 		 </SCRIPT>";
-	#echo '<center><font color="blue">Return processed successfully.</font></center><br />';
+	//echo '<center><font color="blue">Return processed successfully.</font></center><br />';
 
 	echo "<form action='index.php'><input id='tiny_button' type='submit' id='submit' value='Return to Main Menu'/></form>";
 	echo "</BODY>";
