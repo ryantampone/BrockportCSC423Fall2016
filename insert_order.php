@@ -38,7 +38,7 @@ function show_item($message, $result_showItem,$vendorId)
 
 
 
-				<input type='hidden' id='vendor_id' name='vendor_id' value='$vendorId' readonly='readonly' />
+				<input type='hidden' id='vendor_id' name='vendor_id' value='$vendorId' style=\"background-color: #d6dbdf;\" readonly='readonly' />
 
 		  <table align='center' cellspacing='10' >
 			<tr>
@@ -128,7 +128,7 @@ function show_item($message, $result_showItem,$vendorId)
 			</tr>
 			<tr>
 				<td align='right'>Status:</td>
-				<td align='left'><input type='text' id='Status' name='Status' value='Pending' readonly/></td>
+				<td align='left'><input type='text' id='Status' name='Status' value='Pending' style=\"background-color: #d6dbdf;\" readonly/></td>
 			</tr>
 			</table>
 			<div class='button'>

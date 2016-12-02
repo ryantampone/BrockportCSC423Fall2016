@@ -60,7 +60,7 @@ function show_items($message, $result)
       <tr>
     	  <td><p style=\"padding-right: 30px;\">$desc</p></td>
     	  <td><p style=\"padding-right: 30px;\">$size</p></td>
-    	  <td><input type='text' size='5' name='stock$count' id='stock$count' value='$stockqty' readonly/></td>
+    	  <td><input type='text' size='5' name='stock$count' id='stock$count' value='$stockqty' style=\"background-color: #d6dbdf;\" readonly/></td>
         <td><input type='text' size='5' name='return$count' id='return$count' onkeypress='return hasToBeNumber(event)' onpaste='return false' onblur='checkQty($count)' />
       </tr>
     ";

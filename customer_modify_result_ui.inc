@@ -52,7 +52,7 @@ function show_all_customers($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Customer ID:</td>
-								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' readonly required/></td>
+								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' onKeyPress='return hasToBeNumberOrLetter(event)' onpaste='return false' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Customer Name:</td>
@@ -138,7 +138,7 @@ function show_all_customers($message, $result)
 								 <td><input name='email' type='text' size='50' value=\"$email\" required/></td>
 						 <tr>
 								 <td align='right'>Status:</td>
-								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
+								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 				 </table>
 			  <div class='button'>

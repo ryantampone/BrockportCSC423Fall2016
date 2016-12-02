@@ -64,7 +64,7 @@ function show_confirm()
             echo"
               <tr>
                 <td><p style=\"padding-right: 30px;\">$desc</p></td>
-                <td><input type='text' size='5' name='return$count' value='$returnqty' readonly/>
+                <td><input type='text' size='5' name='return$count' value='$returnqty' style=\"background-color: #d6dbdf;\" readonly/>
                 <input type='hidden' name='desc$count' value='$desc' />
             ";
           }

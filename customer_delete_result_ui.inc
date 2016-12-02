@@ -52,39 +52,39 @@ function show_all_customers($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Customer ID:</td>
-								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' readonly required/></td>
+								 <td><input NAME='customerid' TYPE='text' SIZE='50' value='$customerid' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Customer Name:</td>
-								 <td><input NAME='customername' TYPE='text' SIZE='50' value=\"$customername\" readonly required/></td>
+								 <td><input NAME='customername' TYPE='text' SIZE='50' value=\"$customername\" style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Address:</td>
-								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" readonly required/></td>
+								 <td><input NAME='address' TYPE='text' SIZE='50' value=\"$address\" style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>City:</td>
-								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" readonly required/></td>
+								 <td><input NAME='city' TYPE='text' SIZE='50' value=\"$city\" style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 							 <td align='right'>State:</td>
-							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' readonly required/></td>
+							 <td><input NAME='state' TYPE='text' SIZE='50' value='$state' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Zip:</td>
-								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' readonly required/></td>
+								 <td><input NAME='zip' TYPE='text' SIZE='50' value='$zip' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Phone:</td>
-								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' readonly required/></td>
+								 <td><input NAME='phone' TYPE='text' SIZE='50' value='$phone' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 						 		 <td align='right'>Email:</td>
-								 <td><input name='email' type='text' size='50' value=\"$email\" readonly required/></td>
+								 <td><input name='email' type='text' size='50' value=\"$email\" style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Status:</td>
-								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
+								 <td><input NAME='status' TYPE='text' SIZE='50' value='$status' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 				 </table>
 				  <div class='button'>

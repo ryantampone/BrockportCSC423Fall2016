@@ -56,7 +56,7 @@ function show_all_vendors($message, $result)
 				 <table align='center'>
 						 <tr>
 								 <td align='right'>Vendor ID:</td>
-								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' readonly required/></td>
+								 <td><input NAME='vendorid' TYPE='text' SIZE='50' value='$vendorid' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 						 <tr>
 								 <td align='right'>Vendor Code:</td>
@@ -151,7 +151,7 @@ function show_all_vendors($message, $result)
 						 </tr>
 						 <tr>
 								 <td align='right'>Status:</td>
-								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' readonly required/></td>
+								 <td><input id='status' NAME='status' TYPE='text' SIZE='50' value='$status' style=\"background-color: #d6dbdf;\" readonly required/></td>
 						 </tr>
 				 </table>
 				 <div class='button'>
