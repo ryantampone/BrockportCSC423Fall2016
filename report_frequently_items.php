@@ -26,7 +26,7 @@
 		<form action='report_frequently_item_list.php' method='post'>
 			<table align='center'>
 			<tr>
-				<td ><span align='right'>Vendor ID:</span></td>
+				<td ><span align='right'>Vendor Name:</span></td>
 				<td>
 								<select id='VendorName' name='VendorName' >
 							";
