@@ -25,7 +25,9 @@ function show_item_delivered($storeName, $startDate, $endDate){
 	
 			
 			//find the orderID which is matching the storename and the date
-			$sql_orderId = "SELECT OrderId, DateTimeOfOrder FROM `Order` WHERE ((`DateTimeOfOrder` > '$startDat') OR (`DateTimeOfOrder` < '$endDate')) AND StoreId in (SELECT StoreId FROM `RetailStore` WHERE StoreName ='$storeName');";
+			$sql_orderId = "SELECT OrderId, DateTimeOfOrder FROM `Order` WHERE ((`DateTimeOfOrder` > '$startDate') AND (`DateTimeOfOrder` < '$endDate')) AND StoreId in (SELECT StoreId FROM `RetailStore` WHERE StoreName ='Long Pond Road Greece');";
+
+
 			$resule_orderId = mysql_query($sql_orderId);
 			if (!$resule_orderId)
 				  {
