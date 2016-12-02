@@ -5,7 +5,7 @@ include 'header.php';
 
 
 
-$vendorName = $_POST['VendorName'];
+$vendorName = mysqli_real_escape_string($_POST['VendorName']);
 //echo "Vendor Name: ".$vendorName;
 //echo "<br />";
 
