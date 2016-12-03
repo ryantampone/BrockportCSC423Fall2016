@@ -15,6 +15,8 @@ function show_order($result, $orderStatus)
 
    //While there are more rows in the $result, get the next row
    //as an associative array
+   echo"
+   <h2>All Pending Orders</h2>";
    while ($row = mysql_fetch_assoc($result))
    {
 		 $orderid = $row['OrderId'];
@@ -27,7 +29,8 @@ function show_order($result, $orderStatus)
 		 echo"
 	 		<div id='callToAction'>
 				<br>
-	 			<h2>Order ID</h2>: <input type='button' id='orderStaus' name='orderStaus' value='$orderid: $status'/>
+	 			<h3>Order Id: $orderid
+				 <input type='button' id='orderStaus' name='orderStaus' value='View Detail'/> </h3>
 	 		</div>
 	 		";
 
