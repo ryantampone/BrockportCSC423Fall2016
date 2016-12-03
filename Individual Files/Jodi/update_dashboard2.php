@@ -36,7 +36,7 @@
   $startDate = "2016-11-03";#date('Y-m-d', strtotime('today - 30 days'));
   $endDate =  "2016-12-03";#date('Y-m-d');
 
-  $QueryMS = "SELECT COUNT( * ) FROM `CustomerPurchase` WHERE ((`DateTimeOfPurchase` > '$startDate') AND (`DateTimeOfPurchase` < '$endDate')) AND StoreId = '$StoreID';";
+  $QueryMS = "SELECT COUNT(*) FROM `CustomerPurchase` WHERE ((`DateTimeOfPurchase` > '$startDate') AND (`DateTimeOfPurchase` < '$endDate')) AND StoreId = '$StoreID';";
   $ResultMS = mysql_query($QueryMS); // Result of Processing the Query is shown
   if (!$ResultMS)
   {
@@ -45,7 +45,7 @@
   }
   while($row = mysql_fetch_assoc($ResultMS))
   {
-    $numberOfSalesLastMonth = $row['count(*)'];
+    $numberOfSalesLastMonth = "5";#$row['count(*)'];
   }
   mysql_free_result($ResultMS);
 	//------------------------------------------------------------------------------
