@@ -11,10 +11,20 @@
     $SN = mysql_real_escape_string($_POST['StoreName']);
     $Query = "SELECT StoreId FROM `RetailStore` WHERE StoreName =  '$SN';";
     $Result = mysql_query($Query); // Result of Processing the Query is shown
+    if (!$Result)
+    {
+      echo "Unable to retrieve Store Id from Store Name Dropdown"; //be sure to change
+      exit;
+    }
+    while($row = mysql_fetch_assoc($Result))
+    {
+      $StoreID = $row['StoreId'];
+    }
+    mysql_free_result($Result);
 
 	//------------------------------------------------------------------------------
 
-    $activeVendorsQuery = "SELECT StoreId FROM `RetailStore` WHERE StoreName ='$SN';";
+    $activeVendorsQuery = "SELECT count(*) FROM Vendor WHERE Status = 'Active';";
     $resultAV = mysql_query($activeVendorsQuery);
     if (!$resultAV)
     {
@@ -69,7 +79,7 @@
     mysql_free_result($resultStores);
 
 	//----------------------------------------------------------------------------------
-    $pendingOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Pending';";
+    $pendingOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Pending' and StoreId='$StoreID';";
     $resultPending = mysql_query($pendingOrdersQuery);
     if (!$resultPending)
     {
