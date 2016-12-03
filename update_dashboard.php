@@ -12,7 +12,7 @@
     $startDate = date('Y-m-d', strtotime('today - 30 days'));
     $endDate =  date('Y-m-d');
 
-    $QueryMS = "SELECT count(*) FROM `CustomerPurchase`;";
+    $QueryMS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDateWS') AND (DateTimeOfPurchase < '$endDateWS'));";
     $ResultMS = mysql_query($QueryMS); // Result of Processing the Query is shown
     if (!$ResultMS)
     {
@@ -25,6 +25,23 @@
     }
     mysql_free_result($ResultMS);
 
+
+    //------------------------------------------------------------------------------
+    $startDateWS = date('Y-m-d', strtotime('today - 7 days'));
+    $endDateWS =  date('Y-m-d');
+
+    $QueryWS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDateWS') AND (DateTimeOfPurchase < '$endDateWS'));";
+    $ResultWS = mysql_query($QueryWS); // Result of Processing the Query is shown
+    if (!$ResultWS)
+    {
+      echo "Unable to Retrieve count of weekly sales from database"; //be sure to change
+      exit;
+    }
+    while($row = mysql_fetch_assoc($ResultWS))
+    {
+      $numberOfSalesLastWeek = $row['count(*)'];
+    }
+    mysql_free_result($ResultWS);
 
 	//------------------------------------------------------------------------------
     $activeVendorsQuery = "SELECT count(*) FROM Vendor WHERE Status = 'Active';";
