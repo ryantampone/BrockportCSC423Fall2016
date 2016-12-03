@@ -9,7 +9,21 @@
 
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
 
-    $numberOfSalesLastMonth = "hi everyone";
+    $startDate = date('Y-m-d', strtotime('today - 30 days'));
+    $endDate =  date('Y-m-d');
+
+    $QueryMS = "SELECT count(*) FROM `CustomerPurchase`;";
+    $ResultMS = mysql_query($QueryMS); // Result of Processing the Query is shown
+    if (!$ResultMS)
+    {
+      echo "Unable to Retrieve count of monthy sales from database"; //be sure to change
+      exit;
+    }
+    while($row = mysql_fetch_assoc($ResultMS))
+    {
+      $numberOfSalesLastMonth = $row['count(*)'];
+    }
+    mysql_free_result($ResultMS);
 
 
 	//------------------------------------------------------------------------------

@@ -33,8 +33,8 @@
     mysql_free_result($ResultSN);
 
   //------------------------------------------------------------------------------
-  $startDate = "2016-11-03";#date('Y-m-d', strtotime('today - 30 days'));
-  $endDate =  "2016-12-03";#date('Y-m-d');
+  $startDate = date('Y-m-d', strtotime('today - 30 days'));
+  $endDate =  date('Y-m-d');
 
   $QueryMS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDate') AND (DateTimeOfPurchase < '$endDate')) AND StoreId = '$StoreID';";
   $ResultMS = mysql_query($QueryMS); // Result of Processing the Query is shown
@@ -45,7 +45,6 @@
   }
   while($row = mysql_fetch_assoc($ResultMS))
   {
-    echo "Unable to do shit count of monthy sales from database"; //be sure to change
     $numberOfSalesLastMonth = $row['count(*)'];
   }
   mysql_free_result($ResultMS);
