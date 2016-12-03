@@ -9,7 +9,7 @@
 
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
     $testSN = $_POST['StoreName'];
-    if ($testSN == "Store Name")
+    if ($testSN == "Select Store")
     {
       echo "<SCRIPT LANGUAGE='JavaScript'>
          window.alert('Please Select Your Store Location to View Your Customized Dashboard')
