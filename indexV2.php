@@ -5,12 +5,35 @@
 
 
 <?php
-	function show_index($v_active ,$v_inactive, $v_total, $stores, $pending, $delivered, $cancelled, $total_o, $c_active, $c_inactive, $c_total)
+	function show_index($v_active ,$v_inactive, $v_total, $stores, $monthlySales, $pending, $delivered, $cancelled, $total_o, $c_active, $c_inactive, $c_total)
 	{
 		echo "
 <br>
 		<div id='callToAction'>
 		  <h2>Dashboard</h2>
+			<div id='dropdown'>
+				<form action='update_dashboard2.php' method='post'>
+				<table align='center'>
+					<tr>
+						<td><select id='StoreName' name='StoreName'><option value='Select Store'>Select Store</option>";
+								$sql_storeNames="SELECT StoreName FROM RetailStore WHERE Status ='Active';";
+								$storeName_result = mysql_query($sql_storeNames);
+								if(!$storeName_result)
+								{
+									echo "Store names retrieved unsuccessfully: ".mysql_error();
+									exit;
+								}
+								while($row = mysql_fetch_assoc($storeName_result))
+								{
+									$storeName = $row['StoreName'];
+									echo "<option value='".$storeName."'>".$storeName."</option>";
+								}
+								echo "</select></td>
+								<td><input type='submit' value='Go' ></input>
+					</tr>
+					</table>
+			</form>
+			</div>
 		</div>
 		<br>
 		<!-- ===================Index Code Goes Under Here======================= -->
@@ -47,7 +70,10 @@
 					<div class='innerTable'>
 						<table class='dashTables' align='center'>
 						<tr>
-							<td width='175px'><h4>Number of Stores: </h4></td><td id='number_stores'>$stores</td>
+							<td width='175px' height='35px'><h4>Number of Stores: </h4></td><td id='number_stores'>$stores</td>
+						</tr>
+						<tr>
+							<td height='35px'><h4>Monthly Sales: </h4></td><td id='monthly_sales'>$monthlySales</td>
 						</tr>
 						</table>
 					</div>
