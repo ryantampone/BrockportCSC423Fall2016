@@ -26,9 +26,10 @@
 								while($row = mysql_fetch_assoc($storeName_result))
 								{
 									$storeName = $row['StoreName'];
-									echo "<option value='"$storeName"'>".$storeName."</option>";
+									echo "<option value='".$storeName."'>".$storeName."</option>";
 								}
 								echo "</select></td>
+								<td><input type='submit' value='Go' ></input>
 					</tr>
 					</table>
 			</form>
