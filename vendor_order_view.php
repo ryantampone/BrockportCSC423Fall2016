@@ -33,6 +33,12 @@ function show_order($result, $orderStatus)
 
 
 		 echo"
+		 <table name='reportTable'>
+		 		<th colspan='3'></th>
+		 </table>
+
+
+
 		 <form action='' method='post'>
 			 <table align='center'>
 
@@ -87,7 +93,7 @@ function show_order($result, $orderStatus)
 				 echo"
 				 	<tr>
 				 		<td><p style=\"padding-right: 30px;\" align='left'>".$_description.", ".$_size."</p></td>
-						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty' style=\"background-color: #d6dbdf;\" readonly/></td>
+						<td><input type='text' size='5' id='".$_id_for_next_item."' value='$qty' readonly/></td>
 					</tr>
 				 ";
 			 }

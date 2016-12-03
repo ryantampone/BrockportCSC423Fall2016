@@ -17,7 +17,7 @@ function ui_show_item_insert_result($message, $itemname, $result)
     if ($message != "")
        {
          echo "<SCRIPT LANGUAGE='JavaScript'>
-						window.alert('$message')
+						window.alert(\"$message\")
 						window.location.href='index.php';
 						</SCRIPT>";
            #echo '<center><font color="blue">'.$message.'</font></center><br />';

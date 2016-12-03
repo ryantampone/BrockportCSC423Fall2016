@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
     <title>Nanno's Vendor Order System</title>
+		<link rel='shortcut icon' type='image/x-icon' href='src/favicon.ico' />
     <link href="css/headerVendorStyles.css" type="text/css" rel="stylesheet" />
 <!--
 				<script type='text/javascript'>
