@@ -15,7 +15,7 @@
 				<form action='update_dashboard2.php' method='post'>
 				<table align='center'>
 					<tr>
-						<td><select id='StoreName' name='StoreName'><option>Select Store</option>";
+						<td><select id='StoreName' name='StoreName'><option value='0'>Select Store</option>";
 								$sql_storeNames="SELECT StoreName FROM RetailStore WHERE Status ='Active';";
 								$storeName_result = mysql_query($sql_storeNames);
 								if(!$storeName_result)
@@ -26,7 +26,7 @@
 								while($row = mysql_fetch_assoc($storeName_result))
 								{
 									$storeName = $row['StoreName'];
-									echo "<option>".$storeName."</option>";
+									echo "<option value='"$storeName"'>".$storeName."</option>";
 								}
 								echo "</select></td>
 					</tr>
