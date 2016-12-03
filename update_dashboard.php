@@ -8,6 +8,10 @@
   require('indexV2.php');
 
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
+
+    $numberOfSalesLastMonth = "hi everyone";
+
+
 	//------------------------------------------------------------------------------
     $activeVendorsQuery = "SELECT count(*) FROM Vendor WHERE Status = 'Active';";
     $resultAV = mysql_query($activeVendorsQuery);
@@ -163,7 +167,7 @@
 	//----------------------------------------------------------------------------------
 
 
-	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $pendingOrders, $deliveredOrders, $cancelledOrders, $totalOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
+	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $numberOfSalesLastMonth, $pendingOrders, $deliveredOrders, $cancelledOrders, $totalOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
 
 
 

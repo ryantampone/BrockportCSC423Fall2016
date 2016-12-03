@@ -45,7 +45,7 @@
   }
   while($row = mysql_fetch_assoc($ResultMS))
   {
-    $numberOfSalesLastMonth = $row['count(*)'];
+    $numberOfSalesLastMonth = $row['COUNT(*)'];
   }
   mysql_free_result($ResultMS);
 	//------------------------------------------------------------------------------
