@@ -15,7 +15,7 @@
 				<form action='update_dashboard2.php' method='post'>
 				<table align='center'>
 					<tr>
-						<td><select id='StoreName' name='StoreName'><option value='0'>Select Store</option>";
+						<td><select id='StoreName' name='StoreName'><option value='Select Store'>Select Store</option>";
 								$sql_storeNames="SELECT StoreName FROM RetailStore WHERE Status ='Active';";
 								$storeName_result = mysql_query($sql_storeNames);
 								if(!$storeName_result)
@@ -73,7 +73,7 @@
 							<td width='175px' height='35px'><h4>Number of Stores: </h4></td><td id='number_stores'>$stores</td>
 						</tr>
 						<tr>
-							<td height='35px'><h4>Number of Sales Last Month: </h4></td><td id='monthly_sales'>$monthlySales</td>
+							<td height='35px'><h4>Monthly Sales: </h4></td><td id='monthly_sales'>$monthlySales</td>
 						</tr>
 						</table>
 					</div>
