@@ -5,7 +5,7 @@
 
 <?php
 	require('db_cn.inc');
-	require('vendor_order_view.php');
+	require('vendor_order_view_test.php');
 
 	$selectedOrderStatus = $_POST['orderStatus'];
 
