@@ -5,7 +5,7 @@
 
   require('db_cn.inc');
   // require('update_dashboard_insert_result_ui.inc');
-  require('index.php');
+  require('indexV2.php');
 
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
 	//------------------------------------------------------------------------------
