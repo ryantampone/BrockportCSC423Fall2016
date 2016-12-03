@@ -9,6 +9,12 @@
 
     connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
     $SN = mysql_real_escape_string($_POST['StoreName']);
+
+    if ($SN == 'Store Name')
+    {
+      header("Location: http://www.itss.brockport.edu/~rtamp1/csc423/gp/update_dashboard.php");
+    }
+
     $Query = "SELECT StoreId FROM `RetailStore` WHERE StoreName =  '$SN';";
     $Result = mysql_query($Query); // Result of Processing the Query is shown
     if (!$Result)
