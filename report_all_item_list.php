@@ -5,7 +5,7 @@ include 'header.php';
 
 
 
-$storeName = mysqli_real_escape_string($_POST['StoreName']);
+$storeName = mysql_escape_string($_POST['StoreName']);
 
 
 
