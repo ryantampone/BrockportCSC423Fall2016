@@ -19,19 +19,35 @@
     }
 
     $SN = mysql_real_escape_string($_POST['StoreName']);
-    $Query = "SELECT StoreId FROM `RetailStore` WHERE StoreName =  '$SN';";
-    $Result = mysql_query($Query); // Result of Processing the Query is shown
-    if (!$Result)
+    $QuerySN = "SELECT StoreId FROM `RetailStore` WHERE StoreName =  '$SN';";
+    $ResultSN = mysql_query($QuerySN); // Result of Processing the Query is shown
+    if (!$ResultSN)
     {
       echo "Unable to retrieve Store Id from Store Name Dropdown"; //be sure to change
       exit;
     }
-    while($row = mysql_fetch_assoc($Result))
+    while($row = mysql_fetch_assoc($ResultSN))
     {
       $StoreID = $row['StoreId'];
     }
-    mysql_free_result($Result);
+    mysql_free_result($ResultSN);
 
+  //------------------------------------------------------------------------------
+  $startDate = date('Y-m-d', strtotime('today - 30 days'));
+  $endDate = date('Y-m-d');
+
+  $QueryMS = "SELECT COUNT( * ) FROM `CustomerPurchase` WHERE ((`DateTimeOfPurchase` > '$startdate') AND (`DateTimeOfPurchase` < '$enddate')) AND StoreId = $StoreID;";
+  $ResultMS = mysql_query($QueryMS); // Result of Processing the Query is shown
+  if (!$ResultMS)
+  {
+    echo "Unable to Retrieve count of monthy sales from database"; //be sure to change
+    exit;
+  }
+  while($row = mysql_fetch_assoc($ResultMS))
+  {
+    $numberOfSalesLastMonth = $row['count(*)'];
+  }
+  mysql_free_result($ResultMS);
 	//------------------------------------------------------------------------------
 
     $activeVendorsQuery = "SELECT count(*) FROM Vendor WHERE Status = 'Active';";
@@ -188,7 +204,7 @@
 	//----------------------------------------------------------------------------------
 
 
-	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $pendingOrders, $deliveredOrders, $cancelledOrders, $totalOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
+	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $numberOfSalesLastMonth, $pendingOrders, $deliveredOrders, $cancelledOrders, $totalOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
 
 
 
