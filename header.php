@@ -147,7 +147,7 @@
   {
     var itemretail = document.getElementById("ItemRetail").value;
     var pattern = /^\d+.\d{2}$/;
-    if (itemretail.match(pattern))
+    if (itemretail.match(pattern) || itemretail == "")
       return;
     else
     {
@@ -165,29 +165,71 @@
   }
 
 
-  function check_dept() {
- switch(document.getElementById('Department').value){
+  function check_dept(o) {
+ /*switch(document.getElementById('Department').value){
 		case 'Meat Department':
 			document.getElementById('Category_1').innerHTML = 'Beef';
-        	document.getElementById('Category_2').innerHTML = 'Chicken';
+      document.getElementById('Category_2').innerHTML = 'Chicken';
+      document.getElementById('Category_3').innerHTML = 'Turkey';
+      document.getElementById('Category_4').innerHTML = 'Other';
 			break;
 
 		case 'Candy Department':
-		 document.getElementById('Category_1').innerHTML = 'Jelly Beans';
-         document.getElementById('Category_2').innerHTML = 'Gummy & Chewy Candy';
-		 break;
+		  document.getElementById('Category_1').innerHTML = 'Chocolate';
+      document.getElementById('Category_2').innerHTML = 'Gummy & Chewy Candy';
+      document.getElementById('Category_3').innerHTML = 'Other';
+		  break;
 
-		 case 'Cookies/Crackers Department':
-		 document.getElementById('Category_1').innerHTML = 'Chocolate Chip Cookies';
-         document.getElementById('Category_2').innerHTML = 'Ginger Cookies';
-		 break;
+		case 'Cookies/Crackers Department':
+		  document.getElementById('Category_1').innerHTML = 'Crackers';
+      document.getElementById('Category_2').innerHTML = 'Cookies';
+      document.getElementById('Category_3').innerHTML = 'Other';
+		  break;
+
+    case 'Baked Goods':
+  		document.getElementById('Category_1').innerHTML = 'Donuts';
+      document.getElementById('Category_2').innerHTML = 'Pie';
+      document.getElementById('Category_3').innerHTML = 'Other';
+  		break;
+
+    case 'Dairy Department':
+  		document.getElementById('Category_1').innerHTML = 'Beverage';
+      document.getElementById('Category_2').innerHTML = 'Food';
+  		break;
 
 		default:
+		  document.getElementById('Category_1').innerHTML = 'Alcohol';
+      document.getElementById('Category_2').innerHTML = 'Soda';
+      document.getElementById('Category_3').innerHTML = 'Water';
+      document.getElementById('Category_4').innerHTML = 'Other';
 
-		  document.getElementById('Category_1').innerHTML = 'Pepsi';
-          document.getElementById('Category_2').innerHTML = 'Water';
+		}*/
 
-		}
+      myDoc = document.getElementById('Category');
+
+			if(!myDoc)
+        return;
+
+			var myCategoryItems = new Array();
+			myCategoryItems['Baked Goods']=['Donuts','Pie','Other'];
+			myCategoryItems['Beverages Department']=['Alcohol','Soda','Water','Other'];
+			myCategoryItems['Candy Department']=['Chocolate','Gummy & Chewy Candy','Other'];
+			myCategoryItems['Cookies/Crackers Department']=['Crackers','Cookies','Other'];
+			myCategoryItems['Dairy Department']=['Beverage','Food'];
+      myCategoryItems['Meat Department']=['Beef','Chicken','Turkey','Other'];
+
+			myDoc.options.length = 0;
+			cur = myCategoryItems[o.options[o.selectedIndex].value];
+
+			if(!cur)
+        return;
+
+			myDoc.options.length = cur.length;
+			for(var i = 0; i < cur.length; i++)
+			{
+				myDoc.options[i].text = cur[i];
+				myDoc.options[i].value = cur[i];
+			}
 }
 
 function checkQty(count)

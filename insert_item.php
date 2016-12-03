@@ -25,8 +25,9 @@ connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
    $esc_description = mysql_real_escape_string($_POST['Description']);
    $esc_size = mysql_real_escape_string($_POST['Size']);
    $esc_imageFileName = mysql_real_escape_string($_POST['ImageFileName']);
+   $esc_vendorID = mysql_real_escape_string($_POST['VendorId']);
 
-   $insertitem = "INSERT INTO InventoryItem(ItemId, Description, Size, Division, Department, Category, ItemCost, ItemRetail, ImageFileName, VendorId) values ('$esc_itemId', '$esc_description', '$esc_size', '$division', '$department', '$category', '$itemCost', '$itemRetail', '$esc_imageFileName', '$vendorID');";
+   $insertitem = "INSERT INTO InventoryItem(ItemId, Description, Size, Division, Department, Category, ItemCost, ItemRetail, ImageFileName, VendorId) values ('$esc_itemId', '$esc_description', '$esc_size', '$division', '$department', '$category', '$itemCost', '$itemRetail', '$esc_imageFileName', '$esc_vendorID');";
 
    $result = mysql_query($insertitem);
    echo $result;
@@ -34,16 +35,16 @@ connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 
    if(!$result){
 
-   $message = "Error in inserting item: $itemname". mysql_error();
+   $message = "Error in inserting item: $itemId .". mysql_error();
 
    }
    else{
 
-   $message = "Item: $itemname inserted successfully.";
+   $message = "Item: $itemId inserted successfully.";
 
    }
 
-   ui_show_item_insert_result($message, $itemname, $result);
+   ui_show_item_insert_result($message, $itemId, $result);
 }
   function connect_and_select_db($server, $username, $pwd, $dbname)
 {

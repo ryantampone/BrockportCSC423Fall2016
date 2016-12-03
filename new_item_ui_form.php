@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td align='right'>Description:</td>
-            <td><input id='Description' name='Description' type='textarea' required/></td>
+            <td><input id='Description' name='Description' type='text' size='50' required/></td>
           </tr>
           <tr>
             <td align='right'>Size:</td>
@@ -54,22 +54,23 @@
 		    	<tr>
             <td align='right'>Department:</td>
 						<td>
-							<select name='Department' id='Department' onchange='check_dept()' onpaste='return false'>
-								<option value='Meat Department'>Meat Department</option>
+							<select name='Department' id='Department' onchange='check_dept(this)' onpaste='return false'>
+								<option value='Baked Goods'>Baked Goods</option>
 								<option value='Beverages Department'>Beverages Department</option>
 								<option value='Candy Department'>Candy Department</option>
 								<option value='Cookies/Crackers Department'>Cookies/Crackers Department</option>
-
+								<option value='Dairy Department'>Dairy Department</option>
+								<option value='Meat Department'>Meat Department</option>
 							</select>
 						</td>
 					</tr>
   				<tr>
               <td align='right'>Category:</td>
               <td>
-								<select name='Category'>
-										<option id='Category_1' value='Beef'>Beef</option>
-										<option id='Category_2' value='Chicken'>Chicken</option>
-
+								<select name='Category' id='Category'>
+										<option id='Category_1' value='Donuts'>Donuts</option>
+										<option id='Category_2' value='Pie'>Pie</option>
+										<option id='Category_3' value='Other'>Other</option>
 								</select>
 							</td>
           </tr>

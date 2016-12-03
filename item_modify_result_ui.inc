@@ -76,7 +76,7 @@ function show_all_items($message, $result)
                     </tr>
                	    <tr>
                         <td align='right'>Description:</td>
-                        <td><input id='Description' name='Description' value=\"$description\" type='textarea' required/></td>
+                        <td><input id='Description' name='Description' value=\"$description\" type='text' size='50' required/></td>
                     </tr>
                     <tr>
                         <td align='right'>Size:</td>
@@ -84,125 +84,101 @@ function show_all_items($message, $result)
                     </tr>
                     <tr>
                         <td align='right'>Division:</td>
+												<td>
+													<select id='Division' name='Division' required />";
+														$sql_div ="SELECT DISTINCT Division FROM InventoryItem ORDER BY Division;";
+														$division_result = mysql_query($sql_div);
 
-		<td>
-					<select id='Division' name='Division' required />";
+														if(!$division_result)
+														{
+															echo "Divisions retrieved unsuccessfully: ".mysql_error();
+															exit;
+														}
+														while ($row = mysql_fetch_assoc($division_result))
+														{
+															$_division = $row['Division'];
+															if ($_division == $division)
+																echo "<option value='$_division' selected>".$_division."</option>";
+															else echo "<option value='$_division'>".$_division."</option>";
+														}
+													echo "
+													</select>
+												</td>
+        						</tr>
+										<tr>
+										<td align='right'>Department:</td>
+										<td>
+											<select id='Department' name='Department' onchange='check_dept(this)' required />";
+												// this = [object HTMLSelectElement]
+								  			$sql_dept ="SELECT DISTINCT Department FROM InventoryItem ORDER BY Department;";
+										 		$department_result = mysql_query($sql_dept);
 
-
-					 $sql_div ="SELECT DISTINCT Division FROM InventoryItem ORDER BY Division;";
-					 $div_result = mysql_query($sql_div);
-	    				$div = mysql_query($div_result);
-					if(!$div_result)
-					{
-
-						echo "Division's retrieved unsuccessfully: ".mysql_error();
-						exit;
-					}
-					while ($row = mysql_fetch_assoc($div_result))
-					{
-						$_division = $row['Division'];
-						echo "<option value=$_division>".$_division."</option>";
-					}
-  					echo "<option value='$division' selected>$division</option>
-				</select>
-				</td>
-
-
-
-
-                    </tr>
-			<tr>	  <td align='right'>Department:</td>
-				<td>
-					<select id='Department' name='Department' required />";
-
-			  		 $sql_dept ="SELECT DISTINCT Department FROM InventoryItem ORDER BY Department;";
-					 $department_result = mysql_query($sql_dept);
-
-					if(!$department_result)
-					{
-
-						echo "Depatment's retrieved unsuccessfully: ".mysql_error();
-						exit;
-					}
-					while ($row = mysql_fetch_assoc($department_result))
-					{
-						$_department = $row['Department'];
-						echo "<option value=$_department>".$_department."</option>";
-					}
-  					echo "<option value='$department' selected>$department</option>
-				</select>
-				</td>
-
-			</tr>
-  				<tr>
-              <td align='right'>Category:</td>
-          <td>
-					<select id='Category' name='Category' required />";
-
-			  		 $sql_category ="SELECT DISTINCT Category FROM InventoryItem ORDER BY Category;";
-					 $category_result = mysql_query($sql_category);
-
-					if(!$category_result)
-					{
-
-						echo "Category's retrieved unsuccessfully: ".mysql_error();
-						exit;
-					}
-					while ($row = mysql_fetch_assoc($category_result))
-					{
-						$_category = $row['Category'];
-						echo "<option>".$_category."</option>";
-					}
-  					echo "<option value='Category' selected>$category</option>
-				</select>
-				</td>
-																								</td>
-
-			</tr>
-		<tr>
-			<td align='right'>Item Cost:</td>
-			 <td><input id='ItemCost' name='ItemCost' value='$itemCost' onblur='isItemCost()' onpaste='return false' TYPE='text' SIZE='50' required/></td>
-		</tr>
-
-		<tr>
-			<td align='right'>Item Retail:</td>
-			 <td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' onBlur='isItemRetail()' opaste='return false' TYPE='text' SIZE='50' required/></td>
-		</tr>
-
-		<tr>
-			<td align='right'>Vendor Name:</td>
-			<td>
-				<select id='VendorName' name='VendorName' required/>
+												if(!$department_result)
+												{
+													echo "Departments retrieved unsuccessfully: ".mysql_error();
+													exit;
+												}
+												while ($row = mysql_fetch_assoc($department_result))
+												{
+													$_department = $row['Department'];
+													if ($_department == $department)
+														echo "<option value='$_department' selected>".$_department."</option>";
+													else echo "<option value='$_department'>".$_department."</option>";
+												}
+					  						echo "
+											</select>
+										</td>
+									</tr>
+  								<tr>
+              			<td align='right'>Category:</td>
+          					<td>
+											<select id='Category' name='Category' required />
+												<option value='$category'>".$category."</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td align='right'>Item Cost:</td>
+			 							<td><input id='ItemCost' name='ItemCost' value='$itemCost' onblur='isItemCost()' onpaste='return false' TYPE='text' SIZE='50' required/></td>
+									</tr>
+									<tr>
+										<td align='right'>Item Retail:</td>
+			 							<td><input id='ItemRetail' name='ItemRetail' value='$itemRetail' onBlur='isItemRetail()' opaste='return false' TYPE='text' SIZE='50' required/></td>
+									</tr>
+									<tr>
+										<td align='right'>Vendor Name:</td>
+										<td>
+											<select id='VendorName' name='VendorName' required/>
 			";
-				  $sql_vendors = "SELECT VendorName FROM Vendor WHERE Status='Active';";
-					$vendors_result = mysql_query($sql_vendors);
+											  $sql_vendors = "SELECT VendorId, VendorName FROM Vendor WHERE Status='Active';";
+												$vendors_result = mysql_query($sql_vendors);
 
-					if (!$vendors_result)
-					{
-						echo "VendorName's retrieved unsuccessfully: ".mysql_error();
-						exit;
-					}
-					while ($row = mysql_fetch_assoc($vendors_result))
-					{
-						$vendorname = mysql_real_escape_string($row['VendorName']);
-						echo "<option>".$vendorname."</option>";
-					}
-  echo "<option value='$vName' selected>$vName</option>
-				</select>
-			</td>
-		</tr>
-
-		<tr>
-			<td align='right'>Image Filename:</td>
-			<td><input id='ImageFileName' name='ImageFileName' value=\"$imageFileName\" onKeyPress='return isImageFileName(event)' onpaste='return false' TYPE='text' SIZE='50' required/></td>
-		</tr>
-                </table>
-				  <div class='button'>
-<input id='tiny_button' type='submit' id='submit' name='submit' >
-<input id='tiny_button' type='reset' id='reset' name='reset'>
-</div>
-
-		 </form> ";
+												if (!$vendors_result)
+												{
+													echo "Vendors retrieved unsuccessfully: ".mysql_error();
+													exit;
+												}
+												while ($row = mysql_fetch_assoc($vendors_result))
+												{
+													$vendorid = $row['VendorId'];
+													$vendorname = $row['VendorName'];
+													if ($vName == $vendorname)
+														echo "<option selected>".$vendorname."</option>";
+													else echo "<option>".$vendorname."</option>";
+												}
+  										echo "</select>
+										</td>
+									</tr>
+									<tr>
+										<td align='right'>Image Filename:</td>
+										<td><input id='ImageFileName' name='ImageFileName' value=\"$imageFileName\" onKeyPress='return isImageFileName(event)' onpaste='return false' TYPE='text' SIZE='50' required/></td>
+									</tr>
+            </table>
+				  	<div class='button'>
+									<input id='tiny_button' type='submit' id='submit' name='submit' >
+									<input id='tiny_button' type='reset' id='reset' name='reset'>
+						</div>
+		 		</form> ";
 	}
 
 

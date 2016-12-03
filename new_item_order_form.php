@@ -30,7 +30,7 @@
 			<table align='center'>
 
 			<tr>
-				<td ><span align='right'>Vendor ID:</span></td>
+				<td ><span align='right'>Vendor Name:</span></td>
 
 				<td>
 								<select id='VendorInfo' name='VendorInfo' >
