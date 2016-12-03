@@ -4,8 +4,9 @@ require('db_cn.inc');
 include 'header.php';
 
 
+connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 
-$storeName = mysql_escape_string($_POST['StoreName']);
+$storeName = mysql_real_escape_string($_POST['StoreName']);
 //echo "Store Name: ".$storeName;
 //echo "<br />";
 $startDate = $_POST['startDate'];
@@ -19,13 +20,12 @@ $endDate = $_POST['endDate'];
 show_item_delivered($storeName, $startDate, $endDate);
 function show_item_delivered($storeName, $startDate, $endDate){
 			//echo "StoreName is ".$storeName."";
-			connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 			
 			
 	
 			
 			//find the orderID which is matching the storename and the date
-			$sql_orderId = "SELECT OrderId, DateTimeOfOrder FROM `Order` WHERE ((`DateTimeOfOrder` > '$startDate') AND (`DateTimeOfOrder` < '$endDate')) AND StoreId in (SELECT StoreId FROM `RetailStore` WHERE StoreName ='Long Pond Road Greece');";
+			$sql_orderId = "SELECT OrderId, DateTimeOfOrder FROM `Order` WHERE ((`DateTimeOfOrder` > '$startDate') AND (`DateTimeOfOrder` < '$endDate')) AND StoreId in (SELECT StoreId FROM `RetailStore` WHERE StoreName ='$storeName');";
 
 
 			$resule_orderId = mysql_query($sql_orderId);
