@@ -93,7 +93,7 @@
     mysql_free_result($resultPending);
 
 	//----------------------------------------------------------------------------------
-    $deliveredOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Delivered';";
+    $deliveredOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Delivered' and StoreId='$StoreID';";
     $resultDelivered = mysql_query($deliveredOrdersQuery);
     if (!$resultDelivered)
     {
@@ -107,7 +107,7 @@
     mysql_free_result($resultDelivered);
 
 	//----------------------------------------------------------------------------------
-   $cancelledOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Canceled';";
+   $cancelledOrdersQuery = "SELECT count(*) FROM `Order` WHERE Status = 'Canceled' and StoreId='$StoreID';";
     $resultCancelled = mysql_query($cancelledOrdersQuery);
     if (!$resultCancelled)
     {
@@ -121,7 +121,7 @@
     mysql_free_result($resultCancelled);
 
 	//----------------------------------------------------------------------------------
-	$totalOrdersQuery = "SELECT count(*) FROM `Order`;";
+	$totalOrdersQuery = "SELECT count(*) FROM `Order` WHERE StoreId='$StoreID';";
 	$resultTO = mysql_query($totalOrdersQuery);
 	if(!$resultTO)
 	{
