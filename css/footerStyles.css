@@ -3,30 +3,28 @@
   background-color: #293240;
   padding: 28px 0;
   max-width: 100%;
-
-  margin: 0 auto;
+  height: 180px;
+  margin-bottom: : 0px;
 }
 
 #pagefooter img
 {
-
-display: block;
-margin-left: 50px;
-
+  display: block;
+  margin-left: 50px;
 }
 
 #pagefooter_wrapper
 {
   width: 100%;
   margin: 30px auto;
-  text-align: center;
 }
 
-#authors
+div.footercontent
 {
-  display:inline-block;
-  background-color: white;
+    float:left;
+    margin: 20px;
 }
+
 /*
 #pagefooter ul
 {

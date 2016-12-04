@@ -1,17 +1,17 @@
 <!doctype html>
 <footer> <br><br><br>
   <div id="pagefooter">
-      <div id="pagefooter_wrapper">
-          
-
+        <div class="footercontent">
           <img src='/~rtamp1/csc423/gp/src/aptaris.png'/>
+        </div>
+        <div class="footercontent">
           <ul>
               <li><h3>Authors</h3></li>
               <li>Ryan Tampone</li>
               <li>YangYan Dong</li>
               <li>Adam Smith</li>
           </ul>
-
+        </div>
           <!--
           <div id="authors">
             <ul>
@@ -72,10 +72,5 @@
         </ul>
 
       -->
-      </div>
   </div>
 </footer>
-
-
-</body>
-</html>
