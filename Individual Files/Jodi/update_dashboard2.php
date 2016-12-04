@@ -224,9 +224,6 @@
 
 	show_index($vendorsActive, $vendorsInactive, $vendorsTotal, $stores, $numberOfSalesLastMonth, $numberOfSalesLastWeek, $pendingOrders, $deliveredOrders, $cancelledOrders, $totalOrders, $activeCustomers, $inactiveCustomers, $totalCustomers );
 
-
-
-
   function connect_and_select_db($server, $username, $pwd, $dbname)
   {
     $conn = mysql_connect($server, $username, $pwd);
