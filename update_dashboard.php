@@ -12,7 +12,7 @@
     $startDate = date('Y-m-d', strtotime('today - 30 days'));
     $endDate =  date('Y-m-d');
 
-    $QueryMS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDateWS') AND (DateTimeOfPurchase < '$endDateWS'));";
+    $QueryMS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDate') AND (DateTimeOfPurchase < '$endDate'));";
     $ResultMS = mysql_query($QueryMS); // Result of Processing the Query is shown
     if (!$ResultMS)
     {
@@ -27,7 +27,7 @@
 
 
     //------------------------------------------------------------------------------
-    $startDateWS = date('Y-m-d', strtotime('today - 7 days'));
+    $startDateWS = date('Y-m-d', strtotime('today - 3 days'));
     $endDateWS =  date('Y-m-d');
 
     $QueryWS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDateWS') AND (DateTimeOfPurchase < '$endDateWS'));";

@@ -62,6 +62,7 @@
   }
   while($row = mysql_fetch_assoc($ResultWS))
   {
+    echo "Start date is: $startDateWS, End Date is: $endDateWS";
     $numberOfSalesLastWeek = $row['count(*)'];
   }
   mysql_free_result($ResultWS);
