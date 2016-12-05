@@ -27,7 +27,7 @@
 
 
     //------------------------------------------------------------------------------
-    $startDateWS = date('Y-m-d', strtotime('today - 3 days'));
+    $startDateWS = date('Y-m-d', strtotime('today - 7 days'));
     $endDateWS =  date('Y-m-d');
 
     $QueryWS = "SELECT count(*) FROM `CustomerPurchase` WHERE ((DateTimeOfPurchase > '$startDateWS') AND (DateTimeOfPurchase < '$endDateWS'));";
