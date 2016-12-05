@@ -11,6 +11,7 @@
 <br>
 		<div id='callToAction'>
 		  <h2>Dashboard</h2>
+			<center><h4>Select Your Store to View Your Customized Dashbaord</h4><center>
 			<div id='dropdown'>
 				<form action='update_dashboard2.php' method='post'>
 				<table align='center'>
