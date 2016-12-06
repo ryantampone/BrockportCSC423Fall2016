@@ -45,7 +45,7 @@ function process_purchase()
         <table align='center'>
           <tr>
             <td><input id='tiny_button' name='submit' type='submit' value='Add Item' /></td>
-            <td><input id='tiny_button' name='done' type='button' value='Done' onclick='window.alert(\"Thank you for your purchase!\");window.location.href=\"http://www.itss.brockport.edu/~asmit26/csc423/gp/customer_purchase_ui.php\";' /></td>
+            <td><input id='tiny_button' name='done' type='button' value='Done' onclick='window.alert(\"Thank you for your purchase!\");window.location.href=\"http://www.itss.brockport.edu/~rtamp1/csc423/gp/customer_purchase_ui.php\";' /></td>
           </tr>
         </table>
         <input type='hidden' name='custid' value='$customerid' />
