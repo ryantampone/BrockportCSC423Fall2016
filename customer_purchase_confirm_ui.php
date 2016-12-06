@@ -102,7 +102,7 @@ function purchase()
 				 		<script language=\"javascript\">
 							var msg = document.getElementById(\"message\").value;
 			 				window.alert(msg);
-			 				window.location.href=\"http://www.itss.brockport.edu/~asmit26/csc423/gp/customer_purchase_ui.php\";
+			 				window.location.href=\"http://www.itss.brockport.edu/~rtamp1/csc423/gp/customer_purchase_ui.php\";
 			 			</script>
 				 ";
 			 }

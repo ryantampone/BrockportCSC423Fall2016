@@ -1,5 +1,5 @@
 <?php
-	include 'header.php';
+	include 'headerPurchase.php';
 	require('db_cn.inc');
 
 	function connect_and_select_db($server, $username, $pwd, $dbname)
