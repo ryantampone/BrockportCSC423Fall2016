@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jodi L. Hess CSC423 Quiz 2 </title>
+<form action="" method="post">
+<style>
+h3 {text-align: center;}
+  h2 {text-align: left; font color: blue;}
+body { background-color: lightblue; }
+
+</style>
+<body>
+<h3> <font color="B22222"> SEARCH FOR AN INVENTORY ITEM TYPE </font> </h3>
+
+  <h4> Leave all the fields empty to list all item types. </h4>
+
+<form action=""  method="post" >
+
+<table>
+<colgroup>
+<col span="1" style="width: 15%;">
+<col span="1" style="width: 30%;">
+
+</colgroup>
+<col width="15%">
+<col width="30%">
+
+
+<?-------------------------------------------------------------->
+<tr width="100%">
+
+
+<td height="35 px" > Item Type Name: </td>
+<td> <input type="text" name="name" id="name" size="30"> </td> </tr>
+
+<td height="35 px" width="100 px"> Barcode Prefix: </td>
+<?----- <label for="barcode"> </label>
+<td> <input type="text" name="barcode" id="barcode" size="30" maxlength="4"> </td>
+</tr>
+
+<tr>
+<td> </td>
+
+<td style="height:60px"> <input align="right" type="submit" id="submit"
+name="submit" value="Submit" onclick="validateForm()">
+
+<input type="cancel" id="cancel" name="cancel" size="6" value="Cancel" onclick="cancel()">
+
+
+</td>
+</tr>
+
+</table>
+</html>
+
