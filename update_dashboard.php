@@ -85,7 +85,7 @@
     mysql_free_result($resultTV);
 
 	//----------------------------------------------------------------------------------
-    $storesQuery = "SELECT count(*) FROM RetailStore;";
+    $storesQuery = "SELECT count(*) FROM RetailStore WHERE Status='Active';";
     $resultStores = mysql_query($storesQuery);
     if (!$resultStores)
     {
