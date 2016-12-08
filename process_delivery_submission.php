@@ -27,7 +27,7 @@ function process_delivery_submission()
 		}
 		else
 		{
-		  $messageOrder = "Order processed successfully.  Delivery Date set to: $dateFulfilled , Status set to: $status ";
+		  $messageOrder = "Order processed successfully.  Delivery Date set to: $dateFulfilled , Order marked: $status ";
 		}
 
 

@@ -11,13 +11,13 @@ function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY, 
 
 
   //email stuffs
-  $messageStore = 'Delivered to store location: '.$storeID;
+  $messageStore = 'Delivered to store location: '.$storeID." ";
   $newline = "\n";
 
   $messageEmail = $messageStore.$newline.'Status: '.$messageOrder.$newline.$messageInsert;
   $messageTextMessage = $messageStore.$messageOrder.' '. $messageInsert;
   mail('rtamp1@brockport.edu','New Delivery',$messageEmail,'Nannos Foods Management System: New Delivery');
-  mail('8457982351@vtext.com','New Delivery',$messageTextMessage,'Nannos Foods Management System');
+  mail('8457982351@vtext.com','New Delivery',$messageTextMessage);
 
 
   $message = $messageOrder.$messageInsert;
