@@ -8,12 +8,11 @@ include 'header.php';
 $storeName = mysql_escape_string($_POST['StoreName']);
 
 
-
 show_item($storeName);
 function show_item($storeName){
 			//echo "StoreName is ".$storeName."";
 			connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-			$sql_showItem = "SELECT * FROM InventoryItem WHERE ItemId in (SELECT ItemId FROM Inventory WHERE StoreId in (SELECT StoreId FROM RetailStore WHERE StoreName = '$storeName'));";
+			$sql_showItem = "SELECT distinct * FROM InventoryItem WHERE ItemId in (SELECT ItemId FROM Inventory WHERE StoreId in (SELECT StoreId FROM RetailStore WHERE StoreName = '$storeName'));";
 			$result = mysql_query($sql_showItem);
 			if (!$result)
 				  {
@@ -55,11 +54,11 @@ function show_item($storeName){
 						 $itemRetail = $row['ItemRetail'];
 						 $imageFileName = $row['ImageFileName'];
 						 $vendorId = $row['VendorId'];
-						 $qty_sql = "SELECT QuantityOrdered FROM `OrderDetail` WHERE ItemId='$itemid';";
+						 $qty_sql = "SELECT QuantityInStock FROM Inventory WHERE ItemId='$itemid' AND StoreId in (SELECT StoreId FROM RetailStore WHERE StoreName = '$storeName');";
 						 $item_result = mysql_query($qty_sql);
 						 while($qty_row = mysql_fetch_assoc($item_result)){
 						 
-						 	$qty = $qty_row['QuantityOrdered'];
+						 	$qty = $qty_row['QuantityInStock'];
 							$count++;
 							//echo"count is ".$count."\n";
 							$array++;
