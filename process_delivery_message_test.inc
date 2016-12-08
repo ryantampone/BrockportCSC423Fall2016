@@ -1,6 +1,6 @@
 <?php
 
-function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY, $storeID)
+function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -9,25 +9,11 @@ function show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY, 
   echo "</HEAD>";
   echo "<BODY>";
 
-
-  //email stuffs
-  $messageStore = 'Delivered to store location: '.$storeID;
-  $newline = "\n";
-
-  $messageEmail = $messageStore.$newline.'Status: '.$messageOrder.$newline.$messageInsert;
-  $messageTextMessage = $messageStore.$messageOrder.' '. $messageInsert;
-  mail('rtamp1@brockport.edu','New Delivery',$messageEmail,'Nannos Foods Management System: New Delivery');
-  mail('8457982351@vtext.com','New Delivery',$messageTextMessage,'Nannos Foods Management System');
-
-
   $message = $messageOrder.$messageInsert;
   echo "<SCRIPT LANGUAGE='JavaScript'>
      window.alert('$message')
      window.location.href='index.php';
      </SCRIPT>";
-
-
-
   /*
   if ($messageOrder)
   {

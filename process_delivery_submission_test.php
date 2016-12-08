@@ -27,7 +27,7 @@ function process_delivery_submission()
 		}
 		else
 		{
-		  $messageOrder = "Order processed successfully.  Delivery Date set to: $dateFulfilled , Status set to: $status ";
+		  $messageOrder = "Order processed successfully.  Date set to: $dateFulfilled , Status set to: $status ";
 		}
 
 
@@ -121,10 +121,7 @@ function process_delivery_submission()
 			$numRecords--;
 		}
 
-
-
-
-	 show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY, $storeID);
+	 show_delivery_result($messageOrder, $messageInsert, $messageUpdateQTY);
 }
 
 // Function to connect to the database
